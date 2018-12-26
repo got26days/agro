@@ -11,7 +11,7 @@
         </div>
         <article class="article event">
             <div class="container">
-                <time class="article__time" datetime="2018-06-20T08:00:00+03:00">20.06.18</time>                    
+                <time class="article__time" datetime="2018-06-20T08:00:00+03:00">{{ Carbon\Carbon::parse($post->updated_at)->format('d.m.Y') }}</time>                    
                 <h1>{{ $post->title }}</h1>
             <img class="article__main-img" src="/storage/{{ $post->image }}" alt="">
                 {!! $post->body !!}

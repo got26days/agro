@@ -17,7 +17,7 @@
                 <div class="events__item">
                     <a href="#" class="events__item-img"><img src="img/events/pic-1.jpg" alt=""></a>
                     <div class="events__item-main">
-                    <time class="events__item-time" datetime="2018-06-20T08:00:00+03:00">{{ $post->updated_at }}</time>
+                    <time class="events__item-time" datetime="2018-06-20T08:00:00+03:00">{{ Carbon\Carbon::parse($post->updated_at)->format('d.m.Y') }}</time>
                         <div class="events__item-title">{{ $post->title }}</div>
                         <div class="events__item-txt"></div>
                         <div class="events__item-bar">
