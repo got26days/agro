@@ -5,7 +5,7 @@
     <div class="breadcrumbs">
         <div class="container">
             <div class="breadcrumbs__wrap">
-                <a href="#">Главная</a>&#8195;/&#8195;<span>О нас</span>
+                <a href="/">Главная</a>&#8195;/&#8195;<span>О нас</span>
             </div>
         </div>
     </div>

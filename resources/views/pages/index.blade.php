@@ -6,7 +6,7 @@
         <div class="main-sec__wrap">
             <div class="container">
                 <h1 class="main-sec__title">
-                    <span>АгроДоход</span> — первый сервис «одного окна» для начинающих и опытных фермеров
+                   {!! $caption->body !!}
                 </h1>
             </div>
         </div>
@@ -36,30 +36,17 @@
                 <div class="income__row-bar">
                     <button class="btn income__row-bar-btn">Участвовать</button>
                 </div>
+                @foreach($top_directions as $top_direction)
                 <div class="income__item">
-                    <div class="income__item-img"><img src="img/pic/invest.jpg" alt=""></div>
+                    <div class="income__item-img"><img src="/storage/{{ $top_direction->image }}" alt=""></div>
                     <div class="income__item-main">
-                        <h3 class="income__item-title">Инвесторам</h3>
-                        <div class="income__item-txt">Мы предоставляем возможность инвестировать в выгодные сельскохозяйственные проекты. У нас вы найдёте актуальные предложения и необходимую аналитику.</div>
-                        <button class="btn income__item-btn">Участвовать</button>
+                    <h3 class="income__item-title">{{ $top_direction->title }}</h3>
+                        <div class="income__item-txt">{{ $top_direction->description }}</div>
+                    <a class="btn income__item-btn" href="/direction{{ $top_direction->id }}">Участвовать</a>
                     </div>
                 </div>
-                <div class="income__item">
-                    <div class="income__item-img"><img src="img/pic/tech.jpg" alt=""></div>
-                    <div class="income__item-main">
-                        <h3 class="income__item-title">Поставщикам <br>технологий и <br>оборудования</h3>
-                        <div class="income__item-txt">Фермерским хозяйствам необходимы новейшие высокотехнологичные разработки. Спрос рождает предложения.</div>
-                        <button class="btn income__item-btn">Участвовать</button>
-                    </div>
-                </div>
-                <div class="income__item">
-                    <div class="income__item-img"><img src="img/pic/agrorinok.jpg" alt=""></div>
-                    <div class="income__item-main">
-                        <h3 class="income__item-title">Агрорынок</h3>
-                        <div class="income__item-txt">Для каждого продавца найдётся свой покупатель. Сбыт и оптовое приобретение продукции посредством нашего сайта.</div>
-                        <button class="btn income__item-btn">Участвовать</button>
-                    </div>
-                </div>
+                @endforeach
+
             </div>
         </div>
     </section>        
@@ -69,43 +56,25 @@
             <div class="directions__txt">«Агродоход» — это сервис «одного окна», позволяющий Вам начать свой сельскохозяйственный бизнес или оптимизировать существующий. <br>«Агродоход» — всё, что необходимо фермеру:</div>
             <div class="directions__wrap directions__wrap--first">
                 <a href="#" class="directions__item">
-                    <div class="directions__item-img"><img src="img/pic/ring-1.png" alt=""></div>
-                    <div class="directions__item-txt">Дистрибьюция и сбыт продукции</div>
-                </a>
-                <a href="#" class="directions__item">
-                    <div class="directions__item-img"><img src="img/pic/ring-2.png" alt=""></div>
-                    <div class="directions__item-txt">Гранты, субсидии и кредитование</div>
-                </a>
-                <a href="#" class="directions__item">
-                    <div class="directions__item-img"><img src="img/pic/ring-3.png" alt=""></div>
-                    <div class="directions__item-txt">Единый центр закупок</div>
-                </a>
-                <a href="#" class="directions__item">
-                    <div class="directions__item-img"><img src="img/pic/ring-4.png" alt=""></div>
-                    <div class="directions__item-txt">Привлечение инвестиций</div>
-                </a>
-            </div>
-            <div class="directions__wrap">                    
-                <a href="#" class="directions__item">
-                    <div class="directions__item-img"><img src="img/pic/ring-5.png" alt=""></div>
-                    <div class="directions__item-txt">Технологии и инновации</div>
+                        <div class="directions__item-img"><img src="img/pic/ring-2.png" alt=""></div>
+                        <div class="directions__item-txt">Гранты, субсидии и кредитование</div>
                 </a>
                 <a href="#" class="directions__item">
                     <div class="directions__item-img"><img src="img/pic/ring-6.png" alt=""></div>
                     <div class="directions__item-txt">Бухгалтерское сопровождение</div>
                 </a>
                 <a href="#" class="directions__item">
-                    <div class="directions__item-img"><img src="img/pic/ring-7.png" alt=""></div>
-                    <div class="directions__item-txt">Производственный аудит</div>
-                </a>
-                <a href="#" class="directions__item">
                     <div class="directions__item-img"><img src="img/pic/ring-8.png" alt=""></div>
                     <div class="directions__item-txt">Юридическое сопровождение</div>
                 </a>
-                <a href="#" class="directions__item">
-                    <div class="directions__item-img"><img src="img/pic/ring-9.png" alt=""></div>
-                    <div class="directions__item-txt">Аналитический центр</div>
+            </div>
+            <div class="directions__wrap">                    
+                @foreach($bottom_directions as $bottom_direction)
+                <a href="/direction{{ $bottom_direction->id }}" class="directions__item">
+                    <div class="directions__item-img"><img src="/storage/{{ $bottom_direction->circle }}" alt=""></div>
+                    <div class="directions__item-txt">{{ $bottom_direction->title }}</div>
                 </a>
+                @endforeach
             </div>
         </div>
     </section>            

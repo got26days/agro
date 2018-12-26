@@ -12,21 +12,21 @@
     </div>
     <div class="footer__container">
         <div class="footer__wrap">
+            @if(isset($footer_var))
             <div class="footer__contacts">
-                <div>142002, Московская область, Домодедово, улица Текстильщиков, 1Б, офис 307а</div>
-                <div><a href="mailto:info@agroexpertservice.ru">info@agroexpertservice.ru</a></div>
-                <div><a href="tel:+74959026838">+7 (495) 902-68-38</a></div>
+                {!! $footer_var->body !!}
             </div>
             <div class="footer__middle">
-                <div><a href="#">Политика в отношении обработки персональных данных</a></div>
+                <div><a href="/download/policy" target="_blank">Политика в отношении обработки персональных данных</a></div>
                 <div><span>АгроДоход © 2018</span>&#8195;&#8195;<span>Сайт создан <a href="http://bigdatak.com/" target="_blank">Big Data Key</a></span></div>
             </div>
             <ul class="footer__soc">
-                <li><a href="#" target="_blank" class="footer__soc-link footer__soc-link--ok" title="Одноклассники">Одноклассники</a></li>
-                <li><a href="#" target="_blank" class="footer__soc-link footer__soc-link--facebook" title="Facebook">Facebook</a></li>
-                <li><a href="#" target="_blank" class="footer__soc-link footer__soc-link--instagram" title="Instagram">Instagram</a></li>
-                <li><a href="#" target="_blank" class="footer__soc-link footer__soc-link--vk" title="Вконтакте">Вконтакте</a></li>
+                <li><a href="{{ $footer_var->ok }}" target="_blank" class="footer__soc-link footer__soc-link--ok" title="Одноклассники">Одноклассники</a></li>
+                <li><a href="{{ $footer_var->facebook }}" target="_blank" class="footer__soc-link footer__soc-link--facebook" title="Facebook">Facebook</a></li>
+                <li><a href="{{ $footer_var->inst }}" target="_blank" class="footer__soc-link footer__soc-link--instagram" title="Instagram">Instagram</a></li>
+                <li><a href="{{ $footer_var->vk }}" target="_blank" class="footer__soc-link footer__soc-link--vk" title="Вконтакте">Вконтакте</a></li>
             </ul>
+            @endif
         </div>
     </div>
 </footer>

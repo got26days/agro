@@ -2,7 +2,7 @@
 <html lang="Ru-ru">
 <head>
     <meta charset="UTF-8">
-    <title>Агродоход</title>
+    <title>{{ isset($seotitle) ? $seotitle : 'Title' }}</title>
     
     <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -31,8 +31,8 @@
 -->
     
     <!--SEO-->
-    <meta name="description" content="Описание">
-    <meta name="keywords" content="Ключевые слова через запятую" />
+    <meta name="description" content="{{ isset($seodescription) ? $seodescription : 'Description' }}">
+    <meta name="keywords" content="{{ isset($seokeywords) ? $seokeywords : 'Keywords' }}" />
 	
     <!-- Meta-теги Open Graph для соц сетей -->
 <!--
@@ -70,7 +70,15 @@
     <!-- Цветовое оформление окон браузеров -->	
 	<meta name="theme-color" content="#fff"><!-- Chrome, Firefox OS and Opera -->	
 	<meta name="msapplication-navbutton-color" content="#fff"><!-- Windows Phone -->	
-	<meta name="apple-mobile-web-app-status-bar-style" content="#fff"><!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#fff"><!-- iOS Safari -->
+    
+    <style>
+        .income__item-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
     <!--[if lt IE 8]>

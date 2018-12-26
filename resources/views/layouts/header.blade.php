@@ -6,7 +6,7 @@
                 <input type="search" name="input search-input" class="search__input" placeholder="Поиск">
                 <button class="btn search__btn" type="submit" title="Искать">Искать</button>
             </form>
-            <a href="tel:+74959026838" class="header__tel">+7 (495) 902-68-38</a>
+                <a href="tel:{{ $phone_var->atel }}" class="header__tel">{{ $phone_var->phone }}</a>
             <nav class="user-menu">
                 <ul>
                     <li><a href="#" class="user-menu__link user-menu__link--sign-up">Регистрация</a></li>
