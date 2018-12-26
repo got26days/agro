@@ -98,7 +98,7 @@
                     <div class="contacts-sec__table">
                         <div class="contacts-sec__row">
                             <div class="contacts-sec__title">Тел.:</div>
-                            <div class="contacts-sec__val"><a href="tel:+74959026838">+7 (495) 902-68-38</a></div>
+                            <div class="contacts-sec__val"><a href="tel:{{ $phone_var->atel }}">{{ $phone_var->phone }}</a></div>
                         </div>
                         <div class="contacts-sec__row">
                             <div class="contacts-sec__title">E-mail:</div>
