@@ -14,6 +14,8 @@ use App\Serv;
 use Validator;
 use App\Mail;
 use App\Sendmail;
+use App\Seo;
+use JanDrda\LaravelGoogleCustomSearchEngine\LaravelGoogleCustomSearchEngine;
 
 class MainController extends Controller
 {
@@ -77,7 +79,13 @@ class MainController extends Controller
         $top_directions = Direction::where('showmainpage', '=', 'true')->latest()->limit(3)->get();
         $bottom_directions = Direction::where('showmainpage', '=', 'false')->latest()->get();
 
-        return view('pages.index', compact('caption', 'top_directions', 'bottom_directions'));
+        $seo = Seo::where('page', '=', 'option5')->latest()->first();
+
+        $seotitle = $seo['seo_title'];
+        $seodescription = $seo['seo_description'];
+        $seokeywords = $seo['seo_keywords'];
+
+        return view('pages.index', compact('caption', 'top_directions', 'bottom_directions', 'seotitle', 'seokeywords', 'seodescription'));
     }
 
     public function about()
@@ -85,7 +93,14 @@ class MainController extends Controller
         $teams = Team::latest()->get();
         $about = About::latest()->first();
 
-        return view('pages.about', compact('teams', 'about'));
+        $seo = Seo::where('page', '=', 'option1')->latest()->first();
+
+        $seotitle = $seo['seo_title'];
+        $seodescription = $seo['seo_description'];
+        $seokeywords = $seo['seo_keywords'];
+        $page_title = $seo['page_title'];
+
+        return view('pages.about', compact('teams', 'about', 'seotitle', 'seokeywords', 'seodescription', 'page_title'));
     }
 
     public function direction($slug)
@@ -102,14 +117,21 @@ class MainController extends Controller
         $seodescription = $direction['seo_description'];
         $seokeywords = $direction['seo_keywords'];
 
-        return view('pages.direction', compact('direction', 'seotitle', 'seokeywords'));
+        return view('pages.direction', compact('direction', 'seotitle', 'seokeywords', 'seodescription'));
     }
 
     public function faq()
     {
         $faqs = Faq::latest()->get();
 
-        return view('pages.faq', compact('faqs'));
+        $seo = Seo::where('page', '=', 'option2')->latest()->first();
+
+        $seotitle = $seo['seo_title'];
+        $seodescription = $seo['seo_description'];
+        $seokeywords = $seo['seo_keywords'];
+        $page_title = $seo['page_title'];
+
+        return view('pages.faq', compact('faqs', 'seotitle', 'seokeywords', 'seodescription', 'page_title'));
     }
 
 
@@ -117,7 +139,14 @@ class MainController extends Controller
     {
         $posts = Post::where('status', '=', 'PUBLISHED')->latest()->paginate(5);
 
-        return view('pages.events', compact('posts'));
+        $seo = Seo::where('page', '=', 'option3')->latest()->first();
+
+        $seotitle = $seo['seo_title'];
+        $seodescription = $seo['seo_description'];
+        $seokeywords = $seo['seo_keywords'];
+        $page_title = $seo['page_title'];
+
+        return view('pages.events', compact('posts', 'seotitle', 'seokeywords', 'seodescription', 'page_title'));
     }
 
     public function event($slug)
@@ -132,7 +161,7 @@ class MainController extends Controller
         $seodescription = $post['meta_description'];
         $seokeywords = $post['meta_keywords'];
 
-        return view('pages.event', compact('post', 'seotitle', 'seokeywords'));
+        return view('pages.event', compact('post', 'seotitle', 'seokeywords', 'seodescription'));
     }
 
     public function getDownload()
@@ -147,6 +176,39 @@ class MainController extends Controller
         return response()->file($file);
     }
 
+    public function search(Request $request)
+    {
+        $q = $request['q'];
+
+        // $user = [
+        //     [
+        //         'name' => 'Jim',
+        //         'url' => 'Url1',
+        //         'snippet' => 'snippet1'
+        //     ],
+        //     [
+        //         'name' => 'Jim2',
+        //         'url' => 'Url2',
+        //         'snippet' => 'snippet2'
+        //     ]
+        // ];
+        // $user = GoogleSearch::getResults('The meaning of life'); 
+        $fulltext = new LaravelGoogleCustomSearchEngine();
+        $user = $fulltext->getResults('О'); // get first 10 results for query 'some phrase' 
+         return $user;   
+
+        if(count($user) > 0)
+        return view('pages.searchpage')->withDetails($user)->withQuery ( $q );
+
+        else return view ('pages.searchpage')->withMessage('Совпадения не найдены, попробуйте еще раз!');
+
+    }
+
+    // public function searchpage()
+    // {
+    //     return view('pages.searchpage');
+    // }
+
     public function servs()
     {
         $servs = [];
@@ -156,6 +218,13 @@ class MainController extends Controller
             $servs[$i] = Serv::where('option', '=', 'option'.$y)->latest()->first();
         }
 
-        return view('pages.servs', compact('servs'));
+        $seo = Seo::where('page', '=', 'option4')->latest()->first();
+
+        $seotitle = $seo['seo_title'];
+        $seodescription = $seo['seo_description'];
+        $seokeywords = $seo['seo_keywords'];
+        $page_title = $seo['page_title'];
+
+        return view('pages.servs', compact('servs', 'seotitle', 'seokeywords', 'seodescription', 'page_title'));
     }
 }

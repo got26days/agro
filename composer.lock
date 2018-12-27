@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "63b3b207a897684f804d001368c908f8",
+    "content-hash": "54e3a5f83bf6ddd64263616401a25afb",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -1670,6 +1670,54 @@
             "time": "2018-09-29T18:48:56+00:00"
         },
         {
+            "name": "jan-drda/laravel-google-custom-search-engine",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jdrda/laravel-google-custom-search-engine.git",
+                "reference": "d5a6814afb97b3f2e65a49828e08f7e73cbeda33"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jdrda/laravel-google-custom-search-engine/zipball/d5a6814afb97b3f2e65a49828e08f7e73cbeda33",
+                "reference": "d5a6814afb97b3f2e65a49828e08f7e73cbeda33",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": ">=5.0.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "JanDrda\\LaravelGoogleCustomSearchEngine": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Drda",
+                    "email": "jdrda@outlook.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel package to get Google Custom Search results from Google Custom Search Engine API for both free and paid version.",
+            "homepage": "https://github.com/jdrda/laravel-google-custom-search-engine",
+            "keywords": [
+                "custom",
+                "engine",
+                "free",
+                "google",
+                "laravel",
+                "paid",
+                "search"
+            ],
+            "time": "2016-12-14T10:55:51+00:00"
+        },
+        {
             "name": "justinrainbow/json-schema",
             "version": "5.2.7",
             "source": {
@@ -3331,6 +3379,55 @@
                 "phra"
             ],
             "time": "2015-10-13T18:44:15+00:00"
+        },
+        {
+            "name": "spatie/googlesearch",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/googlesearch.git",
+                "reference": "c5807db3c5abfb38c4e310f11c7054f2b7744c05"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/googlesearch/zipball/c5807db3c5abfb38c4e310f11c7054f2b7744c05",
+                "reference": "c5807db3c5abfb38c4e310f11c7054f2b7744c05",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^4.0|^6.0",
+                "illuminate/support": "~4.1|5.*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "2.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Spatie\\GoogleSearch": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be"
+                }
+            ],
+            "description": "Get searchresults from a Google Custom Search Engine",
+            "homepage": "https://github.com/spatie/googlesearch",
+            "keywords": [
+                "custom",
+                "engine",
+                "google",
+                "laravel",
+                "search"
+            ],
+            "time": "2016-01-29T11:07:49+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

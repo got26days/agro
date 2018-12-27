@@ -5,13 +5,13 @@
     <div class="breadcrumbs">
         <div class="container">
             <div class="breadcrumbs__wrap">
-                <a href="#">Главная</a>&#8195;/&#8195;<span>Вопрос-ответ</span>
+                <a href="#">Главная</a>&#8195;/&#8195;<span>{{ $page_title }}</span>
             </div>
         </div>
     </div>
     <div class="faq">
         <div class="container">
-            <h1 class="sec__title faq__title">Вопрос-ответ</h1>
+            <h1 class="sec__title faq__title">{{ $page_title }}</h1>
             <div class="faq__wrap">
                 @foreach($faqs as $faq)
                 <div class="faq__item js-accordion-item">
@@ -24,8 +24,6 @@
                     </div>
                 </div>
                 @endforeach
-
- 
             </div>
         </div>
     </div>

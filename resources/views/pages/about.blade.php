@@ -5,13 +5,13 @@
     <div class="breadcrumbs">
         <div class="container">
             <div class="breadcrumbs__wrap">
-                <a href="/">Главная</a>&#8195;/&#8195;<span>О нас</span>
+            <a href="/">Главная</a>&#8195;/&#8195;<span>{{ $page_title }}</span>
             </div>
         </div>
     </div>
     <div class="about">
         <div class="container">
-            <h1 class="sec__title about__title">О нас</h1>
+            <h1 class="sec__title about__title">{{ $page_title }}</h1>
         </div>
         <div class="about__img"></div>
         <div class="container">

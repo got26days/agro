@@ -5,14 +5,14 @@
     <div class="breadcrumbs">
         <div class="container">
             <div class="breadcrumbs__wrap">
-                <a href="/">Главная</a>&#8195;/&#8195;<span>Услуги</span>
+                <a href="/">Главная</a>&#8195;/&#8195;<span>{{ $page_title }}</span>
             </div>
         </div>
     </div>
     <div class="farm">
         <section class="sec farm-sec">
             <div class="container">
-                <h1 class="sec__title farm-sec__title">Услуги</h1>
+                <h1 class="sec__title farm-sec__title">{{ $page_title }}</h1>
                 <div class="farm__wrap" id="wcredits">
                     <div class="farm__blc farm__blc--100 farm-fig-blc">
                         <img src="img/farm/fig-1.png" class="farm-fig-blc__img farm-fig-blc__img--1" alt="">

@@ -87,8 +87,33 @@
             opacity: 0;
         }
     </style>
+    {{-- <script>
+            (function() {
+              var cx = '008143017935988811443:zbrbrrlehi4';
+              var gcse = document.createElement('script');
+              gcse.type = 'text/javascript';
+              gcse.async = true;
+              gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(gcse, s);
+            })();
+          </script>
+          <gcse:search></gcse:search> --}}
 </head>
 <body>
+
+        <script>
+                (function() {
+                  var cx = '008143017935988811443:zbrbrrlehi4';
+                  var gcse = document.createElement('script');
+                  gcse.type = 'text/javascript';
+                  gcse.async = true;
+                  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                  var s = document.getElementsByTagName('script')[0];
+                  s.parentNode.insertBefore(gcse, s);
+                })();
+              </script>
+              <gcse:search></gcse:search>
     <!--[if lt IE 8]>
         <p class="browserhappy">
             Ваш браузер <strong>устарел</strong>. Пожалуйста <a href="https://browsehappy.com/"  target="_blank">обновите</a>.

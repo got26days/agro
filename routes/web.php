@@ -14,13 +14,17 @@
 Route::get('/', 'MainController@index');
 
 Route::get('/o-nas', 'MainController@about');
-Route::get('/uslugi-fermeram', 'MainController@about');
+// Route::get('/uslugi-fermeram', 'MainController@about');
 Route::get('/faq', 'MainController@faq');
 Route::get('/events', 'MainController@events');
 Route::get('/event/{slug}', 'MainController@event');
 Route::get('/download/policy', 'MainController@getDownload');
 Route::get('/direction/{slug}', 'MainController@direction');
 Route::get('/uslugi', 'MainController@servs');
+
+Route::any('/search', 'MainController@search');
+
+// Route::get('/searchpage', 'MainController@searchpage')->name('searchpage');
 
 
 Route::post('/form', 'MainController@form');
