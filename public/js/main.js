@@ -108,7 +108,7 @@ $(document).ready(function(){
     
             if (valid){
                $.ajax({
-    				url: "php/mail.php",
+    				url: "/form",
     				type: "POST",
     				response: "HTML",
     				data: $(this).serialize(),    

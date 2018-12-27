@@ -17,10 +17,13 @@ Route::get('/o-nas', 'MainController@about');
 Route::get('/uslugi-fermeram', 'MainController@about');
 Route::get('/faq', 'MainController@faq');
 Route::get('/events', 'MainController@events');
-Route::get('/event/solo{id}', 'MainController@event');
+Route::get('/event/{slug}', 'MainController@event');
 Route::get('/download/policy', 'MainController@getDownload');
-Route::get('/direction{id}', 'MainController@direction');
+Route::get('/direction/{slug}', 'MainController@direction');
+Route::get('/uslugi', 'MainController@servs');
 
+
+Route::post('/form', 'MainController@form');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

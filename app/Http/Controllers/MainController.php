@@ -10,9 +10,66 @@ use Response;
 use App\Caption;
 use App\Direction;
 use App\Post;
+use App\Serv;
+use Validator;
+use App\Mail;
+use App\Sendmail;
 
 class MainController extends Controller
 {
+
+    public function form(Request $request)
+    {
+        $rules = array();
+
+        if($request['title'] === "Хотите, чтобы мы ответили на ваши вопросы?") {
+            $rules = array(
+                'name' => 'required',
+                'tel' => 'required',
+            );
+        }
+
+        $validator = Validator::make($request->all(), $rules);
+
+        if ($validator->fails())
+        {
+            redirect()->back()->with('success', ['Ошибка, повторите снова']);   
+        }
+
+        $mail = new Mail;
+        $mail->title = $request['title'];
+        $mail->name = $request['name'];
+        $mail->email = $request['email'];
+        $mail->tel = $request['tel'];
+        $mail->text = $request['text'];
+        $mail->save();
+
+        $data = array(
+            'title' => $mail['title'],
+            'name' => $mail['name'],
+            'email' => $mail['email'],
+            'tel' => $mail['tel'],
+            'text' => $mail['text'],
+          );
+  
+        $sendmails = Sendmail::where('send', '=', 'true')->latest()->get();
+
+        if(!empty($sendmails)){
+            foreach($sendmails as $sendmail){
+
+                $sendto = $sendmail['email'];
+
+                \Mail::send('mail.form', $data, function($message) use ($data, $sendto)
+                {
+                    $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход.');
+                });
+
+            }
+        }
+
+        return 'true';    
+    }
+
     public function index()
     {
         $caption = Caption::latest()->first();
@@ -31,9 +88,11 @@ class MainController extends Controller
         return view('pages.about', compact('teams', 'about'));
     }
 
-    public function direction($id)
+    public function direction($slug)
     {   
-        $direction = Direction::find($id);
+        // return $slug;
+
+        $direction = Direction::where('slug', '=', $slug)->latest()->first();
 
         if(!isset($direction)){
             abort(404);
@@ -56,14 +115,14 @@ class MainController extends Controller
 
     public function events()
     {
-        $posts = Post::where('status', '=', 'PUBLISHED')->latest()->paginate(1);
+        $posts = Post::where('status', '=', 'PUBLISHED')->latest()->paginate(5);
 
         return view('pages.events', compact('posts'));
     }
 
-    public function event($id)
+    public function event($slug)
     {   
-        $post = Post::find($id);
+        $post = Post::where('slug', '=', $slug)->latest()->first();
 
         if(!isset($post)){
             abort(404);
@@ -86,5 +145,17 @@ class MainController extends Controller
                 );
 
         return response()->file($file);
+    }
+
+    public function servs()
+    {
+        $servs = [];
+
+        for ($i = 0; $i <= 15; $i++) {
+            $y = $i + 1;
+            $servs[$i] = Serv::where('option', '=', 'option'.$y)->latest()->first();
+        }
+
+        return view('pages.servs', compact('servs'));
     }
 }

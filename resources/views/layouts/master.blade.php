@@ -78,6 +78,14 @@
             justify-content: center;
             align-items: center;
         }
+        .income__row-bar-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .farm__blc-video:hover .farm__blc-video-blind {
+            opacity: 0;
+        }
     </style>
 </head>
 <body>
@@ -95,12 +103,13 @@
             <div class="popup__overlay js-popup-close"></div>
             <div class="popup__main">
                 <button class="btn popup__close js-popup-close" title="Закрыть">Закрыть</button>
-                <form action="php/mail.php" class="popup__form js-form-val">
+                <form action="/form" class="popup__form js-form-val">
+                    @csrf
                     <div class="popup__form-title" id="js-form-title"></div>
                     <input type="text" name="title" class="js-val" id="js-input-title" hidden="hidden">
-                    <input type="text" name="name" class="input popup__input js-val" placeholder="Ваше имя">
-                    <input type="tel" name="tel" class="input popup__input js-val" placeholder="Телефон">
-                    <button class="btn btn--green popup__submit" id="js-popup-btn">Заказать услугу</button>
+                    <input type="text" name="name" class="input popup__input js-val" placeholder="Ваше имя" required>
+                    <input type="tel" name="tel" class="input popup__input js-val" placeholder="Телефон" required>
+                    <button class="btn btn--green popup__submit" id="js-popup-btn" type="submit">Заказать услугу</button>
                 </form>
             </div>
         </div>
@@ -120,7 +129,9 @@
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 
     <script>
-        ymaps.ready(init);
+        if ( window.location.pathname == '/' ){
+            ymaps.ready(init);
+        }
         var map;						
         function init(){     
             map = new ymaps.Map("map", {

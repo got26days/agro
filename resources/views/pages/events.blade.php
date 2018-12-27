@@ -21,7 +21,7 @@
                         <div class="events__item-title">{{ $post->title }}</div>
                         <div class="events__item-txt"></div>
                         <div class="events__item-bar">
-                        <a href="/event/solo{{ $post->id }}" class="events__item-more">Подробнее</a>
+                        <a href="/event/{{ $post->slug }}" class="events__item-more">Подробнее</a>
                         </div>
                     </div>
                 </div>
