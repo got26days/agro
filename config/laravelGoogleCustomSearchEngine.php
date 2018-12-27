@@ -9,7 +9,7 @@ return [
      *
      * !! Attention !! If you change style of your Custom search engine, the ID can be changed
      */
-    'engineId' => '008143017935988811443:zbrbrrlehi4',
+    'engineId' => env('SEARCH_ENIGNE_ID', ''),
 
     /**
      * For generation API key you have to go to https://console.developers.google.com, than
@@ -24,5 +24,5 @@ return [
      *
      * !! Attention !! It can take some time to API key will be authorized, wait 10 mins before starting to use it
      */
-    'apiKey' => 'AIzaSyCc4GBUZdW6UiucQrEja__9viMQOWtccUk'
+    'apiKey' => env('API_KEY_GOOGLE', ''),
 ];
