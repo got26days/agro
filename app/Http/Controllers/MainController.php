@@ -182,7 +182,6 @@ class MainController extends Controller
 
         $fulltext = new LaravelGoogleCustomSearchEngine();
         $results = $fulltext->getResults($q);
-        // $users =  Response::json($users);
 
         $users = [];
 
@@ -196,7 +195,7 @@ class MainController extends Controller
             array_push($users, $new_array);
         }
 
-        return view('pages.searchpage')->with(compact('users'))->withQuery($q);
+        return view('pages.searchpage')->withUsers($users)->withQuery($q);
 
     }
 
