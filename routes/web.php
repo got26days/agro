@@ -26,9 +26,6 @@ Route::get('/uslugi', 'MainController@servs');
 
 Route::any('/search', 'MainController@search');
 
-// Route::get('/searchpage', 'MainController@searchpage')->name('searchpage');
-
-
 Route::post('/form', 'MainController@form');
 
 Route::group(['prefix' => 'admin'], function () {
