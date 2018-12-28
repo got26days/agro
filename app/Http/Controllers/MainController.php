@@ -180,22 +180,9 @@ class MainController extends Controller
     {
         $q = $request['q'];
 
-        // $user = [
-        //     [
-        //         'name' => 'Jim',
-        //         'url' => 'Url1',
-        //         'snippet' => 'snippet1'
-        //     ],
-        //     [
-        //         'name' => 'Jim2',
-        //         'url' => 'Url2',
-        //         'snippet' => 'snippet2'
-        //     ]
-        // ];
-        // $user = GoogleSearch::getResults('The meaning of life'); 
         $fulltext = new LaravelGoogleCustomSearchEngine();
-        $user = $fulltext->getResults('О'); // get first 10 results for query 'some phrase' 
-         return $user;   
+        $user = $fulltext->getResults($q);
+        // return $user;   
 
         if(count($user) > 0)
         return view('pages.searchpage')->withDetails($user)->withQuery ( $q );

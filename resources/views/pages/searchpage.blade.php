@@ -41,13 +41,13 @@
                                 @foreach($details as $user)
                                     <tr>
                                         <td>
-                                            {{ $user['name'] }}
+                                            {{ $user['title'] }}
                                         </td>
                                         <td>
-                                                {{ $user['url'] }}
+                                            {{ $user['link'] }}
                                         </td>
                                         <td>
-                                                {{ $user['snippet'] }}
+                                            {{ $user['snippet'] }}
                                         </td>
                                     </tr>
                                 @endforeach
