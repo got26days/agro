@@ -187,7 +187,7 @@ class MainController extends Controller
         if(count($user) > 0)
         return view('pages.searchpage')->withDetails($user)->withQuery ( $q );
 
-        else return view ('pages.searchpage')->withMessage('Совпадения не найдены, попробуйте еще раз!');
+        else return view ('pages.searchpage')->withDetails($user)->withMessage('Совпадения не найдены, попробуйте еще раз!');
 
     }
 
