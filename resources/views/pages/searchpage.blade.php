@@ -14,46 +14,17 @@
             <!--<p class="sisea-results">2 найдено для "<span class="simplesearch-highlight">поиск</span>"</p>-->
             @if(count($users) > 0)
             <div class="sisea-results-list">
-                <div class="sisea-result">
-                    <a href="search" title="">Результат поиска по "{{ $query }}"</a>
-                    <div class="extract">
-                        <p></p>
-                    </div>
+                <div class="sisea-result" style="margin-bottom: 15px;">
+                    <p>Результат поиска "{{ $query }}"</p>
                 </div>
 
-                <div class="sisea-result">
-                    <div class="extract">
-                        <table style="margin-top: 30px;">
-                            <thead>
-                                <tr>
-                                    <td>
-                                        Name
-                                    </td>
-                                    <td>
-                                        Url
-                                    </td>
-                                    <td>
-                                        snippet
-                                    </td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach($users as $user)
-                                    <tr>
-                                        <td>
-                                            {{ $user['title'] }}
-                                        </td>
-                                        <td>
-                                            <a href="{{ $user['link'] }}">{{ $user['link'] }}</a>
-                                        </td>
-                                        <td>
-                                            {{ $user['snippet'] }}
-                                        </td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                <div class="sisea-results-list">
+                    @foreach($users as $user)
+                    <div class="sisea-result" style="margin-bottom: 15px;">
+                        <a href="{{ $user['link'] }}" title="">{{ $user['title'] }}</a>
+                        <div class="extract"><p>{{ $user['snippet'] }}</p></div>
                     </div>
+                    @endforeach
                 </div>
                 
             </div>
@@ -61,9 +32,8 @@
 
             <div class="sisea-results-list">
                 <div class="sisea-result">
-                    {{-- <a href="search" title="">Совпадений не найдено, попробуйте еще раз.</a> --}}
                     <div class="extract">
-                        <p>Совпадений не найдено, попробуйте еще раз.</p>
+                        <p>По вашему запросу ничего не найдено. Попробуйте ввести похожие по смыслу слова, чтобы получить лучший результат.</p>
                     </div>
                 </div>
             </div>
