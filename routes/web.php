@@ -13,7 +13,7 @@ use Spatie\Sitemap\SitemapGenerator;
 |
 */
 
-Route::get('/', 'MainController@index');
+Route::get('/', 'MainController@index')->name('mainpage');
 
 Route::get('/o-nas', 'MainController@about');
 // Route::get('/uslugi-fermeram', 'MainController@about');

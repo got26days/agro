@@ -26,7 +26,7 @@
                 <li class="main-menu__item"><a href="/uslugi" class="main-menu__link">УСЛУГИ</a></li>
                 <li class="main-menu__item"><a href="/events" class="main-menu__link">СОБЫТИЯ</a></li>
                 <li class="main-menu__item"><a href="/faq" class="main-menu__link">ВОПРОС-ОТВЕТ</a></li>
-                @if(Request::url() === '/')
+                @if(Route::current()->getName() == 'mainpage')
                     <li class="main-menu__item"><a href="#contacts" class="main-menu__link js-scroll">КОНТАКТЫ</a></li>
                 @else
                 <li class="main-menu__item"><a href="/#contacts" class="main-menu__link">КОНТАКТЫ</a></li>
