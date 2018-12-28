@@ -12,7 +12,7 @@
         <div class="container">
             <h1>Результат поиска</h1>
             <!--<p class="sisea-results">2 найдено для "<span class="simplesearch-highlight">поиск</span>"</p>-->
-            @if(count($details) > 0)
+            @if(count($users) > 0)
             <div class="sisea-results-list">
                 <div class="sisea-result">
                     <a href="search" title="">Результат поиска по "{{ $query }}"</a>
@@ -38,13 +38,13 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($details as $user)
+                                @foreach($users as $user)
                                     <tr>
                                         <td>
                                             {{ $user['title'] }}
                                         </td>
                                         <td>
-                                            {{ $user['link'] }}
+                                            <a href="{{ $user['link'] }}">{{ $user['link'] }}</a>
                                         </td>
                                         <td>
                                             {{ $user['snippet'] }}

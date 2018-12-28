@@ -181,13 +181,22 @@ class MainController extends Controller
         $q = $request['q'];
 
         $fulltext = new LaravelGoogleCustomSearchEngine();
-        $user = $fulltext->getResults($q);
-        $user = json_encode($user, true);
+        $results = $fulltext->getResults($q);
+        // $users =  Response::json($users);
 
-        if(count($user) > 0)
-        return view('pages.searchpage')->withDetails($user)->withQuery($q);
+        $users = [];
 
-        else return view ('pages.searchpage')->withDetails($user)->withMessage('Совпадения не найдены, попробуйте еще раз!');
+        foreach($results as $result){
+            $new_array = [
+                'title' => $result->title,
+                'link' => strstr( $result->formattedUrl, '/'),
+                'snippet' => $result->snippet
+            ];
+
+            array_push($users, $new_array);
+        }
+
+        return view('pages.searchpage')->with(compact('users'))->withQuery($q);
 
     }
 
