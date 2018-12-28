@@ -182,7 +182,7 @@ class MainController extends Controller
 
         $fulltext = new LaravelGoogleCustomSearchEngine();
         $user = $fulltext->getResults($q);
-        // return $user;   
+        return $user;   
 
         if(count($user) > 0)
         return view('pages.searchpage')->withDetails($user)->withQuery ( $q );
