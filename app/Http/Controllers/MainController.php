@@ -182,19 +182,14 @@ class MainController extends Controller
 
         $fulltext = new LaravelGoogleCustomSearchEngine();
         $user = $fulltext->getResults($q);
-        // return $user;   
+        $user = json_decode($user, true);
 
         if(count($user) > 0)
-        return view('pages.searchpage')->withDetails($user)->withQuery ( $q );
+        return view('pages.searchpage')->withDetails($user)->withQuery($q);
 
         else return view ('pages.searchpage')->withDetails($user)->withMessage('Совпадения не найдены, попробуйте еще раз!');
 
     }
-
-    // public function searchpage()
-    // {
-    //     return view('pages.searchpage');
-    // }
 
     public function servs()
     {
