@@ -76,8 +76,9 @@ class MainController extends Controller
     {
         $caption = Caption::latest()->first();
 
-        $top_directions = Direction::where('showmainpage', '=', 'true')->latest()->limit(3)->get();
-        $bottom_directions = Direction::where('showmainpage', '=', 'false')->latest()->get();
+        $top_directions = Direction::where('showmainpage', '=', 'option1')->latest()->limit(3)->get();
+        $bottom_directions = Direction::where('showmainpage', '=', 'option2')->latest()->get();
+        // $bottom_directions = Direction::where('showmainpage', '=', 'false')->latest()->get();
 
         $seo = Seo::where('page', '=', 'option5')->latest()->first();
 
