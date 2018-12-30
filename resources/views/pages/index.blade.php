@@ -41,7 +41,7 @@
                     <div class="income__item-main">
                         <h3 class="income__item-title">Инвесторам</h3>
                         <div class="income__item-txt">Мы предоставляем возможность инвестировать в выгодные сельскохозяйственные проекты. У нас вы найдёте актуальные предложения и необходимую аналитику.</div>
-                        <a class="btn income__item-btn" href="/investoram">Участвовать</a>
+                        <a class="btn income__item-btn" href="/direction/investoram">Участвовать</a>
                     </div>
                 </div>
                 <div class="income__item">
@@ -49,7 +49,7 @@
                     <div class="income__item-main">
                         <h3 class="income__item-title">Поставщикам <br>технологий и <br>оборудования</h3>
                         <div class="income__item-txt">Фермерским хозяйствам необходимы новейшие высокотехнологичные разработки. Спрос рождает предложения.</div>
-                        <a class="btn income__item-btn" href="/postavshikam-tehnologij-i-oborudovaniya">Участвовать</a>
+                        <a class="btn income__item-btn" href="/direction/postavshikam-tehnologij-i-oborudovaniya">Участвовать</a>
                     </div>
                 </div>
                 <div class="income__item">
@@ -57,7 +57,7 @@
                     <div class="income__item-main">
                         <h3 class="income__item-title">Агрорынок</h3>
                         <div class="income__item-txt">Для каждого продавца найдётся свой покупатель. Сбыт и оптовое приобретение продукции посредством нашего сайта.</div>
-                        <a class="btn income__item-btn" href="/agrorynok">Участвовать</a>
+                        <a class="btn income__item-btn" href="/direction/agrorynok/">Участвовать</a>
                     </div>
                 </div>
 
