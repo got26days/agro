@@ -36,16 +36,30 @@
                 <div class="income__row-bar">
                     <a class="btn income__row-bar-btn" href="/uslugi">Участвовать</a>
                 </div>
-                @foreach($top_directions as $top_direction)
                 <div class="income__item">
-                    <div class="income__item-img"><img src="/storage/{{ $top_direction->image }}" alt=""></div>
+                    <div class="income__item-img"><img src="img/pic/invest.jpg" alt=""></div>
                     <div class="income__item-main">
-                    <h3 class="income__item-title">{{ $top_direction->title }}</h3>
-                        <div class="income__item-txt">{{ $top_direction->description }}</div>
-                    <a class="btn income__item-btn" href="/direction/{{ $top_direction->slug }}">Участвовать</a>
+                        <h3 class="income__item-title">Инвесторам</h3>
+                        <div class="income__item-txt">Мы предоставляем возможность инвестировать в выгодные сельскохозяйственные проекты. У нас вы найдёте актуальные предложения и необходимую аналитику.</div>
+                        <a class="btn income__item-btn" href="/investoram">Участвовать</a>
                     </div>
                 </div>
-                @endforeach
+                <div class="income__item">
+                    <div class="income__item-img"><img src="img/pic/tech.jpg" alt=""></div>
+                    <div class="income__item-main">
+                        <h3 class="income__item-title">Поставщикам <br>технологий и <br>оборудования</h3>
+                        <div class="income__item-txt">Фермерским хозяйствам необходимы новейшие высокотехнологичные разработки. Спрос рождает предложения.</div>
+                        <a class="btn income__item-btn" href="/postavshikam-tehnologij-i-oborudovaniya">Участвовать</a>
+                    </div>
+                </div>
+                <div class="income__item">
+                    <div class="income__item-img"><img src="img/pic/agrorinok.jpg" alt=""></div>
+                    <div class="income__item-main">
+                        <h3 class="income__item-title">Агрорынок</h3>
+                        <div class="income__item-txt">Для каждого продавца найдётся свой покупатель. Сбыт и оптовое приобретение продукции посредством нашего сайта.</div>
+                        <a class="btn income__item-btn" href="/agrorynok">Участвовать</a>
+                    </div>
+                </div>
 
             </div>
         </div>
