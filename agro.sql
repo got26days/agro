@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 29, 2018 at 03:42 AM
+-- Generation Time: Dec 30, 2018 at 06:21 AM
 -- Server version: 5.7.22-0ubuntu18.04.1
 -- PHP Version: 7.2.4-1+ubuntu18.04.1+deb.sury.org+1
 
@@ -41,6 +41,29 @@ CREATE TABLE `abouts` (
 
 INSERT INTO `abouts` (`id`, `body`, `created_at`, `updated_at`) VALUES
 (1, '<p><strong>Компания &laquo;Агродоход&raquo;</strong> &mdash; это группа разнопрофильных профессионалов в сфере агропрома. Наша миссия &mdash; создание мощного альянса участников реального сектора экономики. Это способствует организационной и экономической эффективности.</p>\r\n<p><strong>Наши цели и задачи:</strong></p>\r\n<ul>\r\n<li>создание сервиса одного окна для сельхозпроизводителей;</li>\r\n<li>освободить российского фермера от груза непрофильной, но необходимой деятельности;</li>\r\n<li>создать необходимые условия, чтобы сельхозпроизводитель мог видеть и управлять результатами своего труда в реальном времени;</li>\r\n<li>обозначить точки роста каждого хозяйства.</li>\r\n</ul>', '2018-12-24 17:13:40', '2018-12-24 17:13:40');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `activs`
+--
+
+CREATE TABLE `activs` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `option` text COLLATE utf8mb4_unicode_ci,
+  `link` text COLLATE utf8mb4_unicode_ci,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `activs`
+--
+
+INSERT INTO `activs` (`id`, `option`, `link`, `created_at`, `updated_at`) VALUES
+(1, 'option2', '/uslugi#wcredits', '2018-12-30 06:08:26', '2018-12-30 06:08:26'),
+(2, 'option6', '/uslugi#wbuh', '2018-12-30 06:08:42', '2018-12-30 06:08:42'),
+(3, 'option8', '/uslugi#wurob', '2018-12-30 06:08:58', '2018-12-30 06:08:58');
 
 -- --------------------------------------------------------
 
@@ -250,7 +273,12 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (131, 17, 'seo_keywords', 'text', 'Seo Keywords', 0, 1, 1, 1, 1, 1, '{}', 5),
 (132, 17, 'page_title', 'text', 'H1', 0, 1, 1, 1, 1, 1, '{}', 6),
 (133, 17, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 7),
-(134, 17, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 8);
+(134, 17, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 8),
+(135, 18, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(136, 18, 'option', 'select_dropdown', 'Выбор направления', 0, 1, 1, 1, 1, 1, '{\"default\":\"option1\",\"options\":{\"option1\":\"\\u0414\\u0438\\u0441\\u0442\\u0440\\u0438\\u0431\\u044c\\u044e\\u0446\\u0438\\u044f \\u0438 \\u0441\\u0431\\u044b\\u0442 \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0446\\u0438\\u0438\",\"option2\":\"\\u0413\\u0440\\u0430\\u043d\\u0442\\u044b, \\u0441\\u0443\\u0431\\u0441\\u0438\\u0434\\u0438\\u0438 \\u0438 \\u043a\\u0440\\u0435\\u0434\\u0438\\u0442\\u043e\\u0432\\u0430\\u043d\\u0438\\u0435\",\"option3\":\"\\u0415\\u0434\\u0438\\u043d\\u044b\\u0439 \\u0446\\u0435\\u043d\\u0442\\u0440 \\u0437\\u0430\\u043a\\u0443\\u043f\\u043e\\u043a\",\"option4\":\"\\u041f\\u0440\\u0438\\u0432\\u043b\\u0435\\u0447\\u0435\\u043d\\u0438\\u0435 \\u0438\\u043d\\u0432\\u0435\\u0441\\u0442\\u0438\\u0446\\u0438\\u0439\",\"option5\":\"\\u0422\\u0435\\u0445\\u043d\\u043e\\u043b\\u043e\\u0433\\u0438\\u0438 \\u0438 \\u0438\\u043d\\u043d\\u043e\\u0432\\u0430\\u0446\\u0438\\u0438\",\"option6\":\"\\u0411\\u0443\\u0445\\u0433\\u0430\\u043b\\u0442\\u0435\\u0440\\u0441\\u043a\\u043e\\u0435 \\u0441\\u043e\\u043f\\u0440\\u043e\\u0432\\u043e\\u0436\\u0434\\u0435\\u043d\\u0438\\u0435\",\"option7\":\"\\u041f\\u0440\\u043e\\u0438\\u0437\\u0432\\u043e\\u0434\\u0441\\u0442\\u0432\\u0435\\u043d\\u043d\\u044b\\u0439 \\u0430\\u0443\\u0434\\u0438\\u0442\",\"option8\":\"\\u042e\\u0440\\u0438\\u0434\\u0438\\u0447\\u0435\\u0441\\u043a\\u043e\\u0435 \\u0441\\u043e\\u043f\\u0440\\u043e\\u0432\\u043e\\u0436\\u0434\\u0435\\u043d\\u0438\\u0435\",\"option9\":\"\\u0410\\u043d\\u0430\\u043b\\u0438\\u0442\\u0438\\u0447\\u0435\\u0441\\u043a\\u0438\\u0439 \\u0446\\u0435\\u043d\\u0442\\u0440\"}}', 2),
+(137, 18, 'link', 'text', 'ссылка на страницу', 0, 1, 1, 1, 1, 1, '{}', 3),
+(138, 18, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 4),
+(139, 18, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5);
 
 -- --------------------------------------------------------
 
@@ -297,7 +325,8 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (14, 'servs', 'servs', 'Услуги', 'Услуги', 'voyager-news', 'App\\Serv', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-26 20:21:06', '2018-12-26 20:21:06'),
 (15, 'mails', 'mails', 'Сообщения', 'Сообщения', 'voyager-mail', 'App\\Mail', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-26 22:51:33', '2018-12-26 22:51:33'),
 (16, 'sendmails', 'sendmails', 'Emails для почты', 'Emails для почты', 'voyager-mail', 'App\\Sendmail', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-26 23:58:57', '2018-12-26 23:58:57'),
-(17, 'seos', 'seos', 'SEO', 'SEO', 'voyager-character', 'App\\Seo', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-27 20:44:29', '2018-12-27 21:03:45');
+(17, 'seos', 'seos', 'SEO', 'SEO', 'voyager-character', 'App\\Seo', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-27 20:44:29', '2018-12-27 21:03:45'),
+(18, 'activs', 'activs', 'Направления на главной', 'Направления на главной', 'voyager-dot-2', 'App\\Activ', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-30 05:56:41', '2018-12-30 05:56:41');
 
 -- --------------------------------------------------------
 
@@ -465,19 +494,19 @@ CREATE TABLE `menu_items` (
 --
 
 INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class`, `color`, `parent_id`, `order`, `created_at`, `updated_at`, `route`, `parameters`) VALUES
-(1, 1, 'Dashboard', '', '_self', 'voyager-boat', NULL, NULL, 16, '2018-12-24 15:43:17', '2018-12-29 03:18:51', 'voyager.dashboard', NULL),
-(2, 1, 'Media', '', '_self', 'voyager-images', NULL, NULL, 15, '2018-12-24 15:43:17', '2018-12-29 03:18:51', 'voyager.media.index', NULL),
-(3, 1, 'Users', '', '_self', 'voyager-person', NULL, NULL, 18, '2018-12-24 15:43:17', '2018-12-29 03:18:51', 'voyager.users.index', NULL),
-(4, 1, 'Roles', '', '_self', 'voyager-lock', NULL, NULL, 17, '2018-12-24 15:43:17', '2018-12-29 03:18:51', 'voyager.roles.index', NULL),
-(5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 14, '2018-12-24 15:43:17', '2018-12-29 03:18:45', NULL, NULL),
+(1, 1, 'Dashboard', '', '_self', 'voyager-boat', NULL, NULL, 17, '2018-12-24 15:43:17', '2018-12-30 06:07:27', 'voyager.dashboard', NULL),
+(2, 1, 'Media', '', '_self', 'voyager-images', NULL, NULL, 16, '2018-12-24 15:43:17', '2018-12-30 06:07:27', 'voyager.media.index', NULL),
+(3, 1, 'Users', '', '_self', 'voyager-person', NULL, NULL, 19, '2018-12-24 15:43:17', '2018-12-30 06:07:27', 'voyager.users.index', NULL),
+(4, 1, 'Roles', '', '_self', 'voyager-lock', NULL, NULL, 18, '2018-12-24 15:43:17', '2018-12-30 06:07:27', 'voyager.roles.index', NULL),
+(5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 15, '2018-12-24 15:43:17', '2018-12-30 06:07:27', NULL, NULL),
 (6, 1, 'Menu Builder', '', '_self', 'voyager-list', NULL, 5, 1, '2018-12-24 15:43:17', '2018-12-27 00:15:10', 'voyager.menus.index', NULL),
 (7, 1, 'Database', '', '_self', 'voyager-data', NULL, 5, 2, '2018-12-24 15:43:17', '2018-12-27 00:15:10', 'voyager.database.index', NULL),
 (8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 3, '2018-12-24 15:43:17', '2018-12-27 00:15:10', 'voyager.compass.index', NULL),
 (9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 4, '2018-12-24 15:43:17', '2018-12-27 00:15:10', 'voyager.bread.index', NULL),
-(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 13, '2018-12-24 15:43:17', '2018-12-29 03:18:43', 'voyager.settings.index', NULL),
-(11, 1, 'Categories', '', '_self', 'voyager-categories', NULL, NULL, 20, '2018-12-24 15:43:19', '2018-12-29 03:18:45', 'voyager.categories.index', NULL),
+(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 14, '2018-12-24 15:43:17', '2018-12-30 06:07:32', 'voyager.settings.index', NULL),
+(11, 1, 'Categories', '', '_self', 'voyager-categories', NULL, NULL, 21, '2018-12-24 15:43:19', '2018-12-30 06:07:27', 'voyager.categories.index', NULL),
 (12, 1, 'События', '', '_self', 'voyager-ticket', '#000000', NULL, 1, '2018-12-24 15:43:19', '2018-12-29 03:18:03', 'voyager.posts.index', 'null'),
-(13, 1, 'Pages', '', '_self', 'voyager-file-text', NULL, NULL, 19, '2018-12-24 15:43:19', '2018-12-29 03:18:45', 'voyager.pages.index', NULL),
+(13, 1, 'Pages', '', '_self', 'voyager-file-text', NULL, NULL, 20, '2018-12-24 15:43:19', '2018-12-30 06:07:27', 'voyager.pages.index', NULL),
 (14, 1, 'Hooks', '', '_self', 'voyager-hook', NULL, 5, 5, '2018-12-24 15:43:20', '2018-12-27 00:15:10', 'voyager.hooks', NULL),
 (15, 1, 'Вопросы и ответы', '', '_self', 'voyager-question', NULL, NULL, 3, '2018-12-24 15:49:02', '2018-12-29 03:18:08', 'voyager.faqs.index', NULL),
 (16, 1, 'Команда', '', '_self', 'voyager-people', NULL, NULL, 2, '2018-12-24 17:03:14', '2018-12-29 03:18:05', 'voyager.teams.index', NULL),
@@ -486,10 +515,11 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (19, 1, 'телефоны', '', '_self', 'voyager-telephone', NULL, NULL, 5, '2018-12-25 16:32:28', '2018-12-29 03:18:16', 'voyager.phones.index', NULL),
 (20, 1, 'Главная страница', '', '_self', 'voyager-bar-chart', '#000000', NULL, 7, '2018-12-25 16:42:18', '2018-12-29 03:18:22', 'voyager.captions.index', 'null'),
 (21, 1, 'Направления деят.', '', '_self', 'voyager-tools', '#000000', NULL, 8, '2018-12-25 17:15:26', '2018-12-29 03:18:25', 'voyager.directions.index', 'null'),
-(22, 1, 'Услуги', '', '_self', 'voyager-news', NULL, NULL, 9, '2018-12-26 20:21:07', '2018-12-29 03:18:29', 'voyager.servs.index', NULL),
-(23, 1, 'Сообщения', '', '_self', 'voyager-mail', NULL, NULL, 10, '2018-12-26 22:51:34', '2018-12-29 03:18:31', 'voyager.mails.index', NULL),
-(24, 1, 'Emails для почты', '', '_self', 'voyager-mail', NULL, NULL, 12, '2018-12-26 23:58:57', '2018-12-29 03:18:38', 'voyager.sendmails.index', NULL),
-(25, 1, 'SEO', '', '_self', 'voyager-character', NULL, NULL, 11, '2018-12-27 20:44:29', '2018-12-29 03:18:35', 'voyager.seos.index', NULL);
+(22, 1, 'Услуги', '', '_self', 'voyager-news', NULL, NULL, 10, '2018-12-26 20:21:07', '2018-12-30 06:07:32', 'voyager.servs.index', NULL),
+(23, 1, 'Сообщения', '', '_self', 'voyager-mail', NULL, NULL, 11, '2018-12-26 22:51:34', '2018-12-30 06:07:32', 'voyager.mails.index', NULL),
+(24, 1, 'Emails для почты', '', '_self', 'voyager-mail', NULL, NULL, 13, '2018-12-26 23:58:57', '2018-12-30 06:07:32', 'voyager.sendmails.index', NULL),
+(25, 1, 'SEO', '', '_self', 'voyager-character', NULL, NULL, 12, '2018-12-27 20:44:29', '2018-12-30 06:07:32', 'voyager.seos.index', NULL),
+(26, 1, 'Направления на главной', '', '_self', 'voyager-dot-2', NULL, NULL, 9, '2018-12-30 05:56:41', '2018-12-30 06:07:32', 'voyager.activs.index', NULL);
 
 -- --------------------------------------------------------
 
@@ -689,7 +719,12 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (93, 'read_seos', 'seos', '2018-12-27 20:44:29', '2018-12-27 20:44:29'),
 (94, 'edit_seos', 'seos', '2018-12-27 20:44:29', '2018-12-27 20:44:29'),
 (95, 'add_seos', 'seos', '2018-12-27 20:44:29', '2018-12-27 20:44:29'),
-(96, 'delete_seos', 'seos', '2018-12-27 20:44:29', '2018-12-27 20:44:29');
+(96, 'delete_seos', 'seos', '2018-12-27 20:44:29', '2018-12-27 20:44:29'),
+(97, 'browse_activs', 'activs', '2018-12-30 05:56:41', '2018-12-30 05:56:41'),
+(98, 'read_activs', 'activs', '2018-12-30 05:56:41', '2018-12-30 05:56:41'),
+(99, 'edit_activs', 'activs', '2018-12-30 05:56:41', '2018-12-30 05:56:41'),
+(100, 'add_activs', 'activs', '2018-12-30 05:56:41', '2018-12-30 05:56:41'),
+(101, 'delete_activs', 'activs', '2018-12-30 05:56:41', '2018-12-30 05:56:41');
 
 -- --------------------------------------------------------
 
@@ -801,7 +836,12 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (93, 1),
 (94, 1),
 (95, 1),
-(96, 1);
+(96, 1),
+(97, 1),
+(98, 1),
+(99, 1),
+(100, 1),
+(101, 1);
 
 -- --------------------------------------------------------
 
@@ -1124,6 +1164,12 @@ ALTER TABLE `abouts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `activs`
+--
+ALTER TABLE `activs`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `captions`
 --
 ALTER TABLE `captions`
@@ -1309,6 +1355,12 @@ ALTER TABLE `abouts`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `activs`
+--
+ALTER TABLE `activs`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `captions`
 --
 ALTER TABLE `captions`
@@ -1324,13 +1376,13 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=140;
 
 --
 -- AUTO_INCREMENT for table `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `directions`
@@ -1366,7 +1418,7 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT for table `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -1384,7 +1436,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
 
 --
 -- AUTO_INCREMENT for table `phones`
