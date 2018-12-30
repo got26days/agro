@@ -16,6 +16,7 @@ use App\Mail;
 use App\Sendmail;
 use App\Seo;
 use JanDrda\LaravelGoogleCustomSearchEngine\LaravelGoogleCustomSearchEngine;
+use App\Activ;
 
 class MainController extends Controller
 {
@@ -86,7 +87,20 @@ class MainController extends Controller
         $seodescription = $seo['seo_description'];
         $seokeywords = $seo['seo_keywords'];
 
-        return view('pages.index', compact('caption', 'top_directions', 'bottom_directions', 'seotitle', 'seokeywords', 'seodescription'));
+        $circl1 = Activ::where('option', '=', 'option1')->latest()->first();
+        $circl2 = Activ::where('option', '=', 'option2')->latest()->first();
+        $circl3 = Activ::where('option', '=', 'option3')->latest()->first();
+        $circl4 = Activ::where('option', '=', 'option4')->latest()->first();
+        $circl5 = Activ::where('option', '=', 'option5')->latest()->first();
+        $circl6 = Activ::where('option', '=', 'option6')->latest()->first();
+        $circl7 = Activ::where('option', '=', 'option7')->latest()->first();
+        $circl8 = Activ::where('option', '=', 'option8')->latest()->first();
+        $circl9 = Activ::where('option', '=', 'option9')->latest()->first();
+        
+
+        return view('pages.index', compact('caption', 'top_directions', 'bottom_directions', 'seotitle', 'seokeywords', 'seodescription', 
+        'circl1', 'circl2', 'circl3', 'circl4',
+        'circl5', 'circl6', 'circl7', 'circl8','circl9'));
     }
 
     public function about()

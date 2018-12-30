@@ -55,27 +55,47 @@
             <h2 class="sec__title">Направления деятельности </h2>
             <div class="directions__txt">«Агродоход» — это сервис «одного окна», позволяющий Вам начать свой сельскохозяйственный бизнес или оптимизировать существующий. <br>«Агродоход» — всё, что необходимо фермеру:</div>
             <div class="directions__wrap directions__wrap--first">
-                <a href="/uslugi#wcredits" class="directions__item">
-                        <div class="directions__item-img"><img src="/img/pic/ring-2.png" alt=""></div>
-                        <div class="directions__item-txt">Гранты, субсидии и кредитование</div>
+                <a href="{{ $circl1['link'] }}" class="directions__item">
+                    <div class="directions__item-img"><img src="img/pic/ring-1.png" alt=""></div>
+                    <div class="directions__item-txt">Дистрибьюция и сбыт продукции</div>
                 </a>
-                <a href="/uslugi#wbuh" class="directions__item">
-                    <div class="directions__item-img"><img src="/img/pic/ring-6.png" alt=""></div>
-                    <div class="directions__item-txt">Бухгалтерское сопровождение</div>
+                <a href="{{ $circl2['link'] }}" class="directions__item">
+                    <div class="directions__item-img"><img src="img/pic/ring-2.png" alt=""></div>
+                    <div class="directions__item-txt">Гранты, субсидии и кредитование</div>
                 </a>
-                <a href="/uslugi#wurob" class="directions__item">
-                    <div class="directions__item-img"><img src="/img/pic/ring-8.png" alt=""></div>
-                    <div class="directions__item-txt">Юридическое сопровождение</div>
+                <a href="{{ $circl3['link'] }}" class="directions__item">
+                    <div class="directions__item-img"><img src="img/pic/ring-3.png" alt=""></div>
+                    <div class="directions__item-txt">Единый центр закупок</div>
+                </a>
+                <a href="{{ $circl4['link'] }}" class="directions__item">
+                    <div class="directions__item-img"><img src="img/pic/ring-4.png" alt=""></div>
+                    <div class="directions__item-txt">Привлечение инвестиций</div>
                 </a>
             </div>
             <div class="directions__wrap">                    
-                @foreach($bottom_directions as $bottom_direction)
-                <a href="/direction/{{ $bottom_direction->slug }}" class="directions__item">
-                    <div class="directions__item-img"><img src="/storage/{{ $bottom_direction->circle }}" alt=""></div>
-                    <div class="directions__item-txt">{{ $bottom_direction->title }}</div>
+                <a href="{{ $circl5['link'] }}" class="directions__item">
+                    <div class="directions__item-img"><img src="img/pic/ring-5.png" alt=""></div>
+                    <div class="directions__item-txt">Технологии и инновации</div>
                 </a>
-                @endforeach
+                <a href="{{ $circl6['link'] }}" class="directions__item">
+                    <div class="directions__item-img"><img src="img/pic/ring-6.png" alt=""></div>
+                    <div class="directions__item-txt">Бухгалтерское сопровождение</div>
+                </a>
+                <a href="{{ $circl7['link'] }}" class="directions__item">
+                    <div class="directions__item-img"><img src="img/pic/ring-7.png" alt=""></div>
+                    <div class="directions__item-txt">Производственный аудит</div>
+                </a>
+                <a href="{{ $circl8['link'] }}" class="directions__item">
+                    <div class="directions__item-img"><img src="img/pic/ring-8.png" alt=""></div>
+                    <div class="directions__item-txt">Юридическое сопровождение</div>
+                </a>
+                <a href="{{ $circl9['link'] }}" class="directions__item">
+                    <div class="directions__item-img"><img src="img/pic/ring-9.png" alt=""></div>
+                    <div class="directions__item-txt">Аналитический центр</div>
+                </a>
             </div>
+
+
         </div>
     </section>            
     <section class="sec-form">
