@@ -2,78 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
     
-    <loc>http://agro.test/</loc>
-        <lastmod>2018-12-28T04:13:33+00:00</lastmod>
+    <loc>http://agrodohod-laravel.bigdatak.com/</loc>
+        <lastmod>2018-12-28T04:34:59+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
     
-    <loc>http://agro.test/direction/agrorynok</loc>
-        <lastmod>2018-12-28T04:13:36+00:00</lastmod>
+    <loc>http://agrodohod-laravel.bigdatak.com/direction/agrorynok</loc>
+        <lastmod>2018-12-28T04:35:00+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
     
-    <loc>http://agro.test/download/policy</loc>
-        <lastmod>2018-12-28T04:13:36+00:00</lastmod>
+    <loc>http://agrodohod-laravel.bigdatak.com/download/policy</loc>
+        <lastmod>2018-12-28T04:35:00+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
     
-    <loc>http://agro.test/event/latest-post</loc>
-        <lastmod>2018-12-28T04:13:37+00:00</lastmod>
+    <loc>http://agrodohod-laravel.bigdatak.com/event/latest-post</loc>
+        <lastmod>2018-12-28T04:35:01+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
     
-    <loc>http://agro.test/event/lorem-ipsum-post</loc>
-        <lastmod>2018-12-28T04:13:37+00:00</lastmod>
+    <loc>http://agrodohod-laravel.bigdatak.com/event/lorem-ipsum-post</loc>
+        <lastmod>2018-12-28T04:35:01+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
     
-    <loc>http://agro.test/event/my-sample-post</loc>
-        <lastmod>2018-12-28T04:13:37+00:00</lastmod>
+    <loc>http://agrodohod-laravel.bigdatak.com/event/my-sample-post</loc>
+        <lastmod>2018-12-28T04:35:01+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
     
-    <loc>http://agro.test/event/yarr-post</loc>
-        <lastmod>2018-12-28T04:13:37+00:00</lastmod>
+    <loc>http://agrodohod-laravel.bigdatak.com/event/yarr-post</loc>
+        <lastmod>2018-12-28T04:35:01+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
     
-    <loc>http://agro.test/events</loc>
-        <lastmod>2018-12-28T04:13:34+00:00</lastmod>
+    <loc>http://agrodohod-laravel.bigdatak.com/events</loc>
+        <lastmod>2018-12-28T04:35:00+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
     
-    <loc>http://agro.test/faq</loc>
-        <lastmod>2018-12-28T04:13:36+00:00</lastmod>
+    <loc>http://agrodohod-laravel.bigdatak.com/faq</loc>
+        <lastmod>2018-12-28T04:34:59+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
     
-    <loc>http://agro.test/o-nas</loc>
-        <lastmod>2018-12-28T04:13:35+00:00</lastmod>
+    <loc>http://agrodohod-laravel.bigdatak.com/o-nas</loc>
+        <lastmod>2018-12-28T04:35:00+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
     
-    <loc>http://agro.test/uslugi</loc>
-        <lastmod>2018-12-28T04:13:36+00:00</lastmod>
+    <loc>http://agrodohod-laravel.bigdatak.com/uslugi</loc>
+        <lastmod>2018-12-28T04:35:00+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
