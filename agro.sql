@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 16, 2019 at 11:54 AM
+-- Generation Time: Jan 16, 2019 at 04:58 PM
 -- Server version: 5.7.22-0ubuntu18.04.1
 -- PHP Version: 7.2.4-1+ubuntu18.04.1+deb.sury.org+1
 
@@ -127,17 +127,27 @@ CREATE TABLE `credits` (
   `seo_description` text COLLATE utf8mb4_unicode_ci,
   `seo_keywords` text COLLATE utf8mb4_unicode_ci,
   `slug` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `temp_id` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `body` text COLLATE utf8mb4_unicode_ci,
+  `image` text COLLATE utf8mb4_unicode_ci,
+  `image1` text COLLATE utf8mb4_unicode_ci,
+  `title1` text COLLATE utf8mb4_unicode_ci,
+  `body1` text COLLATE utf8mb4_unicode_ci,
+  `image2` text COLLATE utf8mb4_unicode_ci,
+  `title2` text COLLATE utf8mb4_unicode_ci,
+  `body2` text COLLATE utf8mb4_unicode_ci,
+  `image3` text COLLATE utf8mb4_unicode_ci,
+  `title3` text COLLATE utf8mb4_unicode_ci,
+  `body3` text COLLATE utf8mb4_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `credits`
 --
 
-INSERT INTO `credits` (`id`, `title`, `seo_title`, `seo_description`, `seo_keywords`, `slug`, `temp_id`, `created_at`, `updated_at`) VALUES
-(1, 'Заголовок1', 'Заголовок2', 'Заголовок3', 'Заголовок5', 'zagolovok1', '1', '2019-01-16 10:34:11', '2019-01-16 10:34:11');
+INSERT INTO `credits` (`id`, `title`, `seo_title`, `seo_description`, `seo_keywords`, `slug`, `created_at`, `updated_at`, `body`, `image`, `image1`, `title1`, `body1`, `image2`, `title2`, `body2`, `image3`, `title3`, `body3`) VALUES
+(1, 'Заголовок1', 'Заголовок2', 'Заголовок3', 'Заголовок5', 'zagolovok1', '2019-01-16 10:34:00', '2019-01-16 16:53:14', 'Проанализировав ваше хозяйство и кредитную историю, наши специалисты помогут вам получить кредит или государственные субсидии на выгодных условиях. Для получения точной информации по вашей ситуации, заполните заявку на нашем сайте. Наши специалисты свяжутся с вами в максимально короткий срок. Мы найдём оптимальное решение для получения вами необходимого финансирования.', 'credits/January2019/JdF8XXAG36xIqk0RCz8c.jpg', 'credits/January2019/C9alfXKWS3pOGFmCvbkJ.jpg', 'Работаем в сжатые сроки', 'АгроДоход быстро подготовит и передаст в банки все необходимые документы. \r\nЗатем наши специалисты отсортируют и обработают ответы кредитных организаций. \r\nДеньги вы получите в сжатые сроки.', 'credits/January2019/fkbjLVs4UQ4fX2xG4vV5.jpg', 'Самые выгодные условия  на рынке', 'Нередко кредитные договоры содержат крайне невыгодные и даже кабальные для заёмщика условия. Однако разобраться в запутанных и пространных формулировках под силу только профессиональному юристу. \r\nНаши специалисты помогут вам выбрать самое лучшее предложение на рынке кредитования.', 'credits/January2019/wm8ufBERD7gu5hGbB2Vs.jpg', 'Даже с плохой кредитной историей', 'Специалисты АгроДохода помогут вам найти выход из самой трудной ситуации. \r\nПомогаем получить кредит даже с плохой кредитной историей.');
 
 -- --------------------------------------------------------
 
@@ -319,16 +329,6 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (151, 19, 'body3', 'text_area', 'Текст 3', 0, 0, 1, 1, 1, 1, '{}', 12),
 (152, 19, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 13),
 (153, 19, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 14),
-(154, 20, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
-(155, 20, 'title', 'text', 'Заголовок', 0, 1, 1, 1, 1, 1, '{}', 2),
-(156, 20, 'seo_title', 'text', 'Seo Title', 0, 1, 1, 1, 1, 1, '{}', 3),
-(157, 20, 'seo_description', 'text', 'Seo Description', 0, 1, 1, 1, 1, 1, '{}', 4),
-(158, 20, 'seo_keywords', 'text', 'Seo Keywords', 0, 1, 1, 1, 1, 1, '{}', 5),
-(159, 20, 'slug', 'text', 'Slug', 1, 0, 0, 1, 1, 1, '{\"slugify\":{\"origin\":\"title\",\"forceUpdate\":true},\"validation\":{\"rule\":\"unique:directions,slug\"}}', 6),
-(160, 20, 'temp_id', 'text', 'Temp Id', 1, 1, 1, 1, 1, 1, '{}', 7),
-(161, 20, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 8),
-(162, 20, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 9),
-(164, 20, 'credit_belongsto_temp_relationship', 'relationship', 'temps', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Temp\",\"table\":\"temps\",\"type\":\"belongsTo\",\"column\":\"temp_id\",\"key\":\"id\",\"label\":\"body\",\"pivot_table\":\"abouts\",\"pivot\":\"0\",\"taggable\":\"0\"}', 10),
 (165, 23, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (166, 23, 'title', 'text', 'Заголовок', 0, 1, 1, 1, 1, 1, '{}', 2),
 (167, 23, 'seo_title', 'text', 'Seo Title', 0, 1, 1, 1, 1, 1, '{}', 3),
@@ -338,7 +338,26 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (171, 23, 'temp_id', 'text', 'Temp Id', 1, 1, 1, 1, 1, 1, '{}', 7),
 (172, 23, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 8),
 (173, 23, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 9),
-(174, 23, 'dcredit_belongsto_temp_relationship', 'relationship', 'temps', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Temp\",\"table\":\"temps\",\"type\":\"belongsTo\",\"column\":\"temp_id\",\"key\":\"id\",\"label\":\"body\",\"pivot_table\":\"abouts\",\"pivot\":\"0\",\"taggable\":\"0\"}', 10);
+(174, 23, 'dcredit_belongsto_temp_relationship', 'relationship', 'temps', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Temp\",\"table\":\"temps\",\"type\":\"belongsTo\",\"column\":\"temp_id\",\"key\":\"id\",\"label\":\"body\",\"pivot_table\":\"abouts\",\"pivot\":\"0\",\"taggable\":\"0\"}', 10),
+(175, 24, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(176, 24, 'title', 'text', 'Заголовок', 0, 1, 1, 1, 1, 1, '{}', 2),
+(177, 24, 'seo_title', 'text', 'Seo Title', 0, 1, 1, 1, 1, 1, '{}', 3),
+(178, 24, 'seo_description', 'text', 'Seo Description', 0, 1, 1, 1, 1, 1, '{}', 4),
+(179, 24, 'seo_keywords', 'text', 'Seo Keywords', 0, 1, 1, 1, 1, 1, '{}', 5),
+(180, 24, 'slug', 'text', 'Slug', 1, 1, 1, 1, 1, 1, '{\"slugify\":{\"origin\":\"title\",\"forceUpdate\":true},\"validation\":{\"rule\":\"unique:directions,slug\"}}', 6),
+(181, 24, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 7),
+(182, 24, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 8),
+(183, 24, 'body', 'text_area', 'Текст', 0, 0, 1, 1, 1, 1, '{}', 9),
+(184, 24, 'image', 'image', 'Изображение', 0, 0, 1, 1, 1, 1, '{\"resize\":{\"width\":\"600\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 10),
+(185, 24, 'image1', 'image', 'Изображение 1', 0, 0, 1, 1, 1, 1, '{\"resize\":{\"width\":\"500\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 11),
+(186, 24, 'title1', 'text', 'Заголовок 1', 0, 0, 1, 1, 1, 1, '{}', 12),
+(187, 24, 'body1', 'text_area', 'Текст 1', 0, 0, 1, 1, 1, 1, '{}', 13),
+(188, 24, 'image2', 'image', 'Изображение 2', 0, 0, 1, 1, 1, 1, '{\"resize\":{\"width\":\"500\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 14),
+(189, 24, 'title2', 'text', 'Заголовок 2', 0, 0, 1, 1, 1, 1, '{}', 15),
+(190, 24, 'body2', 'text_area', 'Текст 2', 0, 0, 1, 1, 1, 1, '{}', 16),
+(191, 24, 'image3', 'image', 'Изображение 3', 0, 0, 1, 1, 1, 1, '{\"resize\":{\"width\":\"500\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 17),
+(192, 24, 'title3', 'text', 'Заголовок 3', 0, 0, 1, 1, 1, 1, '{}', 18),
+(193, 24, 'body3', 'text_area', 'Текст 3', 0, 0, 1, 1, 1, 1, '{}', 19);
 
 -- --------------------------------------------------------
 
@@ -388,9 +407,9 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (17, 'seos', 'seos', 'SEO', 'SEO', 'voyager-character', 'App\\Seo', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-27 20:44:29', '2018-12-27 21:03:45'),
 (18, 'activs', 'activs', 'Направления на главной', 'Направления на главной', 'voyager-dot-2', 'App\\Activ', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-30 05:56:41', '2018-12-30 05:56:41'),
 (19, 'temps', 'temps', 'Шаблон', 'Шаблоны', 'voyager-window-list', 'App\\Temp', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2019-01-16 10:17:10', '2019-01-16 10:24:18'),
-(20, 'credits', 'credits', 'Страница', 'Страницы', 'voyager-file-text', 'App\\Credit', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2019-01-16 10:29:23', '2019-01-16 11:15:34'),
 (21, 'Domaincredits', 'domaincredits', 'Страница поддомена', 'Страницы поддомена', 'voyager-file-text', 'App\\Domaincredit', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2019-01-16 10:58:12', '2019-01-16 10:58:12'),
-(23, 'dcredits', 'dcredits', 'Страница поддомена', 'Страницы поддомена', 'voyager-file-text', 'App\\Dcredit', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2019-01-16 11:12:55', '2019-01-16 11:16:01');
+(23, 'dcredits', 'dcredits', 'Страница поддомена', 'Страницы поддомена', 'voyager-file-text', 'App\\Dcredit', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2019-01-16 11:12:55', '2019-01-16 11:16:01'),
+(24, 'credits', 'credits', 'Страница', 'Страницы', NULL, 'App\\Credit', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2019-01-16 16:48:17', '2019-01-16 16:48:17');
 
 -- --------------------------------------------------------
 
@@ -836,11 +855,6 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (104, 'edit_temps', 'temps', '2019-01-16 10:17:11', '2019-01-16 10:17:11'),
 (105, 'add_temps', 'temps', '2019-01-16 10:17:11', '2019-01-16 10:17:11'),
 (106, 'delete_temps', 'temps', '2019-01-16 10:17:11', '2019-01-16 10:17:11'),
-(107, 'browse_credits', 'credits', '2019-01-16 10:29:23', '2019-01-16 10:29:23'),
-(108, 'read_credits', 'credits', '2019-01-16 10:29:23', '2019-01-16 10:29:23'),
-(109, 'edit_credits', 'credits', '2019-01-16 10:29:23', '2019-01-16 10:29:23'),
-(110, 'add_credits', 'credits', '2019-01-16 10:29:23', '2019-01-16 10:29:23'),
-(111, 'delete_credits', 'credits', '2019-01-16 10:29:23', '2019-01-16 10:29:23'),
 (112, 'browse_Domaincredits', 'Domaincredits', '2019-01-16 10:58:12', '2019-01-16 10:58:12'),
 (113, 'read_Domaincredits', 'Domaincredits', '2019-01-16 10:58:12', '2019-01-16 10:58:12'),
 (114, 'edit_Domaincredits', 'Domaincredits', '2019-01-16 10:58:12', '2019-01-16 10:58:12'),
@@ -850,7 +864,12 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (118, 'read_dcredits', 'dcredits', '2019-01-16 11:12:55', '2019-01-16 11:12:55'),
 (119, 'edit_dcredits', 'dcredits', '2019-01-16 11:12:55', '2019-01-16 11:12:55'),
 (120, 'add_dcredits', 'dcredits', '2019-01-16 11:12:55', '2019-01-16 11:12:55'),
-(121, 'delete_dcredits', 'dcredits', '2019-01-16 11:12:55', '2019-01-16 11:12:55');
+(121, 'delete_dcredits', 'dcredits', '2019-01-16 11:12:55', '2019-01-16 11:12:55'),
+(122, 'browse_credits', 'credits', '2019-01-16 16:48:17', '2019-01-16 16:48:17'),
+(123, 'read_credits', 'credits', '2019-01-16 16:48:17', '2019-01-16 16:48:17'),
+(124, 'edit_credits', 'credits', '2019-01-16 16:48:17', '2019-01-16 16:48:17'),
+(125, 'add_credits', 'credits', '2019-01-16 16:48:17', '2019-01-16 16:48:17'),
+(126, 'delete_credits', 'credits', '2019-01-16 16:48:17', '2019-01-16 16:48:17');
 
 -- --------------------------------------------------------
 
@@ -973,11 +992,6 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (104, 1),
 (105, 1),
 (106, 1),
-(107, 1),
-(108, 1),
-(109, 1),
-(110, 1),
-(111, 1),
 (112, 1),
 (113, 1),
 (114, 1),
@@ -987,7 +1001,12 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (118, 1),
 (119, 1),
 (120, 1),
-(121, 1);
+(121, 1),
+(122, 1),
+(123, 1),
+(124, 1),
+(125, 1),
+(126, 1);
 
 -- --------------------------------------------------------
 
@@ -1576,13 +1595,13 @@ ALTER TABLE `credits`
 -- AUTO_INCREMENT for table `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=175;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=194;
 
 --
 -- AUTO_INCREMENT for table `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `dcredits`
@@ -1642,7 +1661,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=122;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=127;
 
 --
 -- AUTO_INCREMENT for table `phones`
