@@ -17,6 +17,7 @@ use App\Sendmail;
 use App\Seo;
 use JanDrda\LaravelGoogleCustomSearchEngine\LaravelGoogleCustomSearchEngine;
 use App\Activ;
+use App\Credit;
 
 class MainController extends Controller
 {
@@ -71,6 +72,21 @@ class MainController extends Controller
         }
 
         return 'true';    
+    }
+
+    public function credit($slug)
+    {
+        $credit = Credit::where('slug', '=', $slug)->latest()->first();
+
+        if(!isset($credit)){
+            abort(404);
+        }
+
+        $seotitle = $credit['seo_title'];
+        $seodescription = $credit['seo_description'];
+        $seokeywords = $credit['seo_keywords'];
+
+        return view('pages.credit', compact('credit', 'seotitle', 'seokeywords', 'seodescription'));
     }
 
     public function index()

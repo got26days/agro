@@ -82,6 +82,17 @@ $(document).ready(function(){
         $('#js-popup-btn').html(formBtn);
         popupOpen()
     });
+
+    $('.js-order-btn-two').on('click', function(){
+        var formTitle = $(this).attr('data-titletwo'),
+            formTitleTwo = $(this).attr('data-title'),
+            formBtn = $(this).attr('data-btn');
+        $('#js-form-title').html(formTitleTwo);
+        $('#js-input-title').val(formTitle);
+        $('#js-popup-btn').html(formBtn);
+        popupOpen()
+    });
+
     $('.js-popup-close').on('click', function(){
         popupClose();
     });

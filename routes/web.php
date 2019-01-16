@@ -13,21 +13,38 @@ use Spatie\Sitemap\SitemapGenerator;
 |
 */
 
-Route::get('/', 'MainController@index')->name('mainpage');
 
-Route::get('/o-nas', 'MainController@about');
-// Route::get('/uslugi-fermeram', 'MainController@about');
-Route::get('/faq', 'MainController@faq');
-Route::get('/events', 'MainController@events');
-Route::get('/event/{slug}', 'MainController@event');
-Route::get('/download/policy', 'MainController@getDownload');
-Route::get('/direction/{slug}', 'MainController@direction');
-Route::get('/uslugi', 'MainController@servs');
+$domain = env('APP_MAIN_DOMAIN');
 
-Route::any('/search', 'MainController@search');
 
-Route::post('/form', 'MainController@form');
+Route::group(['domain' => $domain], function()
+    {
+        Route::get('/', 'MainController@index')->name('mainpage');
 
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
+        Route::get('/o-nas', 'MainController@about');
+        // Route::get('/uslugi-fermeram', 'MainController@about');
+        Route::get('/faq', 'MainController@faq');
+        Route::get('/events', 'MainController@events');
+        Route::get('/event/{slug}', 'MainController@event');
+
+        Route::get('/credit/{slug}', 'MainController@credit');
+
+        Route::get('/download/policy', 'MainController@getDownload');
+        Route::get('/direction/{slug}', 'MainController@direction');
+        Route::get('/uslugi', 'MainController@servs');
+        
+        Route::any('/search', 'MainController@search');
+        
+        Route::post('/form', 'MainController@form');
+        
+        Route::group(['prefix' => 'admin'], function () {
+            Voyager::routes();
+        });
+}); 
+
+$subdomain = env('APP_SUB_DOMAIN');
+
+Route::group(['domain' => $subdomain], function () {
+    Route::post('/form', 'MainController@form');
+    Route::get('/{slug}', 'DomainController@credit');
 });

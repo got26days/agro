@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 30, 2018 at 06:21 AM
+-- Generation Time: Jan 16, 2019 at 11:54 AM
 -- Server version: 5.7.22-0ubuntu18.04.1
 -- PHP Version: 7.2.4-1+ubuntu18.04.1+deb.sury.org+1
 
@@ -63,7 +63,8 @@ CREATE TABLE `activs` (
 INSERT INTO `activs` (`id`, `option`, `link`, `created_at`, `updated_at`) VALUES
 (1, 'option2', '/uslugi#wcredits', '2018-12-30 06:08:26', '2018-12-30 06:08:26'),
 (2, 'option6', '/uslugi#wbuh', '2018-12-30 06:08:42', '2018-12-30 06:08:42'),
-(3, 'option8', '/uslugi#wurob', '2018-12-30 06:08:58', '2018-12-30 06:08:58');
+(3, 'option8', '/uslugi#wurob', '2018-12-30 06:08:58', '2018-12-30 06:08:58'),
+(4, 'option7', 'test', '2018-12-30 06:24:58', '2018-12-30 06:24:58');
 
 -- --------------------------------------------------------
 
@@ -112,6 +113,31 @@ CREATE TABLE `categories` (
 INSERT INTO `categories` (`id`, `parent_id`, `order`, `name`, `slug`, `created_at`, `updated_at`) VALUES
 (1, NULL, 1, 'Category 1', 'category-1', '2018-12-24 15:43:19', '2018-12-24 15:43:19'),
 (2, NULL, 1, 'Category 2', 'category-2', '2018-12-24 15:43:19', '2018-12-24 15:43:19');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `credits`
+--
+
+CREATE TABLE `credits` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `title` text COLLATE utf8mb4_unicode_ci,
+  `seo_title` text COLLATE utf8mb4_unicode_ci,
+  `seo_description` text COLLATE utf8mb4_unicode_ci,
+  `seo_keywords` text COLLATE utf8mb4_unicode_ci,
+  `slug` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `temp_id` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `credits`
+--
+
+INSERT INTO `credits` (`id`, `title`, `seo_title`, `seo_description`, `seo_keywords`, `slug`, `temp_id`, `created_at`, `updated_at`) VALUES
+(1, 'Заголовок1', 'Заголовок2', 'Заголовок3', 'Заголовок5', 'zagolovok1', '1', '2019-01-16 10:34:11', '2019-01-16 10:34:11');
 
 -- --------------------------------------------------------
 
@@ -231,18 +257,18 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (89, 12, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 3),
 (90, 13, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (91, 13, 'title', 'text', 'Закголовок', 0, 1, 1, 1, 1, 1, '{}', 2),
-(92, 13, 'body', 'rich_text_box', 'Текст', 0, 1, 1, 1, 1, 1, '{}', 4),
+(92, 13, 'body', 'rich_text_box', 'Текст', 0, 0, 1, 1, 1, 1, '{}', 4),
 (93, 13, 'background', 'image', 'Фоновое изображение на странице', 0, 1, 1, 1, 1, 1, '{\"resize\":{\"width\":\"1500\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 5),
 (94, 13, 'formtitle', 'text_area', 'Текст над формой', 0, 1, 1, 1, 1, 1, '{}', 6),
 (95, 13, 'circle', 'image', 'Изображение в круге', 0, 1, 1, 1, 1, 1, '{\"resize\":{\"width\":\"179\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 7),
 (96, 13, 'image', 'image', 'Изображение для главной', 0, 1, 1, 1, 1, 1, '{\"resize\":{\"width\":\"360\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 8),
-(97, 13, 'showmainpage', 'select_dropdown', 'Показать на главной', 0, 1, 1, 1, 1, 1, '{\"default\":\"option1\",\"options\":{\"option1\":\"\\u041d\\u0435 \\u043f\\u043e\\u043a\\u0430\\u0437\\u043e\\u0432\\u0430\\u0442\\u044c\",\"option2\":\"\\u041f\\u043e\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c \\u043a\\u0430\\u0440\\u0442\\u043e\\u0447\\u043a\\u043e\\u0439 \\u043d\\u0430 \\u0433\\u043b\\u0430\\u0432\\u043d\\u043e\\u0439\",\"option3\":\"\\u041f\\u043e\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c \\u0432 \\u043a\\u0440\\u0443\\u0433\\u0435 \\u043d\\u0430 \\u0433\\u043b\\u0430\\u0432\\u043d\\u043e\\u0439\"}}', 9),
+(97, 13, 'showmainpage', 'select_dropdown', 'Показать на главной', 0, 0, 0, 0, 0, 0, '{\"default\":\"option1\",\"options\":{\"option1\":\"\\u041d\\u0435 \\u043f\\u043e\\u043a\\u0430\\u0437\\u043e\\u0432\\u0430\\u0442\\u044c\",\"option2\":\"\\u041f\\u043e\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c \\u043a\\u0430\\u0440\\u0442\\u043e\\u0447\\u043a\\u043e\\u0439 \\u043d\\u0430 \\u0433\\u043b\\u0430\\u0432\\u043d\\u043e\\u0439\"}}', 9),
 (98, 13, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 10),
 (99, 13, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 11),
 (100, 13, 'seo_title', 'text', 'Seo Title', 0, 1, 1, 1, 1, 1, '{}', 12),
 (101, 13, 'seo_decription', 'text', 'Seo Decription', 0, 1, 1, 1, 1, 1, '{}', 13),
 (102, 13, 'seo_keywords', 'text', 'Seo Keywords', 0, 1, 1, 1, 1, 1, '{}', 14),
-(103, 13, 'description', 'text_area', 'Краткое описание', 0, 1, 1, 1, 1, 1, '{}', 3),
+(103, 13, 'description', 'text_area', 'Краткое описание', 0, 0, 1, 1, 1, 1, '{}', 3),
 (104, 13, 'slug', 'text', 'Slug', 0, 1, 1, 1, 1, 1, '{\"slugify\":{\"origin\":\"title\",\"forceUpdate\":true},\"validation\":{\"rule\":\"unique:directions,slug\"}}', 15),
 (105, 12, 'banner', 'image', 'Банер', 0, 1, 1, 1, 1, 1, '{\"resize\":{\"width\":\"null\",\"height\":\"449\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 4),
 (106, 12, 'seo_text', 'text_area', 'Seo Текст', 0, 1, 1, 1, 1, 1, '{}', 7),
@@ -278,7 +304,41 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (136, 18, 'option', 'select_dropdown', 'Выбор направления', 0, 1, 1, 1, 1, 1, '{\"default\":\"option1\",\"options\":{\"option1\":\"\\u0414\\u0438\\u0441\\u0442\\u0440\\u0438\\u0431\\u044c\\u044e\\u0446\\u0438\\u044f \\u0438 \\u0441\\u0431\\u044b\\u0442 \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0446\\u0438\\u0438\",\"option2\":\"\\u0413\\u0440\\u0430\\u043d\\u0442\\u044b, \\u0441\\u0443\\u0431\\u0441\\u0438\\u0434\\u0438\\u0438 \\u0438 \\u043a\\u0440\\u0435\\u0434\\u0438\\u0442\\u043e\\u0432\\u0430\\u043d\\u0438\\u0435\",\"option3\":\"\\u0415\\u0434\\u0438\\u043d\\u044b\\u0439 \\u0446\\u0435\\u043d\\u0442\\u0440 \\u0437\\u0430\\u043a\\u0443\\u043f\\u043e\\u043a\",\"option4\":\"\\u041f\\u0440\\u0438\\u0432\\u043b\\u0435\\u0447\\u0435\\u043d\\u0438\\u0435 \\u0438\\u043d\\u0432\\u0435\\u0441\\u0442\\u0438\\u0446\\u0438\\u0439\",\"option5\":\"\\u0422\\u0435\\u0445\\u043d\\u043e\\u043b\\u043e\\u0433\\u0438\\u0438 \\u0438 \\u0438\\u043d\\u043d\\u043e\\u0432\\u0430\\u0446\\u0438\\u0438\",\"option6\":\"\\u0411\\u0443\\u0445\\u0433\\u0430\\u043b\\u0442\\u0435\\u0440\\u0441\\u043a\\u043e\\u0435 \\u0441\\u043e\\u043f\\u0440\\u043e\\u0432\\u043e\\u0436\\u0434\\u0435\\u043d\\u0438\\u0435\",\"option7\":\"\\u041f\\u0440\\u043e\\u0438\\u0437\\u0432\\u043e\\u0434\\u0441\\u0442\\u0432\\u0435\\u043d\\u043d\\u044b\\u0439 \\u0430\\u0443\\u0434\\u0438\\u0442\",\"option8\":\"\\u042e\\u0440\\u0438\\u0434\\u0438\\u0447\\u0435\\u0441\\u043a\\u043e\\u0435 \\u0441\\u043e\\u043f\\u0440\\u043e\\u0432\\u043e\\u0436\\u0434\\u0435\\u043d\\u0438\\u0435\",\"option9\":\"\\u0410\\u043d\\u0430\\u043b\\u0438\\u0442\\u0438\\u0447\\u0435\\u0441\\u043a\\u0438\\u0439 \\u0446\\u0435\\u043d\\u0442\\u0440\"}}', 2),
 (137, 18, 'link', 'text', 'ссылка на страницу', 0, 1, 1, 1, 1, 1, '{}', 3),
 (138, 18, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 4),
-(139, 18, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5);
+(139, 18, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5),
+(140, 19, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(141, 19, 'body', 'text_area', 'Текст', 0, 1, 1, 1, 1, 1, '{}', 2),
+(142, 19, 'image', 'image', 'Изображение', 0, 1, 1, 1, 1, 1, '{\"resize\":{\"width\":\"600\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 3),
+(143, 19, 'image1', 'image', 'Изображение 1', 0, 0, 1, 1, 1, 1, '{\"resize\":{\"width\":\"500\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 4),
+(144, 19, 'title1', 'text', 'Заголовок 1', 0, 0, 1, 1, 1, 1, '{}', 5),
+(145, 19, 'body1', 'text_area', 'Текст 1', 0, 0, 1, 1, 1, 1, '{}', 6),
+(146, 19, 'image2', 'image', 'Изображение 2', 0, 0, 1, 1, 1, 1, '{\"resize\":{\"width\":\"500\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 7),
+(147, 19, 'title2', 'text', 'Заголовок 2', 0, 0, 1, 1, 1, 1, '{}', 8),
+(148, 19, 'body2', 'text_area', 'Текст 2', 0, 0, 1, 1, 1, 1, '{}', 9),
+(149, 19, 'image3', 'image', 'Изображение 2', 0, 0, 1, 1, 1, 1, '{\"resize\":{\"width\":\"500\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 10),
+(150, 19, 'title3', 'text', 'Заголовок 3', 0, 0, 1, 1, 1, 1, '{}', 11),
+(151, 19, 'body3', 'text_area', 'Текст 3', 0, 0, 1, 1, 1, 1, '{}', 12),
+(152, 19, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 13),
+(153, 19, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 14),
+(154, 20, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(155, 20, 'title', 'text', 'Заголовок', 0, 1, 1, 1, 1, 1, '{}', 2),
+(156, 20, 'seo_title', 'text', 'Seo Title', 0, 1, 1, 1, 1, 1, '{}', 3),
+(157, 20, 'seo_description', 'text', 'Seo Description', 0, 1, 1, 1, 1, 1, '{}', 4),
+(158, 20, 'seo_keywords', 'text', 'Seo Keywords', 0, 1, 1, 1, 1, 1, '{}', 5),
+(159, 20, 'slug', 'text', 'Slug', 1, 0, 0, 1, 1, 1, '{\"slugify\":{\"origin\":\"title\",\"forceUpdate\":true},\"validation\":{\"rule\":\"unique:directions,slug\"}}', 6),
+(160, 20, 'temp_id', 'text', 'Temp Id', 1, 1, 1, 1, 1, 1, '{}', 7),
+(161, 20, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 8),
+(162, 20, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 9),
+(164, 20, 'credit_belongsto_temp_relationship', 'relationship', 'temps', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Temp\",\"table\":\"temps\",\"type\":\"belongsTo\",\"column\":\"temp_id\",\"key\":\"id\",\"label\":\"body\",\"pivot_table\":\"abouts\",\"pivot\":\"0\",\"taggable\":\"0\"}', 10),
+(165, 23, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(166, 23, 'title', 'text', 'Заголовок', 0, 1, 1, 1, 1, 1, '{}', 2),
+(167, 23, 'seo_title', 'text', 'Seo Title', 0, 1, 1, 1, 1, 1, '{}', 3),
+(168, 23, 'seo_description', 'text', 'Seo Description', 0, 1, 1, 1, 1, 1, '{}', 4),
+(169, 23, 'seo_keywords', 'text', 'Seo Keywords', 0, 1, 1, 1, 1, 1, '{}', 5),
+(170, 23, 'slug', 'text', 'Slug', 1, 0, 0, 1, 1, 1, '{\"slugify\":{\"origin\":\"title\",\"forceUpdate\":true},\"validation\":{\"rule\":\"unique:directions,slug\"}}', 6),
+(171, 23, 'temp_id', 'text', 'Temp Id', 1, 1, 1, 1, 1, 1, '{}', 7),
+(172, 23, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 8),
+(173, 23, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 9),
+(174, 23, 'dcredit_belongsto_temp_relationship', 'relationship', 'temps', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Temp\",\"table\":\"temps\",\"type\":\"belongsTo\",\"column\":\"temp_id\",\"key\":\"id\",\"label\":\"body\",\"pivot_table\":\"abouts\",\"pivot\":\"0\",\"taggable\":\"0\"}', 10);
 
 -- --------------------------------------------------------
 
@@ -321,12 +381,41 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (10, 'footers', 'footers', 'Footer', 'Footers', 'voyager-archive', 'App\\Footer', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-25 16:19:08', '2018-12-27 00:11:40'),
 (11, 'phones', 'phones', 'Телефон', 'телефоны', 'voyager-telephone', 'App\\Phone', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-25 16:32:28', '2018-12-25 16:32:28'),
 (12, 'captions', 'captions', 'Главная страница', 'Главная страница', 'voyager-bar-chart', 'App\\Caption', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-25 16:42:18', '2018-12-26 18:45:48'),
-(13, 'directions', 'directions', 'Направление деятиельности', 'Направления деятельности', NULL, 'App\\Direction', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-25 17:15:26', '2018-12-29 03:16:34'),
+(13, 'directions', 'directions', 'Направление деятиельности', 'Направления деятельности', NULL, 'App\\Direction', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-25 17:15:26', '2018-12-30 06:51:38'),
 (14, 'servs', 'servs', 'Услуги', 'Услуги', 'voyager-news', 'App\\Serv', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-26 20:21:06', '2018-12-26 20:21:06'),
 (15, 'mails', 'mails', 'Сообщения', 'Сообщения', 'voyager-mail', 'App\\Mail', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-26 22:51:33', '2018-12-26 22:51:33'),
 (16, 'sendmails', 'sendmails', 'Emails для почты', 'Emails для почты', 'voyager-mail', 'App\\Sendmail', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-26 23:58:57', '2018-12-26 23:58:57'),
 (17, 'seos', 'seos', 'SEO', 'SEO', 'voyager-character', 'App\\Seo', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-27 20:44:29', '2018-12-27 21:03:45'),
-(18, 'activs', 'activs', 'Направления на главной', 'Направления на главной', 'voyager-dot-2', 'App\\Activ', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-30 05:56:41', '2018-12-30 05:56:41');
+(18, 'activs', 'activs', 'Направления на главной', 'Направления на главной', 'voyager-dot-2', 'App\\Activ', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-30 05:56:41', '2018-12-30 05:56:41'),
+(19, 'temps', 'temps', 'Шаблон', 'Шаблоны', 'voyager-window-list', 'App\\Temp', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2019-01-16 10:17:10', '2019-01-16 10:24:18'),
+(20, 'credits', 'credits', 'Страница', 'Страницы', 'voyager-file-text', 'App\\Credit', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2019-01-16 10:29:23', '2019-01-16 11:15:34'),
+(21, 'Domaincredits', 'domaincredits', 'Страница поддомена', 'Страницы поддомена', 'voyager-file-text', 'App\\Domaincredit', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2019-01-16 10:58:12', '2019-01-16 10:58:12'),
+(23, 'dcredits', 'dcredits', 'Страница поддомена', 'Страницы поддомена', 'voyager-file-text', 'App\\Dcredit', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2019-01-16 11:12:55', '2019-01-16 11:16:01');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dcredits`
+--
+
+CREATE TABLE `dcredits` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `title` text COLLATE utf8mb4_unicode_ci,
+  `seo_title` text COLLATE utf8mb4_unicode_ci,
+  `seo_description` text COLLATE utf8mb4_unicode_ci,
+  `seo_keywords` text COLLATE utf8mb4_unicode_ci,
+  `slug` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `temp_id` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `dcredits`
+--
+
+INSERT INTO `dcredits` (`id`, `title`, `seo_title`, `seo_description`, `seo_keywords`, `slug`, `temp_id`, `created_at`, `updated_at`) VALUES
+(1, 'Заголовок 231', '222', '333', '444', 'zagolovok-231', '1', '2019-01-16 11:16:26', '2019-01-16 11:16:26');
 
 -- --------------------------------------------------------
 
@@ -357,7 +446,13 @@ CREATE TABLE `directions` (
 --
 
 INSERT INTO `directions` (`id`, `title`, `body`, `background`, `formtitle`, `circle`, `image`, `showmainpage`, `created_at`, `updated_at`, `seo_title`, `seo_decription`, `seo_keywords`, `description`, `slug`) VALUES
-(1, 'Агрорынок', '<p>В России активно развиваются многие отрасли животноводства, которые обладают впечатляющей экономической эффективностью и могут приносить существенную прибыль не только конкретному фермеру, но и обеспечить наращивание внутреннего валового продукта во всей стране.</p>\r\n<p>Содержание статьи:</p>\r\n<ul>\r\n<li>Отрасли российского животноводства</li>\r\n<li>Состояние и динамика развития отрасли</li>\r\n<li>Эффективность животноводческой отрасли России</li>\r\n<li>Карта российского животноводства</li>\r\n<li>Животноводство &mdash; стратегическая отрасль экономики России.</li>\r\n</ul>', 'directions/December2018/gN71WQg1FUwA8bS21qN4.jpg', 'Хотите продать или купить сельхозпродукцию?', 'directions/December2018/IakvKZKvps7noCh5qkcj.png', 'directions/December2018/ESz4ECpTTfFYLaytCY9s.jpg', 'false', '2018-12-25 17:18:00', '2018-12-26 18:25:10', 'seo_titleas', 'seo_decc', 'keywords', 'Для каждого продавца найдётся свой покупатель. Сбыт и оптовое приобретение продукции посредством нашего сайта.', 'agrorynok');
+(1, 'Агрорынок', '<p>В России активно развиваются многие отрасли животноводства, которые обладают впечатляющей экономической эффективностью и могут приносить существенную прибыль не только конкретному фермеру, но и обеспечить наращивание внутреннего валового продукта во всей стране.</p>\r\n<p>Содержание статьи:</p>\r\n<ul>\r\n<li>Отрасли российского животноводства</li>\r\n<li>Состояние и динамика развития отрасли</li>\r\n<li>Эффективность животноводческой отрасли России</li>\r\n<li>Карта российского животноводства</li>\r\n<li>Животноводство &mdash; стратегическая отрасль экономики России.</li>\r\n</ul>', 'directions/December2018/gN71WQg1FUwA8bS21qN4.jpg', 'Хотите продать или купить сельхозпродукцию?', 'directions/December2018/IakvKZKvps7noCh5qkcj.png', 'directions/December2018/ESz4ECpTTfFYLaytCY9s.jpg', 'false', '2018-12-25 17:18:00', '2018-12-26 18:25:10', 'seo_titleas', 'seo_decc', 'keywords', 'Для каждого продавца найдётся свой покупатель. Сбыт и оптовое приобретение продукции посредством нашего сайта.', 'agrorynok'),
+(2, 'Инвесторам', '<p>11</p>', NULL, '111', NULL, NULL, NULL, '2018-12-30 06:51:00', '2018-12-30 06:59:18', NULL, NULL, NULL, '1111', 'investoram'),
+(3, 'Поставщикам технологий и оборудования', NULL, NULL, NULL, NULL, NULL, NULL, '2018-12-30 06:51:46', '2018-12-30 06:51:46', NULL, NULL, NULL, NULL, 'postavshikam-tehnologij-i-oborudovaniya'),
+(4, 'Единый центр закупок', NULL, NULL, NULL, NULL, NULL, NULL, '2018-12-30 06:52:28', '2018-12-30 06:52:28', NULL, NULL, NULL, NULL, 'edinyj-centr-zakupok'),
+(5, 'Привлечение инвестиций', NULL, NULL, NULL, NULL, NULL, NULL, '2018-12-30 06:52:48', '2018-12-30 06:52:48', NULL, NULL, NULL, NULL, 'privlechenie-investicij'),
+(6, 'Производственный аудит', NULL, NULL, NULL, NULL, NULL, NULL, '2018-12-30 06:53:11', '2018-12-30 06:53:11', NULL, NULL, NULL, NULL, 'proizvodstvennyj-audit'),
+(7, 'Аналитический центр', NULL, NULL, NULL, NULL, NULL, NULL, '2018-12-30 06:53:26', '2018-12-30 06:53:26', NULL, NULL, NULL, NULL, 'analiticheskij-centr');
 
 -- --------------------------------------------------------
 
@@ -445,7 +540,15 @@ INSERT INTO `mails` (`id`, `title`, `name`, `email`, `tel`, `text`, `created_at`
 (17, 'Операции с землей и недвижимостью', '123213', NULL, '123123', NULL, '2018-12-27 00:05:33', '2018-12-27 00:05:33'),
 (18, 'Операции с землей и недвижимостью', '123213', NULL, '123123', NULL, '2018-12-27 00:05:49', '2018-12-27 00:05:49'),
 (19, 'страница \'Агрорынок\'', '123123', '123@123.com', NULL, 'asd213', '2018-12-27 00:06:15', '2018-12-27 00:06:15'),
-(20, 'страница \'Агрорынок\'', '123123', '123@123.com', NULL, 'asd213', '2018-12-27 00:09:51', '2018-12-27 00:09:51');
+(20, 'страница \'Агрорынок\'', '123123', '123@123.com', NULL, 'asd213', '2018-12-27 00:09:51', '2018-12-27 00:09:51'),
+(21, 'Запрос на кредит', '123', NULL, '123123', '123', '2019-01-16 09:19:04', '2019-01-16 09:19:04'),
+(22, 'Оставить заявку на кредитование или субсидии', '213213', NULL, '123123', NULL, '2019-01-16 09:34:19', '2019-01-16 09:34:19'),
+(23, 'Оставить заявку на гранты, кредитование и субсидии', '213213', NULL, '123123', NULL, '2019-01-16 09:37:59', '2019-01-16 09:37:59'),
+(24, 'Оставить заявку', '123312', NULL, '123123', NULL, '2019-01-16 09:52:28', '2019-01-16 09:52:28'),
+(25, 'Заголовок', '123213', NULL, '342234', NULL, '2019-01-16 09:55:34', '2019-01-16 09:55:34'),
+(26, 'Заголовок1', '123213', NULL, '123123', '123213', '2019-01-16 10:49:25', '2019-01-16 10:49:25'),
+(27, 'Заголовок1', '432434', NULL, '124', NULL, '2019-01-16 10:49:30', '2019-01-16 10:49:30'),
+(28, 'Заголовок 231', '31321', NULL, '1233', NULL, '2019-01-16 11:23:29', '2019-01-16 11:23:29');
 
 -- --------------------------------------------------------
 
@@ -494,19 +597,19 @@ CREATE TABLE `menu_items` (
 --
 
 INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class`, `color`, `parent_id`, `order`, `created_at`, `updated_at`, `route`, `parameters`) VALUES
-(1, 1, 'Dashboard', '', '_self', 'voyager-boat', NULL, NULL, 17, '2018-12-24 15:43:17', '2018-12-30 06:07:27', 'voyager.dashboard', NULL),
-(2, 1, 'Media', '', '_self', 'voyager-images', NULL, NULL, 16, '2018-12-24 15:43:17', '2018-12-30 06:07:27', 'voyager.media.index', NULL),
-(3, 1, 'Users', '', '_self', 'voyager-person', NULL, NULL, 19, '2018-12-24 15:43:17', '2018-12-30 06:07:27', 'voyager.users.index', NULL),
-(4, 1, 'Roles', '', '_self', 'voyager-lock', NULL, NULL, 18, '2018-12-24 15:43:17', '2018-12-30 06:07:27', 'voyager.roles.index', NULL),
-(5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 15, '2018-12-24 15:43:17', '2018-12-30 06:07:27', NULL, NULL),
+(1, 1, 'Dashboard', '', '_self', 'voyager-boat', NULL, NULL, 20, '2018-12-24 15:43:17', '2019-01-16 11:22:53', 'voyager.dashboard', NULL),
+(2, 1, 'Media', '', '_self', 'voyager-images', NULL, NULL, 19, '2018-12-24 15:43:17', '2019-01-16 11:22:53', 'voyager.media.index', NULL),
+(3, 1, 'Users', '', '_self', 'voyager-person', NULL, NULL, 22, '2018-12-24 15:43:17', '2019-01-16 11:22:53', 'voyager.users.index', NULL),
+(4, 1, 'Roles', '', '_self', 'voyager-lock', NULL, NULL, 21, '2018-12-24 15:43:17', '2019-01-16 11:22:53', 'voyager.roles.index', NULL),
+(5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 18, '2018-12-24 15:43:17', '2019-01-16 11:22:53', NULL, NULL),
 (6, 1, 'Menu Builder', '', '_self', 'voyager-list', NULL, 5, 1, '2018-12-24 15:43:17', '2018-12-27 00:15:10', 'voyager.menus.index', NULL),
 (7, 1, 'Database', '', '_self', 'voyager-data', NULL, 5, 2, '2018-12-24 15:43:17', '2018-12-27 00:15:10', 'voyager.database.index', NULL),
 (8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 3, '2018-12-24 15:43:17', '2018-12-27 00:15:10', 'voyager.compass.index', NULL),
 (9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 4, '2018-12-24 15:43:17', '2018-12-27 00:15:10', 'voyager.bread.index', NULL),
-(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 14, '2018-12-24 15:43:17', '2018-12-30 06:07:32', 'voyager.settings.index', NULL),
-(11, 1, 'Categories', '', '_self', 'voyager-categories', NULL, NULL, 21, '2018-12-24 15:43:19', '2018-12-30 06:07:27', 'voyager.categories.index', NULL),
+(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 17, '2018-12-24 15:43:17', '2019-01-16 11:22:53', 'voyager.settings.index', NULL),
+(11, 1, 'Categories', '', '_self', 'voyager-categories', NULL, NULL, 24, '2018-12-24 15:43:19', '2019-01-16 11:22:53', 'voyager.categories.index', NULL),
 (12, 1, 'События', '', '_self', 'voyager-ticket', '#000000', NULL, 1, '2018-12-24 15:43:19', '2018-12-29 03:18:03', 'voyager.posts.index', 'null'),
-(13, 1, 'Pages', '', '_self', 'voyager-file-text', NULL, NULL, 20, '2018-12-24 15:43:19', '2018-12-30 06:07:27', 'voyager.pages.index', NULL),
+(13, 1, 'Pages', '', '_self', 'voyager-file-text', NULL, NULL, 23, '2018-12-24 15:43:19', '2019-01-16 11:22:53', 'voyager.pages.index', NULL),
 (14, 1, 'Hooks', '', '_self', 'voyager-hook', NULL, 5, 5, '2018-12-24 15:43:20', '2018-12-27 00:15:10', 'voyager.hooks', NULL),
 (15, 1, 'Вопросы и ответы', '', '_self', 'voyager-question', NULL, NULL, 3, '2018-12-24 15:49:02', '2018-12-29 03:18:08', 'voyager.faqs.index', NULL),
 (16, 1, 'Команда', '', '_self', 'voyager-people', NULL, NULL, 2, '2018-12-24 17:03:14', '2018-12-29 03:18:05', 'voyager.teams.index', NULL),
@@ -519,7 +622,10 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (23, 1, 'Сообщения', '', '_self', 'voyager-mail', NULL, NULL, 11, '2018-12-26 22:51:34', '2018-12-30 06:07:32', 'voyager.mails.index', NULL),
 (24, 1, 'Emails для почты', '', '_self', 'voyager-mail', NULL, NULL, 13, '2018-12-26 23:58:57', '2018-12-30 06:07:32', 'voyager.sendmails.index', NULL),
 (25, 1, 'SEO', '', '_self', 'voyager-character', NULL, NULL, 12, '2018-12-27 20:44:29', '2018-12-30 06:07:32', 'voyager.seos.index', NULL),
-(26, 1, 'Направления на главной', '', '_self', 'voyager-dot-2', NULL, NULL, 9, '2018-12-30 05:56:41', '2018-12-30 06:07:32', 'voyager.activs.index', NULL);
+(26, 1, 'Направления на главной', '', '_self', 'voyager-dot-2', NULL, NULL, 9, '2018-12-30 05:56:41', '2018-12-30 06:07:32', 'voyager.activs.index', NULL),
+(27, 1, 'Шаблоны', '', '_self', 'voyager-window-list', '#000000', NULL, 14, '2019-01-16 10:17:11', '2019-01-16 10:23:23', 'voyager.temps.index', 'null'),
+(28, 1, 'Страницы', '', '_self', 'voyager-file-text', NULL, NULL, 15, '2019-01-16 10:29:23', '2019-01-16 11:22:48', 'voyager.credits.index', NULL),
+(30, 1, 'Страницы поддомена', '', '_self', 'voyager-file-text', NULL, NULL, 16, '2019-01-16 11:12:55', '2019-01-16 11:22:53', 'voyager.dcredits.index', NULL);
 
 -- --------------------------------------------------------
 
@@ -724,7 +830,27 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (98, 'read_activs', 'activs', '2018-12-30 05:56:41', '2018-12-30 05:56:41'),
 (99, 'edit_activs', 'activs', '2018-12-30 05:56:41', '2018-12-30 05:56:41'),
 (100, 'add_activs', 'activs', '2018-12-30 05:56:41', '2018-12-30 05:56:41'),
-(101, 'delete_activs', 'activs', '2018-12-30 05:56:41', '2018-12-30 05:56:41');
+(101, 'delete_activs', 'activs', '2018-12-30 05:56:41', '2018-12-30 05:56:41'),
+(102, 'browse_temps', 'temps', '2019-01-16 10:17:11', '2019-01-16 10:17:11'),
+(103, 'read_temps', 'temps', '2019-01-16 10:17:11', '2019-01-16 10:17:11'),
+(104, 'edit_temps', 'temps', '2019-01-16 10:17:11', '2019-01-16 10:17:11'),
+(105, 'add_temps', 'temps', '2019-01-16 10:17:11', '2019-01-16 10:17:11'),
+(106, 'delete_temps', 'temps', '2019-01-16 10:17:11', '2019-01-16 10:17:11'),
+(107, 'browse_credits', 'credits', '2019-01-16 10:29:23', '2019-01-16 10:29:23'),
+(108, 'read_credits', 'credits', '2019-01-16 10:29:23', '2019-01-16 10:29:23'),
+(109, 'edit_credits', 'credits', '2019-01-16 10:29:23', '2019-01-16 10:29:23'),
+(110, 'add_credits', 'credits', '2019-01-16 10:29:23', '2019-01-16 10:29:23'),
+(111, 'delete_credits', 'credits', '2019-01-16 10:29:23', '2019-01-16 10:29:23'),
+(112, 'browse_Domaincredits', 'Domaincredits', '2019-01-16 10:58:12', '2019-01-16 10:58:12'),
+(113, 'read_Domaincredits', 'Domaincredits', '2019-01-16 10:58:12', '2019-01-16 10:58:12'),
+(114, 'edit_Domaincredits', 'Domaincredits', '2019-01-16 10:58:12', '2019-01-16 10:58:12'),
+(115, 'add_Domaincredits', 'Domaincredits', '2019-01-16 10:58:12', '2019-01-16 10:58:12'),
+(116, 'delete_Domaincredits', 'Domaincredits', '2019-01-16 10:58:12', '2019-01-16 10:58:12'),
+(117, 'browse_dcredits', 'dcredits', '2019-01-16 11:12:55', '2019-01-16 11:12:55'),
+(118, 'read_dcredits', 'dcredits', '2019-01-16 11:12:55', '2019-01-16 11:12:55'),
+(119, 'edit_dcredits', 'dcredits', '2019-01-16 11:12:55', '2019-01-16 11:12:55'),
+(120, 'add_dcredits', 'dcredits', '2019-01-16 11:12:55', '2019-01-16 11:12:55'),
+(121, 'delete_dcredits', 'dcredits', '2019-01-16 11:12:55', '2019-01-16 11:12:55');
 
 -- --------------------------------------------------------
 
@@ -841,7 +967,27 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (98, 1),
 (99, 1),
 (100, 1),
-(101, 1);
+(101, 1),
+(102, 1),
+(103, 1),
+(104, 1),
+(105, 1),
+(106, 1),
+(107, 1),
+(108, 1),
+(109, 1),
+(110, 1),
+(111, 1),
+(112, 1),
+(113, 1),
+(114, 1),
+(115, 1),
+(116, 1),
+(117, 1),
+(118, 1),
+(119, 1),
+(120, 1),
+(121, 1);
 
 -- --------------------------------------------------------
 
@@ -1065,6 +1211,36 @@ INSERT INTO `teams` (`id`, `name`, `photo`, `position`, `youtube`, `created_at`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `temps`
+--
+
+CREATE TABLE `temps` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `body` text COLLATE utf8mb4_unicode_ci,
+  `image` text COLLATE utf8mb4_unicode_ci,
+  `image1` text COLLATE utf8mb4_unicode_ci,
+  `title1` text COLLATE utf8mb4_unicode_ci,
+  `body1` text COLLATE utf8mb4_unicode_ci,
+  `image2` text COLLATE utf8mb4_unicode_ci,
+  `title2` text COLLATE utf8mb4_unicode_ci,
+  `body2` text COLLATE utf8mb4_unicode_ci,
+  `image3` text COLLATE utf8mb4_unicode_ci,
+  `title3` text COLLATE utf8mb4_unicode_ci,
+  `body3` text COLLATE utf8mb4_unicode_ci,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `temps`
+--
+
+INSERT INTO `temps` (`id`, `body`, `image`, `image1`, `title1`, `body1`, `image2`, `title2`, `body2`, `image3`, `title3`, `body3`, `created_at`, `updated_at`) VALUES
+(1, 'Проанализировав ваше хозяйство и кредитную историю, наши специалисты помогут вам получить кредит или государственные субсидии на выгодных условиях. Для получения точной информации по вашей ситуации, заполните заявку на нашем сайте. Наши специалисты свяжутся с вами в максимально короткий срок. Мы найдём оптимальное решение для получения вами необходимого финансирования.', 'temps/January2019/ouQiRdgpBNiNkjpjamqL.jpg', 'temps/January2019/WwRoR9AnqgEZvpJizSoA.jpg', 'Работаем в сжатые сроки', 'АгроДоход быстро подготовит и передаст в банки все необходимые документы. \r\nЗатем наши специалисты отсортируют и обработают ответы кредитных организаций. \r\nДеньги вы получите в сжатые сроки.', 'temps/January2019/aue5u0g2ZacIuZCrspNq.jpg', 'Самые выгодные условия  на рынке', 'Нередко кредитные договоры содержат крайне невыгодные и даже кабальные для заёмщика условия. Однако разобраться в запутанных и пространных формулировках под силу только профессиональному юристу. \r\nНаши специалисты помогут вам выбрать самое лучшее предложение на рынке кредитования.', 'temps/January2019/zvnnBpXtrmptrE4L1uoS.jpg', 'Даже с плохой кредитной историей', 'Специалисты АгроДохода помогут вам найти выход из самой трудной ситуации. \r\nПомогаем получить кредит даже с плохой кредитной историей.', '2019-01-16 10:23:36', '2019-01-16 10:23:36');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `translations`
 --
 
@@ -1184,6 +1360,12 @@ ALTER TABLE `categories`
   ADD KEY `categories_parent_id_foreign` (`parent_id`);
 
 --
+-- Indexes for table `credits`
+--
+ALTER TABLE `credits`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `data_rows`
 --
 ALTER TABLE `data_rows`
@@ -1197,6 +1379,12 @@ ALTER TABLE `data_types`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `data_types_name_unique` (`name`),
   ADD UNIQUE KEY `data_types_slug_unique` (`slug`);
+
+--
+-- Indexes for table `dcredits`
+--
+ALTER TABLE `dcredits`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `directions`
@@ -1322,6 +1510,12 @@ ALTER TABLE `teams`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `temps`
+--
+ALTER TABLE `temps`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `translations`
 --
 ALTER TABLE `translations`
@@ -1358,7 +1552,7 @@ ALTER TABLE `abouts`
 -- AUTO_INCREMENT for table `activs`
 --
 ALTER TABLE `activs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `captions`
@@ -1373,22 +1567,34 @@ ALTER TABLE `categories`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `credits`
+--
+ALTER TABLE `credits`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=140;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=175;
 
 --
 -- AUTO_INCREMENT for table `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
+--
+-- AUTO_INCREMENT for table `dcredits`
+--
+ALTER TABLE `dcredits`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `directions`
 --
 ALTER TABLE `directions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `faqs`
@@ -1406,7 +1612,7 @@ ALTER TABLE `footers`
 -- AUTO_INCREMENT for table `mails`
 --
 ALTER TABLE `mails`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `menus`
@@ -1418,7 +1624,7 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT for table `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -1436,7 +1642,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=122;
 
 --
 -- AUTO_INCREMENT for table `phones`
@@ -1485,6 +1691,12 @@ ALTER TABLE `settings`
 --
 ALTER TABLE `teams`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `temps`
+--
+ALTER TABLE `temps`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `translations`
