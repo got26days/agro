@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Dcredit;
+use App\Domain;
 
 class DomainController extends Controller
 {
     public function credit($slug)
     {
-        $credit = Dcredit::where('slug', '=', $slug)->latest()->first();
+        $credit = Domain::where('slug', '=', $slug)->latest()->first();
 
         if(!isset($credit)){
             abort(404);

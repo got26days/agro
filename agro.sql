@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 16, 2019 at 04:58 PM
+-- Generation Time: Jan 23, 2019 at 03:01 PM
 -- Server version: 5.7.22-0ubuntu18.04.1
 -- PHP Version: 7.2.4-1+ubuntu18.04.1+deb.sury.org+1
 
@@ -357,7 +357,11 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (190, 24, 'body2', 'text_area', 'Текст 2', 0, 0, 1, 1, 1, 1, '{}', 16),
 (191, 24, 'image3', 'image', 'Изображение 3', 0, 0, 1, 1, 1, 1, '{\"resize\":{\"width\":\"500\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 17),
 (192, 24, 'title3', 'text', 'Заголовок 3', 0, 0, 1, 1, 1, 1, '{}', 18),
-(193, 24, 'body3', 'text_area', 'Текст 3', 0, 0, 1, 1, 1, 1, '{}', 19);
+(193, 24, 'body3', 'text_area', 'Текст 3', 0, 0, 1, 1, 1, 1, '{}', 19),
+(194, 19, 'seo_title', 'text', 'Seo Title', 0, 1, 1, 1, 1, 1, '{}', 15),
+(195, 19, 'seo_description', 'text', 'Seo Description', 0, 1, 1, 1, 1, 1, '{}', 16),
+(196, 19, 'seo_keywords', 'text', 'Seo Keywords', 0, 1, 1, 1, 1, 1, '{}', 17),
+(197, 19, 'title', 'text_area', 'Title', 0, 1, 1, 1, 1, 1, '{}', 18);
 
 -- --------------------------------------------------------
 
@@ -406,9 +410,9 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (16, 'sendmails', 'sendmails', 'Emails для почты', 'Emails для почты', 'voyager-mail', 'App\\Sendmail', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-26 23:58:57', '2018-12-26 23:58:57'),
 (17, 'seos', 'seos', 'SEO', 'SEO', 'voyager-character', 'App\\Seo', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-27 20:44:29', '2018-12-27 21:03:45'),
 (18, 'activs', 'activs', 'Направления на главной', 'Направления на главной', 'voyager-dot-2', 'App\\Activ', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-30 05:56:41', '2018-12-30 05:56:41'),
-(19, 'temps', 'temps', 'Шаблон', 'Шаблоны', 'voyager-window-list', 'App\\Temp', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2019-01-16 10:17:10', '2019-01-16 10:24:18'),
+(19, 'temps', 'temps', 'Шаблон', 'Шаблоны', 'voyager-window-list', 'App\\Temp', NULL, '\\App\\Http\\Controllers\\Voyager\\TitleController', NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2019-01-16 10:17:10', '2019-01-23 13:40:40'),
 (21, 'Domaincredits', 'domaincredits', 'Страница поддомена', 'Страницы поддомена', 'voyager-file-text', 'App\\Domaincredit', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2019-01-16 10:58:12', '2019-01-16 10:58:12'),
-(23, 'dcredits', 'dcredits', 'Страница поддомена', 'Страницы поддомена', 'voyager-file-text', 'App\\Dcredit', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2019-01-16 11:12:55', '2019-01-16 11:16:01'),
+(23, 'dcredits', 'dcredits', 'Страница поддомена', 'Страницы поддомена', 'voyager-file-text', 'App\\Dcredit', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2019-01-16 11:12:55', '2019-01-17 08:35:58'),
 (24, 'credits', 'credits', 'Страница', 'Страницы', NULL, 'App\\Credit', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2019-01-16 16:48:17', '2019-01-16 16:48:17');
 
 -- --------------------------------------------------------
@@ -472,6 +476,38 @@ INSERT INTO `directions` (`id`, `title`, `body`, `background`, `formtitle`, `cir
 (5, 'Привлечение инвестиций', NULL, NULL, NULL, NULL, NULL, NULL, '2018-12-30 06:52:48', '2018-12-30 06:52:48', NULL, NULL, NULL, NULL, 'privlechenie-investicij'),
 (6, 'Производственный аудит', NULL, NULL, NULL, NULL, NULL, NULL, '2018-12-30 06:53:11', '2018-12-30 06:53:11', NULL, NULL, NULL, NULL, 'proizvodstvennyj-audit'),
 (7, 'Аналитический центр', NULL, NULL, NULL, NULL, NULL, NULL, '2018-12-30 06:53:26', '2018-12-30 06:53:26', NULL, NULL, NULL, NULL, 'analiticheskij-centr');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `domains`
+--
+
+CREATE TABLE `domains` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `seo_title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_description` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_keywords` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `temp_id` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `domains`
+--
+
+INSERT INTO `domains` (`id`, `title`, `slug`, `seo_title`, `seo_description`, `seo_keywords`, `temp_id`, `created_at`, `updated_at`) VALUES
+(1, 'Заголовок1\r', 'zagolovok1', 'Заголовок1\r\nЗаголовок 2\r\nЗаголовок 3', '434', '777', 5, '2019-01-23 14:31:24', '2019-01-23 14:31:24'),
+(2, 'Заголовок 2\r', 'zagolovok-2', 'Заголовок1\r\nЗаголовок 2\r\nЗаголовок 3', '434', '777', 5, '2019-01-23 14:31:24', '2019-01-23 14:31:24'),
+(3, 'Заголовок 3', 'zagolovok-3', 'Заголовок1\r\nЗаголовок 2\r\nЗаголовок 3', '434', '777', 5, '2019-01-23 14:31:24', '2019-01-23 14:31:24'),
+(10, 'шаблон4\r', 'shablon4', 'шаблон4\r\nшаюлон5\r\nшаблон6', NULL, NULL, 8, '2019-01-23 14:47:39', '2019-01-23 14:47:39'),
+(11, 'шаюлон5\r', 'shayulon5', 'шаблон4\r\nшаюлон5\r\nшаблон6', NULL, NULL, 8, '2019-01-23 14:47:39', '2019-01-23 14:47:39'),
+(12, 'шаблон6', 'shablon6', 'шаблон4\r\nшаюлон5\r\nшаблон6', NULL, NULL, 8, '2019-01-23 14:47:39', '2019-01-23 14:47:39'),
+(21, 'шаблон2\r', 'shablon2', 'шаблон2\r\nшаблон3', NULL, NULL, 7, '2019-01-23 14:48:41', '2019-01-23 14:48:41'),
+(22, 'шаблон3', 'shablon3', 'шаблон2\r\nшаблон3', NULL, NULL, 7, '2019-01-23 14:48:41', '2019-01-23 14:48:41');
 
 -- --------------------------------------------------------
 
@@ -567,7 +603,8 @@ INSERT INTO `mails` (`id`, `title`, `name`, `email`, `tel`, `text`, `created_at`
 (25, 'Заголовок', '123213', NULL, '342234', NULL, '2019-01-16 09:55:34', '2019-01-16 09:55:34'),
 (26, 'Заголовок1', '123213', NULL, '123123', '123213', '2019-01-16 10:49:25', '2019-01-16 10:49:25'),
 (27, 'Заголовок1', '432434', NULL, '124', NULL, '2019-01-16 10:49:30', '2019-01-16 10:49:30'),
-(28, 'Заголовок 231', '31321', NULL, '1233', NULL, '2019-01-16 11:23:29', '2019-01-16 11:23:29');
+(28, 'Заголовок 231', '31321', NULL, '1233', NULL, '2019-01-16 11:23:29', '2019-01-16 11:23:29'),
+(30, 'asd', 'asd', 'asd@213.com', '123213', '123213', '2019-01-23 13:31:50', '2019-01-23 13:31:50');
 
 -- --------------------------------------------------------
 
@@ -642,9 +679,8 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (24, 1, 'Emails для почты', '', '_self', 'voyager-mail', NULL, NULL, 13, '2018-12-26 23:58:57', '2018-12-30 06:07:32', 'voyager.sendmails.index', NULL),
 (25, 1, 'SEO', '', '_self', 'voyager-character', NULL, NULL, 12, '2018-12-27 20:44:29', '2018-12-30 06:07:32', 'voyager.seos.index', NULL),
 (26, 1, 'Направления на главной', '', '_self', 'voyager-dot-2', NULL, NULL, 9, '2018-12-30 05:56:41', '2018-12-30 06:07:32', 'voyager.activs.index', NULL),
-(27, 1, 'Шаблоны', '', '_self', 'voyager-window-list', '#000000', NULL, 14, '2019-01-16 10:17:11', '2019-01-16 10:23:23', 'voyager.temps.index', 'null'),
-(28, 1, 'Страницы', '', '_self', 'voyager-file-text', NULL, NULL, 15, '2019-01-16 10:29:23', '2019-01-16 11:22:48', 'voyager.credits.index', NULL),
-(30, 1, 'Страницы поддомена', '', '_self', 'voyager-file-text', NULL, NULL, 16, '2019-01-16 11:12:55', '2019-01-16 11:22:53', 'voyager.dcredits.index', NULL);
+(27, 1, 'Страницы поддомена', '', '_self', 'voyager-window-list', '#000000', NULL, 14, '2019-01-16 10:17:11', '2019-01-23 15:00:38', 'voyager.temps.index', 'null'),
+(28, 1, 'Страницы', '', '_self', 'voyager-file-text', NULL, NULL, 15, '2019-01-16 10:29:23', '2019-01-16 11:22:48', 'voyager.credits.index', NULL);
 
 -- --------------------------------------------------------
 
@@ -688,7 +724,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (23, '2016_01_01_000000_create_pages_table', 2),
 (24, '2016_01_01_000000_create_posts_table', 2),
 (25, '2016_02_15_204651_create_categories_table', 2),
-(26, '2017_04_11_000000_alter_post_nullable_fields_table', 2);
+(26, '2017_04_11_000000_alter_post_nullable_fields_table', 2),
+(28, '2019_01_23_140457_create_domains_table', 3);
 
 -- --------------------------------------------------------
 
@@ -1247,15 +1284,21 @@ CREATE TABLE `temps` (
   `title3` text COLLATE utf8mb4_unicode_ci,
   `body3` text COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `seo_title` text COLLATE utf8mb4_unicode_ci,
+  `seo_description` text COLLATE utf8mb4_unicode_ci,
+  `seo_keywords` text COLLATE utf8mb4_unicode_ci,
+  `title` text COLLATE utf8mb4_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `temps`
 --
 
-INSERT INTO `temps` (`id`, `body`, `image`, `image1`, `title1`, `body1`, `image2`, `title2`, `body2`, `image3`, `title3`, `body3`, `created_at`, `updated_at`) VALUES
-(1, 'Проанализировав ваше хозяйство и кредитную историю, наши специалисты помогут вам получить кредит или государственные субсидии на выгодных условиях. Для получения точной информации по вашей ситуации, заполните заявку на нашем сайте. Наши специалисты свяжутся с вами в максимально короткий срок. Мы найдём оптимальное решение для получения вами необходимого финансирования.', 'temps/January2019/ouQiRdgpBNiNkjpjamqL.jpg', 'temps/January2019/WwRoR9AnqgEZvpJizSoA.jpg', 'Работаем в сжатые сроки', 'АгроДоход быстро подготовит и передаст в банки все необходимые документы. \r\nЗатем наши специалисты отсортируют и обработают ответы кредитных организаций. \r\nДеньги вы получите в сжатые сроки.', 'temps/January2019/aue5u0g2ZacIuZCrspNq.jpg', 'Самые выгодные условия  на рынке', 'Нередко кредитные договоры содержат крайне невыгодные и даже кабальные для заёмщика условия. Однако разобраться в запутанных и пространных формулировках под силу только профессиональному юристу. \r\nНаши специалисты помогут вам выбрать самое лучшее предложение на рынке кредитования.', 'temps/January2019/zvnnBpXtrmptrE4L1uoS.jpg', 'Даже с плохой кредитной историей', 'Специалисты АгроДохода помогут вам найти выход из самой трудной ситуации. \r\nПомогаем получить кредит даже с плохой кредитной историей.', '2019-01-16 10:23:36', '2019-01-16 10:23:36');
+INSERT INTO `temps` (`id`, `body`, `image`, `image1`, `title1`, `body1`, `image2`, `title2`, `body2`, `image3`, `title3`, `body3`, `created_at`, `updated_at`, `seo_title`, `seo_description`, `seo_keywords`, `title`) VALUES
+(1, 'Проанализировав ваше хозяйство и кредитную историю, наши специалисты помогут вам получить кредит или государственные субсидии на выгодных условиях. Для получения точной информации по вашей ситуации, заполните заявку на нашем сайте. Наши специалисты свяжутся с вами в максимально короткий срок. Мы найдём оптимальное решение для получения вами необходимого финансирования.', 'temps/January2019/ouQiRdgpBNiNkjpjamqL.jpg', 'temps/January2019/WwRoR9AnqgEZvpJizSoA.jpg', 'Работаем в сжатые сроки', 'АгроДоход быстро подготовит и передаст в банки все необходимые документы. \r\nЗатем наши специалисты отсортируют и обработают ответы кредитных организаций. \r\nДеньги вы получите в сжатые сроки.', 'temps/January2019/aue5u0g2ZacIuZCrspNq.jpg', 'Самые выгодные условия  на рынке', 'Нередко кредитные договоры содержат крайне невыгодные и даже кабальные для заёмщика условия. Однако разобраться в запутанных и пространных формулировках под силу только профессиональному юристу. \r\nНаши специалисты помогут вам выбрать самое лучшее предложение на рынке кредитования.', 'temps/January2019/zvnnBpXtrmptrE4L1uoS.jpg', 'Даже с плохой кредитной историей', 'Специалисты АгроДохода помогут вам найти выход из самой трудной ситуации. \r\nПомогаем получить кредит даже с плохой кредитной историей.', '2019-01-16 10:23:36', '2019-01-16 10:23:36', NULL, NULL, NULL, NULL),
+(7, '213', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-01-23 14:47:00', '2019-01-23 14:47:52', NULL, NULL, NULL, 'шаблон2\r\nшаблон3'),
+(8, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-01-23 14:47:39', '2019-01-23 14:47:39', NULL, NULL, NULL, 'шаблон4\r\nшаюлон5\r\nшаблон6');
 
 -- --------------------------------------------------------
 
@@ -1410,6 +1453,13 @@ ALTER TABLE `dcredits`
 --
 ALTER TABLE `directions`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `domains`
+--
+ALTER TABLE `domains`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `domains_slug_unique` (`slug`);
 
 --
 -- Indexes for table `faqs`
@@ -1595,7 +1645,7 @@ ALTER TABLE `credits`
 -- AUTO_INCREMENT for table `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=194;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=198;
 
 --
 -- AUTO_INCREMENT for table `data_types`
@@ -1616,6 +1666,12 @@ ALTER TABLE `directions`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
+-- AUTO_INCREMENT for table `domains`
+--
+ALTER TABLE `domains`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
 -- AUTO_INCREMENT for table `faqs`
 --
 ALTER TABLE `faqs`
@@ -1631,7 +1687,7 @@ ALTER TABLE `footers`
 -- AUTO_INCREMENT for table `mails`
 --
 ALTER TABLE `mails`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `menus`
@@ -1649,7 +1705,7 @@ ALTER TABLE `menu_items`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `pages`
@@ -1715,7 +1771,7 @@ ALTER TABLE `teams`
 -- AUTO_INCREMENT for table `temps`
 --
 ALTER TABLE `temps`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `translations`
