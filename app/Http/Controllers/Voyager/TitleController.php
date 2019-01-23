@@ -54,7 +54,7 @@ class TitleController extends \TCG\Voyager\Http\Controllers\VoyagerBaseControlle
                     $newpage->temp_id = $data['id'];
                     $newpage->title = $title;
                     $newpage->slug = str_slug($title, '-');
-                    $newpage->seo_title = $data['title'];
+                    $newpage->seo_title = $data['seo_title'];
                     $newpage->seo_description = $data['seo_description'];
                     $newpage->seo_keywords = $data['seo_keywords'];
                     $newpage->save();
@@ -102,7 +102,7 @@ class TitleController extends \TCG\Voyager\Http\Controllers\VoyagerBaseControlle
                     $newpage->temp_id = $data['id'];
                     $newpage->title = $title;
                     $newpage->slug = str_slug($title, '-');
-                    $newpage->seo_title = $data['title'];
+                    $newpage->seo_title = $data['seo_title'];
                     $newpage->seo_description = $data['seo_description'];
                     $newpage->seo_keywords = $data['seo_keywords'];
                     $newpage->save();
