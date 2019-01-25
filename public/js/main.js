@@ -65,6 +65,7 @@ $(document).ready(function(){
         $(window).scroll(function(){
             $(this).scrollTop(topPos);
         });
+        setTimeout(popupReadyClose, 800);
     }
     function popupClose(){
         $('#js-popup').fadeOut(250);
