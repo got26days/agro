@@ -158,5 +158,14 @@
             map.geoObjects.add(placemark);
         };        
     </script><!--карты-->
+    <script>
+        
+        $(document).on('af_complete', function(event, response) {
+            if (response.success) {
+                $('#js-popup').hide();
+            }
+        });
+
+    </script>
 </body>
 </html>
