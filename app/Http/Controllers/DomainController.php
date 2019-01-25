@@ -15,6 +15,8 @@ class DomainController extends Controller
             abort(404);
         }
 
+        // return $credit
+
         $seotitle = $credit['seo_title'];
         $seodescription = $credit['seo_description'];
         $seokeywords = $credit['seo_keywords'];

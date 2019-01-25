@@ -93,7 +93,10 @@ class TitleController extends \TCG\Voyager\Http\Controllers\VoyagerBaseControlle
 
             Domain::where('temp_id', '=', $id)->delete();
 
+            
+
             if($data['title']){
+          
                 $delimiter = "\n";
                 $splitcontents = explode($delimiter, $data['title']);
                 foreach ( $splitcontents as $title )
