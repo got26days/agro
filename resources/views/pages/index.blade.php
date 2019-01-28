@@ -141,7 +141,7 @@
                         </div>
                         <div class="contacts-sec__row">
                             <div class="contacts-sec__title">Адрес:</div>
-                        <div class="contacts-sec__val">{!! $caption['adderss'] !!}</div>
+                        <div class="contacts-sec__val">{!! $caption['address'] !!}</div>
                         </div>
                     </div>
                     <ul class="contacts-sec__soc">
