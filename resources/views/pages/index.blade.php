@@ -133,15 +133,15 @@
                     <div class="contacts-sec__table">
                         <div class="contacts-sec__row">
                             <div class="contacts-sec__title">Тел.:</div>
-                            <div class="contacts-sec__val"><a href="tel:{{ $phone_var->atel }}">{{ $phone_var->phone }}</a></div>
+                            <div class="contacts-sec__val"><a href="tel:{{ $caption['phonelink'] }}">{{ $caption['phone'] }}</a></div>
                         </div>
                         <div class="contacts-sec__row">
                             <div class="contacts-sec__title">E-mail:</div>
-                            <div class="contacts-sec__val"><a href="mailto:info@agrodohod.ru">info@agrodohod.ru</a></div>
+                        <div class="contacts-sec__val"><a href="mailto:{{ $caption['email'] }}">{{ $caption['email'] }}</a></div>
                         </div>
                         <div class="contacts-sec__row">
                             <div class="contacts-sec__title">Адрес:</div>
-                            <div class="contacts-sec__val">142002, Московская область, Домодедово, <br/>ул. Текстильщиков, 1Б, офис 307а</div>
+                        <div class="contacts-sec__val">{!! $caption['adderss'] !!}</div>
                         </div>
                     </div>
                     <ul class="contacts-sec__soc">
