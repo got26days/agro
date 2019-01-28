@@ -75,28 +75,32 @@ class TitleController extends \TCG\Voyager\Http\Controllers\VoyagerBaseControlle
         }
     }
 
-        // POST BR(E)AD
-        public function update(Request $request, $id)
-        {
-            $slug = $this->getSlug($request);
-            $dataType = Voyager::model('DataType')->where('slug', '=', $slug)->first();
-            // Compatibility with Model binding.
-            $id = $id instanceof Model ? $id->{$id->getKeyName()} : $id;
-            $data = call_user_func([$dataType->model_name, 'findOrFail'], $id);
-            // Check permission
-            $this->authorize('edit', $data);
-            // Validate fields with ajax
-            $val = $this->validateBread($request->all(), $dataType->editRows, $dataType->name, $id);
-            if ($val->fails()) {
-                return response()->json(['errors' => $val->messages()]);
-            }
+    // POST BR(E)AD
+    public function update(Request $request, $id)
+    {
+        $slug = $this->getSlug($request);
+        $dataType = Voyager::model('DataType')->where('slug', '=', $slug)->first();
+        // Compatibility with Model binding.
+        $id = $id instanceof Model ? $id->{$id->getKeyName()} : $id;
+        $data = call_user_func([$dataType->model_name, 'findOrFail'], $id);
+        // Check permission
+        $this->authorize('edit', $data);
+        // Validate fields with ajax
+        $val = $this->validateBread($request->all(), $dataType->editRows, $dataType->name, $id);
+        if ($val->fails()) {
+            return response()->json(['errors' => $val->messages()]);
+        }
+    
 
-            Domain::where('temp_id', '=', $id)->delete();
+        Domain::where('temp_id', '=', $id)->delete();
 
-            
+
+        if (!$request->ajax()) {
+            $this->insertUpdateData($request, $slug, $dataType->editRows, $data);
 
             if($data['title']){
-          
+            
+    
                 $delimiter = "\n";
                 $splitcontents = explode($delimiter, $data['title']);
                 foreach ( $splitcontents as $title )
@@ -112,17 +116,15 @@ class TitleController extends \TCG\Voyager\Http\Controllers\VoyagerBaseControlle
                 }
             }
 
-            if (!$request->ajax()) {
-                $this->insertUpdateData($request, $slug, $dataType->editRows, $data);
-                event(new BreadDataUpdated($dataType, $data));
-                return redirect()
-                    ->route("voyager.{$dataType->slug}.index")
-                    ->with([
-                        'message'    => __('voyager::generic.successfully_updated')." {$dataType->display_name_singular}",
-                        'alert-type' => 'success',
-                    ]);
-            }
+            event(new BreadDataUpdated($dataType, $data));
+            return redirect()
+                ->route("voyager.{$dataType->slug}.index")
+                ->with([
+                    'message'    => __('voyager::generic.successfully_updated')." {$dataType->display_name_singular}",
+                    'alert-type' => 'success',
+                ]);
         }
+    }
 
         
     public function destroy(Request $request, $id)
