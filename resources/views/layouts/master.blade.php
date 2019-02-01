@@ -89,8 +89,8 @@
             opacity: 0;
         }
         .margin-link{
-            margin-left: 20px;
-            margin-right: 20px;
+            margin-left: 30px;
+            margin-right: 30px;
         }
     </style>
 </head>
