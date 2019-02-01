@@ -15,7 +15,7 @@
             <div class="events__wrap">
                 @foreach($posts as $post)
                 <div class="events__item">
-                <a href="#" class="events__item-img"><img src="/storage/{{ $post->image }}" alt=""></a>
+                <a href="/event/{{ $post->slug }}" class="events__item-img"><img src="/storage/{{ $post->image }}" alt=""></a>
                     <div class="events__item-main">
                     <time class="events__item-time" datetime="2018-06-20T08:00:00+03:00">{{ Carbon\Carbon::parse($post->updated_at)->format('d.m.Y') }}</time>
                         <div class="events__item-title">{{ $post->title }}</div>
