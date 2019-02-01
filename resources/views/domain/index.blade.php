@@ -5,7 +5,7 @@
     <div class="breadcrumbs">
         <div class="container">
             <div class="breadcrumbs__wrap">
-                <a href="#">Главная</a>&#8195;/&#8195;<span>Кредиты</span> &#8195;/&#8195;<span>{{ $credit->title }}</span>
+                <a href="#">Главная 1</a>&#8195;/&#8195;<span>Кредиты</span> &#8195;/&#8195;<span>{{ $credit->title }}</span>
             </div>
         </div>
     </div>
