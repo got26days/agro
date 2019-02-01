@@ -7,9 +7,9 @@
                 <li class="footer-menu__item"><a href="/events" class="footer-menu__link">События</a></li>
                 <li class="footer-menu__item"><a href="/faq" class="footer-menu__link">Вопрос-ответ</a></li>
                 @if(Route::current()->getName() == 'mainpage')
-                    <li class="footer-menu__item"><a href="#contacts" class="footer-menu__link js-scroll">КОНТАКТЫ</a></li>
+                    <li class="footer-menu__item"><a href="#contacts" class="footer-menu__link js-scroll">Контакты</a></li>
                 @else
-                    <li class="footer-menu__item"><a href="/#contacts" class="footer-menu__link">КОНТАКТЫ</a></li>
+                    <li class="footer-menu__item"><a href="/#contacts" class="footer-menu__link">Контакты/a></li>
                 @endif
             </ul>
         </nav>
