@@ -86,17 +86,16 @@
                     <div class="directions__item-txt">Привлечение инвестиций</div>
                 </a>
             </div>
-            <div class="directions__wrap" style="justify-content: space-evenly;">                    
-
-                <a href="{{ $circl6['link'] }}" class="directions__item">
+            <div class="directions__wrap" style="justify-content: center;">                    
+                <a href="{{ $circl6['link'] }}" class="directions__item margin-link">
                     <div class="directions__item-img"><img src="img/pic/ring-6.png" alt=""></div>
                     <div class="directions__item-txt">Бухгалтерское сопровождение</div>
                 </a>
-                <a href="{{ $circl7['link'] }}" class="directions__item">
+                <a href="{{ $circl7['link'] }}" class="directions__item margin-link">
                     <div class="directions__item-img"><img src="img/pic/ring-7.png" alt=""></div>
                     <div class="directions__item-txt">Производственный аудит</div>
                 </a>
-                <a href="{{ $circl8['link'] }}" class="directions__item">
+                <a href="{{ $circl8['link'] }}" class="directions__item margin-link">
                     <div class="directions__item-img"><img src="img/pic/ring-8.png" alt=""></div>
                     <div class="directions__item-txt">Юридическое сопровождение</div>
                 </a>

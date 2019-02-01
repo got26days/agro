@@ -88,6 +88,10 @@
         .farm__blc-video:hover .farm__blc-video-blind {
             opacity: 0;
         }
+        .margin-link{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
     </style>
 </head>
 <body>
