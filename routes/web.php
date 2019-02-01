@@ -42,12 +42,15 @@ Route::group(['domain' => $domain], function()
         });
 }); 
 
+
+Route::any('/search', 'MainController@search');
+
 $subdomain = env('APP_SUB_DOMAIN');
 
 Route::group(['domain' => $subdomain], function () {
     Route::post('/form', 'MainController@form');
     Route::get('/{slug}', 'DomainController@credit');
-    Route::any('/search', 'MainController@search');
+    
 });
 
 
