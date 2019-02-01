@@ -87,10 +87,7 @@
                 </a>
             </div>
             <div class="directions__wrap">                    
-                <a href="{{ $circl5['link'] }}" class="directions__item">
-                    <div class="directions__item-img"><img src="img/pic/ring-5.png" alt=""></div>
-                    <div class="directions__item-txt">Технологии и инновации</div>
-                </a>
+
                 <a href="{{ $circl6['link'] }}" class="directions__item">
                     <div class="directions__item-img"><img src="img/pic/ring-6.png" alt=""></div>
                     <div class="directions__item-txt">Бухгалтерское сопровождение</div>
@@ -103,10 +100,7 @@
                     <div class="directions__item-img"><img src="img/pic/ring-8.png" alt=""></div>
                     <div class="directions__item-txt">Юридическое сопровождение</div>
                 </a>
-                <a href="{{ $circl9['link'] }}" class="directions__item">
-                    <div class="directions__item-img"><img src="img/pic/ring-9.png" alt=""></div>
-                    <div class="directions__item-txt">Аналитический центр</div>
-                </a>
+
             </div>
 
 
