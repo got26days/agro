@@ -88,7 +88,7 @@
         .farm__blc-video:hover .farm__blc-video-blind {
             opacity: 0;
         }
-        @media screen and (min-width: 843px) {
+        @media screen and (min-width: 770px) {
             .margin-link{
             margin-left: 30px;
             margin-right: 30px;
