@@ -90,8 +90,8 @@
         }
         @media screen and (min-width: 770px) {
             .margin-link{
-            margin-left: 30px;
-            margin-right: 30px;
+            margin-left: 37px;
+            margin-right: 37px;
             }
         }
     </style>
