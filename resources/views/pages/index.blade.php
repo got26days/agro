@@ -159,7 +159,7 @@
     <section class="sec seo-text">
         <div class="container">
             <h2 class="sec__title">{{ $caption->seo_titile }}</h2>
-            <p>{{ $caption->seo_text }}</p>
+            <p style="white-space: pre-line;">{{ $caption->seo_text }}</p>
         </div>
     </section>
 </main>
