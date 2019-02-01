@@ -29,7 +29,7 @@ Route::group(['domain' => $domain], function()
 
         Route::get('/credit/{slug}', 'MainController@credit');
 
-        Route::get('/download/policy', 'MainController@getDownload')->name('download');
+        Route::get('/download/policy', 'MainController@getDownload');
         Route::get('/direction/{slug}', 'MainController@direction');
         Route::get('/uslugi', 'MainController@servs')->name('uslugi');
         
@@ -50,6 +50,7 @@ $subdomain = env('APP_SUB_DOMAIN');
 Route::group(['domain' => $subdomain], function () {
     Route::post('/form', 'MainController@form');
     Route::get('/{slug}', 'DomainController@credit');
+    Route::get('/download/policy', 'MainController@getDownload');
     
 });
 
