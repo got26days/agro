@@ -3,10 +3,10 @@
         <nav class="footer-menu">
             <ul>
                 <li class="footer-menu__item"><a href="{{ route('about') }}" class="footer-menu__link">О нас</a></li>
-                <li class="footer-menu__item"><a href="/" class="footer-menu__link">Услуги</a></li>
-                <li class="footer-menu__item"><a href="/events" class="footer-menu__link">События</a></li>
-                <li class="footer-menu__item"><a href="/faq" class="footer-menu__link">Вопрос-ответ</a></li>
-                <li class="footer-menu__item"><a href="#contacts" class="footer-menu__link js-scroll">Контакты</a></li>
+                <li class="footer-menu__item"><a href="http://agrodohod.ru/" class="footer-menu__link">Услуги</a></li>
+                <li class="footer-menu__item"><a href="http://agrodohod.ru/events" class="footer-menu__link">События</a></li>
+                <li class="footer-menu__item"><a href="http://agrodohod.ru/faq" class="footer-menu__link">Вопрос-ответ</a></li>
+                <li class="footer-menu__item"><a href="http://agrodohod.ru/#contacts" class="footer-menu__link js-scroll">Контакты</a></li>
             </ul>
         </nav>
     </div>

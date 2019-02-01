@@ -1,25 +1,23 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
--- https://www.phpmyadmin.net/
+-- version 
+-- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Jan 23, 2019 at 03:01 PM
--- Server version: 5.7.22-0ubuntu18.04.1
--- PHP Version: 7.2.4-1+ubuntu18.04.1+deb.sury.org+1
+-- Host: bigda29737.mysql
+-- Generation Time: Jan 31, 2019 at 05:18 PM
+-- Server version: 5.6.25-73.1
+-- PHP Version: 5.6.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
--- Database: `agro`
+-- Database: `bigda29737_base`
 --
 
 -- --------------------------------------------------------
@@ -27,13 +25,16 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `abouts`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `abouts` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `abouts`;
+CREATE TABLE IF NOT EXISTS `abouts` (
+  `id` int(10) unsigned NOT NULL,
   `body` text COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `abouts`
@@ -47,14 +48,17 @@ INSERT INTO `abouts` (`id`, `body`, `created_at`, `updated_at`) VALUES
 --
 -- Table structure for table `activs`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `activs` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `activs`;
+CREATE TABLE IF NOT EXISTS `activs` (
+  `id` int(10) unsigned NOT NULL,
   `option` text COLLATE utf8mb4_unicode_ci,
   `link` text COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `activs`
@@ -71,40 +75,50 @@ INSERT INTO `activs` (`id`, `option`, `link`, `created_at`, `updated_at`) VALUES
 --
 -- Table structure for table `captions`
 --
+-- Creation: Jan 28, 2019 at 01:54 PM
+--
 
-CREATE TABLE `captions` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `captions`;
+CREATE TABLE IF NOT EXISTS `captions` (
+  `id` int(10) unsigned NOT NULL,
   `body` text COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `banner` text COLLATE utf8mb4_unicode_ci,
   `seo_text` text COLLATE utf8mb4_unicode_ci,
   `mobile_banner` text COLLATE utf8mb4_unicode_ci,
-  `seo_titile` text COLLATE utf8mb4_unicode_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `seo_titile` text COLLATE utf8mb4_unicode_ci,
+  `address` text COLLATE utf8mb4_unicode_ci,
+  `phonelink` text COLLATE utf8mb4_unicode_ci,
+  `phone` text COLLATE utf8mb4_unicode_ci,
+  `email` text COLLATE utf8mb4_unicode_ci
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `captions`
 --
 
-INSERT INTO `captions` (`id`, `body`, `created_at`, `updated_at`, `banner`, `seo_text`, `mobile_banner`, `seo_titile`) VALUES
-(1, '<p><span style=\"color: #6fb92e;\">АгроДоход</span> &mdash; первый сервис &laquo;одного окна&raquo; для начинающих и опытных фермеров</p>', '2018-12-25 16:44:00', '2018-12-26 18:46:09', 'captions/December2018/OsU6FxoO3VXi3NM1iNEp.jpg', 'Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.', 'captions/December2018/PmI913zdcy9penhi1Kmz.jpg', 'Развитие сельского хозяйства в России');
+INSERT INTO `captions` (`id`, `body`, `created_at`, `updated_at`, `banner`, `seo_text`, `mobile_banner`, `seo_titile`, `address`, `phonelink`, `phone`, `email`) VALUES
+(1, '<p><span style="color: #6fb92e;">АгроДоход</span> &mdash; первый сервис &laquo;одного окна&raquo; для начинающих и опытных фермеров</p>', '2018-12-25 16:44:00', '2019-01-28 11:10:12', 'captions/December2018/OsU6FxoO3VXi3NM1iNEp.jpg', 'Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.', 'captions/December2018/PmI913zdcy9penhi1Kmz.jpg', 'Развитие сельского хозяйства в России', '<p><span style="color: #222222; font-family: ''Myriad Pro'', sans-serif; font-size: 16px;">142007, Московская область, город Домодедово,<br /> мкр Авиационный, ул. Ильюшина, стр. 2а, номер помещения 517</span></p>', '+88005558586', '8 (800) 555-85-86', 'info@agrodohod.ru');
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `categories`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `categories` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `parent_id` int(10) UNSIGNED DEFAULT NULL,
+DROP TABLE IF EXISTS `categories`;
+CREATE TABLE IF NOT EXISTS `categories` (
+  `id` int(10) unsigned NOT NULL,
+  `parent_id` int(10) unsigned DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `slug` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `categories`
@@ -119,9 +133,12 @@ INSERT INTO `categories` (`id`, `parent_id`, `order`, `name`, `slug`, `created_a
 --
 -- Table structure for table `credits`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `credits` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `credits`;
+CREATE TABLE IF NOT EXISTS `credits` (
+  `id` int(10) unsigned NOT NULL,
   `title` text COLLATE utf8mb4_unicode_ci,
   `seo_title` text COLLATE utf8mb4_unicode_ci,
   `seo_description` text COLLATE utf8mb4_unicode_ci,
@@ -140,24 +157,28 @@ CREATE TABLE `credits` (
   `image3` text COLLATE utf8mb4_unicode_ci,
   `title3` text COLLATE utf8mb4_unicode_ci,
   `body3` text COLLATE utf8mb4_unicode_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `credits`
 --
 
 INSERT INTO `credits` (`id`, `title`, `seo_title`, `seo_description`, `seo_keywords`, `slug`, `created_at`, `updated_at`, `body`, `image`, `image1`, `title1`, `body1`, `image2`, `title2`, `body2`, `image3`, `title3`, `body3`) VALUES
-(1, 'Заголовок1', 'Заголовок2', 'Заголовок3', 'Заголовок5', 'zagolovok1', '2019-01-16 10:34:00', '2019-01-16 16:53:14', 'Проанализировав ваше хозяйство и кредитную историю, наши специалисты помогут вам получить кредит или государственные субсидии на выгодных условиях. Для получения точной информации по вашей ситуации, заполните заявку на нашем сайте. Наши специалисты свяжутся с вами в максимально короткий срок. Мы найдём оптимальное решение для получения вами необходимого финансирования.', 'credits/January2019/JdF8XXAG36xIqk0RCz8c.jpg', 'credits/January2019/C9alfXKWS3pOGFmCvbkJ.jpg', 'Работаем в сжатые сроки', 'АгроДоход быстро подготовит и передаст в банки все необходимые документы. \r\nЗатем наши специалисты отсортируют и обработают ответы кредитных организаций. \r\nДеньги вы получите в сжатые сроки.', 'credits/January2019/fkbjLVs4UQ4fX2xG4vV5.jpg', 'Самые выгодные условия  на рынке', 'Нередко кредитные договоры содержат крайне невыгодные и даже кабальные для заёмщика условия. Однако разобраться в запутанных и пространных формулировках под силу только профессиональному юристу. \r\nНаши специалисты помогут вам выбрать самое лучшее предложение на рынке кредитования.', 'credits/January2019/wm8ufBERD7gu5hGbB2Vs.jpg', 'Даже с плохой кредитной историей', 'Специалисты АгроДохода помогут вам найти выход из самой трудной ситуации. \r\nПомогаем получить кредит даже с плохой кредитной историей.');
+(1, 'Заголовок1', 'Заголовок2', 'Заголовок3', 'Заголовок5', 'zagolovok1', '2019-01-16 10:34:00', '2019-01-16 16:53:14', 'Проанализировав ваше хозяйство и кредитную историю, наши специалисты помогут вам получить кредит или государственные субсидии на выгодных условиях. Для получения точной информации по вашей ситуации, заполните заявку на нашем сайте. Наши специалисты свяжутся с вами в максимально короткий срок. Мы найдём оптимальное решение для получения вами необходимого финансирования.', 'credits/January2019/JdF8XXAG36xIqk0RCz8c.jpg', 'credits/January2019/C9alfXKWS3pOGFmCvbkJ.jpg', 'Работаем в сжатые сроки', 'АгроДоход быстро подготовит и передаст в банки все необходимые документы. \r\nЗатем наши специалисты отсортируют и обработают ответы кредитных организаций. \r\nДеньги вы получите в сжатые сроки.', 'credits/January2019/fkbjLVs4UQ4fX2xG4vV5.jpg', 'Самые выгодные условия  на рынке', 'Нередко кредитные договоры содержат крайне невыгодные и даже кабальные для заёмщика условия. Однако разобраться в запутанных и пространных формулировках под силу только профессиональному юристу. \r\nНаши специалисты помогут вам выбрать самое лучшее предложение на рынке кредитования.', 'credits/January2019/wm8ufBERD7gu5hGbB2Vs.jpg', 'Даже с плохой кредитной историей', 'Специалисты АгроДохода помогут вам найти выход из самой трудной ситуации. \r\nПомогаем получить кредит даже с плохой кредитной историей.'),
+(2, 'Тест', NULL, NULL, NULL, 'test', '2019-01-24 07:47:38', '2019-01-24 07:47:38', 'Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст', 'credits/January2019/ECuks75EgqFnLP1sh5Mc.jpg', 'credits/January2019/RVU70pZAI3jX4se75IB5.jpg', 'Текст 1', 'Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст', 'credits/January2019/MB4OxOo2EcnmHMEYGanh.jpg', 'Текст 2', 'Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст', 'credits/January2019/ePGumJBgrvP31gsc6VjH.jpg', 'Текст 3', 'Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст');
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `data_rows`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `data_rows` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `data_type_id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `data_rows`;
+CREATE TABLE IF NOT EXISTS `data_rows` (
+  `id` int(10) unsigned NOT NULL,
+  `data_type_id` int(10) unsigned NOT NULL,
   `field` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `display_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -169,7 +190,7 @@ CREATE TABLE `data_rows` (
   `delete` tinyint(1) NOT NULL DEFAULT '1',
   `details` text COLLATE utf8mb4_unicode_ci,
   `order` int(11) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=211 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `data_rows`
@@ -184,8 +205,8 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (6, 1, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 0, 0, 0, NULL, 6),
 (7, 1, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 7),
 (8, 1, 'avatar', 'image', 'Avatar', 0, 1, 1, 1, 1, 1, NULL, 8),
-(9, 1, 'user_belongsto_role_relationship', 'relationship', 'Role', 0, 1, 1, 1, 1, 0, '{\"model\":\"TCG\\\\Voyager\\\\Models\\\\Role\",\"table\":\"roles\",\"type\":\"belongsTo\",\"column\":\"role_id\",\"key\":\"id\",\"label\":\"display_name\",\"pivot_table\":\"roles\",\"pivot\":0}', 10),
-(10, 1, 'user_belongstomany_role_relationship', 'relationship', 'Roles', 0, 1, 1, 1, 1, 0, '{\"model\":\"TCG\\\\Voyager\\\\Models\\\\Role\",\"table\":\"roles\",\"type\":\"belongsToMany\",\"column\":\"id\",\"key\":\"id\",\"label\":\"display_name\",\"pivot_table\":\"user_roles\",\"pivot\":\"1\",\"taggable\":\"0\"}', 11),
+(9, 1, 'user_belongsto_role_relationship', 'relationship', 'Role', 0, 1, 1, 1, 1, 0, '{"model":"TCG\\\\Voyager\\\\Models\\\\Role","table":"roles","type":"belongsTo","column":"role_id","key":"id","label":"display_name","pivot_table":"roles","pivot":0}', 10),
+(10, 1, 'user_belongstomany_role_relationship', 'relationship', 'Roles', 0, 1, 1, 1, 1, 0, '{"model":"TCG\\\\Voyager\\\\Models\\\\Role","table":"roles","type":"belongsToMany","column":"id","key":"id","label":"display_name","pivot_table":"user_roles","pivot":"1","taggable":"0"}', 11),
 (11, 1, 'locale', 'text', 'Locale', 0, 1, 1, 1, 1, 0, NULL, 12),
 (12, 1, 'settings', 'hidden', 'Settings', 0, 0, 0, 0, 0, 0, NULL, 12),
 (13, 2, 'id', 'number', 'ID', 1, 0, 0, 0, 0, 0, NULL, 1),
@@ -199,10 +220,10 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (21, 3, 'display_name', 'text', 'Display Name', 1, 1, 1, 1, 1, 1, NULL, 5),
 (22, 1, 'role_id', 'text', 'Role', 1, 1, 1, 1, 1, 1, NULL, 9),
 (23, 4, 'id', 'number', 'ID', 1, 0, 0, 0, 0, 0, NULL, 1),
-(24, 4, 'parent_id', 'select_dropdown', 'Parent', 0, 0, 1, 1, 1, 1, '{\"default\":\"\",\"null\":\"\",\"options\":{\"\":\"-- None --\"},\"relationship\":{\"key\":\"id\",\"label\":\"name\"}}', 2),
-(25, 4, 'order', 'text', 'Order', 1, 1, 1, 1, 1, 1, '{\"default\":1}', 3),
+(24, 4, 'parent_id', 'select_dropdown', 'Parent', 0, 0, 1, 1, 1, 1, '{"default":"","null":"","options":{"":"-- None --"},"relationship":{"key":"id","label":"name"}}', 2),
+(25, 4, 'order', 'text', 'Order', 1, 1, 1, 1, 1, 1, '{"default":1}', 3),
 (26, 4, 'name', 'text', 'Name', 1, 1, 1, 1, 1, 1, NULL, 4),
-(27, 4, 'slug', 'text', 'Slug', 1, 1, 1, 1, 1, 1, '{\"slugify\":{\"origin\":\"name\"}}', 5),
+(27, 4, 'slug', 'text', 'Slug', 1, 1, 1, 1, 1, 1, '{"slugify":{"origin":"name"}}', 5),
 (28, 4, 'created_at', 'timestamp', 'Created At', 0, 0, 1, 0, 0, 0, NULL, 6),
 (29, 4, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 7),
 (30, 5, 'id', 'number', 'ID', 1, 0, 0, 0, 0, 0, NULL, 1),
@@ -211,11 +232,11 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (33, 5, 'title', 'text', 'Title', 1, 1, 1, 1, 1, 1, NULL, 4),
 (34, 5, 'excerpt', 'text_area', 'Excerpt', 1, 0, 1, 1, 1, 1, NULL, 5),
 (35, 5, 'body', 'rich_text_box', 'Body', 1, 0, 1, 1, 1, 1, NULL, 6),
-(36, 5, 'image', 'image', 'Post Image', 0, 1, 1, 1, 1, 1, '{\"resize\":{\"width\":\"1000\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 7),
-(37, 5, 'slug', 'text', 'Slug', 1, 0, 1, 1, 1, 1, '{\"slugify\":{\"origin\":\"title\",\"forceUpdate\":true},\"validation\":{\"rule\":\"unique:posts,slug\"}}', 8),
+(36, 5, 'image', 'image', 'Post Image', 0, 1, 1, 1, 1, 1, '{"resize":{"width":"1000","height":"null"},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"300","height":"250"}}]}', 7),
+(37, 5, 'slug', 'text', 'Slug', 1, 0, 1, 1, 1, 1, '{"slugify":{"origin":"title","forceUpdate":true},"validation":{"rule":"unique:posts,slug"}}', 8),
 (38, 5, 'meta_description', 'text_area', 'Meta Description', 1, 0, 1, 1, 1, 1, NULL, 9),
 (39, 5, 'meta_keywords', 'text_area', 'Meta Keywords', 1, 0, 1, 1, 1, 1, NULL, 10),
-(40, 5, 'status', 'select_dropdown', 'Status', 1, 1, 1, 1, 1, 1, '{\"default\":\"DRAFT\",\"options\":{\"PUBLISHED\":\"published\",\"DRAFT\":\"draft\",\"PENDING\":\"pending\"}}', 11),
+(40, 5, 'status', 'select_dropdown', 'Status', 1, 1, 1, 1, 1, 1, '{"default":"DRAFT","options":{"PUBLISHED":"published","DRAFT":"draft","PENDING":"pending"}}', 11),
 (41, 5, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 0, 0, 0, NULL, 12),
 (42, 5, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 13),
 (43, 5, 'seo_title', 'text', 'SEO Title', 0, 1, 1, 1, 1, 1, NULL, 14),
@@ -225,10 +246,10 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (47, 6, 'title', 'text', 'Title', 1, 1, 1, 1, 1, 1, NULL, 3),
 (48, 6, 'excerpt', 'text_area', 'Excerpt', 1, 0, 1, 1, 1, 1, NULL, 4),
 (49, 6, 'body', 'rich_text_box', 'Body', 1, 0, 1, 1, 1, 1, NULL, 5),
-(50, 6, 'slug', 'text', 'Slug', 1, 0, 1, 1, 1, 1, '{\"slugify\":{\"origin\":\"title\"},\"validation\":{\"rule\":\"unique:pages,slug\"}}', 6),
+(50, 6, 'slug', 'text', 'Slug', 1, 0, 1, 1, 1, 1, '{"slugify":{"origin":"title"},"validation":{"rule":"unique:pages,slug"}}', 6),
 (51, 6, 'meta_description', 'text', 'Meta Description', 1, 0, 1, 1, 1, 1, NULL, 7),
 (52, 6, 'meta_keywords', 'text', 'Meta Keywords', 1, 0, 1, 1, 1, 1, NULL, 8),
-(53, 6, 'status', 'select_dropdown', 'Status', 1, 1, 1, 1, 1, 1, '{\"default\":\"INACTIVE\",\"options\":{\"INACTIVE\":\"INACTIVE\",\"ACTIVE\":\"ACTIVE\"}}', 9),
+(53, 6, 'status', 'select_dropdown', 'Status', 1, 1, 1, 1, 1, 1, '{"default":"INACTIVE","options":{"INACTIVE":"INACTIVE","ACTIVE":"ACTIVE"}}', 9),
 (54, 6, 'created_at', 'timestamp', 'Created At', 1, 1, 1, 0, 0, 0, NULL, 10),
 (55, 6, 'updated_at', 'timestamp', 'Updated At', 1, 0, 0, 0, 0, 0, NULL, 11),
 (56, 6, 'image', 'image', 'Page Image', 0, 1, 1, 1, 1, 1, NULL, 12),
@@ -239,7 +260,7 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (61, 7, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5),
 (62, 8, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (63, 8, 'name', 'text', 'Имя', 0, 1, 1, 1, 1, 1, '{}', 2),
-(64, 8, 'photo', 'image', 'Фото', 0, 1, 1, 1, 1, 1, '{\"resize\":{\"width\":\"263\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"263\",\"height\":\"190\"}}]}', 3),
+(64, 8, 'photo', 'image', 'Фото', 0, 1, 1, 1, 1, 1, '{"resize":{"width":"263","height":"null"},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"263","height":"190"}}]}', 3),
 (65, 8, 'position', 'text', 'Должность', 0, 1, 1, 1, 1, 1, '{}', 4),
 (66, 8, 'youtube', 'text', 'Ссылка на видео', 0, 1, 1, 1, 1, 1, '{}', 5),
 (67, 8, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 6),
@@ -263,29 +284,29 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (85, 11, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5),
 (86, 12, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (87, 12, 'body', 'rich_text_box', 'Текст заголовка', 0, 1, 1, 1, 1, 1, '{}', 2),
-(88, 12, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 8),
+(88, 12, 'created_at', 'timestamp', 'Created At', 0, 0, 1, 1, 0, 1, '{}', 8),
 (89, 12, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 3),
 (90, 13, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (91, 13, 'title', 'text', 'Закголовок', 0, 1, 1, 1, 1, 1, '{}', 2),
 (92, 13, 'body', 'rich_text_box', 'Текст', 0, 0, 1, 1, 1, 1, '{}', 4),
-(93, 13, 'background', 'image', 'Фоновое изображение на странице', 0, 1, 1, 1, 1, 1, '{\"resize\":{\"width\":\"1500\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 5),
+(93, 13, 'background', 'image', 'Фоновое изображение на странице', 0, 1, 1, 1, 1, 1, '{"resize":{"width":"1500","height":"null"},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"300","height":"250"}}]}', 5),
 (94, 13, 'formtitle', 'text_area', 'Текст над формой', 0, 1, 1, 1, 1, 1, '{}', 6),
-(95, 13, 'circle', 'image', 'Изображение в круге', 0, 1, 1, 1, 1, 1, '{\"resize\":{\"width\":\"179\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 7),
-(96, 13, 'image', 'image', 'Изображение для главной', 0, 1, 1, 1, 1, 1, '{\"resize\":{\"width\":\"360\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 8),
-(97, 13, 'showmainpage', 'select_dropdown', 'Показать на главной', 0, 0, 0, 0, 0, 0, '{\"default\":\"option1\",\"options\":{\"option1\":\"\\u041d\\u0435 \\u043f\\u043e\\u043a\\u0430\\u0437\\u043e\\u0432\\u0430\\u0442\\u044c\",\"option2\":\"\\u041f\\u043e\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c \\u043a\\u0430\\u0440\\u0442\\u043e\\u0447\\u043a\\u043e\\u0439 \\u043d\\u0430 \\u0433\\u043b\\u0430\\u0432\\u043d\\u043e\\u0439\"}}', 9),
+(95, 13, 'circle', 'image', 'Изображение в круге', 0, 1, 1, 1, 1, 1, '{"resize":{"width":"179","height":"null"},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"300","height":"250"}}]}', 7),
+(96, 13, 'image', 'image', 'Изображение для главной', 0, 1, 1, 1, 1, 1, '{"resize":{"width":"360","height":"null"},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"300","height":"250"}}]}', 8),
+(97, 13, 'showmainpage', 'select_dropdown', 'Показать на главной', 0, 0, 0, 0, 0, 0, '{"default":"option1","options":{"option1":"\\u041d\\u0435 \\u043f\\u043e\\u043a\\u0430\\u0437\\u043e\\u0432\\u0430\\u0442\\u044c","option2":"\\u041f\\u043e\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c \\u043a\\u0430\\u0440\\u0442\\u043e\\u0447\\u043a\\u043e\\u0439 \\u043d\\u0430 \\u0433\\u043b\\u0430\\u0432\\u043d\\u043e\\u0439"}}', 9),
 (98, 13, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 10),
 (99, 13, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 11),
 (100, 13, 'seo_title', 'text', 'Seo Title', 0, 1, 1, 1, 1, 1, '{}', 12),
 (101, 13, 'seo_decription', 'text', 'Seo Decription', 0, 1, 1, 1, 1, 1, '{}', 13),
 (102, 13, 'seo_keywords', 'text', 'Seo Keywords', 0, 1, 1, 1, 1, 1, '{}', 14),
 (103, 13, 'description', 'text_area', 'Краткое описание', 0, 0, 1, 1, 1, 1, '{}', 3),
-(104, 13, 'slug', 'text', 'Slug', 0, 1, 1, 1, 1, 1, '{\"slugify\":{\"origin\":\"title\",\"forceUpdate\":true},\"validation\":{\"rule\":\"unique:directions,slug\"}}', 15),
-(105, 12, 'banner', 'image', 'Банер', 0, 1, 1, 1, 1, 1, '{\"resize\":{\"width\":\"null\",\"height\":\"449\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 4),
-(106, 12, 'seo_text', 'text_area', 'Seo Текст', 0, 1, 1, 1, 1, 1, '{}', 7),
-(107, 12, 'mobile_banner', 'image', 'Мобильный банер', 0, 1, 1, 1, 1, 1, '{\"resize\":{\"width\":\"885\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 5),
+(104, 13, 'slug', 'text', 'Slug', 0, 1, 1, 1, 1, 1, '{"slugify":{"origin":"title","forceUpdate":true},"validation":{"rule":"unique:directions,slug"}}', 15),
+(105, 12, 'banner', 'image', 'Банер', 0, 0, 1, 1, 1, 1, '{"resize":{"width":"null","height":"449"},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"300","height":"250"}}]}', 4),
+(106, 12, 'seo_text', 'text_area', 'Seo Текст', 0, 0, 1, 1, 1, 1, '{}', 7),
+(107, 12, 'mobile_banner', 'image', 'Мобильный банер', 0, 0, 1, 1, 1, 1, '{"resize":{"width":"885","height":"null"},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"300","height":"250"}}]}', 5),
 (108, 12, 'seo_titile', 'text', 'Seo Заголовок текста', 0, 1, 1, 1, 1, 1, '{}', 6),
 (109, 14, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
-(110, 14, 'option', 'select_dropdown', 'Блок', 0, 1, 1, 1, 1, 1, '{\"default\":\"option1\",\"options\":{\"option1\":\"\\u0413\\u0440\\u0430\\u043d\\u0442\\u044b, \\u0441\\u0443\\u0431\\u0441\\u0438\\u0434\\u0438\\u0438 \\u0438 \\u043a\\u0440\\u0435\\u0434\\u0438\\u0442\\u043e\\u0432\\u0430\\u043d\\u0438\\u0435 \\u0434\\u043b\\u044f \\u0444\\u0435\\u0440\\u043c\\u0435\\u0440\\u043e\\u0432 \\u0438 \\u0441\\u0435\\u043b\\u044c\\u0445\\u043e\\u0437\\u043f\\u0440\\u043e\\u0438\\u0437\\u0432\\u043e\\u0434\\u0438\\u0442\\u0435\\u043b\\u0435\\u0439\",\"option2\":\"\\u0421\\u043f\\u0435\\u0446\\u0438\\u0430\\u043b\\u0438\\u0437\\u0438\\u0440\\u043e\\u0432\\u0430\\u043d\\u043d\\u0430\\u044f \\u0431\\u0443\\u0445\\u0433\\u0430\\u043b\\u0442\\u0435\\u0440\\u0438\\u044f\",\"option3\":\"\\u041e\\u043f\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438 \\u0441 \\u0437\\u0435\\u043c\\u043b\\u0435\\u0439 \\u0438 \\u043d\\u0435\\u0434\\u0432\\u0438\\u0436\\u0438\\u043c\\u043e\\u0441\\u0442\\u044c\\u044e\",\"option4\":\"\\u042e\\u0440\\u0438\\u0434\\u0438\\u0447\\u0435\\u0441\\u043a\\u043e\\u0435 \\u0441\\u043e\\u043f\\u0440\\u043e\\u0432\\u043e\\u0436\\u0434\\u0435\\u043d\\u0438\\u0435\",\"option5\":\"\\u0412\\u0435\\u0434\\u0435\\u043d\\u0438\\u0435 \\u0443\\u0447\\u0451\\u0442\\u0430 \\u0432 \\u0424\\u0413\\u0418\\u0421 \\u00ab\\u041c\\u0435\\u0440\\u043a\\u0443\\u0440\\u0438\\u0439\\u00bb\",\"option6\":\"\\u0413\\u0440\\u0430\\u043d\\u0442\\u044b, \\u043a\\u0440\\u0435\\u0434\\u0438\\u0442\\u043e\\u0432\\u0430\\u043d\\u0438\\u0435 \\u0438 \\u0441\\u0443\\u0431\\u0441\\u0438\\u0434\\u0438\\u0438\",\"option7\":\"\\u041c\\u044b \\u0437\\u043d\\u0430\\u0435\\u043c \\u0432\\u0441\\u0435 \\u043d\\u044e\\u0430\\u043d\\u0441\\u044b \\u0432\\u0430\\u0448\\u0435\\u0433\\u043e \\u0431\\u0438\\u0437\\u043d\\u0435\\u0441\\u0430\",\"option8\":\"\\u041c\\u044b \\u0443\\u043c\\u0435\\u0435\\u043c \\u044d\\u043a\\u043e\\u043d\\u043e\\u043c\\u0438\\u0442\\u044c \\u0432\\u0430\\u0448\\u0438 \\u0434\\u0435\\u043d\\u044c\\u0433\\u0438\",\"option9\":\"\\u041c\\u044b \\u0440\\u0430\\u0441\\u0448\\u0438\\u0440\\u044f\\u0435\\u043c \\u0432\\u0430\\u0448\\u0438 \\u0432\\u043e\\u0437\\u043c\\u043e\\u0436\\u043d\\u043e\\u0441\\u0442\\u0438\",\"option10\":\"\\u041f\\u043e\\u043a\\u0443\\u043f\\u043a\\u0430 \\u0441\\u0435\\u043b\\u044c\\u0441\\u043a\\u043e\\u0445\\u043e\\u0437\\u044f\\u0439\\u0441\\u0442\\u0432\\u0435\\u043d\\u043d\\u044b\\u0445 \\u0437\\u0435\\u043c\\u0435\\u043b\\u044c\",\"option11\":\"\\u041f\\u0440\\u0438\\u043e\\u0431\\u0440\\u0435\\u0442\\u0435\\u043d\\u0438\\u0435 \\u0441\\u0435\\u043b\\u044c\\u0441\\u043a\\u043e\\u0445\\u043e\\u0437\\u044f\\u0439\\u0441\\u0442\\u0432\\u0435\\u043d\\u043d\\u043e\\u0439 \\u043d\\u0435\\u0434\\u0432\\u0438\\u0436\\u0438\\u043c\\u043e\\u0441\\u0442\\u0438\",\"option12\":\"\\u0421\\u0442\\u0440\\u043e\\u0438\\u0442\\u0435\\u043b\\u044c\\u0441\\u0442\\u0432\\u043e \\u0432 \\u0441\\u0435\\u043b\\u044c\\u0441\\u043a\\u043e\\u043c \\u0445\\u043e\\u0437\\u044f\\u0439\\u0441\\u0442\\u0432\\u0435\",\"option13\":\"\\u041f\\u043e\\u043c\\u043e\\u0449\\u044c \\u0432 \\u0441\\u043e\\u0441\\u0442\\u0430\\u0432\\u043b\\u0435\\u043d\\u0438\\u0438 \\u0434\\u043e\\u0433\\u043e\\u0432\\u043e\\u0440\\u0430\",\"option14\":\"\\u0421\\u0443\\u0434\\u0435\\u0431\\u043d\\u044b\\u0435 \\u0441\\u043f\\u043e\\u0440\\u044b \\u0441 \\u043a\\u043e\\u043d\\u0442\\u0440\\u0430\\u0433\\u0435\\u043d\\u0442\\u0430\\u043c\\u0438 \\u0438 \\u043a\\u043e\\u043d\\u0442\\u0440\\u043e\\u043b\\u0438\\u0440\\u0443\\u044e\\u0449\\u0438\\u043c\\u0438 \\u043e\\u0440\\u0433\\u0430\\u043d\\u0430\\u043c\\u0438\",\"option15\":\"\\u0420\\u0435\\u0433\\u0438\\u0441\\u0442\\u0440\\u0430\\u0446\\u0438\\u044f \\u0444\\u0435\\u0440\\u043c\\u0435\\u0440\\u0441\\u043a\\u0438\\u0445 \\u0445\\u043e\\u0437\\u044f\\u0439\\u0441\\u0442\\u0432 \\u0438 \\u043a\\u043e\\u043e\\u043f\\u0435\\u0440\\u0430\\u0442\\u0438\\u0432\\u043e\\u0432\",\"option16\":\"\\u0412\\u0430\\u0436\\u043d\\u043e \\u0437\\u043d\\u0430\\u0442\\u044c!\"}}', 2),
+(110, 14, 'option', 'select_dropdown', 'Блок', 0, 1, 1, 1, 1, 1, '{"default":"option1","options":{"option1":"\\u0413\\u0440\\u0430\\u043d\\u0442\\u044b, \\u0441\\u0443\\u0431\\u0441\\u0438\\u0434\\u0438\\u0438 \\u0438 \\u043a\\u0440\\u0435\\u0434\\u0438\\u0442\\u043e\\u0432\\u0430\\u043d\\u0438\\u0435 \\u0434\\u043b\\u044f \\u0444\\u0435\\u0440\\u043c\\u0435\\u0440\\u043e\\u0432 \\u0438 \\u0441\\u0435\\u043b\\u044c\\u0445\\u043e\\u0437\\u043f\\u0440\\u043e\\u0438\\u0437\\u0432\\u043e\\u0434\\u0438\\u0442\\u0435\\u043b\\u0435\\u0439","option2":"\\u0421\\u043f\\u0435\\u0446\\u0438\\u0430\\u043b\\u0438\\u0437\\u0438\\u0440\\u043e\\u0432\\u0430\\u043d\\u043d\\u0430\\u044f \\u0431\\u0443\\u0445\\u0433\\u0430\\u043b\\u0442\\u0435\\u0440\\u0438\\u044f","option3":"\\u041e\\u043f\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438 \\u0441 \\u0437\\u0435\\u043c\\u043b\\u0435\\u0439 \\u0438 \\u043d\\u0435\\u0434\\u0432\\u0438\\u0436\\u0438\\u043c\\u043e\\u0441\\u0442\\u044c\\u044e","option4":"\\u042e\\u0440\\u0438\\u0434\\u0438\\u0447\\u0435\\u0441\\u043a\\u043e\\u0435 \\u0441\\u043e\\u043f\\u0440\\u043e\\u0432\\u043e\\u0436\\u0434\\u0435\\u043d\\u0438\\u0435","option5":"\\u0412\\u0435\\u0434\\u0435\\u043d\\u0438\\u0435 \\u0443\\u0447\\u0451\\u0442\\u0430 \\u0432 \\u0424\\u0413\\u0418\\u0421 \\u00ab\\u041c\\u0435\\u0440\\u043a\\u0443\\u0440\\u0438\\u0439\\u00bb","option6":"\\u0413\\u0440\\u0430\\u043d\\u0442\\u044b, \\u043a\\u0440\\u0435\\u0434\\u0438\\u0442\\u043e\\u0432\\u0430\\u043d\\u0438\\u0435 \\u0438 \\u0441\\u0443\\u0431\\u0441\\u0438\\u0434\\u0438\\u0438","option7":"\\u041c\\u044b \\u0437\\u043d\\u0430\\u0435\\u043c \\u0432\\u0441\\u0435 \\u043d\\u044e\\u0430\\u043d\\u0441\\u044b \\u0432\\u0430\\u0448\\u0435\\u0433\\u043e \\u0431\\u0438\\u0437\\u043d\\u0435\\u0441\\u0430","option8":"\\u041c\\u044b \\u0443\\u043c\\u0435\\u0435\\u043c \\u044d\\u043a\\u043e\\u043d\\u043e\\u043c\\u0438\\u0442\\u044c \\u0432\\u0430\\u0448\\u0438 \\u0434\\u0435\\u043d\\u044c\\u0433\\u0438","option9":"\\u041c\\u044b \\u0440\\u0430\\u0441\\u0448\\u0438\\u0440\\u044f\\u0435\\u043c \\u0432\\u0430\\u0448\\u0438 \\u0432\\u043e\\u0437\\u043c\\u043e\\u0436\\u043d\\u043e\\u0441\\u0442\\u0438","option10":"\\u041f\\u043e\\u043a\\u0443\\u043f\\u043a\\u0430 \\u0441\\u0435\\u043b\\u044c\\u0441\\u043a\\u043e\\u0445\\u043e\\u0437\\u044f\\u0439\\u0441\\u0442\\u0432\\u0435\\u043d\\u043d\\u044b\\u0445 \\u0437\\u0435\\u043c\\u0435\\u043b\\u044c","option11":"\\u041f\\u0440\\u0438\\u043e\\u0431\\u0440\\u0435\\u0442\\u0435\\u043d\\u0438\\u0435 \\u0441\\u0435\\u043b\\u044c\\u0441\\u043a\\u043e\\u0445\\u043e\\u0437\\u044f\\u0439\\u0441\\u0442\\u0432\\u0435\\u043d\\u043d\\u043e\\u0439 \\u043d\\u0435\\u0434\\u0432\\u0438\\u0436\\u0438\\u043c\\u043e\\u0441\\u0442\\u0438","option12":"\\u0421\\u0442\\u0440\\u043e\\u0438\\u0442\\u0435\\u043b\\u044c\\u0441\\u0442\\u0432\\u043e \\u0432 \\u0441\\u0435\\u043b\\u044c\\u0441\\u043a\\u043e\\u043c \\u0445\\u043e\\u0437\\u044f\\u0439\\u0441\\u0442\\u0432\\u0435","option13":"\\u041f\\u043e\\u043c\\u043e\\u0449\\u044c \\u0432 \\u0441\\u043e\\u0441\\u0442\\u0430\\u0432\\u043b\\u0435\\u043d\\u0438\\u0438 \\u0434\\u043e\\u0433\\u043e\\u0432\\u043e\\u0440\\u0430","option14":"\\u0421\\u0443\\u0434\\u0435\\u0431\\u043d\\u044b\\u0435 \\u0441\\u043f\\u043e\\u0440\\u044b \\u0441 \\u043a\\u043e\\u043d\\u0442\\u0440\\u0430\\u0433\\u0435\\u043d\\u0442\\u0430\\u043c\\u0438 \\u0438 \\u043a\\u043e\\u043d\\u0442\\u0440\\u043e\\u043b\\u0438\\u0440\\u0443\\u044e\\u0449\\u0438\\u043c\\u0438 \\u043e\\u0440\\u0433\\u0430\\u043d\\u0430\\u043c\\u0438","option15":"\\u0420\\u0435\\u0433\\u0438\\u0441\\u0442\\u0440\\u0430\\u0446\\u0438\\u044f \\u0444\\u0435\\u0440\\u043c\\u0435\\u0440\\u0441\\u043a\\u0438\\u0445 \\u0445\\u043e\\u0437\\u044f\\u0439\\u0441\\u0442\\u0432 \\u0438 \\u043a\\u043e\\u043e\\u043f\\u0435\\u0440\\u0430\\u0442\\u0438\\u0432\\u043e\\u0432","option16":"\\u0412\\u0430\\u0436\\u043d\\u043e \\u0437\\u043d\\u0430\\u0442\\u044c!"}}', 2),
 (111, 14, 'body', 'rich_text_box', 'Описание', 0, 1, 1, 1, 1, 1, '{}', 3),
 (112, 14, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 4),
 (113, 14, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5),
@@ -299,11 +320,11 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (121, 15, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 8),
 (122, 16, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (123, 16, 'email', 'text', 'Email', 0, 1, 1, 1, 1, 1, '{}', 2),
-(124, 16, 'send', 'select_dropdown', 'Посылать?', 0, 1, 1, 1, 1, 1, '{\"default\":\"true\",\"options\":{\"true\":\"\\u0414\\u0430\",\"false\":\"\\u041d\\u0435\\u0442\"}}', 3),
+(124, 16, 'send', 'select_dropdown', 'Посылать?', 0, 1, 1, 1, 1, 1, '{"default":"true","options":{"true":"\\u0414\\u0430","false":"\\u041d\\u0435\\u0442"}}', 3),
 (125, 16, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 4),
 (126, 16, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5),
 (127, 17, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
-(128, 17, 'page', 'select_dropdown', 'Выберите страницу', 0, 1, 1, 1, 1, 1, '{\"default\":\"option5\",\"options\":{\"option1\":\"\\u041e \\u043d\\u0430\\u0441\",\"option2\":\"FAQ\",\"option3\":\"\\u0421\\u043e\\u0431\\u044b\\u0442\\u0438\\u044f\",\"option4\":\"\\u0423\\u0441\\u043b\\u0443\\u0433\\u0438\",\"option5\":\"\\u0413\\u043b\\u0430\\u0432\\u043d\\u0430\\u044f\"}}', 2),
+(128, 17, 'page', 'select_dropdown', 'Выберите страницу', 0, 1, 1, 1, 1, 1, '{"default":"option5","options":{"option1":"\\u041e \\u043d\\u0430\\u0441","option2":"FAQ","option3":"\\u0421\\u043e\\u0431\\u044b\\u0442\\u0438\\u044f","option4":"\\u0423\\u0441\\u043b\\u0443\\u0433\\u0438","option5":"\\u0413\\u043b\\u0430\\u0432\\u043d\\u0430\\u044f"}}', 2),
 (129, 17, 'seo_title', 'text', 'Seo Title', 0, 1, 1, 1, 1, 1, '{}', 3),
 (130, 17, 'seo_description', 'text', 'Seo Description', 0, 1, 1, 1, 1, 1, '{}', 4),
 (131, 17, 'seo_keywords', 'text', 'Seo Keywords', 0, 1, 1, 1, 1, 1, '{}', 5),
@@ -311,20 +332,20 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (133, 17, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 7),
 (134, 17, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 8),
 (135, 18, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
-(136, 18, 'option', 'select_dropdown', 'Выбор направления', 0, 1, 1, 1, 1, 1, '{\"default\":\"option1\",\"options\":{\"option1\":\"\\u0414\\u0438\\u0441\\u0442\\u0440\\u0438\\u0431\\u044c\\u044e\\u0446\\u0438\\u044f \\u0438 \\u0441\\u0431\\u044b\\u0442 \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0446\\u0438\\u0438\",\"option2\":\"\\u0413\\u0440\\u0430\\u043d\\u0442\\u044b, \\u0441\\u0443\\u0431\\u0441\\u0438\\u0434\\u0438\\u0438 \\u0438 \\u043a\\u0440\\u0435\\u0434\\u0438\\u0442\\u043e\\u0432\\u0430\\u043d\\u0438\\u0435\",\"option3\":\"\\u0415\\u0434\\u0438\\u043d\\u044b\\u0439 \\u0446\\u0435\\u043d\\u0442\\u0440 \\u0437\\u0430\\u043a\\u0443\\u043f\\u043e\\u043a\",\"option4\":\"\\u041f\\u0440\\u0438\\u0432\\u043b\\u0435\\u0447\\u0435\\u043d\\u0438\\u0435 \\u0438\\u043d\\u0432\\u0435\\u0441\\u0442\\u0438\\u0446\\u0438\\u0439\",\"option5\":\"\\u0422\\u0435\\u0445\\u043d\\u043e\\u043b\\u043e\\u0433\\u0438\\u0438 \\u0438 \\u0438\\u043d\\u043d\\u043e\\u0432\\u0430\\u0446\\u0438\\u0438\",\"option6\":\"\\u0411\\u0443\\u0445\\u0433\\u0430\\u043b\\u0442\\u0435\\u0440\\u0441\\u043a\\u043e\\u0435 \\u0441\\u043e\\u043f\\u0440\\u043e\\u0432\\u043e\\u0436\\u0434\\u0435\\u043d\\u0438\\u0435\",\"option7\":\"\\u041f\\u0440\\u043e\\u0438\\u0437\\u0432\\u043e\\u0434\\u0441\\u0442\\u0432\\u0435\\u043d\\u043d\\u044b\\u0439 \\u0430\\u0443\\u0434\\u0438\\u0442\",\"option8\":\"\\u042e\\u0440\\u0438\\u0434\\u0438\\u0447\\u0435\\u0441\\u043a\\u043e\\u0435 \\u0441\\u043e\\u043f\\u0440\\u043e\\u0432\\u043e\\u0436\\u0434\\u0435\\u043d\\u0438\\u0435\",\"option9\":\"\\u0410\\u043d\\u0430\\u043b\\u0438\\u0442\\u0438\\u0447\\u0435\\u0441\\u043a\\u0438\\u0439 \\u0446\\u0435\\u043d\\u0442\\u0440\"}}', 2),
+(136, 18, 'option', 'select_dropdown', 'Выбор направления', 0, 1, 1, 1, 1, 1, '{"default":"option1","options":{"option1":"\\u0414\\u0438\\u0441\\u0442\\u0440\\u0438\\u0431\\u044c\\u044e\\u0446\\u0438\\u044f \\u0438 \\u0441\\u0431\\u044b\\u0442 \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0446\\u0438\\u0438","option2":"\\u0413\\u0440\\u0430\\u043d\\u0442\\u044b, \\u0441\\u0443\\u0431\\u0441\\u0438\\u0434\\u0438\\u0438 \\u0438 \\u043a\\u0440\\u0435\\u0434\\u0438\\u0442\\u043e\\u0432\\u0430\\u043d\\u0438\\u0435","option3":"\\u0415\\u0434\\u0438\\u043d\\u044b\\u0439 \\u0446\\u0435\\u043d\\u0442\\u0440 \\u0437\\u0430\\u043a\\u0443\\u043f\\u043e\\u043a","option4":"\\u041f\\u0440\\u0438\\u0432\\u043b\\u0435\\u0447\\u0435\\u043d\\u0438\\u0435 \\u0438\\u043d\\u0432\\u0435\\u0441\\u0442\\u0438\\u0446\\u0438\\u0439","option5":"\\u0422\\u0435\\u0445\\u043d\\u043e\\u043b\\u043e\\u0433\\u0438\\u0438 \\u0438 \\u0438\\u043d\\u043d\\u043e\\u0432\\u0430\\u0446\\u0438\\u0438","option6":"\\u0411\\u0443\\u0445\\u0433\\u0430\\u043b\\u0442\\u0435\\u0440\\u0441\\u043a\\u043e\\u0435 \\u0441\\u043e\\u043f\\u0440\\u043e\\u0432\\u043e\\u0436\\u0434\\u0435\\u043d\\u0438\\u0435","option7":"\\u041f\\u0440\\u043e\\u0438\\u0437\\u0432\\u043e\\u0434\\u0441\\u0442\\u0432\\u0435\\u043d\\u043d\\u044b\\u0439 \\u0430\\u0443\\u0434\\u0438\\u0442","option8":"\\u042e\\u0440\\u0438\\u0434\\u0438\\u0447\\u0435\\u0441\\u043a\\u043e\\u0435 \\u0441\\u043e\\u043f\\u0440\\u043e\\u0432\\u043e\\u0436\\u0434\\u0435\\u043d\\u0438\\u0435","option9":"\\u0410\\u043d\\u0430\\u043b\\u0438\\u0442\\u0438\\u0447\\u0435\\u0441\\u043a\\u0438\\u0439 \\u0446\\u0435\\u043d\\u0442\\u0440"}}', 2),
 (137, 18, 'link', 'text', 'ссылка на страницу', 0, 1, 1, 1, 1, 1, '{}', 3),
 (138, 18, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 4),
 (139, 18, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5),
 (140, 19, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
-(141, 19, 'body', 'text_area', 'Текст', 0, 1, 1, 1, 1, 1, '{}', 2),
-(142, 19, 'image', 'image', 'Изображение', 0, 1, 1, 1, 1, 1, '{\"resize\":{\"width\":\"600\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 3),
-(143, 19, 'image1', 'image', 'Изображение 1', 0, 0, 1, 1, 1, 1, '{\"resize\":{\"width\":\"500\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 4),
+(141, 19, 'body', 'text_area', 'Текст', 0, 0, 1, 1, 1, 1, '{}', 2),
+(142, 19, 'image', 'image', 'Изображение', 0, 0, 1, 1, 1, 1, '{"resize":{"width":"600","height":"null"},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"300","height":"250"}}]}', 3),
+(143, 19, 'image1', 'image', 'Изображение 1', 0, 0, 1, 1, 1, 1, '{"resize":{"width":"500","height":"null"},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"300","height":"250"}}]}', 4),
 (144, 19, 'title1', 'text', 'Заголовок 1', 0, 0, 1, 1, 1, 1, '{}', 5),
 (145, 19, 'body1', 'text_area', 'Текст 1', 0, 0, 1, 1, 1, 1, '{}', 6),
-(146, 19, 'image2', 'image', 'Изображение 2', 0, 0, 1, 1, 1, 1, '{\"resize\":{\"width\":\"500\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 7),
+(146, 19, 'image2', 'image', 'Изображение 2', 0, 0, 1, 1, 1, 1, '{"resize":{"width":"500","height":"null"},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"300","height":"250"}}]}', 7),
 (147, 19, 'title2', 'text', 'Заголовок 2', 0, 0, 1, 1, 1, 1, '{}', 8),
 (148, 19, 'body2', 'text_area', 'Текст 2', 0, 0, 1, 1, 1, 1, '{}', 9),
-(149, 19, 'image3', 'image', 'Изображение 2', 0, 0, 1, 1, 1, 1, '{\"resize\":{\"width\":\"500\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 10),
+(149, 19, 'image3', 'image', 'Изображение 2', 0, 0, 1, 1, 1, 1, '{"resize":{"width":"500","height":"null"},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"300","height":"250"}}]}', 10),
 (150, 19, 'title3', 'text', 'Заголовок 3', 0, 0, 1, 1, 1, 1, '{}', 11),
 (151, 19, 'body3', 'text_area', 'Текст 3', 0, 0, 1, 1, 1, 1, '{}', 12),
 (152, 19, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 13),
@@ -334,43 +355,59 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (167, 23, 'seo_title', 'text', 'Seo Title', 0, 1, 1, 1, 1, 1, '{}', 3),
 (168, 23, 'seo_description', 'text', 'Seo Description', 0, 1, 1, 1, 1, 1, '{}', 4),
 (169, 23, 'seo_keywords', 'text', 'Seo Keywords', 0, 1, 1, 1, 1, 1, '{}', 5),
-(170, 23, 'slug', 'text', 'Slug', 1, 0, 0, 1, 1, 1, '{\"slugify\":{\"origin\":\"title\",\"forceUpdate\":true},\"validation\":{\"rule\":\"unique:directions,slug\"}}', 6),
+(170, 23, 'slug', 'text', 'Slug', 1, 0, 0, 1, 1, 1, '{"slugify":{"origin":"title","forceUpdate":true},"validation":{"rule":"unique:directions,slug"}}', 6),
 (171, 23, 'temp_id', 'text', 'Temp Id', 1, 1, 1, 1, 1, 1, '{}', 7),
 (172, 23, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 8),
 (173, 23, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 9),
-(174, 23, 'dcredit_belongsto_temp_relationship', 'relationship', 'temps', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Temp\",\"table\":\"temps\",\"type\":\"belongsTo\",\"column\":\"temp_id\",\"key\":\"id\",\"label\":\"body\",\"pivot_table\":\"abouts\",\"pivot\":\"0\",\"taggable\":\"0\"}', 10),
+(174, 23, 'dcredit_belongsto_temp_relationship', 'relationship', 'temps', 0, 1, 1, 1, 1, 1, '{"model":"App\\\\Temp","table":"temps","type":"belongsTo","column":"temp_id","key":"id","label":"body","pivot_table":"abouts","pivot":"0","taggable":"0"}', 10),
 (175, 24, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (176, 24, 'title', 'text', 'Заголовок', 0, 1, 1, 1, 1, 1, '{}', 2),
 (177, 24, 'seo_title', 'text', 'Seo Title', 0, 1, 1, 1, 1, 1, '{}', 3),
 (178, 24, 'seo_description', 'text', 'Seo Description', 0, 1, 1, 1, 1, 1, '{}', 4),
 (179, 24, 'seo_keywords', 'text', 'Seo Keywords', 0, 1, 1, 1, 1, 1, '{}', 5),
-(180, 24, 'slug', 'text', 'Slug', 1, 1, 1, 1, 1, 1, '{\"slugify\":{\"origin\":\"title\",\"forceUpdate\":true},\"validation\":{\"rule\":\"unique:directions,slug\"}}', 6),
+(180, 24, 'slug', 'text', 'Slug', 1, 1, 1, 1, 1, 1, '{"slugify":{"origin":"title","forceUpdate":true},"validation":{"rule":"unique:directions,slug"}}', 6),
 (181, 24, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 7),
 (182, 24, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 8),
 (183, 24, 'body', 'text_area', 'Текст', 0, 0, 1, 1, 1, 1, '{}', 9),
-(184, 24, 'image', 'image', 'Изображение', 0, 0, 1, 1, 1, 1, '{\"resize\":{\"width\":\"600\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 10),
-(185, 24, 'image1', 'image', 'Изображение 1', 0, 0, 1, 1, 1, 1, '{\"resize\":{\"width\":\"500\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 11),
+(184, 24, 'image', 'image', 'Изображение', 0, 0, 1, 1, 1, 1, '{"resize":{"width":"600","height":"null"},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"300","height":"250"}}]}', 10),
+(185, 24, 'image1', 'image', 'Изображение 1', 0, 0, 1, 1, 1, 1, '{"resize":{"width":"500","height":"null"},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"300","height":"250"}}]}', 11),
 (186, 24, 'title1', 'text', 'Заголовок 1', 0, 0, 1, 1, 1, 1, '{}', 12),
 (187, 24, 'body1', 'text_area', 'Текст 1', 0, 0, 1, 1, 1, 1, '{}', 13),
-(188, 24, 'image2', 'image', 'Изображение 2', 0, 0, 1, 1, 1, 1, '{\"resize\":{\"width\":\"500\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 14),
+(188, 24, 'image2', 'image', 'Изображение 2', 0, 0, 1, 1, 1, 1, '{"resize":{"width":"500","height":"null"},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"300","height":"250"}}]}', 14),
 (189, 24, 'title2', 'text', 'Заголовок 2', 0, 0, 1, 1, 1, 1, '{}', 15),
 (190, 24, 'body2', 'text_area', 'Текст 2', 0, 0, 1, 1, 1, 1, '{}', 16),
-(191, 24, 'image3', 'image', 'Изображение 3', 0, 0, 1, 1, 1, 1, '{\"resize\":{\"width\":\"500\",\"height\":\"null\"},\"quality\":\"70%\",\"upsize\":true,\"thumbnails\":[{\"name\":\"medium\",\"scale\":\"50%\"},{\"name\":\"small\",\"scale\":\"25%\"},{\"name\":\"cropped\",\"crop\":{\"width\":\"300\",\"height\":\"250\"}}]}', 17),
+(191, 24, 'image3', 'image', 'Изображение 3', 0, 0, 1, 1, 1, 1, '{"resize":{"width":"500","height":"null"},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"300","height":"250"}}]}', 17),
 (192, 24, 'title3', 'text', 'Заголовок 3', 0, 0, 1, 1, 1, 1, '{}', 18),
 (193, 24, 'body3', 'text_area', 'Текст 3', 0, 0, 1, 1, 1, 1, '{}', 19),
-(194, 19, 'seo_title', 'text', 'Seo Title', 0, 1, 1, 1, 1, 1, '{}', 15),
-(195, 19, 'seo_description', 'text', 'Seo Description', 0, 1, 1, 1, 1, 1, '{}', 16),
-(196, 19, 'seo_keywords', 'text', 'Seo Keywords', 0, 1, 1, 1, 1, 1, '{}', 17),
-(197, 19, 'title', 'text_area', 'Title', 0, 1, 1, 1, 1, 1, '{}', 18);
+(194, 19, 'seo_title', 'text', 'Seo Title', 0, 0, 1, 1, 1, 1, '{}', 15),
+(195, 19, 'seo_description', 'text', 'Seo Description', 0, 0, 1, 1, 1, 1, '{}', 16),
+(196, 19, 'seo_keywords', 'text', 'Seo Keywords', 0, 0, 1, 1, 1, 1, '{}', 17),
+(197, 19, 'title', 'text_area', 'Title', 0, 1, 1, 1, 1, 1, '{}', 18),
+(198, 25, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(199, 25, 'title', 'text', 'Заголовок', 1, 1, 1, 1, 1, 1, '{}', 2),
+(200, 25, 'slug', 'text', 'Slug', 1, 1, 1, 0, 0, 0, '{}', 3),
+(201, 25, 'seo_title', 'text', 'Seo Title', 0, 1, 1, 1, 1, 1, '{}', 4),
+(202, 25, 'seo_description', 'text', 'Seo Description', 0, 1, 1, 1, 1, 1, '{}', 5),
+(203, 25, 'seo_keywords', 'text', 'Seo Keywords', 0, 1, 1, 1, 1, 1, '{}', 6),
+(204, 25, 'temp_id', 'text', 'Temp Id', 1, 1, 1, 1, 1, 1, '{}', 7),
+(205, 25, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 8),
+(206, 25, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 9),
+(207, 12, 'address', 'rich_text_box', 'Адрес', 0, 0, 1, 1, 1, 1, '{}', 9),
+(208, 12, 'phonelink', 'text', 'Ссылка на телефон', 0, 0, 1, 1, 1, 1, '{}', 10),
+(209, 12, 'phone', 'text', 'Телефон', 0, 0, 1, 1, 1, 1, '{}', 11),
+(210, 12, 'email', 'text', 'Email', 0, 0, 1, 1, 1, 1, '{}', 12);
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `data_types`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `data_types` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `data_types`;
+CREATE TABLE IF NOT EXISTS `data_types` (
+  `id` int(10) unsigned NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `slug` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `display_name_singular` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -385,7 +422,7 @@ CREATE TABLE `data_types` (
   `details` text COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `data_types`
@@ -398,31 +435,35 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (4, 'categories', 'categories', 'Category', 'Categories', 'voyager-categories', 'TCG\\Voyager\\Models\\Category', NULL, '', '', 1, 0, NULL, '2018-12-24 15:43:19', '2018-12-24 15:43:19'),
 (5, 'posts', 'posts', 'Post', 'Posts', 'voyager-news', 'TCG\\Voyager\\Models\\Post', 'TCG\\Voyager\\Policies\\PostPolicy', '', '', 1, 0, NULL, '2018-12-24 15:43:19', '2018-12-24 15:43:19'),
 (6, 'pages', 'pages', 'Page', 'Pages', 'voyager-file-text', 'TCG\\Voyager\\Models\\Page', NULL, '', '', 1, 0, NULL, '2018-12-24 15:43:19', '2018-12-24 15:43:19'),
-(7, 'faqs', 'faqs', 'Вопросы и ответы', 'Вопросы и ответы', 'voyager-question', 'App\\Faq', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-24 15:49:02', '2018-12-24 15:49:02'),
-(8, 'teams', 'teams', 'Команда', 'Команда', 'voyager-people', 'App\\Team', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-24 17:03:14', '2018-12-24 17:03:14'),
-(9, 'abouts', 'abouts', 'О нас', 'О нас', 'voyager-receipt', 'App\\About', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-24 17:13:18', '2018-12-24 17:13:18'),
-(10, 'footers', 'footers', 'Footer', 'Footers', 'voyager-archive', 'App\\Footer', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-25 16:19:08', '2018-12-27 00:11:40'),
-(11, 'phones', 'phones', 'Телефон', 'телефоны', 'voyager-telephone', 'App\\Phone', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-25 16:32:28', '2018-12-25 16:32:28'),
-(12, 'captions', 'captions', 'Главная страница', 'Главная страница', 'voyager-bar-chart', 'App\\Caption', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-25 16:42:18', '2018-12-26 18:45:48'),
-(13, 'directions', 'directions', 'Направление деятиельности', 'Направления деятельности', NULL, 'App\\Direction', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-25 17:15:26', '2018-12-30 06:51:38'),
-(14, 'servs', 'servs', 'Услуги', 'Услуги', 'voyager-news', 'App\\Serv', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-26 20:21:06', '2018-12-26 20:21:06'),
-(15, 'mails', 'mails', 'Сообщения', 'Сообщения', 'voyager-mail', 'App\\Mail', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-26 22:51:33', '2018-12-26 22:51:33'),
-(16, 'sendmails', 'sendmails', 'Emails для почты', 'Emails для почты', 'voyager-mail', 'App\\Sendmail', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-26 23:58:57', '2018-12-26 23:58:57'),
-(17, 'seos', 'seos', 'SEO', 'SEO', 'voyager-character', 'App\\Seo', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-27 20:44:29', '2018-12-27 21:03:45'),
-(18, 'activs', 'activs', 'Направления на главной', 'Направления на главной', 'voyager-dot-2', 'App\\Activ', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-12-30 05:56:41', '2018-12-30 05:56:41'),
-(19, 'temps', 'temps', 'Шаблон', 'Шаблоны', 'voyager-window-list', 'App\\Temp', NULL, '\\App\\Http\\Controllers\\Voyager\\TitleController', NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2019-01-16 10:17:10', '2019-01-23 13:40:40'),
-(21, 'Domaincredits', 'domaincredits', 'Страница поддомена', 'Страницы поддомена', 'voyager-file-text', 'App\\Domaincredit', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2019-01-16 10:58:12', '2019-01-16 10:58:12'),
-(23, 'dcredits', 'dcredits', 'Страница поддомена', 'Страницы поддомена', 'voyager-file-text', 'App\\Dcredit', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2019-01-16 11:12:55', '2019-01-17 08:35:58'),
-(24, 'credits', 'credits', 'Страница', 'Страницы', NULL, 'App\\Credit', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2019-01-16 16:48:17', '2019-01-16 16:48:17');
+(7, 'faqs', 'faqs', 'Вопросы и ответы', 'Вопросы и ответы', 'voyager-question', 'App\\Faq', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null}', '2018-12-24 15:49:02', '2018-12-24 15:49:02'),
+(8, 'teams', 'teams', 'Команда', 'Команда', 'voyager-people', 'App\\Team', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null}', '2018-12-24 17:03:14', '2018-12-24 17:03:14'),
+(9, 'abouts', 'abouts', 'О нас', 'О нас', 'voyager-receipt', 'App\\About', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null}', '2018-12-24 17:13:18', '2018-12-24 17:13:18'),
+(10, 'footers', 'footers', 'Footer', 'Footers', 'voyager-archive', 'App\\Footer', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null}', '2018-12-25 16:19:08', '2018-12-27 00:11:40'),
+(11, 'phones', 'phones', 'Телефон', 'телефоны', 'voyager-telephone', 'App\\Phone', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null}', '2018-12-25 16:32:28', '2018-12-25 16:32:28'),
+(12, 'captions', 'captions', 'Главная страница', 'Главная страница', 'voyager-bar-chart', 'App\\Caption', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null}', '2018-12-25 16:42:18', '2019-01-28 11:06:35'),
+(13, 'directions', 'directions', 'Направление деятиельности', 'Направления деятельности', NULL, 'App\\Direction', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null}', '2018-12-25 17:15:26', '2018-12-30 06:51:38'),
+(14, 'servs', 'servs', 'Услуги', 'Услуги', 'voyager-news', 'App\\Serv', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null}', '2018-12-26 20:21:06', '2018-12-26 20:21:06'),
+(15, 'mails', 'mails', 'Сообщения', 'Сообщения', 'voyager-mail', 'App\\Mail', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null}', '2018-12-26 22:51:33', '2018-12-26 22:51:33'),
+(16, 'sendmails', 'sendmails', 'Emails для почты', 'Emails для почты', 'voyager-mail', 'App\\Sendmail', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null}', '2018-12-26 23:58:57', '2018-12-26 23:58:57'),
+(17, 'seos', 'seos', 'SEO', 'SEO', 'voyager-character', 'App\\Seo', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null}', '2018-12-27 20:44:29', '2018-12-27 21:03:45'),
+(18, 'activs', 'activs', 'Направления на главной', 'Направления на главной', 'voyager-dot-2', 'App\\Activ', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null}', '2018-12-30 05:56:41', '2018-12-30 05:56:41'),
+(19, 'temps', 'temps', 'Шаблон', 'Шаблоны', 'voyager-window-list', 'App\\Temp', NULL, '\\App\\Http\\Controllers\\Voyager\\TitleController', NULL, 1, 0, '{"order_column":null,"order_display_column":null}', '2019-01-16 10:17:10', '2019-01-28 10:35:01'),
+(21, 'Domaincredits', 'domaincredits', 'Страница поддомена', 'Страницы поддомена', 'voyager-file-text', 'App\\Domaincredit', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null}', '2019-01-16 10:58:12', '2019-01-16 10:58:12'),
+(23, 'dcredits', 'dcredits', 'Страница поддомена', 'Страницы поддомена', 'voyager-file-text', 'App\\Dcredit', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null}', '2019-01-16 11:12:55', '2019-01-17 08:35:58'),
+(24, 'credits', 'credits', 'Страница', 'Страницы', NULL, 'App\\Credit', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null}', '2019-01-16 16:48:17', '2019-01-16 16:48:17'),
+(25, 'domains', 'domains', 'Domain', 'Domains', NULL, 'App\\Domain', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null}', '2019-01-25 08:18:11', '2019-01-25 08:18:11');
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `dcredits`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `dcredits` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `dcredits`;
+CREATE TABLE IF NOT EXISTS `dcredits` (
+  `id` int(10) unsigned NOT NULL,
   `title` text COLLATE utf8mb4_unicode_ci,
   `seo_title` text COLLATE utf8mb4_unicode_ci,
   `seo_description` text COLLATE utf8mb4_unicode_ci,
@@ -431,7 +472,7 @@ CREATE TABLE `dcredits` (
   `temp_id` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `dcredits`
@@ -445,9 +486,12 @@ INSERT INTO `dcredits` (`id`, `title`, `seo_title`, `seo_description`, `seo_keyw
 --
 -- Table structure for table `directions`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `directions` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `directions`;
+CREATE TABLE IF NOT EXISTS `directions` (
+  `id` int(10) unsigned NOT NULL,
   `title` text COLLATE utf8mb4_unicode_ci,
   `body` text COLLATE utf8mb4_unicode_ci,
   `background` text COLLATE utf8mb4_unicode_ci,
@@ -462,7 +506,7 @@ CREATE TABLE `directions` (
   `seo_keywords` text COLLATE utf8mb4_unicode_ci,
   `description` text COLLATE utf8mb4_unicode_ci,
   `slug` text COLLATE utf8mb4_unicode_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `directions`
@@ -482,9 +526,12 @@ INSERT INTO `directions` (`id`, `title`, `body`, `background`, `formtitle`, `cir
 --
 -- Table structure for table `domains`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `domains` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `domains`;
+CREATE TABLE IF NOT EXISTS `domains` (
+  `id` int(10) unsigned NOT NULL,
   `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `slug` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `seo_title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -493,35 +540,35 @@ CREATE TABLE `domains` (
   `temp_id` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=147 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `domains`
 --
 
 INSERT INTO `domains` (`id`, `title`, `slug`, `seo_title`, `seo_description`, `seo_keywords`, `temp_id`, `created_at`, `updated_at`) VALUES
-(1, 'Заголовок1\r', 'zagolovok1', 'Заголовок1\r\nЗаголовок 2\r\nЗаголовок 3', '434', '777', 5, '2019-01-23 14:31:24', '2019-01-23 14:31:24'),
-(2, 'Заголовок 2\r', 'zagolovok-2', 'Заголовок1\r\nЗаголовок 2\r\nЗаголовок 3', '434', '777', 5, '2019-01-23 14:31:24', '2019-01-23 14:31:24'),
-(3, 'Заголовок 3', 'zagolovok-3', 'Заголовок1\r\nЗаголовок 2\r\nЗаголовок 3', '434', '777', 5, '2019-01-23 14:31:24', '2019-01-23 14:31:24'),
-(10, 'шаблон4\r', 'shablon4', 'шаблон4\r\nшаюлон5\r\nшаблон6', NULL, NULL, 8, '2019-01-23 14:47:39', '2019-01-23 14:47:39'),
-(11, 'шаюлон5\r', 'shayulon5', 'шаблон4\r\nшаюлон5\r\nшаблон6', NULL, NULL, 8, '2019-01-23 14:47:39', '2019-01-23 14:47:39'),
-(12, 'шаблон6', 'shablon6', 'шаблон4\r\nшаюлон5\r\nшаблон6', NULL, NULL, 8, '2019-01-23 14:47:39', '2019-01-23 14:47:39'),
-(21, 'шаблон2\r', 'shablon2', 'шаблон2\r\nшаблон3', NULL, NULL, 7, '2019-01-23 14:48:41', '2019-01-23 14:48:41'),
-(22, 'шаблон3', 'shablon3', 'шаблон2\r\nшаблон3', NULL, NULL, 7, '2019-01-23 14:48:41', '2019-01-23 14:48:41');
+(142, 'Помогаем получить кредит в сжатые сроки\r', 'pomogaem-poluchit-kredit-v-szhatye-sroki', NULL, NULL, NULL, 1, '2019-01-28 10:13:24', '2019-01-28 10:13:24'),
+(143, 'Помогаем получить быстро\r', 'pomogaem-poluchit-bystro', NULL, NULL, NULL, 1, '2019-01-28 10:13:24', '2019-01-28 10:13:24'),
+(144, 'Помогаем получить кредит на выгодных условиях\r', 'pomogaem-poluchit-kredit-na-vygodnykh-usloviyakh', NULL, NULL, NULL, 1, '2019-01-28 10:13:24', '2019-01-28 10:13:24'),
+(145, 'Помогаем получить кредит с минимальным процентом\r', 'pomogaem-poluchit-kredit-s-minimalnym-protsentom', NULL, NULL, NULL, 1, '2019-01-28 10:13:24', '2019-01-28 10:13:24'),
+(146, 'проверка', 'proverka', NULL, NULL, NULL, 1, '2019-01-28 10:13:24', '2019-01-28 10:13:24');
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `faqs`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `faqs` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `faqs`;
+CREATE TABLE IF NOT EXISTS `faqs` (
+  `id` int(10) unsigned NOT NULL,
   `question` text COLLATE utf8mb4_unicode_ci,
   `answer` text COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `faqs`
@@ -535,9 +582,12 @@ INSERT INTO `faqs` (`id`, `question`, `answer`, `created_at`, `updated_at`) VALU
 --
 -- Table structure for table `footers`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `footers` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `footers`;
+CREATE TABLE IF NOT EXISTS `footers` (
+  `id` int(10) unsigned NOT NULL,
   `body` text COLLATE utf8mb4_unicode_ci,
   `ok` text COLLATE utf8mb4_unicode_ci,
   `inst` text COLLATE utf8mb4_unicode_ci,
@@ -545,23 +595,26 @@ CREATE TABLE `footers` (
   `vk` text COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `footers`
 --
 
 INSERT INTO `footers` (`id`, `body`, `ok`, `inst`, `facebook`, `vk`, `created_at`, `updated_at`) VALUES
-(1, '<div>142002, Московская область, Домодедово, улица Текстильщиков, 1Б, офис 307а</div>\r\n<div><a href=\"mailto:info@agroexpertservice.ru\">info@agroexpertservice.ru</a></div>\r\n<div><a href=\"tel:+74959026838\">+7 (495) 902-68-38</a></div>', '/', '/', '/', '/', '2018-12-25 16:19:50', '2018-12-25 16:19:50');
+(1, '<div>142007, Московская область, город Домодедово, мкр Авиационный, ул. Ильюшина, стр. 2а, номер помещения 517</div>\r\n<div><a href="mailto:info@agrodohod.ru">info@agrodohod.ru</a></div>\r\n<div><a href="tel:+74959026838">8 (800) 555-85-86<br /><br /><br /></a></div>', '/', '/', '/', '/', '2018-12-25 16:19:00', '2019-01-28 10:20:36');
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `mails`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `mails` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `mails`;
+CREATE TABLE IF NOT EXISTS `mails` (
+  `id` int(10) unsigned NOT NULL,
   `title` text COLLATE utf8mb4_unicode_ci,
   `name` text COLLATE utf8mb4_unicode_ci,
   `email` text COLLATE utf8mb4_unicode_ci,
@@ -569,7 +622,7 @@ CREATE TABLE `mails` (
   `text` text COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `mails`
@@ -594,8 +647,8 @@ INSERT INTO `mails` (`id`, `title`, `name`, `email`, `tel`, `text`, `created_at`
 (16, 'страница: Агрорынок', '123', '123@123.com', NULL, '123', '2018-12-26 23:54:13', '2018-12-26 23:54:13'),
 (17, 'Операции с землей и недвижимостью', '123213', NULL, '123123', NULL, '2018-12-27 00:05:33', '2018-12-27 00:05:33'),
 (18, 'Операции с землей и недвижимостью', '123213', NULL, '123123', NULL, '2018-12-27 00:05:49', '2018-12-27 00:05:49'),
-(19, 'страница \'Агрорынок\'', '123123', '123@123.com', NULL, 'asd213', '2018-12-27 00:06:15', '2018-12-27 00:06:15'),
-(20, 'страница \'Агрорынок\'', '123123', '123@123.com', NULL, 'asd213', '2018-12-27 00:09:51', '2018-12-27 00:09:51'),
+(19, 'страница ''Агрорынок''', '123123', '123@123.com', NULL, 'asd213', '2018-12-27 00:06:15', '2018-12-27 00:06:15'),
+(20, 'страница ''Агрорынок''', '123123', '123@123.com', NULL, 'asd213', '2018-12-27 00:09:51', '2018-12-27 00:09:51'),
 (21, 'Запрос на кредит', '123', NULL, '123123', '123', '2019-01-16 09:19:04', '2019-01-16 09:19:04'),
 (22, 'Оставить заявку на кредитование или субсидии', '213213', NULL, '123123', NULL, '2019-01-16 09:34:19', '2019-01-16 09:34:19'),
 (23, 'Оставить заявку на гранты, кредитование и субсидии', '213213', NULL, '123123', NULL, '2019-01-16 09:37:59', '2019-01-16 09:37:59'),
@@ -604,20 +657,57 @@ INSERT INTO `mails` (`id`, `title`, `name`, `email`, `tel`, `text`, `created_at`
 (26, 'Заголовок1', '123213', NULL, '123123', '123213', '2019-01-16 10:49:25', '2019-01-16 10:49:25'),
 (27, 'Заголовок1', '432434', NULL, '124', NULL, '2019-01-16 10:49:30', '2019-01-16 10:49:30'),
 (28, 'Заголовок 231', '31321', NULL, '1233', NULL, '2019-01-16 11:23:29', '2019-01-16 11:23:29'),
-(30, 'asd', 'asd', 'asd@213.com', '123213', '123213', '2019-01-23 13:31:50', '2019-01-23 13:31:50');
+(30, 'asd', 'asd', 'asd@213.com', '123213', '123213', '2019-01-23 13:31:50', '2019-01-23 13:31:50'),
+(31, 'Заголовок1', 'fff', NULL, '666', NULL, '2019-01-24 07:45:04', '2019-01-24 07:45:04'),
+(32, 'Тест', 'fff', NULL, '333334', NULL, '2019-01-24 07:48:03', '2019-01-24 07:48:03'),
+(33, 'Тест', '444', NULL, '44', '444', '2019-01-24 07:48:11', '2019-01-24 07:48:11'),
+(34, '10test', 'fff', NULL, '555', NULL, '2019-01-25 08:06:50', '2019-01-25 08:06:50'),
+(35, '10test', '555', NULL, '5555', '555', '2019-01-25 08:07:01', '2019-01-25 08:07:01'),
+(36, '40test', '4444', NULL, '4444444', NULL, '2019-01-25 08:07:15', '2019-01-25 08:07:15'),
+(37, '40test', '444', NULL, '444444', '4444', '2019-01-25 08:07:20', '2019-01-25 08:07:20'),
+(38, '20test', '222222', NULL, '222222', NULL, '2019-01-25 08:08:38', '2019-01-25 08:08:38'),
+(39, '20test', '2222222222', NULL, '222222222', '222222222', '2019-01-25 08:08:45', '2019-01-25 08:08:45'),
+(40, '10test', '111111111', NULL, '11111111', NULL, '2019-01-25 08:08:59', '2019-01-25 08:08:59'),
+(41, '10test', '1111111', NULL, '111111111', '111111111111111', '2019-01-25 08:09:07', '2019-01-25 08:09:07'),
+(42, 'Хотите, чтобы мы ответили на ваши вопросы?', 'выавыа', NULL, 'ываывавыа', NULL, '2019-01-25 08:21:16', '2019-01-25 08:21:16'),
+(43, 'страница ''Поставщикам технологий и оборудования''', 'ывавыа', 'assdsd@sadsad.com', NULL, 'ываыва', '2019-01-25 08:21:54', '2019-01-25 08:21:54'),
+(44, 'Юридическое сопровождение', 'asdasdsad', NULL, 'sadsadsad', NULL, '2019-01-25 08:22:19', '2019-01-25 08:22:19'),
+(45, 'Оставить заявку на кредитование или субсидии', 'test444', NULL, '123123', NULL, '2019-01-25 08:22:55', '2019-01-25 08:22:55'),
+(46, 'Нужен трактор, чтобы ездил очень быстро', '7777', NULL, '7777', NULL, '2019-01-25 08:23:20', '2019-01-25 08:23:20'),
+(47, 'Нужен трактор, чтобы ездил очень быстро', '7777', NULL, '7777', NULL, '2019-01-25 08:23:20', '2019-01-25 08:23:20'),
+(48, 'Оставить заявку на ведение учета в ФГИС «Меркурий»', 'test555', NULL, '123123', NULL, '2019-01-25 08:23:25', '2019-01-25 08:23:25'),
+(49, 'Нужен трактор, чтобы ездил очень быстро', '7777777777777', NULL, '7777777777', '777777777777', '2019-01-25 08:23:30', '2019-01-25 08:23:30'),
+(50, 'Помощь с покупкой сельскохозяйственых земель', 'test666', NULL, '123123', NULL, '2019-01-25 08:23:41', '2019-01-25 08:23:41'),
+(51, 'страница ''Поставщикам технологий и оборудования''', '345345', '123@123.com', NULL, '345435', '2019-01-25 08:23:57', '2019-01-25 08:23:57'),
+(52, 'Нужен трактор, чтобы ездил очень быстро', '8888888', NULL, '888888', NULL, '2019-01-25 08:24:31', '2019-01-25 08:24:31'),
+(53, 'Нужен трактор, чтобы ездил очень быстро', '888888', NULL, '88888888', '88888888888', '2019-01-25 08:24:38', '2019-01-25 08:24:38'),
+(54, 'Нужен трактор, чтобы ездил очень быстро', '666', NULL, '666', NULL, '2019-01-25 08:25:25', '2019-01-25 08:25:25'),
+(55, 'Нужен трактор, чтобы ездил очень быстро', '999', NULL, '999', '999', '2019-01-25 08:25:31', '2019-01-25 08:25:31'),
+(56, 'Стать нашим клиентом', '555555555', NULL, '555555555', NULL, '2019-01-25 08:30:18', '2019-01-25 08:30:18'),
+(57, 'страница ''Поставщикам технологий и оборудования''', '123213', '444@444.com', NULL, '123123213', '2019-01-25 08:30:31', '2019-01-25 08:30:31'),
+(58, 'страница ''Поставщикам технологий и оборудования''', '123123', '123@123.com', NULL, '123213', '2019-01-25 08:33:07', '2019-01-25 08:33:07'),
+(59, 'страница ''Поставщикам технологий и оборудования''', '123', '123@123.com', NULL, '123', '2019-01-25 08:33:22', '2019-01-25 08:33:22'),
+(60, 'Хотите, чтобы мы ответили на ваши вопросы?', '123213', NULL, '213213', NULL, '2019-01-25 08:38:42', '2019-01-25 08:38:42'),
+(61, 'Оставить заявку на ведение учета в ФГИС «Меркурий»', '090909', NULL, '090909', NULL, '2019-01-25 08:43:05', '2019-01-25 08:43:05'),
+(62, '10test', '09090909', NULL, '0909090909', NULL, '2019-01-25 08:43:34', '2019-01-25 08:43:34'),
+(63, '10test', '09090909', NULL, '09090909', '09090909', '2019-01-25 08:43:47', '2019-01-25 08:43:47'),
+(64, '10test', '09999999', NULL, '9999999999', NULL, '2019-01-25 08:43:56', '2019-01-25 08:43:56');
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `menus`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `menus` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `menus`;
+CREATE TABLE IF NOT EXISTS `menus` (
+  `id` int(10) unsigned NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `menus`
@@ -631,10 +721,13 @@ INSERT INTO `menus` (`id`, `name`, `created_at`, `updated_at`) VALUES
 --
 -- Table structure for table `menu_items`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `menu_items` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `menu_id` int(10) UNSIGNED DEFAULT NULL,
+DROP TABLE IF EXISTS `menu_items`;
+CREATE TABLE IF NOT EXISTS `menu_items` (
+  `id` int(10) unsigned NOT NULL,
+  `menu_id` int(10) unsigned DEFAULT NULL,
   `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `url` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `target` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '_self',
@@ -646,26 +739,26 @@ CREATE TABLE `menu_items` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `route` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `parameters` text COLLATE utf8mb4_unicode_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `menu_items`
 --
 
 INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class`, `color`, `parent_id`, `order`, `created_at`, `updated_at`, `route`, `parameters`) VALUES
-(1, 1, 'Dashboard', '', '_self', 'voyager-boat', NULL, NULL, 20, '2018-12-24 15:43:17', '2019-01-16 11:22:53', 'voyager.dashboard', NULL),
-(2, 1, 'Media', '', '_self', 'voyager-images', NULL, NULL, 19, '2018-12-24 15:43:17', '2019-01-16 11:22:53', 'voyager.media.index', NULL),
-(3, 1, 'Users', '', '_self', 'voyager-person', NULL, NULL, 22, '2018-12-24 15:43:17', '2019-01-16 11:22:53', 'voyager.users.index', NULL),
-(4, 1, 'Roles', '', '_self', 'voyager-lock', NULL, NULL, 21, '2018-12-24 15:43:17', '2019-01-16 11:22:53', 'voyager.roles.index', NULL),
-(5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 18, '2018-12-24 15:43:17', '2019-01-16 11:22:53', NULL, NULL),
+(1, 1, 'Dashboard', '', '_self', 'voyager-boat', NULL, NULL, 20, '2018-12-24 15:43:17', '2019-01-25 08:19:31', 'voyager.dashboard', NULL),
+(2, 1, 'Media', '', '_self', 'voyager-images', NULL, NULL, 19, '2018-12-24 15:43:17', '2019-01-25 08:19:31', 'voyager.media.index', NULL),
+(3, 1, 'Users', '', '_self', 'voyager-person', NULL, NULL, 22, '2018-12-24 15:43:17', '2019-01-25 08:19:31', 'voyager.users.index', NULL),
+(4, 1, 'Roles', '', '_self', 'voyager-lock', NULL, NULL, 21, '2018-12-24 15:43:17', '2019-01-25 08:19:31', 'voyager.roles.index', NULL),
+(5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 18, '2018-12-24 15:43:17', '2019-01-25 08:19:31', NULL, NULL),
 (6, 1, 'Menu Builder', '', '_self', 'voyager-list', NULL, 5, 1, '2018-12-24 15:43:17', '2018-12-27 00:15:10', 'voyager.menus.index', NULL),
 (7, 1, 'Database', '', '_self', 'voyager-data', NULL, 5, 2, '2018-12-24 15:43:17', '2018-12-27 00:15:10', 'voyager.database.index', NULL),
 (8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 3, '2018-12-24 15:43:17', '2018-12-27 00:15:10', 'voyager.compass.index', NULL),
 (9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 4, '2018-12-24 15:43:17', '2018-12-27 00:15:10', 'voyager.bread.index', NULL),
-(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 17, '2018-12-24 15:43:17', '2019-01-16 11:22:53', 'voyager.settings.index', NULL),
-(11, 1, 'Categories', '', '_self', 'voyager-categories', NULL, NULL, 24, '2018-12-24 15:43:19', '2019-01-16 11:22:53', 'voyager.categories.index', NULL),
+(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 17, '2018-12-24 15:43:17', '2019-01-25 08:19:45', 'voyager.settings.index', NULL),
+(11, 1, 'Categories', '', '_self', 'voyager-categories', NULL, NULL, 24, '2018-12-24 15:43:19', '2019-01-25 08:19:31', 'voyager.categories.index', NULL),
 (12, 1, 'События', '', '_self', 'voyager-ticket', '#000000', NULL, 1, '2018-12-24 15:43:19', '2018-12-29 03:18:03', 'voyager.posts.index', 'null'),
-(13, 1, 'Pages', '', '_self', 'voyager-file-text', NULL, NULL, 23, '2018-12-24 15:43:19', '2019-01-16 11:22:53', 'voyager.pages.index', NULL),
+(13, 1, 'Pages', '', '_self', 'voyager-file-text', NULL, NULL, 23, '2018-12-24 15:43:19', '2019-01-25 08:19:31', 'voyager.pages.index', NULL),
 (14, 1, 'Hooks', '', '_self', 'voyager-hook', NULL, 5, 5, '2018-12-24 15:43:20', '2018-12-27 00:15:10', 'voyager.hooks', NULL),
 (15, 1, 'Вопросы и ответы', '', '_self', 'voyager-question', NULL, NULL, 3, '2018-12-24 15:49:02', '2018-12-29 03:18:08', 'voyager.faqs.index', NULL),
 (16, 1, 'Команда', '', '_self', 'voyager-people', NULL, NULL, 2, '2018-12-24 17:03:14', '2018-12-29 03:18:05', 'voyager.teams.index', NULL),
@@ -680,19 +773,23 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (25, 1, 'SEO', '', '_self', 'voyager-character', NULL, NULL, 12, '2018-12-27 20:44:29', '2018-12-30 06:07:32', 'voyager.seos.index', NULL),
 (26, 1, 'Направления на главной', '', '_self', 'voyager-dot-2', NULL, NULL, 9, '2018-12-30 05:56:41', '2018-12-30 06:07:32', 'voyager.activs.index', NULL),
 (27, 1, 'Страницы поддомена', '', '_self', 'voyager-window-list', '#000000', NULL, 14, '2019-01-16 10:17:11', '2019-01-23 15:00:38', 'voyager.temps.index', 'null'),
-(28, 1, 'Страницы', '', '_self', 'voyager-file-text', NULL, NULL, 15, '2019-01-16 10:29:23', '2019-01-16 11:22:48', 'voyager.credits.index', NULL);
+(28, 1, 'Страницы', '', '_self', 'voyager-file-text', NULL, NULL, 15, '2019-01-16 10:29:23', '2019-01-16 11:22:48', 'voyager.credits.index', NULL),
+(31, 1, 'Заголовки поддомена', '', '_self', 'voyager-character', '#000000', NULL, 16, '2019-01-25 08:18:11', '2019-01-25 08:19:45', 'voyager.domains.index', 'null');
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `migrations`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `migrations` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `migrations`;
+CREATE TABLE IF NOT EXISTS `migrations` (
+  `id` int(10) unsigned NOT NULL,
   `migration` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `migrations`
@@ -732,9 +829,12 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 --
 -- Table structure for table `pages`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `pages` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `pages`;
+CREATE TABLE IF NOT EXISTS `pages` (
+  `id` int(10) unsigned NOT NULL,
   `author_id` int(11) NOT NULL,
   `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `excerpt` text COLLATE utf8mb4_unicode_ci,
@@ -746,22 +846,25 @@ CREATE TABLE `pages` (
   `status` enum('ACTIVE','INACTIVE') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'INACTIVE',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `pages`
 --
 
 INSERT INTO `pages` (`id`, `author_id`, `title`, `excerpt`, `body`, `image`, `slug`, `meta_description`, `meta_keywords`, `status`, `created_at`, `updated_at`) VALUES
-(1, 0, 'Hello World', 'Hang the jib grog grog blossom grapple dance the hempen jig gangway pressgang bilge rat to go on account lugger. Nelsons folly gabion line draught scallywag fire ship gaff fluke fathom case shot. Sea Legs bilge rat sloop matey gabion long clothes run a shot across the bow Gold Road cog league.', '<p>Hello World. Scallywag grog swab Cat o\'nine tails scuttle rigging hardtack cable nipper Yellow Jack. Handsomely spirits knave lad killick landlubber or just lubber deadlights chantey pinnace crack Jennys tea cup. Provost long clothes black spot Yellow Jack bilged on her anchor league lateen sail case shot lee tackle.</p>\n<p>Ballast spirits fluke topmast me quarterdeck schooner landlubber or just lubber gabion belaying pin. Pinnace stern galleon starboard warp carouser to go on account dance the hempen jig jolly boat measured fer yer chains. Man-of-war fire in the hole nipperkin handsomely doubloon barkadeer Brethren of the Coast gibbet driver squiffy.</p>', 'pages/page1.jpg', 'hello-world', 'Yar Meta Description', 'Keyword1, Keyword2', 'ACTIVE', '2018-12-24 15:43:19', '2018-12-24 15:43:19');
+(1, 0, 'Hello World', 'Hang the jib grog grog blossom grapple dance the hempen jig gangway pressgang bilge rat to go on account lugger. Nelsons folly gabion line draught scallywag fire ship gaff fluke fathom case shot. Sea Legs bilge rat sloop matey gabion long clothes run a shot across the bow Gold Road cog league.', '<p>Hello World. Scallywag grog swab Cat o''nine tails scuttle rigging hardtack cable nipper Yellow Jack. Handsomely spirits knave lad killick landlubber or just lubber deadlights chantey pinnace crack Jennys tea cup. Provost long clothes black spot Yellow Jack bilged on her anchor league lateen sail case shot lee tackle.</p>\n<p>Ballast spirits fluke topmast me quarterdeck schooner landlubber or just lubber gabion belaying pin. Pinnace stern galleon starboard warp carouser to go on account dance the hempen jig jolly boat measured fer yer chains. Man-of-war fire in the hole nipperkin handsomely doubloon barkadeer Brethren of the Coast gibbet driver squiffy.</p>', 'pages/page1.jpg', 'hello-world', 'Yar Meta Description', 'Keyword1, Keyword2', 'ACTIVE', '2018-12-24 15:43:19', '2018-12-24 15:43:19');
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `password_resets`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `password_resets` (
+DROP TABLE IF EXISTS `password_resets`;
+CREATE TABLE IF NOT EXISTS `password_resets` (
   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `token` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
@@ -772,14 +875,17 @@ CREATE TABLE `password_resets` (
 --
 -- Table structure for table `permissions`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `permissions` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `permissions`;
+CREATE TABLE IF NOT EXISTS `permissions` (
+  `id` int(10) unsigned NOT NULL,
   `key` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `table_name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=132 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `permissions`
@@ -906,17 +1012,25 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (123, 'read_credits', 'credits', '2019-01-16 16:48:17', '2019-01-16 16:48:17'),
 (124, 'edit_credits', 'credits', '2019-01-16 16:48:17', '2019-01-16 16:48:17'),
 (125, 'add_credits', 'credits', '2019-01-16 16:48:17', '2019-01-16 16:48:17'),
-(126, 'delete_credits', 'credits', '2019-01-16 16:48:17', '2019-01-16 16:48:17');
+(126, 'delete_credits', 'credits', '2019-01-16 16:48:17', '2019-01-16 16:48:17'),
+(127, 'browse_domains', 'domains', '2019-01-25 08:18:11', '2019-01-25 08:18:11'),
+(128, 'read_domains', 'domains', '2019-01-25 08:18:11', '2019-01-25 08:18:11'),
+(129, 'edit_domains', 'domains', '2019-01-25 08:18:11', '2019-01-25 08:18:11'),
+(130, 'add_domains', 'domains', '2019-01-25 08:18:11', '2019-01-25 08:18:11'),
+(131, 'delete_domains', 'domains', '2019-01-25 08:18:11', '2019-01-25 08:18:11');
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `permission_role`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `permission_role` (
-  `permission_id` int(10) UNSIGNED NOT NULL,
-  `role_id` int(10) UNSIGNED NOT NULL
+DROP TABLE IF EXISTS `permission_role`;
+CREATE TABLE IF NOT EXISTS `permission_role` (
+  `permission_id` int(10) unsigned NOT NULL,
+  `role_id` int(10) unsigned NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -1043,21 +1157,29 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (123, 1),
 (124, 1),
 (125, 1),
-(126, 1);
+(126, 1),
+(127, 1),
+(128, 1),
+(129, 1),
+(130, 1),
+(131, 1);
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `phones`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `phones` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `phones`;
+CREATE TABLE IF NOT EXISTS `phones` (
+  `id` int(10) unsigned NOT NULL,
   `phone` text COLLATE utf8mb4_unicode_ci,
   `atel` text COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `phones`
@@ -1071,9 +1193,12 @@ INSERT INTO `phones` (`id`, `phone`, `atel`, `created_at`, `updated_at`) VALUES
 --
 -- Table structure for table `posts`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `posts` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `posts`;
+CREATE TABLE IF NOT EXISTS `posts` (
+  `id` int(10) unsigned NOT NULL,
   `author_id` int(11) NOT NULL,
   `category_id` int(11) DEFAULT NULL,
   `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -1088,7 +1213,7 @@ CREATE TABLE `posts` (
   `featured` tinyint(1) NOT NULL DEFAULT '0',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `posts`
@@ -1105,14 +1230,17 @@ INSERT INTO `posts` (`id`, `author_id`, `category_id`, `title`, `seo_title`, `ex
 --
 -- Table structure for table `roles`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `roles` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `roles`;
+CREATE TABLE IF NOT EXISTS `roles` (
+  `id` int(10) unsigned NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `display_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `roles`
@@ -1127,31 +1255,38 @@ INSERT INTO `roles` (`id`, `name`, `display_name`, `created_at`, `updated_at`) V
 --
 -- Table structure for table `sendmails`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `sendmails` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `sendmails`;
+CREATE TABLE IF NOT EXISTS `sendmails` (
+  `id` int(10) unsigned NOT NULL,
   `email` text COLLATE utf8mb4_unicode_ci,
   `send` text COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `sendmails`
 --
 
 INSERT INTO `sendmails` (`id`, `email`, `send`, `created_at`, `updated_at`) VALUES
-(1, 'got26days@gmail.com', 'false', '2018-12-26 23:59:00', '2018-12-27 00:07:15'),
-(2, 'mailpalagov@gmail.com', 'false', '2018-12-26 23:59:00', '2018-12-27 00:07:04');
+(1, 'got26days@gmail.com', 'false', '2018-12-26 23:59:00', '2019-01-25 08:26:27'),
+(2, 'mailpalagov@gmail.com', 'false', '2018-12-26 23:59:00', '2018-12-27 00:07:04'),
+(3, '16odal13@gmail.com', 'true', '2019-01-25 08:04:28', '2019-01-25 08:04:28');
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `seos`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `seos` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `seos`;
+CREATE TABLE IF NOT EXISTS `seos` (
+  `id` int(10) unsigned NOT NULL,
   `page` text COLLATE utf8mb4_unicode_ci,
   `seo_title` text COLLATE utf8mb4_unicode_ci,
   `seo_description` text COLLATE utf8mb4_unicode_ci,
@@ -1159,7 +1294,7 @@ CREATE TABLE `seos` (
   `page_title` text COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `seos`
@@ -1177,14 +1312,17 @@ INSERT INTO `seos` (`id`, `page`, `seo_title`, `seo_description`, `seo_keywords`
 --
 -- Table structure for table `servs`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `servs` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `servs`;
+CREATE TABLE IF NOT EXISTS `servs` (
+  `id` int(10) unsigned NOT NULL,
   `option` text COLLATE utf8mb4_unicode_ci,
   `body` text COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `servs`
@@ -1212,9 +1350,12 @@ INSERT INTO `servs` (`id`, `option`, `body`, `created_at`, `updated_at`) VALUES
 --
 -- Table structure for table `settings`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `settings` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `settings`;
+CREATE TABLE IF NOT EXISTS `settings` (
+  `id` int(10) unsigned NOT NULL,
   `key` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `display_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `value` text COLLATE utf8mb4_unicode_ci,
@@ -1222,7 +1363,7 @@ CREATE TABLE `settings` (
   `type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
   `group` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `settings`
@@ -1245,16 +1386,19 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 --
 -- Table structure for table `teams`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `teams` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `teams`;
+CREATE TABLE IF NOT EXISTS `teams` (
+  `id` int(10) unsigned NOT NULL,
   `name` text COLLATE utf8mb4_unicode_ci,
   `photo` text COLLATE utf8mb4_unicode_ci,
   `position` text COLLATE utf8mb4_unicode_ci,
   `youtube` text COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `teams`
@@ -1269,9 +1413,12 @@ INSERT INTO `teams` (`id`, `name`, `photo`, `position`, `youtube`, `created_at`,
 --
 -- Table structure for table `temps`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `temps` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `temps`;
+CREATE TABLE IF NOT EXISTS `temps` (
+  `id` int(10) unsigned NOT NULL,
   `body` text COLLATE utf8mb4_unicode_ci,
   `image` text COLLATE utf8mb4_unicode_ci,
   `image1` text COLLATE utf8mb4_unicode_ci,
@@ -1289,33 +1436,34 @@ CREATE TABLE `temps` (
   `seo_description` text COLLATE utf8mb4_unicode_ci,
   `seo_keywords` text COLLATE utf8mb4_unicode_ci,
   `title` text COLLATE utf8mb4_unicode_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `temps`
 --
 
 INSERT INTO `temps` (`id`, `body`, `image`, `image1`, `title1`, `body1`, `image2`, `title2`, `body2`, `image3`, `title3`, `body3`, `created_at`, `updated_at`, `seo_title`, `seo_description`, `seo_keywords`, `title`) VALUES
-(1, 'Проанализировав ваше хозяйство и кредитную историю, наши специалисты помогут вам получить кредит или государственные субсидии на выгодных условиях. Для получения точной информации по вашей ситуации, заполните заявку на нашем сайте. Наши специалисты свяжутся с вами в максимально короткий срок. Мы найдём оптимальное решение для получения вами необходимого финансирования.', 'temps/January2019/ouQiRdgpBNiNkjpjamqL.jpg', 'temps/January2019/WwRoR9AnqgEZvpJizSoA.jpg', 'Работаем в сжатые сроки', 'АгроДоход быстро подготовит и передаст в банки все необходимые документы. \r\nЗатем наши специалисты отсортируют и обработают ответы кредитных организаций. \r\nДеньги вы получите в сжатые сроки.', 'temps/January2019/aue5u0g2ZacIuZCrspNq.jpg', 'Самые выгодные условия  на рынке', 'Нередко кредитные договоры содержат крайне невыгодные и даже кабальные для заёмщика условия. Однако разобраться в запутанных и пространных формулировках под силу только профессиональному юристу. \r\nНаши специалисты помогут вам выбрать самое лучшее предложение на рынке кредитования.', 'temps/January2019/zvnnBpXtrmptrE4L1uoS.jpg', 'Даже с плохой кредитной историей', 'Специалисты АгроДохода помогут вам найти выход из самой трудной ситуации. \r\nПомогаем получить кредит даже с плохой кредитной историей.', '2019-01-16 10:23:36', '2019-01-16 10:23:36', NULL, NULL, NULL, NULL),
-(7, '213', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-01-23 14:47:00', '2019-01-23 14:47:52', NULL, NULL, NULL, 'шаблон2\r\nшаблон3'),
-(8, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-01-23 14:47:39', '2019-01-23 14:47:39', NULL, NULL, NULL, 'шаблон4\r\nшаюлон5\r\nшаблон6');
+(1, 'Проанализировав ваше хозяйство и кредитную историю, наши специалисты помогут вам получить кредит или государственные субсидии на выгодных условиях. Для получения точной информации по вашей ситуации, заполните заявку на нашем сайте. Наши специалисты свяжутся с вами в максимально короткий срок. Мы найдём оптимальное решение для получения вами необходимого финансирования.', 'temps/January2019/ouQiRdgpBNiNkjpjamqL.jpg', 'temps/January2019/WwRoR9AnqgEZvpJizSoA.jpg', 'Работаем в сжатые сроки', 'АгроДоход быстро подготовит и передаст в банки все необходимые документы. \r\nЗатем наши специалисты отсортируют и обработают ответы кредитных организаций. \r\nДеньги вы получите в сжатые сроки.', 'temps/January2019/HNUwP7jqFGS06z9nZ7S7.jpg', 'Самые выгодные условия  на рынке', 'Нередко кредитные договоры содержат крайне невыгодные и даже кабальные для заёмщика условия. Однако разобраться в запутанных и пространных формулировках под силу только профессиональному юристу. \r\nНаши специалисты помогут вам выбрать самое лучшее предложение на рынке кредитования.', 'temps/January2019/zvnnBpXtrmptrE4L1uoS.jpg', 'Даже с плохой кредитной историей', 'Специалисты АгроДохода помогут вам найти выход из самой трудной ситуации. \r\nПомогаем получить кредит даже с плохой кредитной историей.', '2019-01-16 10:23:00', '2019-01-28 10:13:24', NULL, NULL, NULL, 'Помогаем получить кредит в сжатые сроки\r\nПомогаем получить быстро\r\nПомогаем получить кредит на выгодных условиях\r\nПомогаем получить кредит с минимальным процентом\r\nпроверка');
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `translations`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `translations` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `translations`;
+CREATE TABLE IF NOT EXISTS `translations` (
+  `id` int(10) unsigned NOT NULL,
   `table_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `column_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `foreign_key` int(10) UNSIGNED NOT NULL,
+  `foreign_key` int(10) unsigned NOT NULL,
   `locale` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `value` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `translations`
@@ -1340,7 +1488,7 @@ INSERT INTO `translations` (`id`, `table_name`, `column_name`, `foreign_key`, `l
 (16, 'categories', 'name', 2, 'pt', 'Categoria 2', '2018-12-24 15:43:20', '2018-12-24 15:43:20'),
 (17, 'pages', 'title', 1, 'pt', 'Olá Mundo', '2018-12-24 15:43:20', '2018-12-24 15:43:20'),
 (18, 'pages', 'slug', 1, 'pt', 'ola-mundo', '2018-12-24 15:43:20', '2018-12-24 15:43:20'),
-(19, 'pages', 'body', 1, 'pt', '<p>Olá Mundo. Scallywag grog swab Cat o\'nine tails scuttle rigging hardtack cable nipper Yellow Jack. Handsomely spirits knave lad killick landlubber or just lubber deadlights chantey pinnace crack Jennys tea cup. Provost long clothes black spot Yellow Jack bilged on her anchor league lateen sail case shot lee tackle.</p>\r\n<p>Ballast spirits fluke topmast me quarterdeck schooner landlubber or just lubber gabion belaying pin. Pinnace stern galleon starboard warp carouser to go on account dance the hempen jig jolly boat measured fer yer chains. Man-of-war fire in the hole nipperkin handsomely doubloon barkadeer Brethren of the Coast gibbet driver squiffy.</p>', '2018-12-24 15:43:20', '2018-12-24 15:43:20'),
+(19, 'pages', 'body', 1, 'pt', '<p>Olá Mundo. Scallywag grog swab Cat o''nine tails scuttle rigging hardtack cable nipper Yellow Jack. Handsomely spirits knave lad killick landlubber or just lubber deadlights chantey pinnace crack Jennys tea cup. Provost long clothes black spot Yellow Jack bilged on her anchor league lateen sail case shot lee tackle.</p>\r\n<p>Ballast spirits fluke topmast me quarterdeck schooner landlubber or just lubber gabion belaying pin. Pinnace stern galleon starboard warp carouser to go on account dance the hempen jig jolly boat measured fer yer chains. Man-of-war fire in the hole nipperkin handsomely doubloon barkadeer Brethren of the Coast gibbet driver squiffy.</p>', '2018-12-24 15:43:20', '2018-12-24 15:43:20'),
 (20, 'menu_items', 'title', 1, 'pt', 'Painel de Controle', '2018-12-24 15:43:20', '2018-12-24 15:43:20'),
 (21, 'menu_items', 'title', 2, 'pt', 'Media', '2018-12-24 15:43:20', '2018-12-24 15:43:20'),
 (22, 'menu_items', 'title', 12, 'pt', 'Publicações', '2018-12-24 15:43:20', '2018-12-24 15:43:20'),
@@ -1358,10 +1506,13 @@ INSERT INTO `translations` (`id`, `table_name`, `column_name`, `foreign_key`, `l
 --
 -- Table structure for table `users`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `users` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `role_id` int(10) UNSIGNED DEFAULT NULL,
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(10) unsigned NOT NULL,
+  `role_id` int(10) unsigned DEFAULT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `avatar` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT 'users/default.png',
@@ -1371,7 +1522,7 @@ CREATE TABLE `users` (
   `settings` text COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `users`
@@ -1385,10 +1536,13 @@ INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `email_verified
 --
 -- Table structure for table `user_roles`
 --
+-- Creation: Jan 23, 2019 at 03:02 PM
+--
 
-CREATE TABLE `user_roles` (
-  `user_id` int(10) UNSIGNED NOT NULL,
-  `role_id` int(10) UNSIGNED NOT NULL
+DROP TABLE IF EXISTS `user_roles`;
+CREATE TABLE IF NOT EXISTS `user_roles` (
+  `user_id` int(10) unsigned NOT NULL,
+  `role_id` int(10) unsigned NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -1417,9 +1571,7 @@ ALTER TABLE `captions`
 -- Indexes for table `categories`
 --
 ALTER TABLE `categories`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `categories_slug_unique` (`slug`),
-  ADD KEY `categories_parent_id_foreign` (`parent_id`);
+  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `categories_slug_unique` (`slug`), ADD KEY `categories_parent_id_foreign` (`parent_id`);
 
 --
 -- Indexes for table `credits`
@@ -1431,16 +1583,13 @@ ALTER TABLE `credits`
 -- Indexes for table `data_rows`
 --
 ALTER TABLE `data_rows`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `data_rows_data_type_id_foreign` (`data_type_id`);
+  ADD PRIMARY KEY (`id`), ADD KEY `data_rows_data_type_id_foreign` (`data_type_id`);
 
 --
 -- Indexes for table `data_types`
 --
 ALTER TABLE `data_types`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `data_types_name_unique` (`name`),
-  ADD UNIQUE KEY `data_types_slug_unique` (`slug`);
+  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `data_types_name_unique` (`name`), ADD UNIQUE KEY `data_types_slug_unique` (`slug`);
 
 --
 -- Indexes for table `dcredits`
@@ -1458,8 +1607,7 @@ ALTER TABLE `directions`
 -- Indexes for table `domains`
 --
 ALTER TABLE `domains`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `domains_slug_unique` (`slug`);
+  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `domains_slug_unique` (`slug`);
 
 --
 -- Indexes for table `faqs`
@@ -1483,15 +1631,13 @@ ALTER TABLE `mails`
 -- Indexes for table `menus`
 --
 ALTER TABLE `menus`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `menus_name_unique` (`name`);
+  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `menus_name_unique` (`name`);
 
 --
 -- Indexes for table `menu_items`
 --
 ALTER TABLE `menu_items`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `menu_items_menu_id_foreign` (`menu_id`);
+  ADD PRIMARY KEY (`id`), ADD KEY `menu_items_menu_id_foreign` (`menu_id`);
 
 --
 -- Indexes for table `migrations`
@@ -1503,8 +1649,7 @@ ALTER TABLE `migrations`
 -- Indexes for table `pages`
 --
 ALTER TABLE `pages`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `pages_slug_unique` (`slug`);
+  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `pages_slug_unique` (`slug`);
 
 --
 -- Indexes for table `password_resets`
@@ -1516,16 +1661,13 @@ ALTER TABLE `password_resets`
 -- Indexes for table `permissions`
 --
 ALTER TABLE `permissions`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `permissions_key_index` (`key`);
+  ADD PRIMARY KEY (`id`), ADD KEY `permissions_key_index` (`key`);
 
 --
 -- Indexes for table `permission_role`
 --
 ALTER TABLE `permission_role`
-  ADD PRIMARY KEY (`permission_id`,`role_id`),
-  ADD KEY `permission_role_permission_id_index` (`permission_id`),
-  ADD KEY `permission_role_role_id_index` (`role_id`);
+  ADD PRIMARY KEY (`permission_id`,`role_id`), ADD KEY `permission_role_permission_id_index` (`permission_id`), ADD KEY `permission_role_role_id_index` (`role_id`);
 
 --
 -- Indexes for table `phones`
@@ -1537,15 +1679,13 @@ ALTER TABLE `phones`
 -- Indexes for table `posts`
 --
 ALTER TABLE `posts`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `posts_slug_unique` (`slug`);
+  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `posts_slug_unique` (`slug`);
 
 --
 -- Indexes for table `roles`
 --
 ALTER TABLE `roles`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `roles_name_unique` (`name`);
+  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `roles_name_unique` (`name`);
 
 --
 -- Indexes for table `sendmails`
@@ -1569,8 +1709,7 @@ ALTER TABLE `servs`
 -- Indexes for table `settings`
 --
 ALTER TABLE `settings`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `settings_key_unique` (`key`);
+  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `settings_key_unique` (`key`);
 
 --
 -- Indexes for table `teams`
@@ -1588,24 +1727,19 @@ ALTER TABLE `temps`
 -- Indexes for table `translations`
 --
 ALTER TABLE `translations`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `translations_table_name_column_name_foreign_key_locale_unique` (`table_name`,`column_name`,`foreign_key`,`locale`);
+  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `translations_table_name_column_name_foreign_key_locale_unique` (`table_name`,`column_name`,`foreign_key`,`locale`);
 
 --
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `users_email_unique` (`email`),
-  ADD KEY `users_role_id_foreign` (`role_id`);
+  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `users_email_unique` (`email`), ADD KEY `users_role_id_foreign` (`role_id`);
 
 --
 -- Indexes for table `user_roles`
 --
 ALTER TABLE `user_roles`
-  ADD PRIMARY KEY (`user_id`,`role_id`),
-  ADD KEY `user_roles_user_id_index` (`user_id`),
-  ADD KEY `user_roles_role_id_index` (`role_id`);
+  ADD PRIMARY KEY (`user_id`,`role_id`), ADD KEY `user_roles_user_id_index` (`user_id`), ADD KEY `user_roles_role_id_index` (`role_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -1615,176 +1749,147 @@ ALTER TABLE `user_roles`
 -- AUTO_INCREMENT for table `abouts`
 --
 ALTER TABLE `abouts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `activs`
 --
 ALTER TABLE `activs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `captions`
 --
 ALTER TABLE `captions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `credits`
 --
 ALTER TABLE `credits`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=198;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=211;
 --
 -- AUTO_INCREMENT for table `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT for table `dcredits`
 --
 ALTER TABLE `dcredits`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `directions`
 --
 ALTER TABLE `directions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `domains`
 --
 ALTER TABLE `domains`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=147;
 --
 -- AUTO_INCREMENT for table `faqs`
 --
 ALTER TABLE `faqs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `footers`
 --
 ALTER TABLE `footers`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `mails`
 --
 ALTER TABLE `mails`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=65;
 --
 -- AUTO_INCREMENT for table `menus`
 --
 ALTER TABLE `menus`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=32;
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT for table `pages`
 --
 ALTER TABLE `pages`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=127;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=132;
 --
 -- AUTO_INCREMENT for table `phones`
 --
 ALTER TABLE `phones`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `sendmails`
 --
 ALTER TABLE `sendmails`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `seos`
 --
 ALTER TABLE `seos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `servs`
 --
 ALTER TABLE `servs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `teams`
 --
 ALTER TABLE `teams`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `temps`
 --
 ALTER TABLE `temps`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `translations`
 --
 ALTER TABLE `translations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- Constraints for dumped tables
 --
@@ -1793,40 +1898,39 @@ ALTER TABLE `users`
 -- Constraints for table `categories`
 --
 ALTER TABLE `categories`
-  ADD CONSTRAINT `categories_parent_id_foreign` FOREIGN KEY (`parent_id`) REFERENCES `categories` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+ADD CONSTRAINT `categories_parent_id_foreign` FOREIGN KEY (`parent_id`) REFERENCES `categories` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
 -- Constraints for table `data_rows`
 --
 ALTER TABLE `data_rows`
-  ADD CONSTRAINT `data_rows_data_type_id_foreign` FOREIGN KEY (`data_type_id`) REFERENCES `data_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ADD CONSTRAINT `data_rows_data_type_id_foreign` FOREIGN KEY (`data_type_id`) REFERENCES `data_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `menu_items`
 --
 ALTER TABLE `menu_items`
-  ADD CONSTRAINT `menu_items_menu_id_foreign` FOREIGN KEY (`menu_id`) REFERENCES `menus` (`id`) ON DELETE CASCADE;
+ADD CONSTRAINT `menu_items_menu_id_foreign` FOREIGN KEY (`menu_id`) REFERENCES `menus` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `permission_role`
 --
 ALTER TABLE `permission_role`
-  ADD CONSTRAINT `permission_role_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `permission_role_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE;
+ADD CONSTRAINT `permission_role_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE,
+ADD CONSTRAINT `permission_role_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `users`
 --
 ALTER TABLE `users`
-  ADD CONSTRAINT `users_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`);
+ADD CONSTRAINT `users_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`);
 
 --
 -- Constraints for table `user_roles`
 --
 ALTER TABLE `user_roles`
-  ADD CONSTRAINT `user_roles_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `user_roles_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
-COMMIT;
+ADD CONSTRAINT `user_roles_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE,
+ADD CONSTRAINT `user_roles_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

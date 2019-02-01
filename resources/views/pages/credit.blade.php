@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('domain.master')
 
 @section('content')
 <main class="main">
