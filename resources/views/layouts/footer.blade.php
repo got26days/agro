@@ -3,7 +3,7 @@
         <nav class="footer-menu">
             <ul>
                 <li class="footer-menu__item"><a href="{{ route('about') }}" class="footer-menu__link">О нас</a></li>
-                <li class="footer-menu__item"><a href="/" class="footer-menu__link">Услуги</a></li>
+                <li class="footer-menu__item"><a href="/uslugi" class="footer-menu__link">Услуги</a></li>
                 <li class="footer-menu__item"><a href="/events" class="footer-menu__link">События</a></li>
                 <li class="footer-menu__item"><a href="/faq" class="footer-menu__link">Вопрос-ответ</a></li>
                 @if(Route::current()->getName() == 'mainpage')
