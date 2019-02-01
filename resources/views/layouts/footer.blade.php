@@ -9,7 +9,7 @@
                 @if(Route::current()->getName() == 'mainpage')
                     <li class="footer-menu__item"><a href="#contacts" class="footer-menu__link js-scroll">Контакты</a></li>
                 @else
-                    <li class="footer-menu__item"><a href="/#contacts" class="footer-menu__link">Контакты/a></li>
+                    <li class="footer-menu__item"><a href="/#contacts" class="footer-menu__link">Контакты</a></li>
                 @endif
             </ul>
         </nav>
