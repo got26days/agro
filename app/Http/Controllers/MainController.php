@@ -121,7 +121,7 @@ class MainController extends Controller
 
     public function about()
     {
-        $teams = Team::latest()->get();
+        $teams = Team::get();
         $about = About::latest()->first();
 
         $seo = Seo::where('page', '=', 'option1')->latest()->first();
