@@ -16,7 +16,7 @@
             <img class="article__main-img" src="/storage/{{ $post->image }}" alt="">
                 {!! $post->body !!}
                 <div class="article__bar">
-                    <button class="btn btn--green article__btn js-order-btn"data-title="Оставить заявку на Лекция про эффективные инвестиции в СХ" data-btn="Оставить заявку">Хочу прийти</button>
+                    <button class="btn btn--green article__btn js-order-btn"data-title="Оставить заявку" data-btn="Оставить заявку">Хочу прийти</button>
                 </div>
             </div>
         </article>
