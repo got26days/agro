@@ -10,4 +10,6 @@ class Domain extends Model
     {
         return $this->belongsTo('App\Temp');
     }
+
+    protected $fillable = array('seo_title1', 'seo_title2', 'seo_text', 'seo_main1', 'seo_main2', 'area', 'link');
 }

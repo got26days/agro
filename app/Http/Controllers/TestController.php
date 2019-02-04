@@ -4,14 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
-use App\Imports\UsersImport;
+use App\Imports\MailImport;
+use App\Exports\DownloadsExport;
 
 class TestController extends Controller
 {
     public function index()
     {
-        $newex = Excel::import(new UsersImport, './public/1.xls');
-
-        return $newex;
+        return Excel::download(new DownloadsExport, 'data.xlsx');
     }
 }
