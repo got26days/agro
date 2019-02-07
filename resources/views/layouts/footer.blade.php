@@ -22,7 +22,7 @@
             </div>
             <div class="footer__middle">
                 <div><a href="/download/policy" target="_blank">Политика в отношении обработки персональных данных</a></div>
-                <div><span>АгроДоход © 2018</span>&#8195;&#8195;<span>Сайт создан <a href="http://bigdatak.com/" target="_blank">Big Data Key</a></span></div>
+                <div><span>АгроДоход © 2019</span>&#8195;&#8195;<span>Сайт создан <a href="http://bigdatak.com/" target="_blank">Big Data Key</a></span></div>
             </div>
             <ul class="footer__soc">
                 <li><a href="{{ $footer_var->ok }}" target="_blank" class="footer__soc-link footer__soc-link--ok" title="Одноклассники">Одноклассники</a></li>

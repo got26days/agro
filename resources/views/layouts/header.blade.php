@@ -11,7 +11,7 @@
             <nav class="user-menu">
                 <ul>
                     <li><a href="http://crm.agrodohod.ru/authentication/register" class="user-menu__link user-menu__link--sign-up">Регистрация</a></li>
-                    <li><a href="http://crm.agrodohod.ru/authentication/login" class="user-menu__link user-menu__link--sign-in">Войти</a></li>
+                    <li><a href="http://crm.agrodohod.ru/clients/tickets" class="user-menu__link user-menu__link--sign-in">Войти</a></li>
                 </ul>
             </nav>
         </div>

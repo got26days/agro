@@ -22,9 +22,7 @@ class DownloadImport implements ToModel, WithHeadingRow, WithCalculatedFormulas
     */
     public function model(array $row)
     {
-
-        // die(var_dump($row));
-        
+    
         $temp = new Temp;
         $temp->body = $row['tekst_osnovnoy'];
         $temp->image = $row['kartinka_osnovnaya'];
