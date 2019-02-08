@@ -29,7 +29,6 @@ class DownloadsExport implements FromCollection, WithHeadings, ShouldAutoSize
             ];
 
             array_push($downloads, $down);
-        
         }
 
         $downloads = collect($downloads);

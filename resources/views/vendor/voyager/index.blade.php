@@ -78,11 +78,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
-            <a href="/admin/test" class="btn btn-success btn-add-new">
-                <i class="voyager-plus"></i> <span>Выгрузить</span>
-            </a>
-    </div>
+
    
 @stop
 

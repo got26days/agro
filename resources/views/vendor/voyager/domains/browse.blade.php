@@ -22,6 +22,12 @@
                 </a>
             @endif
         @endcan
+
+   
+            <a href="/admin/test" class="btn btn-success btn-add-new">
+                <i class="voyager-plus"></i> <span>Выгрузить</span>
+            </a>
+ 
         @include('voyager::multilingual.language-selector')
     </div>
 @stop
@@ -56,6 +62,7 @@
                                 </div>
                             </form>
                         @endif
+                    
                         <div class="table-responsive">
                             <table id="dataTable" class="table table-hover">
                                 <thead>
