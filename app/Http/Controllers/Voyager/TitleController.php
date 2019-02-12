@@ -12,6 +12,7 @@ use TCG\Voyager\Events\BreadImagesDeleted;
 use TCG\Voyager\Facades\Voyager;
 use TCG\Voyager\Http\Controllers\Traits\BreadRelationshipParser;
 use App\Domain;
+use Validator;
 
 class TitleController extends \TCG\Voyager\Http\Controllers\VoyagerBaseController
 {
@@ -48,18 +49,21 @@ class TitleController extends \TCG\Voyager\Http\Controllers\VoyagerBaseControlle
             if($data['title']){
                 $delimiter = "\n";
                 $splitcontents = explode($delimiter, $data['title']);
+
+
+
                 foreach ( $splitcontents as $title )
                 {
 
                     $result = explode(' > ',$title);
 
                     $newpage = new Domain;
-
                     $newpage->request = $result[0];
-
                     $newpage->temp_id = $data['id'];
                     $newpage->title = $result[1];
-                    $newpage->slug = str_slug($result[1], '-');
+
+
+                    $newpage->slug =  md5(microtime());
                     $newpage->seo_title = $data['seo_title'];
                     $newpage->seo_description = $data['seo_description'];
                     $newpage->seo_keywords = $data['seo_keywords'];
@@ -77,6 +81,13 @@ class TitleController extends \TCG\Voyager\Http\Controllers\VoyagerBaseControlle
                     $newpage->title3 = $data['title3'];
                     $newpage->body3 = $data['body3'];   
 
+                    $newpage->save();
+
+                    $slug = str_slug($result[1], '-');
+                    $alldomains = Domain::where('slug', '=', $slug)->first();
+                    if($alldomains){
+                        $newpage->slug = $slug .'-' . $newpage['id'];
+                    }
                     $newpage->save();
                 }
             }
@@ -123,10 +134,17 @@ class TitleController extends \TCG\Voyager\Http\Controllers\VoyagerBaseControlle
     
                 $delimiter = "\n";
                 $splitcontents = explode($delimiter, $data['title']);
+
+
                 foreach ( $splitcontents as $title )
                 {
 
+
+
                     $result = explode(' > ',$title);
+
+            
+                    
 
                     $newpage = new Domain;
 
@@ -134,7 +152,7 @@ class TitleController extends \TCG\Voyager\Http\Controllers\VoyagerBaseControlle
 
                     $newpage->temp_id = $data['id'];
                     $newpage->title = $result[1];
-                    $newpage->slug = str_slug($result[1], '-');
+                    $newpage->slug = md5(microtime());
                     $newpage->seo_title = $data['seo_title'];
                     $newpage->seo_description = $data['seo_description'];
                     $newpage->seo_keywords = $data['seo_keywords'];
@@ -151,6 +169,13 @@ class TitleController extends \TCG\Voyager\Http\Controllers\VoyagerBaseControlle
                     $newpage->title3 = $data['title3'];
                     $newpage->body3 = $data['body3'];   
 
+                    $newpage->save();
+
+                    $slug = str_slug($result[1], '-');
+                    $alldomains = Domain::where('slug', '=', $slug)->first();
+                    if($alldomains){
+                        $newpage->slug = $slug .'-' . $newpage['id'];
+                    }
                     $newpage->save();
                 }
             }
