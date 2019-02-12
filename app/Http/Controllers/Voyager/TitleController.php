@@ -87,6 +87,8 @@ class TitleController extends \TCG\Voyager\Http\Controllers\VoyagerBaseControlle
                     $alldomains = Domain::where('slug', '=', $slug)->first();
                     if($alldomains){
                         $newpage->slug = $slug .'-' . $newpage['id'];
+                    } else {
+                        $newpage->slug = $slug;
                     }
                     $newpage->save();
                 }
@@ -175,6 +177,8 @@ class TitleController extends \TCG\Voyager\Http\Controllers\VoyagerBaseControlle
                     $alldomains = Domain::where('slug', '=', $slug)->first();
                     if($alldomains){
                         $newpage->slug = $slug .'-' . $newpage['id'];
+                    } else {
+                        $newpage->slug = $slug;
                     }
                     $newpage->save();
                 }
