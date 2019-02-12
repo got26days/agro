@@ -53,7 +53,7 @@
         <div class="main-form main-form--credit">
             <div class="container">
                 <div class="main-form__wrap">
-                    <h2 class="main-form__title">Оставьте запрос или звоните сами: <a href="tel:+74959026838">+7 (495) 902-68-38</a></h2>
+                    <h2 class="main-form__title">Оставьте запрос или звоните сами: <a href="tel:+74959026838">8 (800) 555-85-86</a></h2>
                     <form action="/form" method="post" name="tech-form" class="main-form__form js-form-val">
                         @csrf
                         <input type="text" name="title" class="js-val" hidden="hidden" value="{{ $credit['title'] }}">
