@@ -49,6 +49,7 @@ Route::any('/search', 'MainController@search');
 $subdomain = env('APP_SUB_DOMAIN');
 
 Route::group(['domain' => $subdomain], function () {
+    Route::get('/', 'DomainController@index');
     Route::post('/form', 'MainController@form');
     Route::get('/{slug}', 'DomainController@credit');
     Route::get('/download/policy', 'MainController@getDownload');

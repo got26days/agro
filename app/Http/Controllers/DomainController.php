@@ -23,4 +23,9 @@ class DomainController extends Controller
 
         return view('domain.index', compact('credit', 'seotitle', 'seokeywords', 'seodescription'));
     }
+
+    public function index()
+    {
+        return view('domain.main');
+    }
 }
