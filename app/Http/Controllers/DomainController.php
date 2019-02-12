@@ -26,6 +26,11 @@ class DomainController extends Controller
 
     public function index()
     {
-        return view('domain.main');
+        $seotitle = 'Агродоход';
+        $seodescription = 'Помощь в получении кредитов, субсидий и грантов от компании «Агродоход»';
+        $seokeywords = 'Агродоход, компания, кредиты, субсидии, гранты, получить, хозяйство, долги, партнеры, субсидии';
+        
+
+        return view('domain.main', compact('seotitle', 'seokeywords', 'seodescription'));
     }
 }
