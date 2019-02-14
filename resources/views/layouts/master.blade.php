@@ -25,13 +25,13 @@
     <link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    
     <link rel="manifest" href="/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 -->
-    
+    <link rel="icon"  href="/favicon.ico">
     <!--SEO-->
     <meta name="description" content="{{ isset($seodescription) ? $seodescription : 'Description' }}">
     <meta name="keywords" content="{{ isset($seokeywords) ? $seokeywords : 'Keywords' }}" />
