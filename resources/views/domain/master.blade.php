@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/style.css"/>
 
     <meta name="google-site-verification" content="rCfQ9Qt1RXm9HUJsTV5DHhDNrt8CEsEP36BwC0LQmEw" />
+    <link rel="icon"  href="/favicon.ico">
     
     <!-- Набор иконок для сайта -->
     <!--- генератор https://www.favicon-generator.org/ -->
