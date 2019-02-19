@@ -108,7 +108,7 @@
     <section class="sec-form">
         <div class="container">
             <h2 class="sec-form__title">Хотите, чтобы мы ответили на ваши вопросы?</h2>
-            <div class="sec-form__txt">Позвоните по телефону <a href="tel:+74950000000">+7 (495) 000-00-00</a> с понедельника по пятницу с 9.00 до 18.00. Или отправьте запрос и мы сами вам перезвоним.</div>
+            <div class="sec-form__txt">Позвоните по телефону <a href="tel:88005558586">8 (800) 555-85-86</a> с понедельника по пятницу с 9.00 до 18.00. Или отправьте запрос и мы сами вам перезвоним.</div>
             <form action="/form" method="post" name="order-form" class="sec-form__form js-form-val" id="order-form">
                 @csrf
                 <input type="text" name="title" class="js-val" hidden="hidden" value="Хотите, чтобы мы ответили на ваши вопросы?">

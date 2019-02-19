@@ -36,6 +36,11 @@
     <!--SEO-->
     <meta name="description" content="{{ isset($seodescription) ? $seodescription : 'Description' }}">
     <meta name="keywords" content="{{ isset($seokeywords) ? $seokeywords : 'Keywords' }}" />
+
+    {{-- Для паука Google: --}}
+    <meta name="googlebot" content="noindex, nofollow"/>
+    {{-- Или для Яндекса: --}}
+    <meta name="yandex" content="none"/>
 	
     <!-- Meta-теги Open Graph для соц сетей -->
 <!--
