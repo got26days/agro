@@ -175,7 +175,8 @@
             id:52287526,
             clickmap:true,
             trackLinks:true,
-            accurateTrackBounce:true
+            accurateTrackBounce:true,
+            webvisor:true
         });
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/52287526" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
