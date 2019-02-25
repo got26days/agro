@@ -15,7 +15,7 @@
                 <h1 class="sec__title credit-page__title" style="white-space: pre-line;">{{ $credit['title'] }}</h1>
                 <div class="credit-page__frame">
                     <div class="credit-page__frame-pic" style="background: url('/storage/{{ $credit['image'] }}') center center no-repeat;"></div>
-                    <div class="credit-page__frame-txt">{{ $credit['body'] }}</div>                        	
+                    <div class="credit-page__frame-txt" style="white-space: pre-line;">{{ $credit['body'] }}</div>                        	
                 </div>
                 <div class="credit-page__bar">
                     <a href="#" class="btn btn--green sec__bar-btn js-order-btn-two" data-title="Оставить заявку" data-titletwo="{{ $credit->title }}" data-btn="Оставить заявку">Оставить заявку</a>
