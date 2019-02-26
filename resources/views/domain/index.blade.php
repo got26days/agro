@@ -64,7 +64,7 @@
                         @endif
                         </div>
                     <div class="team__name">{{ $team->name  }}</div>
-                    <div class="team__status">{{  $team->position }}</div>
+                    <div class="team__status" style="white-space: pre-line;">{{  $team->position }}</div>
                     </div>
                 </div>
                 @endforeach
