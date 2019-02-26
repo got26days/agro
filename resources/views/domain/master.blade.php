@@ -94,6 +94,18 @@
         .farm__blc-video:hover .farm__blc-video-blind {
             opacity: 0;
         }
+        .about__team-newheader{
+            /* padding-left: 25px; */
+            /* padding-top: 4px; */
+            height: 54px;
+            line-height: 50px;
+            font-size: 30px;
+            font-weight: 600;
+            color: #000;
+            font-size: 30px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>

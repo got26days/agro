@@ -65,6 +65,7 @@ class MainController extends Controller
 
                 \Mail::send('mail.form', $data, function($message) use ($data, $sendto)
                 {
+                    $message->from($sendto, 'Заявка с Direct.Agrodohod');
                     $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход.');
                 });
 

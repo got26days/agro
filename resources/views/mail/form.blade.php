@@ -19,10 +19,10 @@
         <p>Email: {{  $email }}</p>
     @endif
     @if($tel)
-        <p>Email: {{  $tel }}</p>
+        <p>Телефон: {{  $tel }}</p>
     @endif
     @if($text)
-        <p>Email: {{  $text }}</p>
+        <p>Сообщение: {{  $text }}</p>
     @endif
 
 </body>
