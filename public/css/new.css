@@ -1,0 +1,12 @@
+.pagination_bar{
+    list-style-type: none;
+    display: flex;
+}
+.pagination ul{
+    list-style-type: none;
+    display: flex;
+}
+
+.pagination{
+    display: flex;
+}
