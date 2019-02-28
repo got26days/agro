@@ -18,7 +18,7 @@ class DownloadsExport implements FromCollection, WithHeadings, ShouldAutoSize
 
         $downloads = [];
 
-        $old_downs = Domain::latest()->orderBy('id', 'desc')->get();
+        $old_downs = Domain::orderBy('id', 'desc')->get();
 
         foreach($old_downs as $download){
 
