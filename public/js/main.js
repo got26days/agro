@@ -104,7 +104,7 @@ $(document).ready(function(){
     /*валидация на заполнение отправка формы и ответ*/
     $('.js-form-val').on('submit', function(e){
             e.preventDefault();
-    
+            $(':input[type="submit"]').prop('disabled', true);
             var form = $(this),
                 fields = $(form).find('.js-val'),            
                 valid = true;
@@ -125,10 +125,12 @@ $(document).ready(function(){
     				response: "HTML",
     				data: $(this).serialize(),    
                     success: function(data) {
+                        $(':input[type="submit"]').prop('disabled', false);
     				    popupClose();               
     				    popupReadyOpen();               
                     },
     				error: function() {
+                        $(':input[type="submit"]').prop('disabled', false);
     					console.log("Не возможно отправить");
     				}
     			});
