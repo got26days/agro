@@ -53,11 +53,11 @@
                     </div>
                 </div>
                 <div class="income__item">
-                    <div class="income__item-img"><img src="img/pic/agrorinok.jpg" alt=""></div>
+                    <div class="income__item-img"><img src="/img/greencar.jpg" alt=""></div>
                     <div class="income__item-main">
-                        <h3 class="income__item-title">Агрорынок</h3>
-                        <div class="income__item-txt">Для каждого продавца найдётся свой покупатель. Сбыт и оптовое приобретение продукции посредством нашего сайта.</div>
-                        <a class="btn income__item-btn" href="/direction/agrorynok/">Участвовать</a>
+                        <h3 class="income__item-title">Запчасти для сельхозтехники</h3>
+                        <div class="income__item-txt">Агродоход поможет вам найти любую интересующую деталь и марку! С нами вы всегда найдете интересующий ваc товар по желаемой цене.</div>
+                        <a class="btn income__item-btn" href="/public/direction/zapchasti-dlya-sel-hoztehniki">Участвовать</a>
                     </div>
                 </div>
 
@@ -69,9 +69,9 @@
             <h2 class="sec__title">Направления деятельности </h2>
             <div class="directions__txt">«Агродоход» — это сервис «одного окна», позволяющий Вам начать свой сельскохозяйственный бизнес или оптимизировать существующий. <br>«Агродоход» — всё, что необходимо фермеру:</div>
             <div class="directions__wrap directions__wrap--first">
-                <a href="{{ $circl1['link'] }}" class="directions__item">
-                    <div class="directions__item-img"><img src="img/pic/ring-1.png" alt=""></div>
-                    <div class="directions__item-txt">Дистрибьюция и сбыт продукции</div>
+                <a href="/public/direction/zapchasti-dlya-sel-hoztehniki" class="directions__item">
+                    <div class="directions__item-img"><img src="img/mincir.png" alt=""></div>
+                    <div class="directions__item-txt">Запчасти для сельхозтехники</div>
                 </a>
                 <a href="{{ $circl2['link'] }}" class="directions__item">
                     <div class="directions__item-img"><img src="img/pic/ring-2.png" alt=""></div>
