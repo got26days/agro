@@ -27,7 +27,7 @@
                         <div class="main-form__row">
                             <input type="text" class="main-form__input js-val" name="name" placeholder="Имя" required>
                             <input type="email" class="main-form__input js-val" name="email" placeholder="E-mail" required>
-                            <button class="btn btn--orange main-form__submit" type="submit">Отправить предложение</button>
+                            <button class="btn btn--orange main-form__submit" type="submit">Отправить заявку</button>
                         </div>
                     </form>
                 </div>

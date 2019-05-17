@@ -56,8 +56,8 @@
                     <div class="income__item-img"><img src="/img/greencar.jpg" alt=""></div>
                     <div class="income__item-main">
                         <h3 class="income__item-title">Запчасти для сельхозтехники</h3>
-                        <div class="income__item-txt">Агродоход поможет вам найти любую интересующую деталь и марку! С нами вы всегда найдете интересующий ваc товар по желаемой цене.</div>
-                        <a class="btn income__item-btn" href="/public/direction/zapchasti-dlya-sel-hoztehniki">Участвовать</a>
+                        <div class="income__item-txt">Нужны детали для сельскохозяйственной техники? АгроДоход поможет вам найти любую интересующую деталь и марку по доступной цене.</div>
+                        <a class="btn income__item-btn" href="/public/direction/zapchasti-dlya-sel-hoztehniki">Заказать</a>
                     </div>
                 </div>
 
