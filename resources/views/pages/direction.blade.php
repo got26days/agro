@@ -23,7 +23,7 @@
                     <form action="/form" method="post" name="tech-form" class="main-form__form js-form-val">
                         @csrf
                         <input type="text" name="title" class="js-val" hidden="hidden" value="страница '{{ $direction->title }}'">
-                        <textarea class="main-form__input main-form__textarea js-val" name="text" placeholder="Подробно опишите ваше предложение" required></textarea>
+                        <textarea class="main-form__input main-form__textarea js-val" name="text" placeholder="Перечень необходимых деталей" required></textarea>
                         <div class="main-form__row">
                             <input type="text" class="main-form__input js-val" name="name" placeholder="Имя" required>
                             <input type="email" class="main-form__input js-val" name="email" placeholder="E-mail" required>
