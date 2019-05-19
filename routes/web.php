@@ -41,6 +41,8 @@ Route::group(['domain' => $domain], function()
             Voyager::routes();
             Route::get('/test', 'TestController@index');
         });
+
+        
 }); 
 
 
@@ -56,4 +58,4 @@ Route::group(['domain' => $subdomain], function () {
     
 });
 
-
+Route::get('/event/{slug}', 'EventController@index');
