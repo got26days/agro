@@ -63,10 +63,10 @@ class MainController extends Controller
 
                 $sendto = $sendmail['email'];
 
-                \Mail::send('mail.form', $data, function($message) use ($data, $sendto)
+                \Mail::send('mail.form', $data, function($message) use ($data, $sendto, $request)
                 {
                     $message->from('orders@agrodohod.ru', 'Заявка с Direct.Agrodohod');
-                    $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход.');
+                    $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход.' . $request['yandex_title']);
                 });
 
             }

@@ -156,8 +156,10 @@ $(document).ready(function(){
 		});
 	});
 	$("select").change(function(){
+		console.log(this);
 		if($(this).val() !== 0){
 			$(this).closest('.js-label').addClass('val');
+			
 		} else{
 			$(this).closest('.js-label').removeClass('val');
 		}

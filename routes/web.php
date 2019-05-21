@@ -39,7 +39,7 @@ Route::group(['domain' => $domain], function()
         
         Route::group(['prefix' => 'admin'], function () {
             Voyager::routes();
-            Route::get('/test', 'TestController@index');
+            // Route::get('/test', 'TestController@index');
         });
 
         
@@ -58,4 +58,14 @@ Route::group(['domain' => $subdomain], function () {
     
 });
 
-Route::get('/event/{slug}', 'EventController@index');
+Route::get('/newpage/{slug}', 'EventController@index');
+Route::post('/event/sendform', 'EventController@sendform');
+
+
+// Auth::routes();
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/anketa', 'EventController@anketa');
+});
+
+// Route::get('/home', 'HomeController@index')->name('home');

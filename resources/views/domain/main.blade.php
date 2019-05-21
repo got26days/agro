@@ -94,6 +94,7 @@
                     <form action="/form" method="post" name="tech-form" class="main-form__form js-form-val">
                         @csrf
                         <input type="text" name="title" class="js-val" hidden="hidden" value="Оставьте запрос или звоните сами">
+                    
                         <textarea class="main-form__input main-form__textarea js-val" name="text" placeholder="Напишите дополнительную информацию или оставьте это поле пустым."></textarea>
                         <div class="main-form__row">
                             <input type="text" class="main-form__input js-val" name="name" placeholder="Имя">

@@ -1984,20 +1984,588 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       currentPage: 1,
-      yearbalance: '',
-      dateur: '',
-      orgform: '',
-      needprice: false,
-      summ: '5000000',
-      region: '',
-      type: ''
+      result: '',
+      loadbtn: false,
+      summresult: '',
+      mainform: {
+        type: '',
+        sendpercent: this.percent,
+        sendpoint: this.point,
+        source: '',
+        form1: {
+          region: '',
+          summ: '5000000',
+          orgform: '',
+          dateur: '',
+          yearbalance: '',
+          needprice: false,
+          history: '',
+          credit: '',
+          term: '',
+          target: '',
+          moment: '',
+          payment: '',
+          accounting: '',
+          name: '',
+          phone: '',
+          email: ''
+        },
+        form2: {
+          region: '',
+          status: '',
+          summ: '45000000',
+          have: '',
+          target: '',
+          type: '',
+          chlen: '',
+          term: '',
+          raschet: '',
+          name: '',
+          phone: '',
+          email: '',
+          position: ''
+        },
+        form3: {
+          form: '',
+          summ: '45000000',
+          studia: '',
+          balance: '',
+          history: '',
+          region: '',
+          srok: '',
+          finance: '',
+          zalog: '',
+          secondsrok: '',
+          present: '',
+          sredstva: '',
+          name: '',
+          phone: '',
+          email: '',
+          position: ''
+        },
+        form4: {
+          region: '',
+          form: '',
+          type: '',
+          buhgalrer: '',
+          geter: '',
+          summ: '1000000',
+          need: '',
+          answer: '',
+          dolg: '',
+          proc: '',
+          name: '',
+          phone: '',
+          email: '',
+          position: ''
+        }
+      }
     };
   },
-  props: {},
+  props: ['percent', 'point', 'manager'],
   mounted: function mounted() {},
   methods: {
     nextPage: function nextPage() {
@@ -2006,6 +2574,46 @@ __webpack_require__.r(__webpack_exports__);
     },
     backPage: function backPage() {
       this.currentPage--;
+    },
+    changes: function changes() {
+      console.log('123');
+    },
+    resetData: function resetData() {
+      this.result = '';
+      this.currentPage = 1;
+    },
+    sendForm: function sendForm() {
+      var _this = this;
+
+      if (this.mainform.type == 'Кредит') {
+        this.summresult = this.mainform.form1.summ;
+      }
+
+      if (this.mainform.type == 'Грант') {
+        this.summresult = this.mainform.form2.summ;
+      }
+
+      if (this.mainform.type == 'Проектное финансирование') {
+        this.summresult = this.mainform.form3.summ;
+      }
+
+      if (this.mainform.type == 'Субсидия') {
+        this.summresult = this.mainform.form4.summ;
+      }
+
+      this.loadbtn = true;
+      axios.post("/event/sendform", this.mainform).then(function (response) {
+        _this.result = response.data;
+        _this.loadbtn = false;
+      })["catch"](function (error) {
+        if (!_.isEmpty(error.response)) {
+          if (error.response.status = 422) {
+            // this.errorsphone.name = error.response.data.errors;
+            alert('error');
+            _this.loadbtn = false;
+          }
+        }
+      });
     }
   }
 });
@@ -19739,504 +20347,3514 @@ var render = function() {
           {
             name: "show",
             rawName: "v-show",
-            value: _vm.currentPage === 1,
-            expression: "currentPage === 1"
+            value: _vm.result == "",
+            expression: "result == ''"
           }
-        ],
-        staticClass: "container"
+        ]
       },
       [
-        _vm._m(0),
-        _vm._v(" "),
-        _c("div", { staticClass: "calc-sec__wrap" }, [
-          _vm._m(1),
-          _vm._v(" "),
-          _c("div", { staticClass: "calc-form" }, [
-            _c("label", { staticClass: "calc-form__label js-label" }, [
-              _c("span", { staticClass: "calc-form__label-title" }, [
-                _vm._v("Вид финансирования")
-              ]),
-              _vm._v(" "),
-              _c(
-                "select",
-                {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.type,
-                      expression: "type"
-                    }
-                  ],
-                  staticClass: "form-select",
-                  attrs: {
-                    name: "add-employer-positions",
-                    "data-placeholder": " "
-                  },
-                  on: {
-                    change: function($event) {
-                      var $$selectedVal = Array.prototype.filter
-                        .call($event.target.options, function(o) {
-                          return o.selected
-                        })
-                        .map(function(o) {
-                          var val = "_value" in o ? o._value : o.value
-                          return val
-                        })
-                      _vm.type = $event.target.multiple
-                        ? $$selectedVal
-                        : $$selectedVal[0]
-                    }
-                  }
-                },
-                [
-                  _c("option"),
-                  _vm._v(" "),
-                  _c(
-                    "option",
-                    { staticClass: "credit", attrs: { value: "Кредит" } },
-                    [_vm._v("Кредит")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "option",
-                    { staticClass: "susidia", attrs: { value: "Субсидия" } },
-                    [_vm._v("Субсидия")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "option",
-                    { staticClass: "grant", attrs: { value: "Грант" } },
-                    [_vm._v("Грант")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "option",
-                    {
-                      staticClass: "project",
-                      attrs: { value: "Проектное финансирование" }
-                    },
-                    [_vm._v("Проектное финансирование")]
-                  )
-                ]
-              )
-            ]),
+        _c(
+          "div",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.currentPage === 1,
+                expression: "currentPage === 1"
+              }
+            ],
+            staticClass: "container"
+          },
+          [
+            _vm._m(0),
             _vm._v(" "),
-            _c("label", { staticClass: "calc-form__label js-label" }, [
-              _c("span", { staticClass: "calc-form__label-title" }, [
-                _vm._v("Регион")
-              ]),
+            _c("div", { staticClass: "calc-sec__wrap" }, [
+              _vm._m(1),
               _vm._v(" "),
-              _c(
-                "select",
-                {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.region,
-                      expression: "region"
-                    }
-                  ],
-                  staticClass: "form-select",
-                  attrs: {
-                    name: "add-employer-positions",
-                    "data-placeholder": " "
-                  },
-                  on: {
-                    change: function($event) {
-                      var $$selectedVal = Array.prototype.filter
-                        .call($event.target.options, function(o) {
-                          return o.selected
-                        })
-                        .map(function(o) {
-                          var val = "_value" in o ? o._value : o.value
-                          return val
-                        })
-                      _vm.region = $event.target.multiple
-                        ? $$selectedVal
-                        : $$selectedVal[0]
-                    }
-                  }
-                },
-                [
-                  _c("option"),
-                  _vm._v(" "),
-                  _c("option", { attrs: { value: "Регион-1" } }, [
-                    _vm._v("Регион-1")
-                  ]),
-                  _vm._v(" "),
-                  _c("option", { attrs: { value: "Регион-2" } }, [
-                    _vm._v("Регион-2")
-                  ]),
-                  _vm._v(" "),
-                  _c("option", { attrs: { value: "Регион-3" } }, [
-                    _vm._v("Регион-3")
-                  ])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "calc-form__slider js-rang-slider" }, [
-              _c("div", { staticClass: "calc-form__slider-txt" }, [
-                _vm._v("Сумма кредита")
-              ]),
-              _vm._v(" "),
-              _c("label", { staticClass: "calc-form__slider-val" }, [
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.summ,
-                      expression: "summ"
-                    }
-                  ],
-                  staticClass: "input calc-form__slider-input",
-                  attrs: { type: "text", id: "amount-4", value: "5000000" },
-                  domProps: { value: _vm.summ },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
+              _c("div", { staticClass: "calc-form" }, [
+                _c(
+                  "label",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.manager,
+                        expression: "manager"
                       }
-                      _vm.summ = $event.target.value
-                    }
-                  }
-                }),
+                    ],
+                    staticClass: "calc-form__label js-label"
+                  },
+                  [
+                    _c("span", { staticClass: "calc-form__label-title" }, [
+                      _vm._v("Источник заявки")
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.mainform.source,
+                            expression: "mainform.source"
+                          }
+                        ],
+                        staticClass: "form-select",
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.$set(
+                              _vm.mainform,
+                              "source",
+                              $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            )
+                          }
+                        }
+                      },
+                      [
+                        _c("option"),
+                        _vm._v(" "),
+                        _c("option", { staticClass: "credit" }, [
+                          _vm._v("Звонок")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { staticClass: "susidia" }, [
+                          _vm._v("Личная встреча")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { staticClass: "grant" }, [
+                          _vm._v("Грант")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { staticClass: "project" }, [
+                          _vm._v("Другое")
+                        ])
+                      ]
+                    )
+                  ]
+                ),
                 _vm._v(" "),
-                _c("span", { staticClass: "js-slider-txt" }),
-                _c("span", { staticClass: "rub" }, [_vm._v("i")])
-              ]),
-              _vm._v(" "),
-              _c("div", {
-                staticClass: "calc-form__slider-blc",
-                attrs: { id: "slider-range-credit" }
-              }),
-              _vm._v(" "),
-              _vm._m(2)
-            ]),
-            _vm._v(" "),
-            _c("label", { staticClass: "calc-form__checkbox" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.needprice,
-                    expression: "needprice"
-                  }
-                ],
-                attrs: { type: "checkbox", id: "js-check-toggler" },
-                domProps: {
-                  checked: Array.isArray(_vm.needprice)
-                    ? _vm._i(_vm.needprice, null) > -1
-                    : _vm.needprice
-                },
-                on: {
-                  change: function($event) {
-                    var $$a = _vm.needprice,
-                      $$el = $event.target,
-                      $$c = $$el.checked ? true : false
-                    if (Array.isArray($$a)) {
-                      var $$v = null,
-                        $$i = _vm._i($$a, $$v)
-                      if ($$el.checked) {
-                        $$i < 0 && (_vm.needprice = $$a.concat([$$v]))
-                      } else {
-                        $$i > -1 &&
-                          (_vm.needprice = $$a
-                            .slice(0, $$i)
-                            .concat($$a.slice($$i + 1)))
+                _c("label", { staticClass: "calc-form__label js-label" }, [
+                  _c("span", { staticClass: "calc-form__label-title" }, [
+                    _vm._v("Вид финансирования")
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "select",
+                    {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.mainform.type,
+                          expression: "mainform.type"
+                        }
+                      ],
+                      staticClass: "form-select",
+                      on: {
+                        change: [
+                          function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.$set(
+                              _vm.mainform,
+                              "type",
+                              $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            )
+                          },
+                          _vm.changes
+                        ]
                       }
-                    } else {
-                      _vm.needprice = $$c
-                    }
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("span", { staticClass: "calc-form__checkbox-dop" }),
-              _vm._v(" "),
-              _c("span", { staticClass: "calc-form__checkbox-txt" }, [
-                _vm._v("Нужен расчет от АгроДохода")
-              ])
-            ]),
-            _vm._v(" "),
-            _c("label", { staticClass: "calc-form__label js-label" }, [
-              _c("span", { staticClass: "calc-form__label-title" }, [
-                _vm._v("Организационная форма")
-              ]),
-              _vm._v(" "),
-              _c(
-                "select",
-                {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.orgform,
-                      expression: "orgform"
-                    }
-                  ],
-                  staticClass: "form-select",
-                  attrs: {
-                    name: "add-employer-positions",
-                    "data-placeholder": " "
-                  },
-                  on: {
-                    change: function($event) {
-                      var $$selectedVal = Array.prototype.filter
-                        .call($event.target.options, function(o) {
-                          return o.selected
-                        })
-                        .map(function(o) {
-                          var val = "_value" in o ? o._value : o.value
-                          return val
-                        })
-                      _vm.orgform = $event.target.multiple
-                        ? $$selectedVal
-                        : $$selectedVal[0]
-                    }
-                  }
-                },
-                [
-                  _c("option"),
-                  _vm._v(" "),
-                  _c("option", { attrs: { value: "форма-1" } }, [
-                    _vm._v("форма-1")
-                  ]),
-                  _vm._v(" "),
-                  _c("option", { attrs: { value: "форма-2" } }, [
-                    _vm._v("форма-2")
-                  ]),
-                  _vm._v(" "),
-                  _c("option", { attrs: { value: "форма-3" } }, [
-                    _vm._v("форма-3")
-                  ])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("label", { staticClass: "calc-form__label js-label" }, [
-              _c("span", { staticClass: "calc-form__label-title" }, [
-                _vm._v("Дата создания юридического лица")
-              ]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.dateur,
-                    expression: "dateur"
-                  }
-                ],
-                staticClass: "input calc-form__input js-input",
-                attrs: { type: "text" },
-                domProps: { value: _vm.dateur },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.dateur = $event.target.value
-                  }
-                }
-              })
-            ]),
-            _vm._v(" "),
-            _c("label", { staticClass: "calc-form__label js-label" }, [
-              _c("span", { staticClass: "calc-form__label-title" }, [
-                _vm._v("Годовой баланс")
-              ]),
-              _vm._v(" "),
-              _c(
-                "select",
-                {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.yearbalance,
-                      expression: "yearbalance"
-                    }
-                  ],
-                  staticClass: "form-select",
-                  attrs: {
-                    name: "add-employer-positions",
-                    "data-placeholder": " "
-                  },
-                  on: {
-                    change: function($event) {
-                      var $$selectedVal = Array.prototype.filter
-                        .call($event.target.options, function(o) {
-                          return o.selected
-                        })
-                        .map(function(o) {
-                          var val = "_value" in o ? o._value : o.value
-                          return val
-                        })
-                      _vm.yearbalance = $event.target.multiple
-                        ? $$selectedVal
-                        : $$selectedVal[0]
-                    }
-                  }
-                },
-                [
-                  _c("option"),
-                  _vm._v(" "),
-                  _c("option", { attrs: { value: "баланс-1" } }, [
-                    _vm._v("баланс-1")
-                  ]),
-                  _vm._v(" "),
-                  _c("option", { attrs: { value: "баланс-2" } }, [
-                    _vm._v("баланс-2")
-                  ]),
-                  _vm._v(" "),
-                  _c("option", { attrs: { value: "баланс-3" } }, [
-                    _vm._v("баланс-3")
-                  ])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "calc-form__bar" }, [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn--green calc-form__submit",
-                  on: { click: _vm.nextPage }
-                },
-                [_vm._v("Далее")]
-              )
-            ])
-          ])
-        ])
-      ]
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        directives: [
-          {
-            name: "show",
-            rawName: "v-show",
-            value: _vm.currentPage === 2,
-            expression: "currentPage === 2"
-          }
-        ],
-        staticClass: "container"
-      },
-      [
-        _vm._m(3),
-        _vm._v(" "),
-        _c("div", { staticClass: "calc-sec__wrap" }, [
-          _vm._m(4),
-          _vm._v(" "),
-          _c(
-            "form",
-            {
-              staticClass: "calc-form",
-              attrs: { action: "#", method: "post" }
-            },
-            [
-              _vm._m(5),
-              _vm._v(" "),
-              _vm._m(6),
-              _vm._v(" "),
-              _vm._m(7),
-              _vm._v(" "),
-              _vm._m(8),
-              _vm._v(" "),
-              _vm._m(9),
-              _vm._v(" "),
-              _c("div", { staticClass: "calc-form__bar" }, [
-                _c("div", { staticClass: "calc-form__bar-btns" }, [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn calc-form__back",
-                      on: { click: _vm.backPage }
                     },
-                    [_vm._v("Назад")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn--green calc-form__submit",
-                      on: { click: _vm.nextPage }
-                    },
-                    [_vm._v("Далее")]
-                  )
-                ])
-              ])
-            ]
-          )
-        ])
-      ]
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        directives: [
-          {
-            name: "show",
-            rawName: "v-show",
-            value: _vm.currentPage === 3,
-            expression: "currentPage === 3"
-          }
-        ],
-        staticClass: "container"
-      },
-      [
-        _vm._m(10),
-        _vm._v(" "),
-        _c("div", { staticClass: "calc-sec__wrap" }, [
-          _vm._m(11),
-          _vm._v(" "),
-          _c(
-            "form",
-            {
-              staticClass: "calc-form",
-              attrs: { action: "#", method: "post" }
-            },
-            [
-              _vm._m(12),
-              _vm._v(" "),
-              _vm._m(13),
-              _vm._v(" "),
-              _vm._m(14),
-              _vm._v(" "),
-              _vm._m(15),
-              _vm._v(" "),
-              _vm._m(16),
-              _vm._v(" "),
-              _c("div", { staticClass: "calc-form__bar" }, [
-                _c("div", { staticClass: "calc-form__bar-btns" }, [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn calc-form__back",
-                      on: { click: _vm.backPage }
-                    },
-                    [_vm._v("Назад")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    { staticClass: "btn btn--green calc-form__submit" },
-                    [_vm._v("Отправить заявку")]
+                    [
+                      _c("option"),
+                      _vm._v(" "),
+                      _c(
+                        "option",
+                        { staticClass: "credit", attrs: { value: "Кредит" } },
+                        [_vm._v("Кредит")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "option",
+                        {
+                          staticClass: "susidia",
+                          attrs: { value: "Субсидия" }
+                        },
+                        [_vm._v("Субсидия")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "option",
+                        { staticClass: "grant", attrs: { value: "Грант" } },
+                        [_vm._v("Грант")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "option",
+                        {
+                          staticClass: "project",
+                          attrs: { value: "Проектное финансирование" }
+                        },
+                        [_vm._v("Проектное финансирование")]
+                      )
+                    ]
                   )
                 ]),
                 _vm._v(" "),
-                _vm._m(17)
+                _c(
+                  "div",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.mainform.type === "",
+                        expression: "mainform.type === ''"
+                      }
+                    ]
+                  },
+                  [
+                    _vm._m(2),
+                    _vm._v(" "),
+                    _vm._m(3),
+                    _vm._v(" "),
+                    _vm._m(4),
+                    _vm._v(" "),
+                    _vm._m(5)
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.mainform.type === "Кредит",
+                        expression: "mainform.type === 'Кредит'"
+                      }
+                    ]
+                  },
+                  [
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Регион")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form1.region,
+                              expression: "mainform.form1.region"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form1,
+                                "region",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Все регионы РФ")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Все ригионы РФ кроме СКФО")]),
+                          _vm._v(" "),
+                          _c("option", [
+                            _vm._v("СКФО (за исключением Ставропольского Края)")
+                          ])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "calc-form__slider js-rang-slider" },
+                      [
+                        _c("div", { staticClass: "calc-form__slider-txt" }, [
+                          _vm._v("Сумма кредита")
+                        ]),
+                        _vm._v(" "),
+                        _c("label", { staticClass: "calc-form__slider-val" }, [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.mainform.form1.summ,
+                                expression: "mainform.form1.summ"
+                              }
+                            ],
+                            staticClass: "input calc-form__slider-input",
+                            attrs: {
+                              type: "text",
+                              id: "amount-4",
+                              value: "5000000"
+                            },
+                            domProps: { value: _vm.mainform.form1.summ },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.mainform.form1,
+                                  "summ",
+                                  $event.target.value
+                                )
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "js-slider-txt" }),
+                          _c("span", { staticClass: "rub" }, [_vm._v("i")])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", {
+                          staticClass: "calc-form__slider-blc",
+                          attrs: { id: "slider-range-credit" }
+                        }),
+                        _vm._v(" "),
+                        _vm._m(6)
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__checkbox" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.mainform.form1.needprice,
+                            expression: "mainform.form1.needprice"
+                          }
+                        ],
+                        attrs: { type: "checkbox", id: "js-check-toggler" },
+                        domProps: {
+                          checked: Array.isArray(_vm.mainform.form1.needprice)
+                            ? _vm._i(_vm.mainform.form1.needprice, null) > -1
+                            : _vm.mainform.form1.needprice
+                        },
+                        on: {
+                          change: function($event) {
+                            var $$a = _vm.mainform.form1.needprice,
+                              $$el = $event.target,
+                              $$c = $$el.checked ? true : false
+                            if (Array.isArray($$a)) {
+                              var $$v = null,
+                                $$i = _vm._i($$a, $$v)
+                              if ($$el.checked) {
+                                $$i < 0 &&
+                                  _vm.$set(
+                                    _vm.mainform.form1,
+                                    "needprice",
+                                    $$a.concat([$$v])
+                                  )
+                              } else {
+                                $$i > -1 &&
+                                  _vm.$set(
+                                    _vm.mainform.form1,
+                                    "needprice",
+                                    $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                                  )
+                              }
+                            } else {
+                              _vm.$set(_vm.mainform.form1, "needprice", $$c)
+                            }
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "calc-form__checkbox-dop" }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "calc-form__checkbox-txt" }, [
+                        _vm._v("Нужен расчет от АгроДохода")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Организационная форма")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form1.orgform,
+                              expression: "mainform.form1.orgform"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: [
+                              function($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function(o) {
+                                    return o.selected
+                                  })
+                                  .map(function(o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.$set(
+                                  _vm.mainform.form1,
+                                  "orgform",
+                                  $event.target.multiple
+                                    ? $$selectedVal
+                                    : $$selectedVal[0]
+                                )
+                              },
+                              function($event) {
+                                _vm.mainform.form1.dateur = ""
+                              }
+                            ]
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Физлицо")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("ИП")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("ООО")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Кооператив")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Холдинг")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Дата создания юридического лица")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.mainform.form1.dateur,
+                            expression: "mainform.form1.dateur"
+                          }
+                        ],
+                        staticClass: "input calc-form__input js-input",
+                        attrs: {
+                          type: "date",
+                          disabled: _vm.mainform.form1.orgform == "Физлицо"
+                        },
+                        domProps: { value: _vm.mainform.form1.dateur },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.mainform.form1,
+                              "dateur",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Годовой баланс")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form1.yearbalance,
+                              expression: "mainform.form1.yearbalance"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form1,
+                                "yearbalance",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Положительный баланс")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Отрицательный баланс")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Нулевой баланс")])
+                        ]
+                      )
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.mainform.type === "Грант",
+                        expression: "mainform.type === 'Грант'"
+                      }
+                    ]
+                  },
+                  [
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Регион")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form2.region,
+                              expression: "mainform.form2.region"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form2,
+                                "region",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Все регионы РФ")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Все ригионы РФ кроме СКФО")]),
+                          _vm._v(" "),
+                          _c("option", [
+                            _vm._v("СКФО (за исключением Ставропольского Края)")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Ставропольский Край")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Статус")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form2.status,
+                              expression: "mainform.form2.status"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form2,
+                                "status",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [
+                            _vm._v("ИП КФХ (существует менее 2 лет)")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [
+                            _vm._v("ИП КФХ (существует более 2 лет)")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Глава кооператива")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Физлицо")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("ИП")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("ООО")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("ОАО")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("ЗАО")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Другое")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "calc-form__slider js-rang-slider" },
+                      [
+                        _c("div", { staticClass: "calc-form__slider-txt" }, [
+                          _vm._v(
+                            "Доступен грант «Начинающий фермер». Какая сумма необходима?"
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("label", { staticClass: "calc-form__slider-val" }, [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.mainform.form2.summ,
+                                expression: "mainform.form2.summ"
+                              }
+                            ],
+                            staticClass: "input calc-form__slider-input",
+                            attrs: {
+                              type: "text",
+                              id: "amount-2",
+                              value: "400000"
+                            },
+                            domProps: { value: _vm.mainform.form2.summ },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.mainform.form2,
+                                  "summ",
+                                  $event.target.value
+                                )
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "js-slider-txt" }),
+                          _c("span", { staticClass: "rub" }, [_vm._v("i")])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", {
+                          staticClass: "calc-form__slider-blc",
+                          attrs: { id: "slider-range-grant" }
+                        }),
+                        _vm._v(" "),
+                        _vm._m(7)
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _vm._m(8),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form2.have,
+                              expression: "mainform.form2.have"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form2,
+                                "have",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Да")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Нет")])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "calc-form__label-sub" }, [
+                        _vm._v(
+                          "*Требование комиссии при подаче заявки на грант"
+                        )
+                      ])
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.mainform.type === "Проектное финансирование",
+                        expression:
+                          "mainform.type === 'Проектное финансирование'"
+                      }
+                    ]
+                  },
+                  [
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Правовая форма собственности ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form3.form,
+                              expression: "mainform.form3.form"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form3,
+                                "form",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("ООО")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Холдинг")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("ЗАО")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("ОАО")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Другое")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "calc-form__slider js-rang-slider" },
+                      [
+                        _c("div", { staticClass: "calc-form__slider-txt" }, [
+                          _vm._v("Сумма проекта")
+                        ]),
+                        _vm._v(" "),
+                        _c("label", { staticClass: "calc-form__slider-val" }, [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.mainform.form3.summ,
+                                expression: "mainform.form3.summ"
+                              }
+                            ],
+                            staticClass: "input calc-form__slider-input",
+                            attrs: { type: "text", id: "amount-5" },
+                            domProps: { value: _vm.mainform.form3.summ },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.mainform.form3,
+                                  "summ",
+                                  $event.target.value
+                                )
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "js-slider-txt" }),
+                          _c("span", { staticClass: "rub" }, [_vm._v("i")])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", {
+                          staticClass: "calc-form__slider-blc",
+                          attrs: { id: "slider-range-project" }
+                        }),
+                        _vm._v(" "),
+                        _vm._m(9)
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Стадия проекта")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form3.studia,
+                              expression: "mainform.form3.studia"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form3,
+                                "studia",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Идея")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Есть бизнес план")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Составьте мне бизнес-план")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("В процессе реализации")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Бухгалтерский баланс")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form3.balance,
+                              expression: "mainform.form3.balance"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form3,
+                                "balance",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Положительный баланс")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Отрицательный баланс")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Нулевой баланс")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Необходим аудит")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Кредитная история")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form3.history,
+                              expression: "mainform.form3.history"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form3,
+                                "history",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Чистая кредитная история")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Хорошая кредитная история")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Плохая кредитная история")])
+                        ]
+                      )
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.mainform.type === "Субсидия",
+                        expression: "mainform.type === 'Субсидия'"
+                      }
+                    ]
+                  },
+                  [
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Регион")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form4.region,
+                              expression: "mainform.form4.region"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form4,
+                                "region",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Все регионы РФ")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Все ригионы РФ кроме СКФО")]),
+                          _vm._v(" "),
+                          _c("option", [
+                            _vm._v("СКФО (за исключением Ставропольского Края)")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Ставропольский Край")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Организационная форма")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form4.form,
+                              expression: "mainform.form4.form"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form4,
+                                "form",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [
+                            _vm._v("ИП КФХ (существует менее 2 лет)")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [
+                            _vm._v("ИП КФХ (существует более 2 лет)")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Глава кооператива")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Физлицо")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("ИП")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("ООО")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("ОАО")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("ЗАО")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Другое")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Тип хозяйства")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form4.type,
+                              expression: "mainform.form4.type"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form4,
+                                "type",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Животноводство")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Растениеводство")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Овощеводство")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Производство")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Сейчас бухгалтерию ведет")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form4.buhgalrer,
+                              expression: "mainform.form4.buhgalrer"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form4,
+                                "buhgalrer",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Штатный сотрудник")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Профильное в СХ агентство")]),
+                          _vm._v(" "),
+                          _c("option", [
+                            _vm._v("Непрофильное в с СХ агентство")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Своими силами")])
+                        ]
+                      )
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.mainform.type != "",
+                        expression: "mainform.type != ''"
+                      }
+                    ],
+                    staticClass: "calc-form__bar"
+                  },
+                  [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn--green",
+                        on: { click: _vm.nextPage }
+                      },
+                      [_vm._v("Далее")]
+                    )
+                  ]
+                )
               ])
-            ]
-          )
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.currentPage === 2,
+                expression: "currentPage === 2"
+              }
+            ],
+            staticClass: "container"
+          },
+          [
+            _vm._m(10),
+            _vm._v(" "),
+            _c("div", { staticClass: "calc-sec__wrap" }, [
+              _vm._m(11),
+              _vm._v(" "),
+              _c("div", { staticClass: "calc-form" }, [
+                _c(
+                  "div",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.mainform.type === "Кредит",
+                        expression: "mainform.type === 'Кредит'"
+                      }
+                    ]
+                  },
+                  [
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Кредитная история")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form1.history,
+                              expression: "mainform.form1.history"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form1,
+                                "history",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Чистая кредитная история")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Хорошая кредитная история")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Плохая кредитная история")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Залоги под кредит ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form1.credit,
+                              expression: "mainform.form1.credit"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: { name: "add-employer-positions" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form1,
+                                "credit",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Недвижимость")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Техника")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Поголовье")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Оборудование")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Ничего из перечисленного")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Желаемые сроки для погашения кредита")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form1.term,
+                              expression: "mainform.form1.term"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form1,
+                                "term",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("сроки-1")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("сроки-2")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("сроки-3")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Цель привлечения средств")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form1.term,
+                              expression: "mainform.form1.term"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form1,
+                                "term",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [
+                            _vm._v("Пополнение оборотных средств")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Развитие")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Модернизация")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Стартап")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Другое")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Расчет доходности на текущий момент")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form1.moment,
+                              expression: "mainform.form1.moment"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form1,
+                                "moment",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Есть  расчёт")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Нет расчёта")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Хочу получить расчёт")])
+                        ]
+                      )
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.mainform.type === "Грант",
+                        expression: "mainform.type === 'Грант'"
+                      }
+                    ]
+                  },
+                  [
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Цель получения гранта")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form2.target,
+                              expression: "mainform.form2.target"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form2,
+                                "target",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Расширения")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Модернизации")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Стартап")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Другое")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Тип хозяйства")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form2.type,
+                              expression: "mainform.form2.type"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form2,
+                                "type",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Животноводство")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Растениеводство")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Овощеводство")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Производство")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Членство в кооперативе")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form2.chlen,
+                              expression: "mainform.form2.chlen"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form2,
+                                "chlen",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Да")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Нет")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Являюсь председателем")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Расчет доходности хозяйства на текущий момент ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form2.term,
+                              expression: "mainform.form2.term"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form2,
+                                "term",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Есть")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Отсутствует")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Хочу получить")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Расчет доходности после получения гранта")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form2.raschet,
+                              expression: "mainform.form2.raschet"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form2,
+                                "raschet",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Есть")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Отсутствует")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Хочу получить")])
+                        ]
+                      )
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.mainform.type === "Проектное финансирование",
+                        expression:
+                          "mainform.type === 'Проектное финансирование'"
+                      }
+                    ]
+                  },
+                  [
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Регион ведения деятельности")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form3.region,
+                              expression: "mainform.form3.region"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form3,
+                                "region",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Все регионы РФ")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Все ригионы РФ кроме СКФО")]),
+                          _vm._v(" "),
+                          _c("option", [
+                            _vm._v("СКФО (за исключением Ставропольского Края)")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Ставропольский Край")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Срок выплаты кредита")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form3.srok,
+                              expression: "mainform.form3.srok"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form3,
+                                "srok",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("от 1 года")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("до 15 лет")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Финансовая модель")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form3.finance,
+                              expression: "mainform.form3.finance"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form3,
+                                "finance",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Есть")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Нет")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Составьте мне")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Залоги под финансирование")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form3.zalog,
+                              expression: "mainform.form3.zalog"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form3,
+                                "zalog",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Недвижимость")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Техника")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Оборудование")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Ничего из перечисленного")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Срок окупаемости проекта")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form3.secondsrok,
+                              expression: "mainform.form3.secondsrok"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form3,
+                                "secondsrok",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "Срок-1" } }, [
+                            _vm._v("Срок-1")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "Срок-2" } }, [
+                            _vm._v("Срок-2")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "Срок-3" } }, [
+                            _vm._v("Срок-3")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.mainform.type === "Субсидия",
+                        expression: "mainform.type === 'Субсидия'"
+                      }
+                    ]
+                  },
+                  [
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Получение субсидий ранее ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form4.geter,
+                              expression: "mainform.form4.geter"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form4,
+                                "geter",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Получал")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Не получал")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "calc-form__slider js-rang-slider" },
+                      [
+                        _c("div", { staticClass: "calc-form__slider-txt" }, [
+                          _vm._v("Размер понесенных затрат к возмещению")
+                        ]),
+                        _vm._v(" "),
+                        _c("label", { staticClass: "calc-form__slider-val" }, [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.mainform.form4.summ,
+                                expression: "mainform.form4.summ"
+                              }
+                            ],
+                            staticClass: "input calc-form__slider-input",
+                            attrs: {
+                              type: "text",
+                              id: "amount-3",
+                              value: "1000000"
+                            },
+                            domProps: { value: _vm.mainform.form4.summ },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.mainform.form4,
+                                  "summ",
+                                  $event.target.value
+                                )
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "js-slider-txt" }),
+                          _c("span", { staticClass: "rub" }, [_vm._v("i")])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", {
+                          staticClass: "calc-form__slider-blc",
+                          attrs: { id: "slider-range-subs" }
+                        }),
+                        _vm._v(" "),
+                        _vm._m(12)
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__checkbox" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.mainform.form4.need,
+                            expression: "mainform.form4.need"
+                          }
+                        ],
+                        attrs: { type: "checkbox", id: "js-check-toggler" },
+                        domProps: {
+                          checked: Array.isArray(_vm.mainform.form4.need)
+                            ? _vm._i(_vm.mainform.form4.need, null) > -1
+                            : _vm.mainform.form4.need
+                        },
+                        on: {
+                          change: function($event) {
+                            var $$a = _vm.mainform.form4.need,
+                              $$el = $event.target,
+                              $$c = $$el.checked ? true : false
+                            if (Array.isArray($$a)) {
+                              var $$v = null,
+                                $$i = _vm._i($$a, $$v)
+                              if ($$el.checked) {
+                                $$i < 0 &&
+                                  _vm.$set(
+                                    _vm.mainform.form4,
+                                    "need",
+                                    $$a.concat([$$v])
+                                  )
+                              } else {
+                                $$i > -1 &&
+                                  _vm.$set(
+                                    _vm.mainform.form4,
+                                    "need",
+                                    $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                                  )
+                              }
+                            } else {
+                              _vm.$set(_vm.mainform.form4, "need", $$c)
+                            }
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "calc-form__checkbox-dop" }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "calc-form__checkbox-txt" }, [
+                        _vm._v("Нужен расчет от АгроДохода")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Обоснование затрат к возмещению")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form4.answer,
+                              expression: "mainform.form4.answer"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form4,
+                                "answer",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Есть")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Нет")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Нужна консультация")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Задолженность по налогам")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form4.dolg,
+                              expression: "mainform.form4.dolg"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form4,
+                                "dolg",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Есть")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Нет")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Процедура банкротства")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form4.proc,
+                              expression: "mainform.form4.proc"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form4,
+                                "proc",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Есть")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Нет")])
+                        ]
+                      )
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "calc-form__bar" }, [
+                  _c("div", { staticClass: "calc-form__bar-btns" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn calc-form__back",
+                        on: { click: _vm.backPage }
+                      },
+                      [_vm._v("Назад")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn--green",
+                        on: { click: _vm.nextPage }
+                      },
+                      [_vm._v("Далее")]
+                    )
+                  ])
+                ])
+              ])
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.currentPage === 3,
+                expression: "currentPage === 3"
+              }
+            ],
+            staticClass: "container"
+          },
+          [
+            _vm._m(13),
+            _vm._v(" "),
+            _c("div", { staticClass: "calc-sec__wrap" }, [
+              _vm._m(14),
+              _vm._v(" "),
+              _c("div", { staticClass: "calc-form" }, [
+                _c(
+                  "div",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.mainform.type === "Кредит",
+                        expression: "mainform.type === 'Кредит'"
+                      }
+                    ]
+                  },
+                  [
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Расчет доходности после получения кредита")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form1.payment,
+                              expression: "mainform.form1.payment"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form1,
+                                "payment",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Есть  расчёт")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Нет расчёта")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Хочу получить расчёт")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Сейчас бухгалтерию ведет")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form1.accounting,
+                              expression: "mainform.form1.accounting"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form1,
+                                "accounting",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Штатный сотрудник")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Профильное в СХ агентство")]),
+                          _vm._v(" "),
+                          _c("option", [
+                            _vm._v("Непрофильное в с СХ агентство")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Своими силами")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Имя и фамилия")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.mainform.form1.name,
+                            expression: "mainform.form1.name"
+                          }
+                        ],
+                        staticClass: "input calc-form__input js-input",
+                        attrs: { type: "text" },
+                        domProps: { value: _vm.mainform.form1.name },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.mainform.form1,
+                              "name",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Телефон")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.mainform.form1.phone,
+                            expression: "mainform.form1.phone"
+                          }
+                        ],
+                        staticClass: "input calc-form__input js-input",
+                        attrs: { type: "tel" },
+                        domProps: { value: _vm.mainform.form1.phone },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.mainform.form1,
+                              "phone",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Электронная почта")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.mainform.form1.email,
+                            expression: "mainform.form1.email"
+                          }
+                        ],
+                        staticClass: "input calc-form__input js-input",
+                        attrs: { type: "email" },
+                        domProps: { value: _vm.mainform.form1.email },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.mainform.form1,
+                              "email",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.mainform.type === "Грант",
+                        expression: "mainform.type === 'Грант'"
+                      }
+                    ]
+                  },
+                  [
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Имя и фамилия")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.mainform.form2.name,
+                            expression: "mainform.form2.name"
+                          }
+                        ],
+                        staticClass: "input calc-form__input js-input",
+                        attrs: { type: "text" },
+                        domProps: { value: _vm.mainform.form2.name },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.mainform.form2,
+                              "name",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Телефон")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.mainform.form2.phone,
+                            expression: "mainform.form2.phone"
+                          }
+                        ],
+                        staticClass: "input calc-form__input js-input",
+                        attrs: { type: "tel" },
+                        domProps: { value: _vm.mainform.form2.phone },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.mainform.form2,
+                              "phone",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Электронная почта")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.mainform.form2.email,
+                            expression: "mainform.form2.email"
+                          }
+                        ],
+                        staticClass: "input calc-form__input js-input",
+                        attrs: { type: "email" },
+                        domProps: { value: _vm.mainform.form2.email },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.mainform.form2,
+                              "email",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Должность")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form2.position,
+                              expression: "mainform.form2.position"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form2,
+                                "position",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "Должность-1" } }, [
+                            _vm._v("Должность-1")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "Должность-2" } }, [
+                            _vm._v("Должность-2")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "Должность-3" } }, [
+                            _vm._v("Должность-3")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.mainform.type === "Проектное финансирование",
+                        expression:
+                          "mainform.type === 'Проектное финансирование'"
+                      }
+                    ]
+                  },
+                  [
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Презентация")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form3.present,
+                              expression: "mainform.form3.present"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form3,
+                                "present",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Есть, готов презентовать")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Нет")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("От суммы проекта имеются собственные средства ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form3.sredstva,
+                              expression: "mainform.form3.sredstva"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form3,
+                                "sredstva",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("0%")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("10%")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("20%")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("30%")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Имя и фамилия")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.mainform.form3.name,
+                            expression: "mainform.form3.name"
+                          }
+                        ],
+                        staticClass: "input calc-form__input js-input",
+                        attrs: { type: "text" },
+                        domProps: { value: _vm.mainform.form3.name },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.mainform.form3,
+                              "name",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Телефон")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.mainform.form3.phone,
+                            expression: "mainform.form3.phone"
+                          }
+                        ],
+                        staticClass: "input calc-form__input js-input",
+                        attrs: { type: "tel" },
+                        domProps: { value: _vm.mainform.form3.phone },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.mainform.form3,
+                              "phone",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Электронная почта")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.mainform.form3.email,
+                            expression: "mainform.form3.email"
+                          }
+                        ],
+                        staticClass: "input calc-form__input js-input",
+                        attrs: { type: "email" },
+                        domProps: { value: _vm.mainform.form3.email },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.mainform.form3,
+                              "email",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Должность или позиция в компании")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form3.position,
+                              expression: "mainform.form3.position"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form3,
+                                "position",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "Должность-1" } }, [
+                            _vm._v("Должность-1")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "Должность-2" } }, [
+                            _vm._v("Должность-2")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "Должность-3" } }, [
+                            _vm._v("Должность-3")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.mainform.type === "Субсидия",
+                        expression: "mainform.type === 'Субсидия'"
+                      }
+                    ]
+                  },
+                  [
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Имя и фамилия")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.mainform.form4.name,
+                            expression: "mainform.form4.name"
+                          }
+                        ],
+                        staticClass: "input calc-form__input js-input",
+                        attrs: { type: "text" },
+                        domProps: { value: _vm.mainform.form4.name },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.mainform.form4,
+                              "name",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Телефон")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.mainform.form4.phone,
+                            expression: "mainform.form4.phone"
+                          }
+                        ],
+                        staticClass: "input calc-form__input js-input",
+                        attrs: { type: "tel" },
+                        domProps: { value: _vm.mainform.form4.phone },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.mainform.form4,
+                              "phone",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Электронная почта")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.mainform.form4.email,
+                            expression: "mainform.form4.email"
+                          }
+                        ],
+                        staticClass: "input calc-form__input js-input",
+                        attrs: { type: "email" },
+                        domProps: { value: _vm.mainform.form4.email },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.mainform.form4,
+                              "email",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Должность")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mainform.form4.position,
+                              expression: "mainform.form4.position"
+                            }
+                          ],
+                          staticClass: "form-select",
+                          attrs: {
+                            name: "add-employer-positions",
+                            "data-placeholder": " "
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.mainform.form4,
+                                "position",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option"),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "Должность-1" } }, [
+                            _vm._v("Должность-1")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "Должность-2" } }, [
+                            _vm._v("Должность-2")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "Должность-3" } }, [
+                            _vm._v("Должность-3")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "calc-form__bar" }, [
+                  _c("div", { staticClass: "calc-form__bar-btns" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn calc-form__back",
+                        on: { click: _vm.backPage }
+                      },
+                      [_vm._v("Назад")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn--green",
+                        attrs: { disabled: _vm.loadbtn },
+                        on: { click: _vm.sendForm }
+                      },
+                      [_vm._v("Отправить заявку")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(15)
+                ])
+              ])
+            ])
+          ]
+        )
+      ]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.result != "",
+            expression: "result != ''"
+          }
+        ]
+      },
+      [
+        _c("div", { staticClass: "calc-ready" }, [
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "calc-ready__blc" }, [
+              _c("div", { staticClass: "calc-ready__blc-txt" }, [
+                _vm._v("\n\t\t\t\t\t\t\tВероятность получения "),
+                _c("span", [_vm._v("гранта")]),
+                _vm._v(" на сумму \n\n\t\t\t\t\t\t\t"),
+                _c("span", [_vm._v(_vm._s(_vm.summresult))]),
+                _vm._v(" "),
+                _c("i", { staticClass: "rub" }, [_vm._v("i")]),
+                _vm._v(" составит\n\t\t\t\t\t\t")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "calc-ready__blc-persent" }, [
+                _vm._v(_vm._s(_vm.result) + "%")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "calc-ready__txt" }, [
+              _vm._v(
+                "\n            \t\t\tМы приняли вашу заявку.  В ближайшее время с вами свяжется наш менеджер для уточнения деталей.\n            \t\t"
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "btn btn--green calc-ready__btn",
+                on: { click: _vm.resetData }
+              },
+              [_vm._v("Пройти снова")]
+            )
+          ])
         ])
       ]
     )
@@ -20260,6 +23878,158 @@ var staticRenderFns = [
       _c("div", { staticClass: "calc-sec__step-baloon step-1" }, [
         _vm._v("Шаг 1 из 3")
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "calc-form__label js-label" }, [
+      _c("span", { staticClass: "calc-form__label-title" }, [_vm._v("Регион")]),
+      _vm._v(" "),
+      _c(
+        "select",
+        {
+          staticClass: "form-select",
+          attrs: {
+            name: "add-employer-positions",
+            "data-placeholder": " ",
+            disabled: "disabled"
+          }
+        },
+        [
+          _c("option"),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "Регион-1" } }, [_vm._v("Регион-1")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "Регион-2" } }, [_vm._v("Регион-2")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "Регион-3" } }, [_vm._v("Регион-3")])
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "calc-form__label js-label" }, [
+      _c("span", { staticClass: "calc-form__label-title" }, [
+        _vm._v("Организационная форма")
+      ]),
+      _vm._v(" "),
+      _c(
+        "select",
+        {
+          staticClass: "form-select",
+          attrs: {
+            name: "add-employer-positions",
+            "data-placeholder": " ",
+            disabled: "disabled"
+          }
+        },
+        [
+          _c("option"),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "форма-1" } }, [_vm._v("форма-1")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "форма-2" } }, [_vm._v("форма-2")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "форма-3" } }, [_vm._v("форма-3")])
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "calc-form__label js-label" }, [
+      _c("span", { staticClass: "calc-form__label-title" }, [
+        _vm._v("Дата создания юридического лица")
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "input calc-form__input js-input",
+        attrs: { type: "text", disabled: "disabled" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "calc-form__label js-label" }, [
+      _c("span", { staticClass: "calc-form__label-title" }, [
+        _vm._v("Годовой баланс")
+      ]),
+      _vm._v(" "),
+      _c(
+        "select",
+        {
+          staticClass: "form-select",
+          attrs: {
+            name: "add-employer-positions",
+            "data-placeholder": " ",
+            disabled: "disabled"
+          }
+        },
+        [
+          _c("option"),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "баланс-1" } }, [_vm._v("баланс-1")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "баланс-2" } }, [_vm._v("баланс-2")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "баланс-3" } }, [_vm._v("баланс-3")])
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "calc-form__slider-row" }, [
+      _c("div", [
+        _c("span", { staticClass: "js-min" }),
+        _vm._v(" "),
+        _c("span", { staticClass: "rub" }, [_vm._v("i")])
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("span", { staticClass: "js-max" }),
+        _vm._v(" "),
+        _c("span", { staticClass: "rub" }, [_vm._v("i")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "calc-form__slider-row" }, [
+      _c("div", [
+        _c("span", { staticClass: "js-min" }),
+        _vm._v(" "),
+        _c("span", { staticClass: "rub" }, [_vm._v("i")])
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("span", { staticClass: "js-max" }),
+        _vm._v(" "),
+        _c("span", { staticClass: "rub" }, [_vm._v("i")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "calc-form__label-title" }, [
+      _vm._v("Наличие 10% от запрашиваемой суммы "),
+      _c("span", [_vm._v("на счету")]),
+      _c("sup", [_vm._v("*")])
     ])
   },
   function() {
@@ -20303,139 +24073,18 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "calc-form__label js-label" }, [
-      _c("span", { staticClass: "calc-form__label-title" }, [
-        _vm._v("Кредитная история")
+    return _c("div", { staticClass: "calc-form__slider-row" }, [
+      _c("div", [
+        _c("span", { staticClass: "js-min" }),
+        _vm._v(" "),
+        _c("span", { staticClass: "rub" }, [_vm._v("i")])
       ]),
       _vm._v(" "),
-      _c(
-        "select",
-        {
-          staticClass: "form-select",
-          attrs: { name: "add-employer-positions", "data-placeholder": " " }
-        },
-        [
-          _c("option"),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "история-1" } }, [
-            _vm._v("история-1")
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "история-2" } }, [
-            _vm._v("история-2")
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "история-3" } }, [_vm._v("история-3")])
-        ]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "calc-form__label js-label" }, [
-      _c("span", { staticClass: "calc-form__label-title" }, [
-        _vm._v("Залоги под кредит ")
-      ]),
-      _vm._v(" "),
-      _c(
-        "select",
-        {
-          staticClass: "form-select",
-          attrs: { name: "add-employer-positions", "data-placeholder": " " }
-        },
-        [
-          _c("option"),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "Залоги-1" } }, [_vm._v("Залоги-1")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "Залоги-2" } }, [_vm._v("Залоги-2")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "Залоги-3" } }, [_vm._v("Залоги-3")])
-        ]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "calc-form__label js-label" }, [
-      _c("span", { staticClass: "calc-form__label-title" }, [
-        _vm._v("Желаемые сроки для погашения кредита")
-      ]),
-      _vm._v(" "),
-      _c(
-        "select",
-        {
-          staticClass: "form-select",
-          attrs: { name: "add-employer-positions", "data-placeholder": " " }
-        },
-        [
-          _c("option"),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "сроки-1" } }, [_vm._v("сроки-1")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "сроки-2" } }, [_vm._v("сроки-2")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "сроки-3" } }, [_vm._v("сроки-3")])
-        ]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "calc-form__label js-label" }, [
-      _c("span", { staticClass: "calc-form__label-title" }, [
-        _vm._v("Цель привлечения средств")
-      ]),
-      _vm._v(" "),
-      _c(
-        "select",
-        {
-          staticClass: "form-select",
-          attrs: { name: "add-employer-positions", "data-placeholder": " " }
-        },
-        [
-          _c("option"),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "Цель-1" } }, [_vm._v("Цель-1")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "Цель-2" } }, [_vm._v("Цель-2")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "Цель-3" } }, [_vm._v("Цель-3")])
-        ]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "calc-form__label js-label" }, [
-      _c("span", { staticClass: "calc-form__label-title" }, [
-        _vm._v("Расчет доходности на текущий момент")
-      ]),
-      _vm._v(" "),
-      _c(
-        "select",
-        {
-          staticClass: "form-select",
-          attrs: { name: "add-employer-positions", "data-placeholder": " " }
-        },
-        [
-          _c("option"),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "Расчет-1" } }, [_vm._v("Расчет-1")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "Расчет-2" } }, [_vm._v("Расчет-2")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "Расчет-3" } }, [_vm._v("Расчет-3")])
-        ]
-      )
+      _c("div", [
+        _c("span", { staticClass: "js-max" }),
+        _vm._v(" "),
+        _c("span", { staticClass: "rub" }, [_vm._v("i")])
+      ])
     ])
   },
   function() {
@@ -20455,105 +24104,6 @@ var staticRenderFns = [
       _c("div", { staticClass: "calc-sec__step-baloon step-3" }, [
         _vm._v("Шаг 3 из 3")
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "calc-form__label js-label" }, [
-      _c("span", { staticClass: "calc-form__label-title" }, [
-        _vm._v("Расчет доходности после получения кредита")
-      ]),
-      _vm._v(" "),
-      _c(
-        "select",
-        {
-          staticClass: "form-select",
-          attrs: { name: "add-employer-positions", "data-placeholder": " " }
-        },
-        [
-          _c("option"),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "Расчет-1" } }, [_vm._v("Расчет-1")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "Расчет-2" } }, [_vm._v("Расчет-2")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "Расчет-3" } }, [_vm._v("Расчет-3")])
-        ]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "calc-form__label js-label" }, [
-      _c("span", { staticClass: "calc-form__label-title" }, [
-        _vm._v("Сейчас бухгалтерию ведет")
-      ]),
-      _vm._v(" "),
-      _c(
-        "select",
-        {
-          staticClass: "form-select",
-          attrs: { name: "add-employer-positions", "data-placeholder": " " }
-        },
-        [
-          _c("option"),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "1" } }, [_vm._v("1")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "2" } }, [_vm._v("2")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "3" } }, [_vm._v("3")])
-        ]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "calc-form__label js-label" }, [
-      _c("span", { staticClass: "calc-form__label-title" }, [
-        _vm._v("Имя и фамилия")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "input calc-form__input js-input",
-        attrs: { type: "text" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "calc-form__label js-label" }, [
-      _c("span", { staticClass: "calc-form__label-title" }, [
-        _vm._v("Телефон")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "input calc-form__input js-input",
-        attrs: { type: "tel" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "calc-form__label js-label" }, [
-      _c("span", { staticClass: "calc-form__label-title" }, [
-        _vm._v("Электронная почта")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "input calc-form__input js-input",
-        attrs: { type: "email" }
-      })
     ])
   },
   function() {
@@ -33076,8 +36626,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\max\Code\agro\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\max\Code\agro\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\homepc\code\agro\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\homepc\code\agro\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
