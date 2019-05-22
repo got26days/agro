@@ -45,7 +45,7 @@
 
     <script src="/event/js/vendors/jquery.min.js"></script>
     <script src="/event/js/vendors/slick.min.js"></script>
-    {{-- <script src="/event/js/vendors/jquery.formstyler.min.js"></script> --}}
+    <script src="/event/js/vendors/jquery.formstyler.min.js"></script>
     <!--jQuery UI-->
     <script src="/event/js/vendors/jquery-ui.js"></script>
     <script src="/event/js/vendors/jquery.ui.touch-punch.js"></script>
