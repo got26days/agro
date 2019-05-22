@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "typewriter-effect": "^2.5.3"
+        "typewriter-effect": "^2.5.3",
+        "vee-validate": "^2.2.7"
     }
 }

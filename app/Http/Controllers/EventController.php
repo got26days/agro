@@ -7,6 +7,10 @@ use App\Ndomain;
 use App\Partner;
 use App\Team;
 use Carbon\Carbon;
+use App\Loan;
+use App\Grant;
+use App\Finan;
+use App\Sub;
 
 class EventController extends Controller
 {
@@ -40,14 +44,15 @@ class EventController extends Controller
         $result = 0;
         $result2 = 0;
 
-        if($request['source']){
-            // Источник
-        }
+        // if($request['source']){
+        //     // Источник
+        // }
 
         $result = $result + $request['sendpercent'];
         $result2 = $result2 + $request['sendpoint'];
 
         if($request['type'] == 'Кредит'){
+   
 
             if($request['form1']['region'] == 'СКФО (за исключением Ставропольского Края)'){
                 $result = $result - 15;
@@ -580,8 +585,104 @@ class EventController extends Controller
         }
 
         if ($result2 >= 10) {
-            $result = 10;
+            $result2 = 10;
         }
+
+        if($request['type'] == 'Кредит'){
+
+            $loan = new Loan;
+            $loan->rating = $result2;
+            $loan->chance = $result;
+            $loan->source = $request['source'];
+            $loan->name = $request['form1']['name'];
+            $loan->phone = $request['form1']['phone'];
+            $loan->email = $request['form1']['email'];
+            $loan->region = $request['form1']['region'];
+            $loan->summ = $request['form1']['summ'];
+            $loan->needprice = $request['form1']['needprice'];
+            $loan->orgform = $request['form1']['orgform'];
+            $loan->dateur = $request['form1']['dateur'];
+            $loan->yearbalance = $request['form1']['yearbalance'];
+            $loan->history = $request['form1']['history'];
+            $loan->credit = $request['form1']['credit'];
+            $loan->term = $request['form1']['term'];
+            $loan->target = $request['form1']['target'];
+            $loan->moment = $request['form1']['moment'];
+            $loan->payment = $request['form1']['payment'];
+            $loan->accounting = $request['form1']['accounting'];
+            $loan->save();
+        }
+
+        if($request['type'] == 'Грант'){
+            $grant = new Grant;
+            $grant->rating = $result2;
+            $grant->chance = $result;
+            $grant->source = $request['source'];
+
+            $grant->name = $request['form2']['name'];
+            $grant->phone = $request['form2']['phone:'];
+            $grant->email = $request['form2']['email'];
+            $grant->position = $request['form2']['position'];
+            $grant->region = $request['form2']['region'];
+            $grant->status = $request['form2']['status'];
+            $grant->summ = $request['form2']['summ'];
+            $grant->have = $request['form2']['have'];
+            $grant->target = $request['form2']['target'];
+            $grant->type = $request['form2']['type'];
+            $grant->chlen = $request['form2']['chlen'];
+            $grant->term = $request['form2']['term'];
+            $grant->raschet = $request['form2']['raschet'];
+
+            $grant->save();
+        }
+
+        if($request['type'] == 'Проектное финансирование'){
+            $finan = new Finan;
+            $finan->rating = $result2;
+            $finan->chance = $result;
+            $finan->source = $request['source'];
+
+            $finan->name = $request['form3']['name'];
+            $finan->phone = $request['form3']['phone:'];
+            $finan->email = $request['form3']['email'];
+            $finan->position = $request['form3']['position'];
+            $finan->form = $request['form3']['form'];
+            $finan->summ = $request['form3']['summ'];
+            $finan->studia = $request['form3']['studia'];
+            $finan->balance = $request['form3']['balance'];
+            $finan->history = $request['form3']['history'];
+            $finan->region = $request['form3']['region'];
+            $finan->srok = $request['form3']['srok'];
+            $finan->finance = $request['form3']['finance'];
+            $finan->secondsrok = $request['form3']['secondsrok'];
+            $finan->present = $request['form3']['present'];
+            $finan->sredstva = $request['form3']['sredstva'];
+            $finan->save();
+        }
+
+        if($request['type'] == 'Субсидия'){
+            $sub = new Sub;
+            $sub->rating = $result2;
+            $sub->chance = $result;
+            $sub->source = $request['source'];
+
+            $sub->name = $request['form4']['name'];
+            $sub->phone = $request['form4']['phone'];
+            $sub->email = $request['form4']['email'];
+            $sub->position = $request['form4']['position'];
+            $sub->region = $request['form4']['region'];
+            $sub->form = $request['form4']['form'];
+            $sub->type = $request['form4']['type'];
+            $sub->buhgalrer = $request['form4']['buhgalrer'];
+            $sub->geter = $request['form4']['geter'];
+            $sub->summ = $request['form4']['summ'];
+            $sub->need = $request['form4']['need'];
+            $sub->answer = $request['form4']['answer'];
+            $sub->dolg = $request['form4']['dolg'];
+            $sub->proc = $request['form4']['proc'];
+            $sub->save();
+        }
+
 
 
         return $result;

@@ -5,6 +5,8 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+import ru from 'vee-validate/dist/locale/ru';
+import VeeValidate, { Validator } from 'vee-validate';
 require('./bootstrap');
 
 window.Vue = require('vue');
@@ -32,7 +34,8 @@ Vue.component('mainform', require('./components/MainForm.vue').default);
 
 // import Typewriter from 'typewriter-effect/dist/core';
 
-
+Vue.use(VeeValidate);
+Validator.localize('ru', ru);
 // document.addEventListener("DOMContentLoaded", function(event) {
 //     new Typewriter(document.getElementById('typewriter'), {
 //         strings: ['Hello', 'World'],

@@ -39,7 +39,11 @@ Route::group(['domain' => $domain], function()
         
         Route::group(['prefix' => 'admin'], function () {
             Voyager::routes();
-            // Route::get('/test', 'TestController@index');
+            Route::get('/test', 'TestController@index');
+            Route::get('/getdata1', 'TestController@getdata1');
+            Route::get('/getdata2', 'TestController@getdata2');
+            Route::get('/getdata3', 'TestController@getdata3');
+            Route::get('/getdata4', 'TestController@getdata4');
         });
 
         
