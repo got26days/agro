@@ -78,3 +78,5 @@ $thirddomain = env('APP_THIRD_DOMAIN');
 Route::group(['domain' => $thirddomain], function () {
     Route::get('/{slug}', 'EventController@index');    
 });
+
+Route::get('/newpage/{slug}', 'EventController@index');    
