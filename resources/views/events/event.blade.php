@@ -212,15 +212,14 @@
                     <div class="calc-video__wrap">
                         <div class="calc-video__blc">
                             <div class="calc-video__blind js-blind"
-                                data-href="https://www.youtube.com/embed/x0dX8oVDCNc">
+                                data-href="https://www.youtube.com/watch?v=d2ZmNCjW6Qw">
                                 <img src="/event/img/video/blind.jpg" alt="">
                             </div>
                         </div>
                         <div class="calc-video__txt">
                             <div class="calc-video__logo"><img src="/event/img/video/rub.svg" alt="P"></div>
                             <div class="calc-video__txt-main">
-                                <b>Любовь Николаевна Староверова </b>лауреат конкурса «Лучший бухглатер России» <br>и
-                                генеральный директор ООО «АгроДоход»
+                                Получение грантов, кредитов и субсидий нашими клиентами — результат комплексной работы всех подразделений АгроДохода. Это и сбор информации и её анализ, и переговоры со всеми участниками процесса, и обучение наших клиентов. Но всё это невозможно без безупречной работы нашей бухгалтерской службы. Её руководитель Оксана Кондратова рассказывает о специфике своей работы.
                             </div>
                         </div>
                     </div>
@@ -236,7 +235,7 @@
             </section>
             <section class="calc-team">
                 <div class="container">
-                    <h2 class="sec__title">Вам помогают 32</h2>
+                    <h2 class="sec__title">Вам помогают</h2>
                     <div class="calc-team__slider calc-slider" id="js-calc-team-slider">
 
                         @foreach($teams as $team)
