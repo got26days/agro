@@ -643,7 +643,7 @@ class EventController extends Controller
             $finan->source = $request['source'];
 
             $finan->name = $request['form3']['name'];
-            $finan->phone = $request['form3']['phone:'];
+            $finan->phone = $request['form3']['phone'];
             $finan->email = $request['form3']['email'];
             $finan->position = $request['form3']['position'];
             $finan->form = $request['form3']['form'];

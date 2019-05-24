@@ -1796,6 +1796,12 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_cool_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-cool-select */ "./node_modules/vue-cool-select/dist/vue-cool-select.umd.min.js");
+/* harmony import */ var vue_cool_select__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_cool_select__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vue_slider_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-slider-component */ "./node_modules/vue-slider-component/dist/vue-slider-component.umd.min.js");
+/* harmony import */ var vue_slider_component__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_slider_component__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vue_slider_component_theme_antd_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-slider-component/theme/antd.css */ "./node_modules/vue-slider-component/theme/antd.css");
+/* harmony import */ var vue_slider_component_theme_antd_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_slider_component_theme_antd_css__WEBPACK_IMPORTED_MODULE_2__);
 //
 //
 //
@@ -2478,98 +2484,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    CoolSelect: vue_cool_select__WEBPACK_IMPORTED_MODULE_0__["CoolSelect"],
+    VueSlider: vue_slider_component__WEBPACK_IMPORTED_MODULE_1___default.a
+  },
   data: function data() {
     return {
       currentPage: 1,
       result: '',
       loadbtn: false,
       summresult: '',
+      options: {
+        min: 1000000,
+        max: 35000000,
+        width: 'auto',
+        dotSize: 40,
+        dotStyle: '#64dc66',
+        tooltip: 'none'
+      },
       mainform: {
         type: '',
         sendpercent: this.percent,
@@ -2577,7 +2513,7 @@ __webpack_require__.r(__webpack_exports__);
         source: '',
         form1: {
           region: '',
-          summ: '5000000',
+          summ: 5000000,
           needprice: false,
           orgform: '',
           dateur: '',
@@ -2596,7 +2532,7 @@ __webpack_require__.r(__webpack_exports__);
         form2: {
           region: '',
           status: '',
-          summ: '45000000',
+          summ: 5000000,
           have: '',
           target: '',
           type: '',
@@ -2610,7 +2546,7 @@ __webpack_require__.r(__webpack_exports__);
         },
         form3: {
           form: '',
-          summ: '45000000',
+          summ: 5000000,
           studia: '',
           balance: '',
           history: '',
@@ -2632,7 +2568,7 @@ __webpack_require__.r(__webpack_exports__);
           type: '',
           buhgalrer: '',
           geter: '',
-          summ: '1000000',
+          summ: 1000000,
           need: '',
           answer: '',
           dolg: '',
@@ -2658,9 +2594,6 @@ __webpack_require__.r(__webpack_exports__);
     },
     backPage: function backPage() {
       this.currentPage--;
-    },
-    changes: function changes() {
-      console.log('123');
     },
     resetData: function resetData() {
       this.result = '';
@@ -2707,63 +2640,67 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       if (this.mainform.type == 'Кредит') {
-        if (this.mainform.form1.region == '' || this.mainform.form1.summ == '' || this.mainform.form1.yearbalance == '' || this.mainform.form1.orgform == '' || this.mainform.form1.yearbalance == '') {
+        if (this.mainform.form1.region == null || this.mainform.form1.summ == null || this.mainform.form1.yearbalance == null || this.mainform.form1.orgform == null || this.mainform.form1.yearbalance == null) {
           return true;
         }
 
         if (this.mainform.form1.orgform != 'Физлицо') {
-          if (this.mainform.form1.dateur == '') {
+          if (this.mainform.form1.dateur == "") {
             return true;
           }
         }
       }
 
+      if (this.mainform.type == null) {
+        return true;
+      }
+
       if (this.mainform.type == 'Грант') {
-        if (this.mainform.form2.region == '' || this.mainform.form2.status == '' || this.mainform.form2.summ == '' || this.mainform.form2.have == '') {
+        if (this.mainform.form2.region == null || this.mainform.form2.status == null || this.mainform.form2.summ == null || this.mainform.form2.have == null) {
           return true;
         }
       }
 
       if (this.mainform.type == 'Проектное финансирование') {
-        if (this.mainform.form3.form == '' || this.mainform.form3.summ == '' || this.mainform.form3.studia == '' || this.mainform.form3.balance == '' || this.mainform.form3.history == '') {
+        if (this.mainform.form3.form == null || this.mainform.form3.summ == null || this.mainform.form3.studia == null || this.mainform.form3.balance == null || this.mainform.form3.history == null) {
           return true;
         }
       }
 
       if (this.mainform.type == 'Субсидия') {
-        if (this.mainform.form4.region == '' || this.mainform.form4.form == '' || this.mainform.form4.type == '' || this.mainform.form5.buhgalrer == '') {
+        if (this.mainform.form4.region == null || this.mainform.form4.form == null || this.mainform.form4.type == null || this.mainform.form4.buhgalrer == null) {
           return true;
         }
       }
     },
     checkBtn2: function checkBtn2() {
       if (this.mainform.type == 'Кредит') {
-        if (this.mainform.form1.history == '' || this.mainform.form1.credit == '' || this.mainform.form1.term == '' || this.mainform.form1.target == '' || this.mainform.form1.moment == '') {
+        if (this.mainform.form1.history == null || this.mainform.form1.credit == null || this.mainform.form1.term == null || this.mainform.form1.target == null || this.mainform.form1.moment == null) {
           return true;
         }
       }
 
       if (this.mainform.type == 'Грант') {
-        if (this.mainform.form2.target == '' || this.mainform.form2.type == '' || this.mainform.form2.chlen == '' || this.mainform.form2.term == '' || this.mainform.form2.raschet == '') {
+        if (this.mainform.form2.target == null || this.mainform.form2.type == null || this.mainform.form2.chlen == null || this.mainform.form2.term == null || this.mainform.form2.raschet == null) {
           return true;
         }
       }
 
       if (this.mainform.type == 'Проектное финансирование') {
-        if (this.mainform.form3.region == '' || this.mainform.form3.srok == '' || this.mainform.form3.finance == '' || this.mainform.form3.zalog == '' || this.mainform.form3.secondsrok == '') {
+        if (this.mainform.form3.region == null || this.mainform.form3.srok == null || this.mainform.form3.finance == null || this.mainform.form3.zalog == null || this.mainform.form3.secondsrok == null) {
           return true;
         }
       }
 
       if (this.mainform.type == 'Субсидия') {
-        if (this.mainform.form4.geter == '' || this.mainform.form4.summ == '' || this.mainform.form4.need == '' || this.mainform.form4.answer == '' || this.mainform.form4.dolg == '' || this.mainform.form4.proc == '') {
+        if (this.mainform.form4.geter == null || this.mainform.form4.answer == null || this.mainform.form4.dolg == null || this.mainform.form4.proc == null) {
           return true;
         }
       }
     },
     checkBtn3: function checkBtn3() {
       if (this.mainform.type == 'Кредит') {
-        if (this.mainform.form1.payment == '' || this.mainform.form1.accounting == '' || this.mainform.form1.name == '' || this.mainform.form1.phone == '' || this.mainform.form1.email == '') {
+        if (this.mainform.form1.payment == null || this.mainform.form1.accounting == null || this.mainform.form1.name == '' || this.mainform.form1.phone == '' || this.mainform.form1.email == '') {
           return true;
         }
 
@@ -2773,7 +2710,7 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       if (this.mainform.type == 'Грант') {
-        if (this.mainform.form2.name == '' || this.mainform.form2.phone == '' || this.mainform.form2.email == '' || this.mainform.form2.position == '') {
+        if (this.mainform.form2.name == '' || this.mainform.form2.phone == '' || this.mainform.form2.email == '' || this.mainform.form2.position == null) {
           return true;
         }
 
@@ -2783,7 +2720,7 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       if (this.mainform.type == 'Проектное финансирование') {
-        if (this.mainform.form3.present == '' || this.mainform.form3.sredstva == '' || this.mainform.form3.name == '' || this.mainform.form3.phone == '' || this.mainform.form3.email == '' || this.mainform.form3.position == '') {
+        if (this.mainform.form3.present == null || this.mainform.form3.sredstva == null || this.mainform.form3.name == '' || this.mainform.form3.phone == '' || this.mainform.form3.email == '' || this.mainform.form3.position == null) {
           return true;
         }
 
@@ -2793,7 +2730,7 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       if (this.mainform.type == 'Субсидия') {
-        if (this.mainform.form4.name == '' || this.mainform.form4.phone == '' || this.mainform.form4.email == '' || this.mainform.form4.position == '') {
+        if (this.mainform.form4.name == '' || this.mainform.form4.phone == '' || this.mainform.form4.email == '' || this.mainform.form4.position == null) {
           return true;
         }
 
@@ -2839,6 +2776,131 @@ __webpack_require__.r(__webpack_exports__);
     });
   }
 });
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MainForm.vue?vue&type=style&index=0&lang=scss&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/lib/loader.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/MainForm.vue?vue&type=style&index=0&lang=scss& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "/* Set the theme color of the component */\n/* import theme style */\n/* component style */\n.vue-slider-disabled {\n  opacity: 0.5;\n  cursor: not-allowed;\n}\n\n/* rail style */\n.vue-slider-rail {\n  background-color: #ccc;\n  border-radius: 15px;\n}\n\n/* process style */\n.vue-slider-process {\n  background-color: #5dbb5f;\n  border-radius: 15px;\n}\n\n/* mark style */\n.vue-slider-mark {\n  z-index: 4;\n}\n.vue-slider-mark:first-child .vue-slider-mark-step, .vue-slider-mark:last-child .vue-slider-mark-step {\n  display: none;\n}\n.vue-slider-mark-step {\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n  background-color: rgba(0, 0, 0, 0.16);\n}\n.vue-slider-mark-label {\n  font-size: 14px;\n  white-space: nowrap;\n}\n/* dot style */\n.vue-slider-dot-handle {\n  cursor: pointer;\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n  background-color: #fff;\n  box-sizing: border-box;\n  box-shadow: 0.5px 0.5px 2px 1px rgba(0, 0, 0, 0.32);\n}\n.vue-slider-dot-handle-focus {\n  box-shadow: 0px 0px 1px 2px rgba(93, 187, 95, 0.36);\n}\n.vue-slider-dot-handle-disabled {\n  cursor: not-allowed;\n  background-color: #ccc;\n}\n.vue-slider-dot-tooltip-inner {\n  font-size: 14px;\n  white-space: nowrap;\n  padding: 2px 5px;\n  min-width: 20px;\n  text-align: center;\n  color: #fff;\n  border-radius: 5px;\n  border-color: #5dbb5f;\n  background-color: #5dbb5f;\n  box-sizing: content-box;\n}\n.vue-slider-dot-tooltip-inner::after {\n  content: \"\";\n  position: absolute;\n}\n.vue-slider-dot-tooltip-inner-top::after {\n  top: 100%;\n  left: 50%;\n  -webkit-transform: translate(-50%, 0);\n          transform: translate(-50%, 0);\n  height: 0;\n  width: 0;\n  border-color: transparent;\n  border-style: solid;\n  border-width: 5px;\n  border-top-color: inherit;\n}\n.vue-slider-dot-tooltip-inner-bottom::after {\n  bottom: 100%;\n  left: 50%;\n  -webkit-transform: translate(-50%, 0);\n          transform: translate(-50%, 0);\n  height: 0;\n  width: 0;\n  border-color: transparent;\n  border-style: solid;\n  border-width: 5px;\n  border-bottom-color: inherit;\n}\n.vue-slider-dot-tooltip-inner-left::after {\n  left: 100%;\n  top: 50%;\n  -webkit-transform: translate(0, -50%);\n          transform: translate(0, -50%);\n  height: 0;\n  width: 0;\n  border-color: transparent;\n  border-style: solid;\n  border-width: 5px;\n  border-left-color: inherit;\n}\n.vue-slider-dot-tooltip-inner-right::after {\n  right: 100%;\n  top: 50%;\n  -webkit-transform: translate(0, -50%);\n          transform: translate(0, -50%);\n  height: 0;\n  width: 0;\n  border-color: transparent;\n  border-style: solid;\n  border-width: 5px;\n  border-right-color: inherit;\n}\n.vue-slider-dot-tooltip-wrapper {\n  opacity: 0;\n  transition: all 0.3s;\n}\n.vue-slider-dot-tooltip-wrapper-show {\n  opacity: 1;\n}\n.calc-form__label-title {\n  background: #fff;\n  top: 0;\n  font-size: 13px;\n  line-height: 16px;\n  letter-spacing: -0.05em;\n  color: #5c5c5c;\n}\n.IZ-select__menu {\n  z-index: 10000;\n}\n.IZ-select__input input {\n  height: 64px;\n}\ninput[type=date]::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  display: none;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-slider-component/theme/antd.css":
+/*!******************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-slider-component/theme/antd.css ***!
+  \******************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "/* component style */\n.vue-slider-disabled .vue-slider-process {\n  background-color: #a7a7a7;\n}\n.vue-slider-disabled .vue-slider-dot-handle {\n  border-color: #a7a7a7;\n}\n.vue-slider-disabled .vue-slider-mark-step-active {\n  box-shadow: 0 0 0 2px #a7a7a7;\n}\n\n/* rail style */\n.vue-slider-rail {\n  background-color: whitesmoke;\n  border-radius: 15px;\n  transition: background-color 0.3s;\n}\n.vue-slider:hover .vue-slider-rail {\n  background-color: #e1e1e1;\n}\n\n/* process style */\n.vue-slider-process {\n  background-color: #9cd5ff;\n  border-radius: 15px;\n  transition: background-color 0.3s;\n}\n.vue-slider:hover .vue-slider-process {\n  background-color: #69c0ff;\n}\n\n/* mark style */\n.vue-slider-mark-step {\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n  box-shadow: 0 0 0 2px #e8e8e8;\n  background-color: #fff;\n}\n.vue-slider-mark-step-active {\n  box-shadow: 0 0 0 2px #9cd5ff;\n}\n.vue-slider:hover .vue-slider-mark-step-active {\n  box-shadow: 0 0 0 2px #69c0ff;\n}\n\n.vue-slider-mark-label {\n  font-size: 12px;\n  white-space: nowrap;\n}\n/* dot style */\n.vue-slider-dot-handle {\n  cursor: pointer;\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n  background-color: #fff;\n  border: 2px solid #9cd5ff;\n  box-sizing: border-box;\n  transition: box-shadow 0.3s, border-color 0.3s;\n}\n.vue-slider:hover .vue-slider-dot-handle {\n  border-color: #69c0ff;\n}\n\n.vue-slider-dot-handle-focus {\n  border-color: #36abff;\n  box-shadow: 0 0 0 5px rgba(54, 171, 255, 0.2);\n}\n.vue-slider:hover .vue-slider-dot-handle-focus {\n  border-color: #36abff;\n}\n\n.vue-slider-dot-handle:hover {\n  border-color: #36abff;\n}\n.vue-slider:hover .vue-slider-dot-handle:hover {\n  border-color: #36abff;\n}\n\n.vue-slider-dot-handle-disabled {\n  cursor: not-allowed;\n  border-color: #ddd !important;\n}\n\n.vue-slider-dot-tooltip {\n  opacity: 0;\n  visibility: hidden;\n  transition: all 0.3s;\n}\n.vue-slider-dot-tooltip-inner {\n  font-size: 14px;\n  white-space: nowrap;\n  padding: 6px 8px;\n  color: #fff;\n  border-radius: 5px;\n  border-color: rgba(0, 0, 0, 0.75);\n  background-color: rgba(0, 0, 0, 0.75);\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);\n  -webkit-transform: scale(0.9);\n          transform: scale(0.9);\n  transition: -webkit-transform 0.3s;\n  transition: transform 0.3s;\n  transition: transform 0.3s, -webkit-transform 0.3s;\n}\n.vue-slider-dot-tooltip-inner::after {\n  content: \"\";\n  position: absolute;\n}\n.vue-slider-dot-tooltip-inner-top::after {\n  top: 100%;\n  left: 50%;\n  -webkit-transform: translate(-50%, 0);\n          transform: translate(-50%, 0);\n  height: 0;\n  width: 0;\n  border-color: transparent;\n  border-style: solid;\n  border-width: 5px;\n  border-top-color: inherit;\n}\n.vue-slider-dot-tooltip-inner-bottom::after {\n  bottom: 100%;\n  left: 50%;\n  -webkit-transform: translate(-50%, 0);\n          transform: translate(-50%, 0);\n  height: 0;\n  width: 0;\n  border-color: transparent;\n  border-style: solid;\n  border-width: 5px;\n  border-bottom-color: inherit;\n}\n.vue-slider-dot-tooltip-inner-left::after {\n  left: 100%;\n  top: 50%;\n  -webkit-transform: translate(0, -50%);\n          transform: translate(0, -50%);\n  height: 0;\n  width: 0;\n  border-color: transparent;\n  border-style: solid;\n  border-width: 5px;\n  border-left-color: inherit;\n}\n.vue-slider-dot-tooltip-inner-right::after {\n  right: 100%;\n  top: 50%;\n  -webkit-transform: translate(0, -50%);\n          transform: translate(0, -50%);\n  height: 0;\n  width: 0;\n  border-color: transparent;\n  border-style: solid;\n  border-width: 5px;\n  border-right-color: inherit;\n}\n.vue-slider-dot-tooltip-inner-top {\n  -webkit-transform-origin: 50% 100%;\n          transform-origin: 50% 100%;\n}\n.vue-slider-dot-tooltip-inner-bottom {\n  -webkit-transform-origin: 50% 0;\n          transform-origin: 50% 0;\n}\n.vue-slider-dot-tooltip-inner-left {\n  -webkit-transform-origin: 100% 50%;\n          transform-origin: 100% 50%;\n}\n.vue-slider-dot-tooltip-inner-right {\n  -webkit-transform-origin: 0% 50%;\n          transform-origin: 0% 50%;\n}\n\n.vue-slider-dot:hover .vue-slider-dot-tooltip, .vue-slider-dot-tooltip-show {\n  opacity: 1;\n  visibility: visible;\n}\n.vue-slider-dot:hover .vue-slider-dot-tooltip .vue-slider-dot-tooltip-inner, .vue-slider-dot-tooltip-show .vue-slider-dot-tooltip-inner {\n  -webkit-transform: scale(1);\n          transform: scale(1);\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/lib/css-base.js":
+/*!*************************************************!*\
+  !*** ./node_modules/css-loader/lib/css-base.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function(useSourceMap) {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		return this.map(function (item) {
+			var content = cssWithMappingToString(item, useSourceMap);
+			if(item[2]) {
+				return "@media " + item[2] + "{" + content + "}";
+			} else {
+				return content;
+			}
+		}).join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+	var content = item[1] || '';
+	var cssMapping = item[3];
+	if (!cssMapping) {
+		return content;
+	}
+
+	if (useSourceMap && typeof btoa === 'function') {
+		var sourceMapping = toComment(cssMapping);
+		var sourceURLs = cssMapping.sources.map(function (source) {
+			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
+		});
+
+		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+	}
+
+	return [content].join('\n');
+}
+
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+	// eslint-disable-next-line no-undef
+	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+
+	return '/*# ' + data + ' */';
+}
+
 
 /***/ }),
 
@@ -20378,6 +20440,545 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MainForm.vue?vue&type=style&index=0&lang=scss&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/lib/loader.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/MainForm.vue?vue&type=style&index=0&lang=scss& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/lib/loader.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./MainForm.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MainForm.vue?vue&type=style&index=0&lang=scss&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/lib/addStyles.js":
+/*!****************************************************!*\
+  !*** ./node_modules/style-loader/lib/addStyles.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+
+var stylesInDom = {};
+
+var	memoize = function (fn) {
+	var memo;
+
+	return function () {
+		if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+		return memo;
+	};
+};
+
+var isOldIE = memoize(function () {
+	// Test for IE <= 9 as proposed by Browserhacks
+	// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+	// Tests for existence of standard globals is to allow style-loader
+	// to operate correctly into non-standard environments
+	// @see https://github.com/webpack-contrib/style-loader/issues/177
+	return window && document && document.all && !window.atob;
+});
+
+var getTarget = function (target, parent) {
+  if (parent){
+    return parent.querySelector(target);
+  }
+  return document.querySelector(target);
+};
+
+var getElement = (function (fn) {
+	var memo = {};
+
+	return function(target, parent) {
+                // If passing function in options, then use it for resolve "head" element.
+                // Useful for Shadow Root style i.e
+                // {
+                //   insertInto: function () { return document.querySelector("#foo").shadowRoot }
+                // }
+                if (typeof target === 'function') {
+                        return target();
+                }
+                if (typeof memo[target] === "undefined") {
+			var styleTarget = getTarget.call(this, target, parent);
+			// Special case to return head of iframe instead of iframe itself
+			if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+				try {
+					// This will throw an exception if access to iframe is blocked
+					// due to cross-origin restrictions
+					styleTarget = styleTarget.contentDocument.head;
+				} catch(e) {
+					styleTarget = null;
+				}
+			}
+			memo[target] = styleTarget;
+		}
+		return memo[target]
+	};
+})();
+
+var singleton = null;
+var	singletonCounter = 0;
+var	stylesInsertedAtTop = [];
+
+var	fixUrls = __webpack_require__(/*! ./urls */ "./node_modules/style-loader/lib/urls.js");
+
+module.exports = function(list, options) {
+	if (typeof DEBUG !== "undefined" && DEBUG) {
+		if (typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+	}
+
+	options = options || {};
+
+	options.attrs = typeof options.attrs === "object" ? options.attrs : {};
+
+	// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+	// tags it will allow on a page
+	if (!options.singleton && typeof options.singleton !== "boolean") options.singleton = isOldIE();
+
+	// By default, add <style> tags to the <head> element
+        if (!options.insertInto) options.insertInto = "head";
+
+	// By default, add <style> tags to the bottom of the target
+	if (!options.insertAt) options.insertAt = "bottom";
+
+	var styles = listToStyles(list, options);
+
+	addStylesToDom(styles, options);
+
+	return function update (newList) {
+		var mayRemove = [];
+
+		for (var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+
+			domStyle.refs--;
+			mayRemove.push(domStyle);
+		}
+
+		if(newList) {
+			var newStyles = listToStyles(newList, options);
+			addStylesToDom(newStyles, options);
+		}
+
+		for (var i = 0; i < mayRemove.length; i++) {
+			var domStyle = mayRemove[i];
+
+			if(domStyle.refs === 0) {
+				for (var j = 0; j < domStyle.parts.length; j++) domStyle.parts[j]();
+
+				delete stylesInDom[domStyle.id];
+			}
+		}
+	};
+};
+
+function addStylesToDom (styles, options) {
+	for (var i = 0; i < styles.length; i++) {
+		var item = styles[i];
+		var domStyle = stylesInDom[item.id];
+
+		if(domStyle) {
+			domStyle.refs++;
+
+			for(var j = 0; j < domStyle.parts.length; j++) {
+				domStyle.parts[j](item.parts[j]);
+			}
+
+			for(; j < item.parts.length; j++) {
+				domStyle.parts.push(addStyle(item.parts[j], options));
+			}
+		} else {
+			var parts = [];
+
+			for(var j = 0; j < item.parts.length; j++) {
+				parts.push(addStyle(item.parts[j], options));
+			}
+
+			stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+		}
+	}
+}
+
+function listToStyles (list, options) {
+	var styles = [];
+	var newStyles = {};
+
+	for (var i = 0; i < list.length; i++) {
+		var item = list[i];
+		var id = options.base ? item[0] + options.base : item[0];
+		var css = item[1];
+		var media = item[2];
+		var sourceMap = item[3];
+		var part = {css: css, media: media, sourceMap: sourceMap};
+
+		if(!newStyles[id]) styles.push(newStyles[id] = {id: id, parts: [part]});
+		else newStyles[id].parts.push(part);
+	}
+
+	return styles;
+}
+
+function insertStyleElement (options, style) {
+	var target = getElement(options.insertInto)
+
+	if (!target) {
+		throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");
+	}
+
+	var lastStyleElementInsertedAtTop = stylesInsertedAtTop[stylesInsertedAtTop.length - 1];
+
+	if (options.insertAt === "top") {
+		if (!lastStyleElementInsertedAtTop) {
+			target.insertBefore(style, target.firstChild);
+		} else if (lastStyleElementInsertedAtTop.nextSibling) {
+			target.insertBefore(style, lastStyleElementInsertedAtTop.nextSibling);
+		} else {
+			target.appendChild(style);
+		}
+		stylesInsertedAtTop.push(style);
+	} else if (options.insertAt === "bottom") {
+		target.appendChild(style);
+	} else if (typeof options.insertAt === "object" && options.insertAt.before) {
+		var nextSibling = getElement(options.insertAt.before, target);
+		target.insertBefore(style, nextSibling);
+	} else {
+		throw new Error("[Style Loader]\n\n Invalid value for parameter 'insertAt' ('options.insertAt') found.\n Must be 'top', 'bottom', or Object.\n (https://github.com/webpack-contrib/style-loader#insertat)\n");
+	}
+}
+
+function removeStyleElement (style) {
+	if (style.parentNode === null) return false;
+	style.parentNode.removeChild(style);
+
+	var idx = stylesInsertedAtTop.indexOf(style);
+	if(idx >= 0) {
+		stylesInsertedAtTop.splice(idx, 1);
+	}
+}
+
+function createStyleElement (options) {
+	var style = document.createElement("style");
+
+	if(options.attrs.type === undefined) {
+		options.attrs.type = "text/css";
+	}
+
+	if(options.attrs.nonce === undefined) {
+		var nonce = getNonce();
+		if (nonce) {
+			options.attrs.nonce = nonce;
+		}
+	}
+
+	addAttrs(style, options.attrs);
+	insertStyleElement(options, style);
+
+	return style;
+}
+
+function createLinkElement (options) {
+	var link = document.createElement("link");
+
+	if(options.attrs.type === undefined) {
+		options.attrs.type = "text/css";
+	}
+	options.attrs.rel = "stylesheet";
+
+	addAttrs(link, options.attrs);
+	insertStyleElement(options, link);
+
+	return link;
+}
+
+function addAttrs (el, attrs) {
+	Object.keys(attrs).forEach(function (key) {
+		el.setAttribute(key, attrs[key]);
+	});
+}
+
+function getNonce() {
+	if (false) {}
+
+	return __webpack_require__.nc;
+}
+
+function addStyle (obj, options) {
+	var style, update, remove, result;
+
+	// If a transform function was defined, run it on the css
+	if (options.transform && obj.css) {
+	    result = typeof options.transform === 'function'
+		 ? options.transform(obj.css) 
+		 : options.transform.default(obj.css);
+
+	    if (result) {
+	    	// If transform returns a value, use that instead of the original css.
+	    	// This allows running runtime transformations on the css.
+	    	obj.css = result;
+	    } else {
+	    	// If the transform function returns a falsy value, don't add this css.
+	    	// This allows conditional loading of css
+	    	return function() {
+	    		// noop
+	    	};
+	    }
+	}
+
+	if (options.singleton) {
+		var styleIndex = singletonCounter++;
+
+		style = singleton || (singleton = createStyleElement(options));
+
+		update = applyToSingletonTag.bind(null, style, styleIndex, false);
+		remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+
+	} else if (
+		obj.sourceMap &&
+		typeof URL === "function" &&
+		typeof URL.createObjectURL === "function" &&
+		typeof URL.revokeObjectURL === "function" &&
+		typeof Blob === "function" &&
+		typeof btoa === "function"
+	) {
+		style = createLinkElement(options);
+		update = updateLink.bind(null, style, options);
+		remove = function () {
+			removeStyleElement(style);
+
+			if(style.href) URL.revokeObjectURL(style.href);
+		};
+	} else {
+		style = createStyleElement(options);
+		update = applyToTag.bind(null, style);
+		remove = function () {
+			removeStyleElement(style);
+		};
+	}
+
+	update(obj);
+
+	return function updateStyle (newObj) {
+		if (newObj) {
+			if (
+				newObj.css === obj.css &&
+				newObj.media === obj.media &&
+				newObj.sourceMap === obj.sourceMap
+			) {
+				return;
+			}
+
+			update(obj = newObj);
+		} else {
+			remove();
+		}
+	};
+}
+
+var replaceText = (function () {
+	var textStore = [];
+
+	return function (index, replacement) {
+		textStore[index] = replacement;
+
+		return textStore.filter(Boolean).join('\n');
+	};
+})();
+
+function applyToSingletonTag (style, index, remove, obj) {
+	var css = remove ? "" : obj.css;
+
+	if (style.styleSheet) {
+		style.styleSheet.cssText = replaceText(index, css);
+	} else {
+		var cssNode = document.createTextNode(css);
+		var childNodes = style.childNodes;
+
+		if (childNodes[index]) style.removeChild(childNodes[index]);
+
+		if (childNodes.length) {
+			style.insertBefore(cssNode, childNodes[index]);
+		} else {
+			style.appendChild(cssNode);
+		}
+	}
+}
+
+function applyToTag (style, obj) {
+	var css = obj.css;
+	var media = obj.media;
+
+	if(media) {
+		style.setAttribute("media", media)
+	}
+
+	if(style.styleSheet) {
+		style.styleSheet.cssText = css;
+	} else {
+		while(style.firstChild) {
+			style.removeChild(style.firstChild);
+		}
+
+		style.appendChild(document.createTextNode(css));
+	}
+}
+
+function updateLink (link, options, obj) {
+	var css = obj.css;
+	var sourceMap = obj.sourceMap;
+
+	/*
+		If convertToAbsoluteUrls isn't defined, but sourcemaps are enabled
+		and there is no publicPath defined then lets turn convertToAbsoluteUrls
+		on by default.  Otherwise default to the convertToAbsoluteUrls option
+		directly
+	*/
+	var autoFixUrls = options.convertToAbsoluteUrls === undefined && sourceMap;
+
+	if (options.convertToAbsoluteUrls || autoFixUrls) {
+		css = fixUrls(css);
+	}
+
+	if (sourceMap) {
+		// http://stackoverflow.com/a/26603875
+		css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+	}
+
+	var blob = new Blob([css], { type: "text/css" });
+
+	var oldSrc = link.href;
+
+	link.href = URL.createObjectURL(blob);
+
+	if(oldSrc) URL.revokeObjectURL(oldSrc);
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/lib/urls.js":
+/*!***********************************************!*\
+  !*** ./node_modules/style-loader/lib/urls.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ * When source maps are enabled, `style-loader` uses a link element with a data-uri to
+ * embed the css on the page. This breaks all relative urls because now they are relative to a
+ * bundle instead of the current page.
+ *
+ * One solution is to only use full urls, but that may be impossible.
+ *
+ * Instead, this function "fixes" the relative urls to be absolute according to the current page location.
+ *
+ * A rudimentary test suite is located at `test/fixUrls.js` and can be run via the `npm test` command.
+ *
+ */
+
+module.exports = function (css) {
+  // get current location
+  var location = typeof window !== "undefined" && window.location;
+
+  if (!location) {
+    throw new Error("fixUrls requires window.location");
+  }
+
+	// blank or null?
+	if (!css || typeof css !== "string") {
+	  return css;
+  }
+
+  var baseUrl = location.protocol + "//" + location.host;
+  var currentDir = baseUrl + location.pathname.replace(/\/[^\/]*$/, "/");
+
+	// convert each url(...)
+	/*
+	This regular expression is just a way to recursively match brackets within
+	a string.
+
+	 /url\s*\(  = Match on the word "url" with any whitespace after it and then a parens
+	   (  = Start a capturing group
+	     (?:  = Start a non-capturing group
+	         [^)(]  = Match anything that isn't a parentheses
+	         |  = OR
+	         \(  = Match a start parentheses
+	             (?:  = Start another non-capturing groups
+	                 [^)(]+  = Match anything that isn't a parentheses
+	                 |  = OR
+	                 \(  = Match a start parentheses
+	                     [^)(]*  = Match anything that isn't a parentheses
+	                 \)  = Match a end parentheses
+	             )  = End Group
+              *\) = Match anything and then a close parens
+          )  = Close non-capturing group
+          *  = Match anything
+       )  = Close capturing group
+	 \)  = Match a close parens
+
+	 /gi  = Get all matches, not the first.  Be case insensitive.
+	 */
+	var fixedCss = css.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi, function(fullMatch, origUrl) {
+		// strip quotes (if they exist)
+		var unquotedOrigUrl = origUrl
+			.trim()
+			.replace(/^"(.*)"$/, function(o, $1){ return $1; })
+			.replace(/^'(.*)'$/, function(o, $1){ return $1; });
+
+		// already a full url? no change
+		if (/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/|\s*$)/i.test(unquotedOrigUrl)) {
+		  return fullMatch;
+		}
+
+		// convert the url to a full url
+		var newUrl;
+
+		if (unquotedOrigUrl.indexOf("//") === 0) {
+		  	//TODO: should we add protocol?
+			newUrl = unquotedOrigUrl;
+		} else if (unquotedOrigUrl.indexOf("/") === 0) {
+			// path should be relative to the base url
+			newUrl = baseUrl + unquotedOrigUrl; // already starts with '/'
+		} else {
+			// path should be relative to current directory
+			newUrl = currentDir + unquotedOrigUrl.replace(/^\.\//, ""); // Strip leading './'
+		}
+
+		// send back the fixed url(...)
+		return "url(" + JSON.stringify(newUrl) + ")";
+	});
+
+	// send back the fixed css
+	return fixedCss;
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/timers-browserify/main.js":
 /*!************************************************!*\
   !*** ./node_modules/timers-browserify/main.js ***!
@@ -31521,6 +32122,18 @@ VeeValidate$1.withValidation = withValidation;
 
 /***/ }),
 
+/***/ "./node_modules/vue-cool-select/dist/vue-cool-select.umd.min.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/vue-cool-select/dist/vue-cool-select.umd.min.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+(function(e,t){ true?module.exports=t():undefined})("undefined"!==typeof self?self:this,function(){return function(e){var t={};function n(r){if(t[r])return t[r].exports;var o=t[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}return n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},n.r=function(e){"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"===typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)n.d(r,o,function(t){return e[t]}.bind(null,o));return r},n.n=function(e){var t=e&&e.__esModule?function(){return e["default"]}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s="fb15")}({"014b":function(e,t,n){"use strict";var r=n("e53d"),o=n("07e3"),i=n("8e60"),s=n("63b6"),c=n("9138"),a=n("ebfd").KEY,u=n("294c"),l=n("dbdb"),f=n("45f2"),p=n("62a0"),d=n("5168"),h=n("ccb9"),b=n("6718"),m=n("47ee"),v=n("9003"),y=n("e4ae"),_=n("f772"),g=n("36c3"),x=n("1bc3"),I=n("aebd"),w=n("a159"),S=n("0395"),Z=n("bf0b"),O=n("d9f6"),E=n("c3a1"),k=Z.f,j=O.f,M=S.f,C=r.Symbol,T=r.JSON,A=T&&T.stringify,P="prototype",F=d("_hidden"),N=d("toPrimitive"),B={}.propertyIsEnumerable,D=l("symbol-registry"),L=l("symbols"),$=l("op-symbols"),R=Object[P],V="function"==typeof C,U=r.QObject,z=!U||!U[P]||!U[P].findChild,G=i&&u(function(){return 7!=w(j({},"a",{get:function(){return j(this,"a",{value:7}).a}})).a})?function(e,t,n){var r=k(R,t);r&&delete R[t],j(e,t,n),r&&e!==R&&j(R,t,r)}:j,W=function(e){var t=L[e]=w(C[P]);return t._k=e,t},H=V&&"symbol"==typeof C.iterator?function(e){return"symbol"==typeof e}:function(e){return e instanceof C},J=function(e,t,n){return e===R&&J($,t,n),y(e),t=x(t,!0),y(n),o(L,t)?(n.enumerable?(o(e,F)&&e[F][t]&&(e[F][t]=!1),n=w(n,{enumerable:I(0,!1)})):(o(e,F)||j(e,F,I(1,{})),e[F][t]=!0),G(e,t,n)):j(e,t,n)},K=function(e,t){y(e);var n,r=m(t=g(t)),o=0,i=r.length;while(i>o)J(e,n=r[o++],t[n]);return e},Y=function(e,t){return void 0===t?w(e):K(w(e),t)},X=function(e){var t=B.call(this,e=x(e,!0));return!(this===R&&o(L,e)&&!o($,e))&&(!(t||!o(this,e)||!o(L,e)||o(this,F)&&this[F][e])||t)},q=function(e,t){if(e=g(e),t=x(t,!0),e!==R||!o(L,t)||o($,t)){var n=k(e,t);return!n||!o(L,t)||o(e,F)&&e[F][t]||(n.enumerable=!0),n}},Q=function(e){var t,n=M(g(e)),r=[],i=0;while(n.length>i)o(L,t=n[i++])||t==F||t==a||r.push(t);return r},ee=function(e){var t,n=e===R,r=M(n?$:g(e)),i=[],s=0;while(r.length>s)!o(L,t=r[s++])||n&&!o(R,t)||i.push(L[t]);return i};V||(C=function(){if(this instanceof C)throw TypeError("Symbol is not a constructor!");var e=p(arguments.length>0?arguments[0]:void 0),t=function(n){this===R&&t.call($,n),o(this,F)&&o(this[F],e)&&(this[F][e]=!1),G(this,e,I(1,n))};return i&&z&&G(R,e,{configurable:!0,set:t}),W(e)},c(C[P],"toString",function(){return this._k}),Z.f=q,O.f=J,n("6abf").f=S.f=Q,n("355d").f=X,n("9aa9").f=ee,i&&!n("b8e3")&&c(R,"propertyIsEnumerable",X,!0),h.f=function(e){return W(d(e))}),s(s.G+s.W+s.F*!V,{Symbol:C});for(var te="hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables".split(","),ne=0;te.length>ne;)d(te[ne++]);for(var re=E(d.store),oe=0;re.length>oe;)b(re[oe++]);s(s.S+s.F*!V,"Symbol",{for:function(e){return o(D,e+="")?D[e]:D[e]=C(e)},keyFor:function(e){if(!H(e))throw TypeError(e+" is not a symbol!");for(var t in D)if(D[t]===e)return t},useSetter:function(){z=!0},useSimple:function(){z=!1}}),s(s.S+s.F*!V,"Object",{create:Y,defineProperty:J,defineProperties:K,getOwnPropertyDescriptor:q,getOwnPropertyNames:Q,getOwnPropertySymbols:ee}),T&&s(s.S+s.F*(!V||u(function(){var e=C();return"[null]"!=A([e])||"{}"!=A({a:e})||"{}"!=A(Object(e))})),"JSON",{stringify:function(e){var t,n,r=[e],o=1;while(arguments.length>o)r.push(arguments[o++]);if(n=t=r[1],(_(t)||void 0!==e)&&!H(e))return v(t)||(t=function(e,t){if("function"==typeof n&&(t=n.call(this,e,t)),!H(t))return t}),r[1]=t,A.apply(T,r)}}),C[P][N]||n("35e8")(C[P],N,C[P].valueOf),f(C,"Symbol"),f(Math,"Math",!0),f(r.JSON,"JSON",!0)},"0395":function(e,t,n){var r=n("36c3"),o=n("6abf").f,i={}.toString,s="object"==typeof window&&window&&Object.getOwnPropertyNames?Object.getOwnPropertyNames(window):[],c=function(e){try{return o(e)}catch(t){return s.slice()}};e.exports.f=function(e){return s&&"[object Window]"==i.call(e)?c(e):o(r(e))}},"07e3":function(e,t){var n={}.hasOwnProperty;e.exports=function(e,t){return n.call(e,t)}},"0a49":function(e,t,n){var r=n("9b43"),o=n("626a"),i=n("4bf8"),s=n("9def"),c=n("cd1c");e.exports=function(e,t){var n=1==e,a=2==e,u=3==e,l=4==e,f=6==e,p=5==e||f,d=t||c;return function(t,c,h){for(var b,m,v=i(t),y=o(v),_=r(c,h,3),g=s(y.length),x=0,I=n?d(t,g):a?d(t,0):void 0;g>x;x++)if((p||x in y)&&(b=y[x],m=_(b,x,v),e))if(n)I[x]=m;else if(m)switch(e){case 3:return!0;case 5:return b;case 6:return x;case 2:I.push(b)}else if(l)return!1;return f?-1:u||l?l:I}}},"0a90":function(e,t,n){var r=n("63b6"),o=n("10ff");r(r.G+r.F*(parseFloat!=o),{parseFloat:o})},"0bfb":function(e,t,n){"use strict";var r=n("cb7c");e.exports=function(){var e=r(this),t="";return e.global&&(t+="g"),e.ignoreCase&&(t+="i"),e.multiline&&(t+="m"),e.unicode&&(t+="u"),e.sticky&&(t+="y"),t}},"0d58":function(e,t,n){var r=n("ce10"),o=n("e11e");e.exports=Object.keys||function(e){return r(e,o)}},"0eae":function(e,t,n){t=e.exports=n("2350")(!1),t.push([e.i,".IZ-select{outline:none}.IZ-select *{font-size:16px;font-weight:400;webkit-font-smoothing:antialiased;font-family:Roboto,sans-serif}.IZ-select__input{align-items:center;display:flex;flex:1 1 auto;flex-wrap:wrap;width:100%;font-size:1rem;line-height:1.5;color:#495057;background-color:#fff;background-clip:padding-box;border-radius:2px;box-shadow:0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);transition:background .8s}.IZ-select__input:not(.IZ-select__input--disabled).IZ-select__input:not(.IZ-select__input--readonly){background-position:50%}.IZ-select__input:not(.IZ-select__input--disabled).IZ-select__input:not(.IZ-select__input--readonly):hover{background:#fbfbfb radial-gradient(circle,transparent 1%,#fbfbfb 0) 50%/15000%}.IZ-select__input:not(.IZ-select__input--disabled).IZ-select__input:not(.IZ-select__input--readonly):active{background-color:#f5f5f5;background-size:100%;transition:background 0s}.IZ-select__input.IZ-select__input--has-menu{border-bottom-left-radius:0;border-bottom-right-radius:0}.IZ-select__input.IZ-select__input--selection-slot{padding-left:20px}.IZ-select__input.IZ-select__input--selection-slot input{padding-left:10px}.IZ-select__input.IZ-select__input--has-error{box-shadow:0 3px 1px -2px rgba(255,0,0,.2),0 2px 2px 0 rgba(255,0,0,.14),0 1px 5px 0 rgba(255,0,0,.12);border:1px solid #ff5252!important;caret-color:#ff5252!important}.IZ-select__input.IZ-select__input--has-error input{color:#ff5252!important}.IZ-select__input.IZ-select__input--successful{border:1px solid #28a745!important;caret-color:#28c346!important}.IZ-select__input.IZ-select__input--disabled{pointer-events:none;background:rgba(0,0,0,.01)}.IZ-select__input.IZ-select__input--disabled input{color:#c8c8c8!important}.IZ-select__input.IZ-select__input--disabled input::-webkit-input-placeholder{color:#c8c8c8}.IZ-select__input.IZ-select__input--disabled input:-ms-input-placeholder{color:#c8c8c8}.IZ-select__input.IZ-select__input--disabled input::-ms-input-placeholder{color:#c8c8c8}.IZ-select__input.IZ-select__input--disabled input::placeholder{color:#c8c8c8}.IZ-select__input input{background-size:25px 25px;background-position:right 10px center;background-repeat:no-repeat;color:#495057!important;background-color:transparent;padding:12px 20px;border-style:none;pointer-events:auto;flex:1 1;margin-top:0;min-width:0;position:relative;line-height:20px;max-width:100%;width:100%}.IZ-select__input input:focus{outline:none}.IZ-select__input input:disabled{pointer-events:none}.IZ-select__menu{position:absolute;z-index:8;-webkit-transform-origin:left top 0;transform-origin:left top 0;background-color:#fff;border:1px solid #ced4da;border-radius:.25rem;border-top-left-radius:0;border-top-right-radius:0;box-shadow:0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12)}.IZ-select__menu .IZ-select__menu-items{overflow-y:auto;overflow-x:hidden}.IZ-select__menu .IZ-select__no-data{margin:0 10px}.IZ-select__menu.IZ-select__menu--disable-search{border-top:1;border-top-left-radius:.25rem;border-top-right-radius:.25rem}.IZ-select__item{cursor:pointer;padding:18px 20px;transition:.3s cubic-bezier(.25,.8,.5,1)}.IZ-select__item:hover{background-color:#f2f2f2}.IZ-select__item.IZ-select__item--selected{color:#1976d2!important}.IZ-select__error{margin-top:.55rem;font-size:85%;color:#ff5252}",""])},"0fc9":function(e,t,n){var r=n("3a38"),o=Math.max,i=Math.min;e.exports=function(e,t){return e=r(e),e<0?o(e+t,0):i(e,t)}},"10ff":function(e,t,n){var r=n("e53d").parseFloat,o=n("a1ce").trim;e.exports=1/r(n("e692")+"-0")!==-1/0?function(e){var t=o(String(e),3),n=r(t);return 0===n&&"-"==t.charAt(0)?-0:n}:r},1169:function(e,t,n){var r=n("2d95");e.exports=Array.isArray||function(e){return"Array"==r(e)}},"11e9":function(e,t,n){var r=n("52a7"),o=n("4630"),i=n("6821"),s=n("6a99"),c=n("69a8"),a=n("c69a"),u=Object.getOwnPropertyDescriptor;t.f=n("9e1e")?u:function(e,t){if(e=i(e),t=s(t,!0),a)try{return u(e,t)}catch(n){}if(c(e,t))return o(!r.f.call(e,t),e[t])}},1495:function(e,t,n){var r=n("86cc"),o=n("cb7c"),i=n("0d58");e.exports=n("9e1e")?Object.defineProperties:function(e,t){o(e);var n,s=i(t),c=s.length,a=0;while(c>a)r.f(e,n=s[a++],t[n]);return e}},1691:function(e,t){e.exports="constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",")},"1bc3":function(e,t,n){var r=n("f772");e.exports=function(e,t){if(!r(e))return e;var n,o;if(t&&"function"==typeof(n=e.toString)&&!r(o=n.call(e)))return o;if("function"==typeof(n=e.valueOf)&&!r(o=n.call(e)))return o;if(!t&&"function"==typeof(n=e.toString)&&!r(o=n.call(e)))return o;throw TypeError("Can't convert object to primitive value")}},"1ec9":function(e,t,n){var r=n("f772"),o=n("e53d").document,i=r(o)&&r(o.createElement);e.exports=function(e){return i?o.createElement(e):{}}},"230e":function(e,t,n){var r=n("d3f4"),o=n("7726").document,i=r(o)&&r(o.createElement);e.exports=function(e){return i?o.createElement(e):{}}},2350:function(e,t){function n(e,t){var n=e[1]||"",o=e[3];if(!o)return n;if(t&&"function"===typeof btoa){var i=r(o),s=o.sources.map(function(e){return"/*# sourceURL="+o.sourceRoot+e+" */"});return[n].concat(s).concat([i]).join("\n")}return[n].join("\n")}function r(e){var t=btoa(unescape(encodeURIComponent(JSON.stringify(e)))),n="sourceMappingURL=data:application/json;charset=utf-8;base64,"+t;return"/*# "+n+" */"}e.exports=function(e){var t=[];return t.toString=function(){return this.map(function(t){var r=n(t,e);return t[2]?"@media "+t[2]+"{"+r+"}":r}).join("")},t.i=function(e,n){"string"===typeof e&&(e=[[null,e,""]]);for(var r={},o=0;o<this.length;o++){var i=this[o][0];"number"===typeof i&&(r[i]=!0)}for(o=0;o<e.length;o++){var s=e[o];"number"===typeof s[0]&&r[s[0]]||(n&&!s[2]?s[2]=n:n&&(s[2]="("+s[2]+") and ("+n+")"),t.push(s))}},t}},"241e":function(e,t,n){var r=n("25eb");e.exports=function(e){return Object(r(e))}},2583:function(e,t,n){var r=n("8fed");"string"===typeof r&&(r=[[e.i,r,""]]),r.locals&&(e.exports=r.locals);var o=n("499e").default;o("78dceeac",r,!0,{sourceMap:!1,shadowMode:!1})},"25eb":function(e,t){e.exports=function(e){if(void 0==e)throw TypeError("Can't call method on  "+e);return e}},"268f":function(e,t,n){e.exports=n("fde4")},"294c":function(e,t){e.exports=function(e){try{return!!e()}catch(t){return!0}}},"2aba":function(e,t,n){var r=n("7726"),o=n("32e9"),i=n("69a8"),s=n("ca5a")("src"),c=n("fa5b"),a="toString",u=(""+c).split(a);n("8378").inspectSource=function(e){return c.call(e)},(e.exports=function(e,t,n,c){var a="function"==typeof n;a&&(i(n,"name")||o(n,"name",t)),e[t]!==n&&(a&&(i(n,s)||o(n,s,e[t]?""+e[t]:u.join(String(t)))),e===r?e[t]=n:c?e[t]?e[t]=n:o(e,t,n):(delete e[t],o(e,t,n)))})(Function.prototype,a,function(){return"function"==typeof this&&this[s]||c.call(this)})},"2aeb":function(e,t,n){var r=n("cb7c"),o=n("1495"),i=n("e11e"),s=n("613b")("IE_PROTO"),c=function(){},a="prototype",u=function(){var e,t=n("230e")("iframe"),r=i.length,o="<",s=">";t.style.display="none",n("fab2").appendChild(t),t.src="javascript:",e=t.contentWindow.document,e.open(),e.write(o+"script"+s+"document.F=Object"+o+"/script"+s),e.close(),u=e.F;while(r--)delete u[a][i[r]];return u()};e.exports=Object.create||function(e,t){var n;return null!==e?(c[a]=r(e),n=new c,c[a]=null,n[s]=e):n=u(),void 0===t?n:o(n,t)}},"2b4c":function(e,t,n){var r=n("5537")("wks"),o=n("ca5a"),i=n("7726").Symbol,s="function"==typeof i,c=e.exports=function(e){return r[e]||(r[e]=s&&i[e]||(s?i:o)("Symbol."+e))};c.store=r},"2d00":function(e,t){e.exports=!1},"2d95":function(e,t){var n={}.toString;e.exports=function(e){return n.call(e).slice(8,-1)}},"2fdb":function(e,t,n){"use strict";var r=n("5ca1"),o=n("d2c8"),i="includes";r(r.P+r.F*n("5147")(i),"String",{includes:function(e){return!!~o(this,e,i).indexOf(e,arguments.length>1?arguments[1]:void 0)}})},"32a6":function(e,t,n){var r=n("241e"),o=n("c3a1");n("ce7e")("keys",function(){return function(e){return o(r(e))}})},"32e9":function(e,t,n){var r=n("86cc"),o=n("4630");e.exports=n("9e1e")?function(e,t,n){return r.f(e,t,o(1,n))}:function(e,t,n){return e[t]=n,e}},"32fc":function(e,t,n){var r=n("e53d").document;e.exports=r&&r.documentElement},"335c":function(e,t,n){var r=n("6b4c");e.exports=Object("z").propertyIsEnumerable(0)?Object:function(e){return"String"==r(e)?e.split(""):Object(e)}},"355d":function(e,t){t.f={}.propertyIsEnumerable},"35e8":function(e,t,n){var r=n("d9f6"),o=n("aebd");e.exports=n("8e60")?function(e,t,n){return r.f(e,t,o(1,n))}:function(e,t,n){return e[t]=n,e}},"36c3":function(e,t,n){var r=n("335c"),o=n("25eb");e.exports=function(e){return r(o(e))}},3846:function(e,t,n){n("9e1e")&&"g"!=/./g.flags&&n("86cc").f(RegExp.prototype,"flags",{configurable:!0,get:n("0bfb")})},"3a38":function(e,t){var n=Math.ceil,r=Math.floor;e.exports=function(e){return isNaN(e=+e)?0:(e>0?r:n)(e)}},"454f":function(e,t,n){n("46a7");var r=n("584a").Object;e.exports=function(e,t,n){return r.defineProperty(e,t,n)}},4588:function(e,t){var n=Math.ceil,r=Math.floor;e.exports=function(e){return isNaN(e=+e)?0:(e>0?r:n)(e)}},"45f2":function(e,t,n){var r=n("d9f6").f,o=n("07e3"),i=n("5168")("toStringTag");e.exports=function(e,t,n){e&&!o(e=n?e:e.prototype,i)&&r(e,i,{configurable:!0,value:t})}},4630:function(e,t){e.exports=function(e,t){return{enumerable:!(1&e),configurable:!(2&e),writable:!(4&e),value:t}}},"46a7":function(e,t,n){var r=n("63b6");r(r.S+r.F*!n("8e60"),"Object",{defineProperty:n("d9f6").f})},"47ee":function(e,t,n){var r=n("c3a1"),o=n("9aa9"),i=n("355d");e.exports=function(e){var t=r(e),n=o.f;if(n){var s,c=n(e),a=i.f,u=0;while(c.length>u)a.call(e,s=c[u++])&&t.push(s)}return t}},"499e":function(e,t,n){"use strict";function r(e,t){for(var n=[],r={},o=0;o<t.length;o++){var i=t[o],s=i[0],c=i[1],a=i[2],u=i[3],l={id:e+":"+o,css:c,media:a,sourceMap:u};r[s]?r[s].parts.push(l):n.push(r[s]={id:s,parts:[l]})}return n}n.r(t),n.d(t,"default",function(){return h});var o="undefined"!==typeof document;if("undefined"!==typeof DEBUG&&DEBUG&&!o)throw new Error("vue-style-loader cannot be used in a non-browser environment. Use { target: 'node' } in your Webpack config to indicate a server-rendering environment.");var i={},s=o&&(document.head||document.getElementsByTagName("head")[0]),c=null,a=0,u=!1,l=function(){},f=null,p="data-vue-ssr-id",d="undefined"!==typeof navigator&&/msie [6-9]\b/.test(navigator.userAgent.toLowerCase());function h(e,t,n,o){u=n,f=o||{};var s=r(e,t);return b(s),function(t){for(var n=[],o=0;o<s.length;o++){var c=s[o],a=i[c.id];a.refs--,n.push(a)}t?(s=r(e,t),b(s)):s=[];for(o=0;o<n.length;o++){a=n[o];if(0===a.refs){for(var u=0;u<a.parts.length;u++)a.parts[u]();delete i[a.id]}}}}function b(e){for(var t=0;t<e.length;t++){var n=e[t],r=i[n.id];if(r){r.refs++;for(var o=0;o<r.parts.length;o++)r.parts[o](n.parts[o]);for(;o<n.parts.length;o++)r.parts.push(v(n.parts[o]));r.parts.length>n.parts.length&&(r.parts.length=n.parts.length)}else{var s=[];for(o=0;o<n.parts.length;o++)s.push(v(n.parts[o]));i[n.id]={id:n.id,refs:1,parts:s}}}}function m(){var e=document.createElement("style");return e.type="text/css",s.appendChild(e),e}function v(e){var t,n,r=document.querySelector("style["+p+'~="'+e.id+'"]');if(r){if(u)return l;r.parentNode.removeChild(r)}if(d){var o=a++;r=c||(c=m()),t=_.bind(null,r,o,!1),n=_.bind(null,r,o,!0)}else r=m(),t=g.bind(null,r),n=function(){r.parentNode.removeChild(r)};return t(e),function(r){if(r){if(r.css===e.css&&r.media===e.media&&r.sourceMap===e.sourceMap)return;t(e=r)}else n()}}var y=function(){var e=[];return function(t,n){return e[t]=n,e.filter(Boolean).join("\n")}}();function _(e,t,n,r){var o=n?"":r.css;if(e.styleSheet)e.styleSheet.cssText=y(t,o);else{var i=document.createTextNode(o),s=e.childNodes;s[t]&&e.removeChild(s[t]),s.length?e.insertBefore(i,s[t]):e.appendChild(i)}}function g(e,t){var n=t.css,r=t.media,o=t.sourceMap;if(r&&e.setAttribute("media",r),f.ssrId&&e.setAttribute(p,t.id),o&&(n+="\n/*# sourceURL="+o.sources[0]+" */",n+="\n/*# sourceMappingURL=data:application/json;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(o))))+" */"),e.styleSheet)e.styleSheet.cssText=n;else{while(e.firstChild)e.removeChild(e.firstChild);e.appendChild(document.createTextNode(n))}}},"4bf8":function(e,t,n){var r=n("be13");e.exports=function(e){return Object(r(e))}},5147:function(e,t,n){var r=n("2b4c")("match");e.exports=function(e){var t=/./;try{"/./"[e](t)}catch(n){try{return t[r]=!1,!"/./"[e](t)}catch(o){}}return!0}},5168:function(e,t,n){var r=n("dbdb")("wks"),o=n("62a0"),i=n("e53d").Symbol,s="function"==typeof i,c=e.exports=function(e){return r[e]||(r[e]=s&&i[e]||(s?i:o)("Symbol."+e))};c.store=r},"52a7":function(e,t){t.f={}.propertyIsEnumerable},5537:function(e,t,n){var r=n("8378"),o=n("7726"),i="__core-js_shared__",s=o[i]||(o[i]={});(e.exports=function(e,t){return s[e]||(s[e]=void 0!==t?t:{})})("versions",[]).push({version:r.version,mode:n("2d00")?"pure":"global",copyright:"© 2019 Denis Pushkarev (zloirock.ru)"})},5559:function(e,t,n){var r=n("dbdb")("keys"),o=n("62a0");e.exports=function(e){return r[e]||(r[e]=o(e))}},"584a":function(e,t){var n=e.exports={version:"2.6.5"};"number"==typeof __e&&(__e=n)},"59ad":function(e,t,n){e.exports=n("7be7")},"5b4e":function(e,t,n){var r=n("36c3"),o=n("b447"),i=n("0fc9");e.exports=function(e){return function(t,n,s){var c,a=r(t),u=o(a.length),l=i(s,u);if(e&&n!=n){while(u>l)if(c=a[l++],c!=c)return!0}else for(;u>l;l++)if((e||l in a)&&a[l]===n)return e||l||0;return!e&&-1}}},"5ca1":function(e,t,n){var r=n("7726"),o=n("8378"),i=n("32e9"),s=n("2aba"),c=n("9b43"),a="prototype",u=function(e,t,n){var l,f,p,d,h=e&u.F,b=e&u.G,m=e&u.S,v=e&u.P,y=e&u.B,_=b?r:m?r[t]||(r[t]={}):(r[t]||{})[a],g=b?o:o[t]||(o[t]={}),x=g[a]||(g[a]={});for(l in b&&(n=t),n)f=!h&&_&&void 0!==_[l],p=(f?_:n)[l],d=y&&f?c(p,r):v&&"function"==typeof p?c(Function.call,p):p,_&&s(_,l,p,e&u.U),g[l]!=p&&i(g,l,d),v&&x[l]!=p&&(x[l]=p)};r.core=o,u.F=1,u.G=2,u.S=4,u.P=8,u.B=16,u.W=32,u.U=64,u.R=128,e.exports=u},"5dbc":function(e,t,n){var r=n("d3f4"),o=n("8b97").set;e.exports=function(e,t,n){var i,s=t.constructor;return s!==n&&"function"==typeof s&&(i=s.prototype)!==n.prototype&&r(i)&&o&&o(e,i),e}},"613b":function(e,t,n){var r=n("5537")("keys"),o=n("ca5a");e.exports=function(e){return r[e]||(r[e]=o(e))}},"626a":function(e,t,n){var r=n("2d95");e.exports=Object("z").propertyIsEnumerable(0)?Object:function(e){return"String"==r(e)?e.split(""):Object(e)}},"62a0":function(e,t){var n=0,r=Math.random();e.exports=function(e){return"Symbol(".concat(void 0===e?"":e,")_",(++n+r).toString(36))}},"63b6":function(e,t,n){var r=n("e53d"),o=n("584a"),i=n("d864"),s=n("35e8"),c=n("07e3"),a="prototype",u=function(e,t,n){var l,f,p,d=e&u.F,h=e&u.G,b=e&u.S,m=e&u.P,v=e&u.B,y=e&u.W,_=h?o:o[t]||(o[t]={}),g=_[a],x=h?r:b?r[t]:(r[t]||{})[a];for(l in h&&(n=t),n)f=!d&&x&&void 0!==x[l],f&&c(_,l)||(p=f?x[l]:n[l],_[l]=h&&"function"!=typeof x[l]?n[l]:v&&f?i(p,r):y&&x[l]==p?function(e){var t=function(t,n,r){if(this instanceof e){switch(arguments.length){case 0:return new e;case 1:return new e(t);case 2:return new e(t,n)}return new e(t,n,r)}return e.apply(this,arguments)};return t[a]=e[a],t}(p):m&&"function"==typeof p?i(Function.call,p):p,m&&((_.virtual||(_.virtual={}))[l]=p,e&u.R&&g&&!g[l]&&s(g,l,p)))};u.F=1,u.G=2,u.S=4,u.P=8,u.B=16,u.W=32,u.U=64,u.R=128,e.exports=u},6718:function(e,t,n){var r=n("e53d"),o=n("584a"),i=n("b8e3"),s=n("ccb9"),c=n("d9f6").f;e.exports=function(e){var t=o.Symbol||(o.Symbol=i?{}:r.Symbol||{});"_"==e.charAt(0)||e in t||c(t,e,{value:s.f(e)})}},6762:function(e,t,n){"use strict";var r=n("5ca1"),o=n("c366")(!0);r(r.P,"Array",{includes:function(e){return o(this,e,arguments.length>1?arguments[1]:void 0)}}),n("9c6c")("includes")},6821:function(e,t,n){var r=n("626a"),o=n("be13");e.exports=function(e){return r(o(e))}},"69a8":function(e,t){var n={}.hasOwnProperty;e.exports=function(e,t){return n.call(e,t)}},"6a99":function(e,t,n){var r=n("d3f4");e.exports=function(e,t){if(!r(e))return e;var n,o;if(t&&"function"==typeof(n=e.toString)&&!r(o=n.call(e)))return o;if("function"==typeof(n=e.valueOf)&&!r(o=n.call(e)))return o;if(!t&&"function"==typeof(n=e.toString)&&!r(o=n.call(e)))return o;throw TypeError("Can't convert object to primitive value")}},"6abf":function(e,t,n){var r=n("e6f3"),o=n("1691").concat("length","prototype");t.f=Object.getOwnPropertyNames||function(e){return r(e,o)}},"6b4c":function(e,t){var n={}.toString;e.exports=function(e){return n.call(e).slice(8,-1)}},"6b54":function(e,t,n){"use strict";n("3846");var r=n("cb7c"),o=n("0bfb"),i=n("9e1e"),s="toString",c=/./[s],a=function(e){n("2aba")(RegExp.prototype,s,e,!0)};n("79e5")(function(){return"/a/b"!=c.call({source:"a",flags:"b"})})?a(function(){var e=r(this);return"/".concat(e.source,"/","flags"in e?e.flags:!i&&e instanceof RegExp?o.call(e):void 0)}):c.name!=s&&a(function(){return c.call(this)})},7514:function(e,t,n){"use strict";var r=n("5ca1"),o=n("0a49")(5),i="find",s=!0;i in[]&&Array(1)[i](function(){s=!1}),r(r.P+r.F*s,"Array",{find:function(e){return o(this,e,arguments.length>1?arguments[1]:void 0)}}),n("9c6c")(i)},7726:function(e,t){var n=e.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=n)},"77f1":function(e,t,n){var r=n("4588"),o=Math.max,i=Math.min;e.exports=function(e,t){return e=r(e),e<0?o(e+t,0):i(e,t)}},"794b":function(e,t,n){e.exports=!n("8e60")&&!n("294c")(function(){return 7!=Object.defineProperty(n("1ec9")("div"),"a",{get:function(){return 7}}).a})},"79aa":function(e,t){e.exports=function(e){if("function"!=typeof e)throw TypeError(e+" is not a function!");return e}},"79e5":function(e,t){e.exports=function(e){try{return!!e()}catch(t){return!0}}},"7be7":function(e,t,n){n("0a90"),e.exports=n("584a").parseFloat},"7d20":function(e,t,n){var r={"./bootstrap.styl":"8e47","./material-design.styl":"e027"};function o(e){var t=i(e);return n(t)}function i(e){var t=r[e];if(!(t+1)){var n=new Error("Cannot find module '"+e+"'");throw n.code="MODULE_NOT_FOUND",n}return t}o.keys=function(){return Object.keys(r)},o.resolve=i,e.exports=o,o.id="7d20"},"7e90":function(e,t,n){var r=n("d9f6"),o=n("e4ae"),i=n("c3a1");e.exports=n("8e60")?Object.defineProperties:function(e,t){o(e);var n,s=i(t),c=s.length,a=0;while(c>a)r.f(e,n=s[a++],t[n]);return e}},8378:function(e,t){var n=e.exports={version:"2.6.5"};"number"==typeof __e&&(__e=n)},"85f2":function(e,t,n){e.exports=n("454f")},"86cc":function(e,t,n){var r=n("cb7c"),o=n("c69a"),i=n("6a99"),s=Object.defineProperty;t.f=n("9e1e")?Object.defineProperty:function(e,t,n){if(r(e),t=i(t,!0),r(n),o)try{return s(e,t,n)}catch(c){}if("get"in n||"set"in n)throw TypeError("Accessors not supported!");return"value"in n&&(e[t]=n.value),e}},"8aae":function(e,t,n){n("32a6"),e.exports=n("584a").Object.keys},"8b97":function(e,t,n){var r=n("d3f4"),o=n("cb7c"),i=function(e,t){if(o(e),!r(t)&&null!==t)throw TypeError(t+": can't set as prototype!")};e.exports={set:Object.setPrototypeOf||("__proto__"in{}?function(e,t,r){try{r=n("9b43")(Function.call,n("11e9").f(Object.prototype,"__proto__").set,2),r(e,[]),t=!(e instanceof Array)}catch(o){t=!0}return function(e,n){return i(e,n),t?e.__proto__=n:r(e,n),e}}({},!1):void 0),check:i}},"8e47":function(e,t,n){var r=n("dab0");"string"===typeof r&&(r=[[e.i,r,""]]),r.locals&&(e.exports=r.locals);var o=n("499e").default;o("356cc78f",r,!0,{sourceMap:!1,shadowMode:!1})},"8e60":function(e,t,n){e.exports=!n("294c")(function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a})},"8fed":function(e,t,n){t=e.exports=n("2350")(!1),t.push([e.i,".IZ-select *{box-sizing:border-box}.IZ-select__input-wrap{display:flex;align-items:center}.fade-leave-active{position:absolute}.fade-enter-active,.fade-leave,.fade-leave-to{transition:opacity .2s}.fade-enter,.fade-leave-to{opacity:0}",""])},9003:function(e,t,n){var r=n("6b4c");e.exports=Array.isArray||function(e){return"Array"==r(e)}},9093:function(e,t,n){var r=n("ce10"),o=n("e11e").concat("length","prototype");t.f=Object.getOwnPropertyNames||function(e){return r(e,o)}},9138:function(e,t,n){e.exports=n("35e8")},"9aa9":function(e,t){t.f=Object.getOwnPropertySymbols},"9b43":function(e,t,n){var r=n("d8e8");e.exports=function(e,t,n){if(r(e),void 0===t)return e;switch(n){case 1:return function(n){return e.call(t,n)};case 2:return function(n,r){return e.call(t,n,r)};case 3:return function(n,r,o){return e.call(t,n,r,o)}}return function(){return e.apply(t,arguments)}}},"9c6c":function(e,t,n){var r=n("2b4c")("unscopables"),o=Array.prototype;void 0==o[r]&&n("32e9")(o,r,{}),e.exports=function(e){o[r][e]=!0}},"9def":function(e,t,n){var r=n("4588"),o=Math.min;e.exports=function(e){return e>0?o(r(e),9007199254740991):0}},"9e1e":function(e,t,n){e.exports=!n("79e5")(function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a})},a159:function(e,t,n){var r=n("e4ae"),o=n("7e90"),i=n("1691"),s=n("5559")("IE_PROTO"),c=function(){},a="prototype",u=function(){var e,t=n("1ec9")("iframe"),r=i.length,o="<",s=">";t.style.display="none",n("32fc").appendChild(t),t.src="javascript:",e=t.contentWindow.document,e.open(),e.write(o+"script"+s+"document.F=Object"+o+"/script"+s),e.close(),u=e.F;while(r--)delete u[a][i[r]];return u()};e.exports=Object.create||function(e,t){var n;return null!==e?(c[a]=r(e),n=new c,c[a]=null,n[s]=e):n=u(),void 0===t?n:o(n,t)}},a1ce:function(e,t,n){var r=n("63b6"),o=n("25eb"),i=n("294c"),s=n("e692"),c="["+s+"]",a="​",u=RegExp("^"+c+c+"*"),l=RegExp(c+c+"*$"),f=function(e,t,n){var o={},c=i(function(){return!!s[e]()||a[e]()!=a}),u=o[e]=c?t(p):s[e];n&&(o[n]=u),r(r.P+r.F*c,"String",o)},p=f.trim=function(e,t){return e=String(o(e)),1&t&&(e=e.replace(u,"")),2&t&&(e=e.replace(l,"")),e};e.exports=f},a4bb:function(e,t,n){e.exports=n("8aae")},aa77:function(e,t,n){var r=n("5ca1"),o=n("be13"),i=n("79e5"),s=n("fdef"),c="["+s+"]",a="​",u=RegExp("^"+c+c+"*"),l=RegExp(c+c+"*$"),f=function(e,t,n){var o={},c=i(function(){return!!s[e]()||a[e]()!=a}),u=o[e]=c?t(p):s[e];n&&(o[n]=u),r(r.P+r.F*c,"String",o)},p=f.trim=function(e,t){return e=String(o(e)),1&t&&(e=e.replace(u,"")),2&t&&(e=e.replace(l,"")),e};e.exports=f},aae3:function(e,t,n){var r=n("d3f4"),o=n("2d95"),i=n("2b4c")("match");e.exports=function(e){var t;return r(e)&&(void 0!==(t=e[i])?!!t:"RegExp"==o(e))}},aebd:function(e,t){e.exports=function(e,t){return{enumerable:!(1&e),configurable:!(2&e),writable:!(4&e),value:t}}},b447:function(e,t,n){var r=n("3a38"),o=Math.min;e.exports=function(e){return e>0?o(r(e),9007199254740991):0}},b8e3:function(e,t){e.exports=!0},be13:function(e,t){e.exports=function(e){if(void 0==e)throw TypeError("Can't call method on  "+e);return e}},bf0b:function(e,t,n){var r=n("355d"),o=n("aebd"),i=n("36c3"),s=n("1bc3"),c=n("07e3"),a=n("794b"),u=Object.getOwnPropertyDescriptor;t.f=n("8e60")?u:function(e,t){if(e=i(e),t=s(t,!0),a)try{return u(e,t)}catch(n){}if(c(e,t))return o(!r.f.call(e,t),e[t])}},bf90:function(e,t,n){var r=n("36c3"),o=n("bf0b").f;n("ce7e")("getOwnPropertyDescriptor",function(){return function(e,t){return o(r(e),t)}})},c366:function(e,t,n){var r=n("6821"),o=n("9def"),i=n("77f1");e.exports=function(e){return function(t,n,s){var c,a=r(t),u=o(a.length),l=i(s,u);if(e&&n!=n){while(u>l)if(c=a[l++],c!=c)return!0}else for(;u>l;l++)if((e||l in a)&&a[l]===n)return e||l||0;return!e&&-1}}},c3a1:function(e,t,n){var r=n("e6f3"),o=n("1691");e.exports=Object.keys||function(e){return r(e,o)}},c5f6:function(e,t,n){"use strict";var r=n("7726"),o=n("69a8"),i=n("2d95"),s=n("5dbc"),c=n("6a99"),a=n("79e5"),u=n("9093").f,l=n("11e9").f,f=n("86cc").f,p=n("aa77").trim,d="Number",h=r[d],b=h,m=h.prototype,v=i(n("2aeb")(m))==d,y="trim"in String.prototype,_=function(e){var t=c(e,!1);if("string"==typeof t&&t.length>2){t=y?t.trim():p(t,3);var n,r,o,i=t.charCodeAt(0);if(43===i||45===i){if(n=t.charCodeAt(2),88===n||120===n)return NaN}else if(48===i){switch(t.charCodeAt(1)){case 66:case 98:r=2,o=49;break;case 79:case 111:r=8,o=55;break;default:return+t}for(var s,a=t.slice(2),u=0,l=a.length;u<l;u++)if(s=a.charCodeAt(u),s<48||s>o)return NaN;return parseInt(a,r)}}return+t};if(!h(" 0o1")||!h("0b1")||h("+0x1")){h=function(e){var t=arguments.length<1?0:e,n=this;return n instanceof h&&(v?a(function(){m.valueOf.call(n)}):i(n)!=d)?s(new b(_(t)),n,h):_(t)};for(var g,x=n("9e1e")?u(b):"MAX_VALUE,MIN_VALUE,NaN,NEGATIVE_INFINITY,POSITIVE_INFINITY,EPSILON,isFinite,isInteger,isNaN,isSafeInteger,MAX_SAFE_INTEGER,MIN_SAFE_INTEGER,parseFloat,parseInt,isInteger".split(","),I=0;x.length>I;I++)o(b,g=x[I])&&!o(h,g)&&f(h,g,l(b,g));h.prototype=m,m.constructor=h,n("2aba")(r,d,h)}},c69a:function(e,t,n){e.exports=!n("9e1e")&&!n("79e5")(function(){return 7!=Object.defineProperty(n("230e")("div"),"a",{get:function(){return 7}}).a})},ca5a:function(e,t){var n=0,r=Math.random();e.exports=function(e){return"Symbol(".concat(void 0===e?"":e,")_",(++n+r).toString(36))}},cb7c:function(e,t,n){var r=n("d3f4");e.exports=function(e){if(!r(e))throw TypeError(e+" is not an object!");return e}},ccb9:function(e,t,n){t.f=n("5168")},cd1c:function(e,t,n){var r=n("e853");e.exports=function(e,t){return new(r(e))(t)}},ce10:function(e,t,n){var r=n("69a8"),o=n("6821"),i=n("c366")(!1),s=n("613b")("IE_PROTO");e.exports=function(e,t){var n,c=o(e),a=0,u=[];for(n in c)n!=s&&r(c,n)&&u.push(n);while(t.length>a)r(c,n=t[a++])&&(~i(u,n)||u.push(n));return u}},ce7e:function(e,t,n){var r=n("63b6"),o=n("584a"),i=n("294c");e.exports=function(e,t){var n=(o.Object||{})[e]||Object[e],s={};s[e]=t(n),r(r.S+r.F*i(function(){n(1)}),"Object",s)}},d2c8:function(e,t,n){var r=n("aae3"),o=n("be13");e.exports=function(e,t,n){if(r(t))throw TypeError("String#"+n+" doesn't accept regex!");return String(o(e))}},d3f4:function(e,t){e.exports=function(e){return"object"===typeof e?null!==e:"function"===typeof e}},d864:function(e,t,n){var r=n("79aa");e.exports=function(e,t,n){if(r(e),void 0===t)return e;switch(n){case 1:return function(n){return e.call(t,n)};case 2:return function(n,r){return e.call(t,n,r)};case 3:return function(n,r,o){return e.call(t,n,r,o)}}return function(){return e.apply(t,arguments)}}},d8e8:function(e,t){e.exports=function(e){if("function"!=typeof e)throw TypeError(e+" is not a function!");return e}},d9f6:function(e,t,n){var r=n("e4ae"),o=n("794b"),i=n("1bc3"),s=Object.defineProperty;t.f=n("8e60")?Object.defineProperty:function(e,t,n){if(r(e),t=i(t,!0),r(n),o)try{return s(e,t,n)}catch(c){}if("get"in n||"set"in n)throw TypeError("Accessors not supported!");return"value"in n&&(e[t]=n.value),e}},dab0:function(e,t,n){t=e.exports=n("2350")(!1),t.push([e.i,".IZ-select{outline:none}.IZ-select__input{align-items:center;display:flex;flex:1 1 auto;flex-wrap:wrap;width:100%;font-size:1rem;line-height:1.5;color:#495057;background-color:#fff;background-clip:padding-box;border:1px solid #ced4da;border-radius:.25rem;transition:background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}.IZ-select__input.IZ-select__input--has-menu{border-bottom-left-radius:0;border-bottom-right-radius:0}.IZ-select__input.IZ-select__input--selection-slot{padding-left:.75rem}.IZ-select__input.IZ-select__input--selection-slot input{padding-left:10px}.IZ-select__input.IZ-select__input--has-error{border:1px solid #dc3545!important;caret-color:#ff5252!important}.IZ-select__input.IZ-select__input--has-error input{color:#ff5252!important}.IZ-select__input.IZ-select__input--successful{border:1px solid #28a745!important;caret-color:#28c346!important}.IZ-select__input.IZ-select__input--focused{border-color:#80bdff;outline:0;box-shadow:0 0 0 .2rem rgba(128,189,255,.5)}.IZ-select__input.IZ-select__input--focused.IZ-select__input--has-error{box-shadow:0 0 0 .2rem rgba(220,53,69,.25)!important}.IZ-select__input.IZ-select__input--focused.IZ-select__input--successful{box-shadow:0 0 0 .2rem rgba(40,167,69,.25)!important}.IZ-select__input.IZ-select__input--disabled{pointer-events:none;background-color:#e9ecef;opacity:1}.IZ-select__input.IZ-select__input--disabled input{color:#6c737a!important}.IZ-select__input.IZ-select__input--disabled::-webkit-input-placeholder{color:#6c737a!important}.IZ-select__input.IZ-select__input--disabled:-ms-input-placeholder{color:#6c737a!important}.IZ-select__input.IZ-select__input--disabled::-ms-input-placeholder{color:#6c737a!important}.IZ-select__input.IZ-select__input--disabled::placeholder{color:#6c737a!important}.IZ-select__input input{font-size:1rem;background-size:25px 25px;background-position:right 10px center;background-repeat:no-repeat;color:#495057!important;background-color:transparent;padding:.375rem .75rem;border-style:none;pointer-events:auto;flex:1 1;margin-top:0;min-width:0;position:relative;line-height:20px;max-width:100%;width:100%}.IZ-select__input input:focus{outline:none}.IZ-select__input input:disabled{pointer-events:none}.IZ-select__menu{position:absolute;z-index:8;-webkit-transform-origin:left top 0;transform-origin:left top 0;background-color:#fff;border:1px solid #ced4da;border-radius:.25rem;border-top:0;border-top-left-radius:0;border-top-right-radius:0;box-shadow:0 2px 11px -2px rgba(0,0,0,.19)}.IZ-select__menu .IZ-select__menu-items{overflow-y:auto;overflow-x:hidden}.IZ-select__menu .IZ-select__no-data{margin:0 10px}.IZ-select__menu.IZ-select__menu--disable-search{border-top:1;border-top-left-radius:.25rem;border-top-right-radius:.25rem}.IZ-select__item{cursor:pointer;padding:10px 14px;transition:.3s cubic-bezier(.25,.8,.5,1)}.IZ-select__item:hover{background-color:#f2f2f2}.IZ-select__item.IZ-select__item--selected{color:#1976d2!important}.IZ-select__error{margin-top:.55rem;font-size:85%;color:#dc3545}",""])},dbdb:function(e,t,n){var r=n("584a"),o=n("e53d"),i="__core-js_shared__",s=o[i]||(o[i]={});(e.exports=function(e,t){return s[e]||(s[e]=void 0!==t?t:{})})("versions",[]).push({version:r.version,mode:n("b8e3")?"pure":"global",copyright:"© 2019 Denis Pushkarev (zloirock.ru)"})},e027:function(e,t,n){var r=n("0eae");"string"===typeof r&&(r=[[e.i,r,""]]),r.locals&&(e.exports=r.locals);var o=n("499e").default;o("15be5fe2",r,!0,{sourceMap:!1,shadowMode:!1})},e11e:function(e,t){e.exports="constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",")},e265:function(e,t,n){e.exports=n("ed33")},e4ae:function(e,t,n){var r=n("f772");e.exports=function(e){if(!r(e))throw TypeError(e+" is not an object!");return e}},e53d:function(e,t){var n=e.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=n)},e692:function(e,t){e.exports="\t\n\v\f\r   ᠎             　\u2028\u2029\ufeff"},e6f3:function(e,t,n){var r=n("07e3"),o=n("36c3"),i=n("5b4e")(!1),s=n("5559")("IE_PROTO");e.exports=function(e,t){var n,c=o(e),a=0,u=[];for(n in c)n!=s&&r(c,n)&&u.push(n);while(t.length>a)r(c,n=t[a++])&&(~i(u,n)||u.push(n));return u}},e853:function(e,t,n){var r=n("d3f4"),o=n("1169"),i=n("2b4c")("species");e.exports=function(e){var t;return o(e)&&(t=e.constructor,"function"!=typeof t||t!==Array&&!o(t.prototype)||(t=void 0),r(t)&&(t=t[i],null===t&&(t=void 0))),void 0===t?Array:t}},ebfd:function(e,t,n){var r=n("62a0")("meta"),o=n("f772"),i=n("07e3"),s=n("d9f6").f,c=0,a=Object.isExtensible||function(){return!0},u=!n("294c")(function(){return a(Object.preventExtensions({}))}),l=function(e){s(e,r,{value:{i:"O"+ ++c,w:{}}})},f=function(e,t){if(!o(e))return"symbol"==typeof e?e:("string"==typeof e?"S":"P")+e;if(!i(e,r)){if(!a(e))return"F";if(!t)return"E";l(e)}return e[r].i},p=function(e,t){if(!i(e,r)){if(!a(e))return!0;if(!t)return!1;l(e)}return e[r].w},d=function(e){return u&&h.NEED&&a(e)&&!i(e,r)&&l(e),e},h=e.exports={KEY:r,NEED:!1,fastKey:f,getWeak:p,onFreeze:d}},ed33:function(e,t,n){n("014b"),e.exports=n("584a").Object.getOwnPropertySymbols},f772:function(e,t){e.exports=function(e){return"object"===typeof e?null!==e:"function"===typeof e}},fa5b:function(e,t,n){e.exports=n("5537")("native-function-to-string",Function.toString)},fab2:function(e,t,n){var r=n("7726").document;e.exports=r&&r.documentElement},fb15:function(e,t,n){"use strict";var r;(n.r(t),"undefined"!==typeof window)&&((r=window.document.currentScript)&&(r=r.src.match(/(.+\/)[^\/]+\.js(\?.*)?$/))&&(n.p=r[1]));n("6762"),n("2fdb"),n("2583");var o=function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",{ref:"IZ-select",staticClass:"IZ-select",attrs:{tabindex:e.disableSearch?0:-1},on:{keydown:[function(t){return!t.type.indexOf("key")&&e._k(t.keyCode,"up",38,t.key,["Up","ArrowUp"])?null:e.onSelectByArrow(t)},function(t){return!t.type.indexOf("key")&&e._k(t.keyCode,"down",40,t.key,["Down","ArrowDown"])?null:e.onSelectByArrow(t)},function(t){return!t.type.indexOf("key")&&e._k(t.keyCode,"enter",13,t.key,"Enter")?null:e.onEnter(t)},function(t){return!t.type.indexOf("key")&&e._k(t.keyCode,"tab",9,t.key,"Tab")&&e._k(t.keyCode,"esc",27,t.key,["Esc","Escape"])?null:e.setBlured(t)}],mousedown:e.onClick,focus:e.setFocused}},[n("div",{staticClass:"IZ-select__input-wrap"},[e._t("input-before"),n("div",{ref:"IZ-select__input",class:{"IZ-select__input":!0,"IZ-select__input--focused":e.focused,"IZ-select__input--has-menu":e.hasMenu,"IZ-select__input--has-error":e.hasError,"IZ-select__input--successful":e.successful,"IZ-select__input--selection-slot":e.showSelectionSlot,"IZ-select__input--disabled":e.disabled,"IZ-select__input--readonly":e.readonly},style:e.inputStyles},[e._t("input-start"),e.showSelectionSlot?e._t("selection",null,{item:e.selectedItem}):e._e(),n("input",e._b({ref:"IZ-select__input-for-text",class:e.inputForTextClass,style:e.inputForTextStyles,attrs:{placeholder:e.placeholder,disabled:e.disableSearch||e.disabled,readonly:e.readonly,tabindex:e.disableSearch?-1:0,type:"text",role:"combobox",autocomplete:"off"},domProps:{value:e.inputValue},on:{keyup:e.onSearchKeyUp,keydown:e.onSearchKeyDown,input:e.onSearch,mousedown:e.onClick,focus:function(t){return e.setFocused(!0)}}},"input",e.inputElCustomAttributes,!1)),e._t("input-end")],2),e._t("input-after")],2),n("transition",{attrs:{name:"fade"}},[e.hasMenu?n("div",{ref:"IZ-select__menu",class:{"IZ-select__menu":!0,"IZ-select__menu--disable-search":e.disableSearch},style:e.menuDynamicStyles},[e._t("before-items-fixed"),n("div",{ref:"IZ-select__menu-items",staticClass:"IZ-select__menu-items",style:{"max-height":e.menuItemsMaxHeight},on:{scroll:e.onScroll}},[e._t("before-items",[n("div",{staticStyle:{height:"8px"}})]),e._l(e.itemsComputed,function(t,r){return n("div",{directives:[{name:"show",rawName:"v-show",value:r<e.scrollItemsLimitCurrent||e.arrowsIndex&&r<=e.arrowsIndex,expression:"i < scrollItemsLimitCurrent || (arrowsIndex && i <= arrowsIndex)"}],key:"IZ-item-"+r,ref:"items",refInFor:!0,class:{"IZ-select__item":!0,"IZ-select__item--selected":e.isItemSelected(t)},on:{click:function(n){return e.onClickSelectItem(t)}}},[e._t("item",[n("span",[e._v("\n              "+e._s(e.getItemText(t))+"\n            ")])],{item:t})],2)}),e.itemsComputed.length||e.loading?e._e():n("div",{staticClass:"IZ-select__no-data"},[e._t("no-data",[e._v("\n            No data available\n          ")])],2),e._t("after-items",[n("div",{staticStyle:{height:"8px"}})])],2),e._t("after-items-fixed"),n("div",{staticStyle:{position:"absolute",top:"0",left:"0",right:"0"}},[e._t("before-items-fixed-absolute")],2),n("div",{staticStyle:{position:"absolute",bottom:"0",left:"0",right:"0"}},[e._t("after-items-fixed-absolute")],2)],2):e._e()]),n("transition",{attrs:{name:"fade"}},[n("div",{directives:[{name:"show",rawName:"v-show",value:e.errorMessage,expression:"errorMessage"}],staticClass:"IZ-select__error"},[e._t("error",[e._v("\n        "+e._s(e.errorMessage)+"\n      ")],{errorMessage:e.errorMessage})],2)])],1)},i=[],s=(n("7514"),n("a4bb")),c=n.n(s),a=n("268f"),u=n.n(a),l=n("e265"),f=n.n(l),p=n("85f2"),d=n.n(p);function h(e,t,n){return t in e?d()(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function b(e){for(var t=1;t<arguments.length;t++){var n=null!=arguments[t]?arguments[t]:{},r=c()(n);"function"===typeof f.a&&(r=r.concat(f()(n).filter(function(e){return u()(n,e).enumerable}))),r.forEach(function(t){h(e,t,n[t])})}return e}var m=n("59ad"),v=n.n(m);function y(e){return e&&e.constructor===Object}function _(e){var t=0,n=0;while(e)t+=v()(e.offsetTop),n+=v()(e.offsetLeft),e=e.offsetParent;return{top:Math.round(t),left:Math.round(n)}}function g(e,t){if(e.offsetTop<t.scrollTop)t.scrollTop=e.offsetTop;else{var n=e.offsetTop+e.offsetHeight,r=t.scrollTop+t.offsetHeight;n>r&&(t.scrollTop=n-t.offsetHeight)}}var x={onSelectByArrow:function(e){var t=this;if(e.preventDefault(),!this.disabled&&!this.readonly){this.showMenu(),null===this.arrowsIndex&&(this.arrowsIndex=this.selectedItemIndex||-1),"ArrowDown"===e.key&&this.arrowsIndex++,"ArrowUp"===e.key&&this.arrowsIndex--;var n=this.itemsComputed.length-1;this.arrowsIndex<0&&(this.arrowsIndex=n),this.arrowsIndex>n&&(this.arrowsIndex=0);var r=this.itemsComputed[this.arrowsIndex];this.arrowsDisableInstantSelection?this.selectedItemByArrows=r:(this.setSearchData(""),this.selectedItem=r,this.fireSelectEvent(this.selectedItem)),this.scrollToItemIfNeeded&&this.$nextTick(function(){var e=t.$refs.items[t.arrowsIndex];e&&g(e,t.$refs["IZ-select__menu-items"])})}},onEnter:function(){if(this.hasMenu){var e=!1;if(!this.arrowsIndex&&!this.disableFirstItemSelectOnEnter){var t=this.itemsComputed[0];if(!t)return;this.fireSelectEvent(this.selectedItem=t),e=!0}this.arrowsDisableInstantSelection&&this.selectedItemByArrows&&(this.fireSelectEvent(this.selectedItem=this.selectedItemByArrows),e=!0),e&&this.setSearchData("")}this.hasMenu?this.hideMenu():this.showMenu()},onClick:function(){this.disabled||this.readonly||(this.setFocused(),this.showMenu())},onClickSelectItem:function(e){this.selectedItem=e,this.setSearchData(""),this.setInputFocused(),this.hideMenu(),this.fireSelectEvent(e)},onSearchKeyDown:function(e){this.disabled||this.readonly||["Enter","ArrowDown","ArrowUp","Tab"].includes(e.key)||(e.target.value||"Backspace"!==e.key||(this.selectedItem=null,this.arrowsIndex=null),this.showMenu(),this.$emit("keydown",e))},onSearchKeyUp:function(e){this.disabled||this.readonly||this.$emit("keyup",e)},onSearch:function(e){this.disabled||this.readonly||(this.selectedItemByArrows=this.selectedItem=this.arrowsIndex=null,this.setSearchData(e.target.value),this.$emit("search",this.getSearchData()))},onScroll:function(e){if(this.$emit("scroll",e),!(this.scrollItemsLimitCurrent>=this.itemsComputed.length)){var t=e.target,n=t.scrollHeight-(t.scrollTop+t.clientHeight)<200;n&&(this.scrollItemsLimitCurrent+=this.scrollItemsLimitAddAfterScroll)}}},I=(n("6b54"),n("c5f6"),{value:{type:[Array,Object,String,Number,Boolean],default:function(){return null},note:'value for "v-model".'},items:{type:[Array,String],required:!0,note:"array of suggestions (data fetched from backend, etc)."},itemText:{type:String,default:null,note:"property in item for text."},itemValue:{type:String,default:null,note:"property in item for value."},placeholder:{type:String,default:null,note:"placeholder for input."},loading:{type:Boolean,default:!1,note:"display the loading indicator."},loadingIndicator:{type:String,default:"https://i.imgur.com/fLYd7PN.gif",note:"sets custom loading spinner/indicator. https://loading.io/"},errorMessage:{type:String,default:null},disabled:{type:Boolean,default:!1,note:"disable the select."},readonly:{type:Boolean,default:!1,note:"readonly state."},filter:{type:Function,default:function(e,t,n){var r=function(e){return null!=e?e:""},o=r(n),i=r(t);return o.toString().toLowerCase().indexOf(i.toString().toLowerCase())>-1},note:"filter function for search."},searchText:{type:String,default:"",note:'search string for input, you can use this with ".sync" modifier.'},inputElCustomAttributes:{type:Object,default:function(){return{}},note:'you can pass your attributes to the input element. Note: the attributes that are used by the component itself inside are not available, for example, "style".'},disableSearch:{type:Boolean,default:!1,note:"disable search input element."},disableFilteringBySearch:{type:Boolean,default:!1,note:"disable filtering by search (you can use search for manually getting items)."},resetSearchOnBlur:{type:Boolean,default:!0,note:"reset search on blur event."},allowMobileScroll:{type:Boolean,default:!0,note:"allow scrolling to an item on mobile devices."},arrowsDisableInstantSelection:{type:Boolean,default:!1,note:"disable auto select when up or down with key arrow."},menuItemsMaxHeight:{type:String,default:"300px",note:"max menu height (any css value)."},eventEmitter:{type:Object,note:"Observer pattern, helps manage events from parent to child."},scrollItemsLimit:{type:Number,default:20,note:"the initial limit of the displayed items to scroll. So that there are not many elements in the scrolling at the beginning. Also see scrollItemsLimitAddAfterScroll prop."},scrollItemsLimitAddAfterScroll:{type:Number,default:10,note:"the number of items added to the scrollItemsLimit prop after scrolling to the end of the scroll. Also see scrollItemsLimitAddAfterScroll prop."},disableFirstItemSelectOnEnter:{type:Boolean,default:!1,note:"disable the selection of the first item from the list of items in menu when to press enter (when no item is selected)."},scrollToItemIfNeeded:{type:Boolean,default:!0,note:"to scroll to an item if it has moved beyond the scroll bar."},inputStyles:{type:Object,default:function(){return{}},note:"custom styles for the input field. You can specify dynamic styles."},inputForTextClass:{type:[Array,String,Object],default:function(){return""},note:'custom "class" attribute for the input field. You can specify dynamic class.'},successful:{type:Boolean,default:!1,note:"does the component have a successful state. If true, then apply green colors."}}),w={itemsComputed:function(){var e=this.items;return"string"===typeof this.items&&(e=JSON.parse(this.items)),this.filteredBySearchItems(e)},inputValue:function(){return this.$scopedSlots.selection&&""===this.getSearchData()?"":""!==this.getSearchData()?this.getSearchData():this.getItemText(this.selectedItem)||this.currentItemValue},currentItemValue:function(){return this.getItemValue(this.selectedItem)},showSelectionSlot:function(){return this.$scopedSlots.selection&&this.selectedItem&&!this.getSearchData()},inputForTextStyles:function(){return this.loading?{"background-image":"url(".concat(this.loadingIndicator,")")}:{}},hasMenu:function(){return this.wishShowMenu&&!this.loading},hasError:function(){return!!this.errorMessage},isMobile:function(){return window.innerWidth<=900&&window.innerHeight<=900},menuDynamicStyles:function(){var e=this.$refs["IZ-select__input"],t={width:e.offsetWidth+"px",left:e.offsetLeft+"px","pointer-events":this.hasMenu?"auto":"none"};return this.disableSearch&&(t.top=e.offsetTop+"px"),t},selectedItemIndex:function(){for(var e in this.itemsComputed)if(this.selectedItem===this.itemsComputed[e]&&this.itemsComputed.hasOwnProperty(e))return e;return null}},S={name:"VueSelect",introduction:"an amazing select",description:"\n  This `select` is amazing, you should _check_ it out 😊.\n  ",token:'<cool-select v-model="selected" :items="items" />',props:I,data:function(){return{wishShowMenu:!1,arrowsIndex:null,focused:!1,selectedItem:null,selectedItemByArrows:null,searchData:"",scrollItemsLimitCurrent:this.scrollItemsLimit,mousedownListener:null}},computed:w,watch:{searchText:function(e){this.setSearchData(e)},value:function(){this.setSelectedItemByValue()},items:function(){this.setSelectedItemByValue()},selectedItem:function(){this.selectedItemByArrows=null,this.$emit("input",this.currentItemValue)},itemsComputed:function(e){this.$emit("change-displayed-items",e)}},created:function(){var e=this;this.eventEmitter&&this.eventEmitter.on("set-search",this.setSearchData),this.setSelectedItemByValue(),this.mousedownListener=window.addEventListener("mousedown",function(t){var n=t.target,r=e.$refs["IZ-select"];e.focused&&r&&!r.contains(n)&&e.setBlured()})},beforeDestroy:function(){window.removeEventListener("mousedown",this.mousedownListener)},methods:b({},x,{getSearchData:function(){return this.searchData},setSearchData:function(e){this.searchData=e,this.$emit("update:search-text",e)},setInputFocused:function(){this.$refs["IZ-select__input-for-text"].focus()},setFocused:function(){var e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];if(!(this.focused||this.disabled||this.readonly)){if(this.disableSearch||e||this.setInputFocused(),window.scrollTo&&this.allowMobileScroll&&this.isMobile){var t=_(this.$refs["IZ-select__input"]),n=t.top;window.scrollTo({top:n-8,behavior:"smooth"})}this.focused=!0,this.showMenu(),this.$emit("focus")}},setBlured:function(){this.resetSearchOnBlur&&this.setSearchData(""),this.focused=!1,this.hideMenu(),this.$refs["IZ-select__input-for-text"].blur(),this.$emit("blur")},fireSelectEvent:function(e){var t=this;this.selectedItemByArrows=null,this.$nextTick(function(){t.$emit("select",e)})},getItemText:function(e){if(!e)return null;if(this.itemText)return e[this.itemText];if(y(e)){var t=c()(e);return 1===t.length?e[t[0]]:e}return e},getItemValue:function(e){if(!e)return null;if(this.itemValue)return e[this.itemValue];if(y(e)){var t=c()(e);return 1===t.length?e[t[0]]:e}return e},setSelectedItemByValue:function(){var e=this;this.items.length?this.selectedItem=this.itemsComputed.find(function(t){if(y(e.value)){var n=e.getItemValue(e.value);return e.getItemValue(t)===n}return e.getItemValue(t)===e.value}):this.selectedItem=null},filteredBySearchItems:function(e){var t=this;return!this.getSearchData()||this.disableFilteringBySearch?e:e.filter(function(e){return t.filter(e,t.getSearchData(),t.getItemText(e))})},isItemSelected:function(e){return e===this.selectedItemByArrows||e===this.selectedItem&&!this.selectedItemByArrows},showMenu:function(){this.hasMenu||(this.wishShowMenu=!0)},hideMenu:function(){this.hasMenu&&(this.wishShowMenu=!1)}})},Z=S;function O(e,t,n,r,o,i,s,c){var a,u="function"===typeof e?e.options:e;if(t&&(u.render=t,u.staticRenderFns=n,u._compiled=!0),r&&(u.functional=!0),i&&(u._scopeId="data-v-"+i),s?(a=function(e){e=e||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext,e||"undefined"===typeof __VUE_SSR_CONTEXT__||(e=__VUE_SSR_CONTEXT__),o&&o.call(this,e),e&&e._registeredComponents&&e._registeredComponents.add(s)},u._ssrRegister=a):o&&(a=c?function(){o.call(this,this.$root.$options.shadowRoot)}:o),a)if(u.functional){u._injectStyles=a;var l=u.render;u.render=function(e,t){return a.call(t),l(e,t)}}else{var f=u.beforeCreate;u.beforeCreate=f?[].concat(f,a):[a]}return{exports:e,options:u}}var E=O(Z,o,i,!1,null,null,null),k=E.exports;function j(){var e={};function t(t,n){e[t]||(e[t]=[]),e[t].push(n)}return{on:t,onOnce:function(e,n){n.once=!0,t(e,n)},emit:function(t,n){for(var r in e[t]){var o=e[t][r];o(n),o.once&&delete e[t][r]}}}}var M=j,C=new T;function T(){var e=this;return e.themes=["bootstrap","material-design"],e.currentTheme=null,e.currentLocale=null,{install:function(t){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},r=n.theme,o=void 0===r?"bootstrap":r;A(o,e.themes)},get theme(){return e.currentTheme}}}function A(e,t){var r="Theme ".concat(e," is not supported! Available Themes: ").concat(t.join(", "),".");if(!t.includes(e))throw Error(r);n("7d20")("./".concat(e,".styl"))}n.d(t,"EventEmitter",function(){return M}),n.d(t,"component",function(){return k}),n.d(t,"CoolSelect",function(){return k}),n.d(t,"VueCoolSelect",function(){return k});t["default"]=C},fde4:function(e,t,n){n("bf90");var r=n("584a").Object;e.exports=function(e,t){return r.getOwnPropertyDescriptor(e,t)}},fdef:function(e,t){e.exports="\t\n\v\f\r   ᠎             　\u2028\u2029\ufeff"}})});
+//# sourceMappingURL=vue-cool-select.umd.min.js.map
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&":
 /*!*******************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e& ***!
@@ -31635,65 +32248,27 @@ var render = function() {
                       _vm._v("Источник заявки")
                     ]),
                     _vm._v(" "),
-                    _c(
-                      "select",
-                      {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.mainform.source,
-                            expression: "mainform.source"
-                          },
-                          {
-                            name: "validate",
-                            rawName: "v-validate",
-                            value: "required",
-                            expression: "'required'"
-                          }
-                        ],
-                        staticClass: "form-select",
-                        attrs: { name: "mainform.source" },
-                        on: {
-                          change: function($event) {
-                            var $$selectedVal = Array.prototype.filter
-                              .call($event.target.options, function(o) {
-                                return o.selected
-                              })
-                              .map(function(o) {
-                                var val = "_value" in o ? o._value : o.value
-                                return val
-                              })
-                            _vm.$set(
-                              _vm.mainform,
-                              "source",
-                              $event.target.multiple
-                                ? $$selectedVal
-                                : $$selectedVal[0]
-                            )
-                          }
+                    _c("cool-select", {
+                      directives: [
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required",
+                          expression: "'required'"
                         }
+                      ],
+                      attrs: {
+                        items: ["", "Звонок", "Личная встреча", "Грант"],
+                        name: "mainform.source"
                       },
-                      [
-                        _c("option"),
-                        _vm._v(" "),
-                        _c("option", { staticClass: "credit" }, [
-                          _vm._v("Звонок")
-                        ]),
-                        _vm._v(" "),
-                        _c("option", { staticClass: "susidia" }, [
-                          _vm._v("Личная встреча")
-                        ]),
-                        _vm._v(" "),
-                        _c("option", { staticClass: "grant" }, [
-                          _vm._v("Грант")
-                        ]),
-                        _vm._v(" "),
-                        _c("option", { staticClass: "project" }, [
-                          _vm._v("Другое")
-                        ])
-                      ]
-                    ),
+                      model: {
+                        value: _vm.mainform.source,
+                        callback: function($$v) {
+                          _vm.$set(_vm.mainform, "source", $$v)
+                        },
+                        expression: "mainform.source"
+                      }
+                    }),
                     _vm._v(" "),
                     _c(
                       "span",
@@ -31709,24 +32284,20 @@ var render = function() {
                       },
                       [_vm._v("Поле обязательно для заполнения")]
                     )
-                  ]
+                  ],
+                  1
                 ),
                 _vm._v(" "),
-                _c("label", { staticClass: "calc-form__label js-label" }, [
-                  _c("span", { staticClass: "calc-form__label-title" }, [
-                    _vm._v("Вид финансирования")
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "select",
-                    {
+                _c(
+                  "label",
+                  { staticClass: "calc-form__label js-label" },
+                  [
+                    _c("span", { staticClass: "calc-form__label-title" }, [
+                      _vm._v("Вид финансирования")
+                    ]),
+                    _vm._v(" "),
+                    _c("cool-select", {
                       directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.mainform.type,
-                          expression: "mainform.type"
-                        },
                         {
                           name: "validate",
                           rawName: "v-validate",
@@ -31734,81 +32305,42 @@ var render = function() {
                           expression: "'required'"
                         }
                       ],
-                      staticClass: "form-select",
-                      attrs: { name: "mainform.type" },
-                      on: {
-                        change: [
-                          function($event) {
-                            var $$selectedVal = Array.prototype.filter
-                              .call($event.target.options, function(o) {
-                                return o.selected
-                              })
-                              .map(function(o) {
-                                var val = "_value" in o ? o._value : o.value
-                                return val
-                              })
-                            _vm.$set(
-                              _vm.mainform,
-                              "type",
-                              $event.target.multiple
-                                ? $$selectedVal
-                                : $$selectedVal[0]
-                            )
-                          },
-                          _vm.changes
-                        ]
+                      attrs: {
+                        items: [
+                          "",
+                          "Кредит",
+                          "Субсидия",
+                          "Грант",
+                          "Проектное финансирование"
+                        ],
+                        name: "mainform.type"
+                      },
+                      model: {
+                        value: _vm.mainform.type,
+                        callback: function($$v) {
+                          _vm.$set(_vm.mainform, "type", $$v)
+                        },
+                        expression: "mainform.type"
                       }
-                    },
-                    [
-                      _c("option"),
-                      _vm._v(" "),
-                      _c(
-                        "option",
-                        { staticClass: "credit", attrs: { value: "Кредит" } },
-                        [_vm._v("Кредит")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "option",
-                        {
-                          staticClass: "susidia",
-                          attrs: { value: "Субсидия" }
-                        },
-                        [_vm._v("Субсидия")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "option",
-                        { staticClass: "grant", attrs: { value: "Грант" } },
-                        [_vm._v("Грант")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "option",
-                        {
-                          staticClass: "project",
-                          attrs: { value: "Проектное финансирование" }
-                        },
-                        [_vm._v("Проектное финансирование")]
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "span",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.errors.first("mainform.type"),
-                          expression: "errors.first('mainform.type')"
-                        }
-                      ]
-                    },
-                    [_vm._v("Поле обязательно для заполнения")]
-                  )
-                ]),
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.first("mainform.type"),
+                            expression: "errors.first('mainform.type')"
+                          }
+                        ]
+                      },
+                      [_vm._v("Поле обязательно для заполнения")]
+                    )
+                  ],
+                  1
+                ),
                 _vm._v(" "),
                 _c(
                   "div",
@@ -31817,19 +32349,58 @@ var render = function() {
                       {
                         name: "show",
                         rawName: "v-show",
-                        value: _vm.mainform.type === "",
-                        expression: "mainform.type === ''"
+                        value: _vm.mainform.type === null,
+                        expression: "mainform.type === null"
                       }
                     ]
                   },
                   [
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Регион")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          attrs: { items: [""], disabled: "disabled" }
+                        })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Организационная форма")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          attrs: { items: [""], disabled: "disabled" }
+                        })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
                     _vm._m(2),
                     _vm._v(" "),
-                    _vm._m(3),
-                    _vm._v(" "),
-                    _vm._m(4),
-                    _vm._v(" "),
-                    _vm._m(5)
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Годовой баланс")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          attrs: { items: [""], disabled: "disabled" }
+                        })
+                      ],
+                      1
+                    )
                   ]
                 ),
                 _vm._v(" "),
@@ -31846,21 +32417,16 @@ var render = function() {
                     ]
                   },
                   [
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Регион")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Регион")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
                           directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form1.region,
-                              expression: "mainform.form1.region"
-                            },
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -31868,60 +32434,44 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: [
+                              "",
+                              "Все регионы РФ",
+                              "Все ригионы РФ кроме СКФО",
+                              "СКФО (за исключением Ставропольского Края)"
+                            ],
                             name: "mainform.form1.region"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form1,
-                                "region",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
+                          model: {
+                            value: _vm.mainform.form1.region,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form1, "region", $$v)
+                            },
+                            expression: "mainform.form1.region"
                           }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Все регионы РФ")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Все ригионы РФ кроме СКФО")]),
-                          _vm._v(" "),
-                          _c("option", [
-                            _vm._v("СКФО (за исключением Ставропольского Края)")
-                          ])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form1.region"),
-                              expression:
-                                "errors.first('mainform.form1.region')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form1.region"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form1.region')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
                     _vm._v(" "),
                     _c(
                       "div",
@@ -31931,47 +32481,84 @@ var render = function() {
                           _vm._v("Сумма кредита")
                         ]),
                         _vm._v(" "),
-                        _c("label", { staticClass: "calc-form__slider-val" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.mainform.form1.summ,
-                                expression: "mainform.form1.summ"
-                              }
-                            ],
-                            staticClass: "input calc-form__slider-input",
-                            attrs: {
-                              type: "text",
-                              id: "amount-4",
-                              value: "5000000"
-                            },
-                            domProps: { value: _vm.mainform.form1.summ },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
+                        _c(
+                          "label",
+                          { staticClass: "calc-form__slider-val" },
+                          [
+                            _c(
+                              "vue-slider",
+                              _vm._b(
+                                {
+                                  model: {
+                                    value: _vm.mainform.form1.summ,
+                                    callback: function($$v) {
+                                      _vm.$set(_vm.mainform.form1, "summ", $$v)
+                                    },
+                                    expression: "mainform.form1.summ"
+                                  }
+                                },
+                                "vue-slider",
+                                _vm.options,
+                                false
+                              )
+                            ),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.mainform.form1.summ,
+                                  expression: "mainform.form1.summ"
                                 }
-                                _vm.$set(
-                                  _vm.mainform.form1,
-                                  "summ",
-                                  $event.target.value
-                                )
+                              ],
+                              staticClass: "input calc-form__slider-input",
+                              attrs: { type: "text", id: "amount-4" },
+                              domProps: { value: _vm.mainform.form1.summ },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.mainform.form1,
+                                    "summ",
+                                    $event.target.value
+                                  )
+                                }
                               }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "js-slider-txt" }),
-                          _c("span", { staticClass: "rub" }, [_vm._v("i")])
-                        ]),
+                            }),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "js-slider-txt" }, [
+                              _vm._v(_vm._s(_vm.mainform.form1.summ))
+                            ]),
+                            _c("span", { staticClass: "rub" }, [_vm._v("р")])
+                          ],
+                          1
+                        ),
                         _vm._v(" "),
                         _c("div", {
                           staticClass: "calc-form__slider-blc",
                           attrs: { id: "slider-range-credit" }
                         }),
                         _vm._v(" "),
-                        _vm._m(6)
+                        _c("div", { staticClass: "calc-form__slider-row" }, [
+                          _c("div", [
+                            _c("span", { staticClass: "js-min" }, [
+                              _vm._v(_vm._s(_vm.options.min))
+                            ]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "rub" }, [_vm._v("р")])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", [
+                            _c("span", { staticClass: "js-max" }, [
+                              _vm._v(_vm._s(_vm.options.max))
+                            ]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "rub" }, [_vm._v("р")])
+                          ])
+                        ])
                       ]
                     ),
                     _vm._v(" "),
@@ -32028,21 +32615,16 @@ var render = function() {
                       ])
                     ]),
                     _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Организационная форма")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Организационная форма")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
                           directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form1.orgform,
-                              expression: "mainform.form1.orgform"
-                            },
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -32050,67 +32632,46 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: [
+                              "",
+                              "Физлицо",
+                              "ИП",
+                              "ООО",
+                              "Кооператив",
+                              "Холдинг"
+                            ],
                             name: "mainform.form1.orgform"
                           },
-                          on: {
-                            change: [
-                              function($event) {
-                                var $$selectedVal = Array.prototype.filter
-                                  .call($event.target.options, function(o) {
-                                    return o.selected
-                                  })
-                                  .map(function(o) {
-                                    var val = "_value" in o ? o._value : o.value
-                                    return val
-                                  })
-                                _vm.$set(
-                                  _vm.mainform.form1,
-                                  "orgform",
-                                  $event.target.multiple
-                                    ? $$selectedVal
-                                    : $$selectedVal[0]
-                                )
-                              },
-                              function($event) {
-                                _vm.mainform.form1.dateur = ""
+                          model: {
+                            value: _vm.mainform.form1.orgform,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form1, "orgform", $$v)
+                            },
+                            expression: "mainform.form1.orgform"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form1.orgform"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form1.orgform')"
                               }
                             ]
-                          }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Физлицо")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("ИП")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("ООО")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Кооператив")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Холдинг")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form1.orgform"),
-                              expression:
-                                "errors.first('mainform.form1.orgform')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
                     _vm._v(" "),
                     _c("label", { staticClass: "calc-form__label js-label" }, [
                       _c("span", { staticClass: "calc-form__label-title" }, [
@@ -32147,21 +32708,16 @@ var render = function() {
                       })
                     ]),
                     _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Годовой баланс")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Годовой баланс")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
                           directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form1.yearbalance,
-                              expression: "mainform.form1.yearbalance"
-                            },
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -32169,60 +32725,44 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: [
+                              "",
+                              "Положительный баланс",
+                              "Отрицательный баланс",
+                              "Нулевой баланс"
+                            ],
                             name: "mainform.form1.yearbalance"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form1,
-                                "yearbalance",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
+                          model: {
+                            value: _vm.mainform.form1.yearbalance,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form1, "yearbalance", $$v)
+                            },
+                            expression: "mainform.form1.yearbalance"
                           }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Положительный баланс")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Отрицательный баланс")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Нулевой баланс")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first(
-                                "mainform.form1.yearbalance"
-                              ),
-                              expression:
-                                "errors.first('mainform.form1.yearbalance')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ])
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form1.yearbalance"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form1.yearbalance')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    )
                   ]
                 ),
                 _vm._v(" "),
@@ -32239,21 +32779,16 @@ var render = function() {
                     ]
                   },
                   [
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Регион")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Регион")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
                           directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form2.region,
-                              expression: "mainform.form2.region"
-                            },
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -32261,78 +32796,56 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: [
+                              "",
+                              "Все регионы РФ",
+                              "Все ригионы РФ кроме СКФО",
+                              "СКФО (за исключением Ставропольского Края)",
+                              "Ставропольский Край"
+                            ],
                             name: "mainform.form2.region"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form2,
-                                "region",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Все регионы РФ")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Все ригионы РФ кроме СКФО")]),
-                          _vm._v(" "),
-                          _c("option", [
-                            _vm._v("СКФО (за исключением Ставропольского Края)")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Ставропольский Край")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form2.region"),
-                              expression:
-                                "errors.first('mainform.form2.region')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Статус")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form2.status,
-                              expression: "mainform.form2.status"
+                          model: {
+                            value: _vm.mainform.form2.region,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form2, "region", $$v)
                             },
+                            expression: "mainform.form2.region"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form2.region"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form2.region')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Статус")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          directives: [
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -32340,74 +32853,50 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: [
+                              "",
+                              "ИП КФХ (существует менее 2 лет)",
+                              "ИП КФХ (существует более 2 лет)",
+                              "Глава кооператива",
+                              "Физлицо",
+                              "ИП",
+                              "ООО",
+                              "ОАО",
+                              "ЗАО",
+                              "Другое"
+                            ],
                             name: "mainform.form2.status"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form2,
-                                "status",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
+                          model: {
+                            value: _vm.mainform.form2.status,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form2, "status", $$v)
+                            },
+                            expression: "mainform.form2.status"
                           }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [
-                            _vm._v("ИП КФХ (существует менее 2 лет)")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", [
-                            _vm._v("ИП КФХ (существует более 2 лет)")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Глава кооператива")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Физлицо")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("ИП")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("ООО")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("ОАО")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("ЗАО")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Другое")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form2.status"),
-                              expression:
-                                "errors.first('mainform.form2.status')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form2.status"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form2.status')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
                     _vm._v(" "),
                     _c(
                       "div",
@@ -32419,70 +32908,106 @@ var render = function() {
                           )
                         ]),
                         _vm._v(" "),
-                        _c("label", { staticClass: "calc-form__slider-val" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.mainform.form2.summ,
-                                expression: "mainform.form2.summ"
-                              },
-                              {
-                                name: "validate",
-                                rawName: "v-validate",
-                                value: "required",
-                                expression: "'required'"
-                              }
-                            ],
-                            staticClass: "input calc-form__slider-input",
-                            attrs: {
-                              type: "text",
-                              id: "amount-2",
-                              value: "400000",
-                              name: "mainform.form2.summ"
-                            },
-                            domProps: { value: _vm.mainform.form2.summ },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
+                        _c(
+                          "label",
+                          { staticClass: "calc-form__slider-val" },
+                          [
+                            _c(
+                              "vue-slider",
+                              _vm._b(
+                                {
+                                  model: {
+                                    value: _vm.mainform.form2.summ,
+                                    callback: function($$v) {
+                                      _vm.$set(_vm.mainform.form2, "summ", $$v)
+                                    },
+                                    expression: "mainform.form2.summ"
+                                  }
+                                },
+                                "vue-slider",
+                                _vm.options,
+                                false
+                              )
+                            ),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.mainform.form2.summ,
+                                  expression: "mainform.form2.summ"
+                                },
+                                {
+                                  name: "validate",
+                                  rawName: "v-validate",
+                                  value: "required",
+                                  expression: "'required'"
                                 }
-                                _vm.$set(
-                                  _vm.mainform.form2,
-                                  "summ",
-                                  $event.target.value
-                                )
+                              ],
+                              staticClass: "input calc-form__slider-input",
+                              attrs: {
+                                type: "text",
+                                id: "amount-2",
+                                value: "400000",
+                                name: "mainform.form2.summ"
+                              },
+                              domProps: { value: _vm.mainform.form2.summ },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.mainform.form2,
+                                    "summ",
+                                    $event.target.value
+                                  )
+                                }
                               }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "js-slider-txt" }),
-                          _c("span", { staticClass: "rub" }, [_vm._v("i")])
-                        ]),
+                            }),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "js-slider-txt" }, [
+                              _vm._v(_vm._s(_vm.mainform.form2.summ))
+                            ]),
+                            _c("span", { staticClass: "rub" }, [_vm._v("р")])
+                          ],
+                          1
+                        ),
                         _vm._v(" "),
                         _c("div", {
                           staticClass: "calc-form__slider-blc",
                           attrs: { id: "slider-range-grant" }
                         }),
                         _vm._v(" "),
-                        _vm._m(7)
+                        _c("div", { staticClass: "calc-form__slider-row" }, [
+                          _c("div", [
+                            _c("span", { staticClass: "js-min" }, [
+                              _vm._v(_vm._s(_vm.options.min))
+                            ]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "rub" }, [_vm._v("р")])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", [
+                            _c("span", { staticClass: "js-max" }, [
+                              _vm._v(_vm._s(_vm.options.max))
+                            ]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "rub" }, [_vm._v("р")])
+                          ])
+                        ])
                       ]
                     ),
                     _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _vm._m(8),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _vm._m(3),
+                        _vm._v(" "),
+                        _c("cool-select", {
                           directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form2.have,
-                              expression: "mainform.form2.have"
-                            },
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -32490,61 +33015,43 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: ["", "Да", "Нет"],
                             name: "mainform.form2.have"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form2,
-                                "have",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
+                          model: {
+                            value: _vm.mainform.form2.have,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form2, "have", $$v)
+                            },
+                            expression: "mainform.form2.have"
                           }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Да")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Нет")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "calc-form__label-sub" }, [
-                        _vm._v(
-                          "*Требование комиссии при подаче заявки на грант"
+                        }),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "calc-form__label-sub" }, [
+                          _vm._v(
+                            "*Требование комиссии при подаче заявки на грант"
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first("mainform.form2.have"),
+                                expression:
+                                  "errors.first('mainform.form2.have')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
                         )
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form2.have"),
-                              expression: "errors.first('mainform.form2.have')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ])
+                      ],
+                      1
+                    )
                   ]
                 ),
                 _vm._v(" "),
@@ -32562,21 +33069,16 @@ var render = function() {
                     ]
                   },
                   [
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Правовая форма собственности")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Правовая форма собственности")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
                           directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form3.form,
-                              expression: "mainform.form3.form"
-                            },
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -32584,61 +33086,44 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: [
+                              "",
+                              "ООО",
+                              "Холдинг",
+                              "ЗАО",
+                              "ОАО",
+                              "Другое"
+                            ],
                             name: "mainform.form3.form"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form3,
-                                "form",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
+                          model: {
+                            value: _vm.mainform.form3.form,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form3, "form", $$v)
+                            },
+                            expression: "mainform.form3.form"
                           }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("ООО")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Холдинг")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("ЗАО")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("ОАО")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Другое")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form3.form"),
-                              expression: "errors.first('mainform.form3.form')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first("mainform.form3.form"),
+                                expression:
+                                  "errors.first('mainform.form3.form')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
                     _vm._v(" "),
                     _c(
                       "div",
@@ -32648,71 +33133,107 @@ var render = function() {
                           _vm._v("Сумма проекта")
                         ]),
                         _vm._v(" "),
-                        _c("label", { staticClass: "calc-form__slider-val" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.mainform.form3.summ,
-                                expression: "mainform.form3.summ"
-                              },
-                              {
-                                name: "validate",
-                                rawName: "v-validate",
-                                value: "required",
-                                expression: "'required'"
-                              }
-                            ],
-                            staticClass: "input calc-form__slider-input",
-                            attrs: {
-                              type: "text",
-                              id: "amount-5",
-                              name: "mainform.form3.summ"
-                            },
-                            domProps: { value: _vm.mainform.form3.summ },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
+                        _c(
+                          "label",
+                          { staticClass: "calc-form__slider-val" },
+                          [
+                            _c(
+                              "vue-slider",
+                              _vm._b(
+                                {
+                                  model: {
+                                    value: _vm.mainform.form3.summ,
+                                    callback: function($$v) {
+                                      _vm.$set(_vm.mainform.form3, "summ", $$v)
+                                    },
+                                    expression: "mainform.form3.summ"
+                                  }
+                                },
+                                "vue-slider",
+                                _vm.options,
+                                false
+                              )
+                            ),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.mainform.form3.summ,
+                                  expression: "mainform.form3.summ"
+                                },
+                                {
+                                  name: "validate",
+                                  rawName: "v-validate",
+                                  value: "required",
+                                  expression: "'required'"
                                 }
-                                _vm.$set(
-                                  _vm.mainform.form3,
-                                  "summ",
-                                  $event.target.value
-                                )
+                              ],
+                              staticClass: "input calc-form__slider-input",
+                              attrs: {
+                                type: "text",
+                                id: "amount-5",
+                                name: "mainform.form3.summ"
+                              },
+                              domProps: { value: _vm.mainform.form3.summ },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.mainform.form3,
+                                    "summ",
+                                    $event.target.value
+                                  )
+                                }
                               }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "js-slider-txt" }),
-                          _c("span", { staticClass: "rub" }, [_vm._v("i")])
-                        ]),
+                            }),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "js-slider-txt" }, [
+                              _vm._v(_vm._s(_vm.mainform.form3.summ))
+                            ]),
+                            _c("span", { staticClass: "rub" }, [_vm._v("р")])
+                          ],
+                          1
+                        ),
                         _vm._v(" "),
                         _c("div", {
                           staticClass: "calc-form__slider-blc",
                           attrs: { id: "slider-range-project" }
                         }),
                         _vm._v(" "),
-                        _vm._m(9)
+                        _c("div", { staticClass: "calc-form__slider-row" }, [
+                          _c("div", [
+                            _c("span", { staticClass: "js-min" }, [
+                              _vm._v(_vm._s(_vm.options.min))
+                            ]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "rub" }, [_vm._v("р")])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", [
+                            _c("span", { staticClass: "js-max" }, [
+                              _vm._v(_vm._s(_vm.options.max))
+                            ]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "rub" }, [_vm._v("р")])
+                          ])
+                        ])
                       ]
                     ),
                     _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Стадия проекта")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Стадия проекта")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
                           directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form3.studia,
-                              expression: "mainform.form3.studia"
-                            },
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -32720,75 +33241,56 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: [
+                              "",
+                              "Идея",
+                              "Есть бизнес план",
+                              "Составьте мне бизнес-план",
+                              "В процессе реализации"
+                            ],
                             name: "mainform.form3.studia"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form3,
-                                "studia",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Идея")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Есть бизнес план")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Составьте мне бизнес-план")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("В процессе реализации")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form3.form"),
-                              expression: "errors.first('mainform.form3.form')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Бухгалтерский баланс")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form3.balance,
-                              expression: "mainform.form3.balance"
+                          model: {
+                            value: _vm.mainform.form3.studia,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form3, "studia", $$v)
                             },
+                            expression: "mainform.form3.studia"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form3.studia"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form3.studia')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Бухгалтерский баланс")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          directives: [
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -32796,76 +33298,56 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: [
+                              "",
+                              "Положительный баланс",
+                              "Отрицательный баланс",
+                              "Нулевой баланс",
+                              "Необходим аудит"
+                            ],
                             name: "mainform.form3.balance"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form3,
-                                "balance",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Положительный баланс")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Отрицательный баланс")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Нулевой баланс")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Необходим аудит")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form3.balance"),
-                              expression:
-                                "errors.first('mainform.form3.balance')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Кредитная история")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form3.history,
-                              expression: "mainform.form3.history"
+                          model: {
+                            value: _vm.mainform.form3.balance,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form3, "balance", $$v)
                             },
+                            expression: "mainform.form3.balance"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form3.balance"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form3.balance')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Кредитная история")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          directives: [
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -32873,58 +33355,44 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: [
+                              "",
+                              "Чистая кредитная история",
+                              "Хорошая кредитная история",
+                              "Плохая кредитная история"
+                            ],
                             name: "mainform.form3.history"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form3,
-                                "history",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
+                          model: {
+                            value: _vm.mainform.form3.history,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form3, "history", $$v)
+                            },
+                            expression: "mainform.form3.history"
                           }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Чистая кредитная история")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Хорошая кредитная история")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Плохая кредитная история")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form3.history"),
-                              expression:
-                                "errors.first('mainform.form3.history')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ])
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form3.history"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form3.history')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    )
                   ]
                 ),
                 _vm._v(" "),
@@ -32941,21 +33409,16 @@ var render = function() {
                     ]
                   },
                   [
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Регион")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Регион")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
                           directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form4.region,
-                              expression: "mainform.form4.region"
-                            },
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -32963,78 +33426,56 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
-                            name: "mainform.form3.region"
+                            items: [
+                              "",
+                              "Все регионы РФ",
+                              "Все ригионы РФ кроме СКФО",
+                              "СКФО (за исключением Ставропольского Края)",
+                              "Ставропольский Край"
+                            ],
+                            name: "mainform.form4.region"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form4,
-                                "region",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Все регионы РФ")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Все ригионы РФ кроме СКФО")]),
-                          _vm._v(" "),
-                          _c("option", [
-                            _vm._v("СКФО (за исключением Ставропольского Края)")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Ставропольский Край")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form3.region"),
-                              expression:
-                                "errors.first('mainform.form3.region')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Организационная форма")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form4.form,
-                              expression: "mainform.form4.form"
+                          model: {
+                            value: _vm.mainform.form4.region,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form4, "region", $$v)
                             },
+                            expression: "mainform.form4.region"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form4.region"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form4.region')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Организационная форма")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          directives: [
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -33042,89 +33483,59 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: [
+                              "",
+                              "ИП КФХ (существует менее 2 лет)",
+                              "ИП КФХ (существует более 2 лет)",
+                              "Глава кооператива",
+                              "Физлицо",
+                              "ИП",
+                              "ООО",
+                              "ОАО",
+                              "ЗАО",
+                              "Другое"
+                            ],
                             name: "mainform.form4.form"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form4,
-                                "form",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [
-                            _vm._v("ИП КФХ (существует менее 2 лет)")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", [
-                            _vm._v("ИП КФХ (существует более 2 лет)")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Глава кооператива")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Физлицо")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("ИП")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("ООО")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("ОАО")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("ЗАО")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Другое")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form4.form"),
-                              expression: "errors.first('mainform.form4.form')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Тип хозяйства")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form4.type,
-                              expression: "mainform.form4.type"
+                          model: {
+                            value: _vm.mainform.form4.form,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form4, "form", $$v)
                             },
+                            expression: "mainform.form4.form"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first("mainform.form4.form"),
+                                expression:
+                                  "errors.first('mainform.form4.form')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Тип хозяйства")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          directives: [
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -33132,75 +33543,54 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: [
+                              "",
+                              "Животноводство",
+                              "Растениеводство",
+                              "Овощеводство",
+                              "Производство"
+                            ],
                             name: "mainform.form4.type"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form4,
-                                "type",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Животноводство")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Растениеводство")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Овощеводство")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Производство")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form4.type"),
-                              expression: "errors.first('mainform.form4.type')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Сейчас бухгалтерию ведет")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form4.buhgalrer,
-                              expression: "mainform.form4.buhgalrer"
+                          model: {
+                            value: _vm.mainform.form4.type,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form4, "type", $$v)
                             },
+                            expression: "mainform.form4.type"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first("mainform.form4.type"),
+                                expression:
+                                  "errors.first('mainform.form4.type')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Сейчас бухгалтерию ведет")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          directives: [
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -33208,64 +33598,45 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: [
+                              "",
+                              "Штатный сотрудник",
+                              "Профильное в СХ агентство",
+                              "Непрофильное в с СХ агентство",
+                              "Своими силами"
+                            ],
                             name: "mainform.form4.buhgalrer"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form4,
-                                "buhgalrer",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
+                          model: {
+                            value: _vm.mainform.form4.buhgalrer,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form4, "buhgalrer", $$v)
+                            },
+                            expression: "mainform.form4.buhgalrer"
                           }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Штатный сотрудник")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Профильное в СХ агентство")]),
-                          _vm._v(" "),
-                          _c("option", [
-                            _vm._v("Непрофильное в с СХ агентство")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Своими силами")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first(
-                                "mainform.form4.buhgalrer"
-                              ),
-                              expression:
-                                "errors.first('mainform.form4.buhgalrer')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ])
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form4.buhgalrer"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form4.buhgalrer')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    )
                   ]
                 ),
                 _vm._v(" "),
@@ -33313,10 +33684,10 @@ var render = function() {
             staticClass: "container"
           },
           [
-            _vm._m(10),
+            _vm._m(4),
             _vm._v(" "),
             _c("div", { staticClass: "calc-sec__wrap" }, [
-              _vm._m(11),
+              _vm._m(5),
               _vm._v(" "),
               _c("div", { staticClass: "calc-form" }, [
                 _c(
@@ -33332,21 +33703,16 @@ var render = function() {
                     ]
                   },
                   [
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Кредитная история")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Кредитная история")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
                           directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form1.history,
-                              expression: "mainform.form1.history"
-                            },
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -33354,74 +33720,55 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: [
+                              "",
+                              "Чистая кредитная история",
+                              "Хорошая кредитная история",
+                              "Плохая кредитная история"
+                            ],
                             name: "mainform.form1.history"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form1,
-                                "history",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Чистая кредитная история")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Хорошая кредитная история")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Плохая кредитная история")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form1.history"),
-                              expression:
-                                "errors.first('mainform.form1.history')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Залоги под кредит ")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form1.credit,
-                              expression: "mainform.form1.credit"
+                          model: {
+                            value: _vm.mainform.form1.history,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form1, "history", $$v)
                             },
+                            expression: "mainform.form1.history"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form1.history"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form1.history')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Залоги под кредит ")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          directives: [
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -33429,149 +33776,106 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
-                          attrs: { name: "mainform.form1.credit" },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form1,
-                                "credit",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Недвижимость")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Техника")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Поголовье")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Оборудование")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Ничего из перечисленного")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form1.credit"),
-                              expression:
-                                "errors.first('mainform.form1.credit')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Желаемые сроки для погашения кредита")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form1.term,
-                              expression: "mainform.form1.term"
-                            },
-                            {
-                              name: "validate",
-                              rawName: "v-validate",
-                              value: "required",
-                              expression: "'required'"
-                            }
-                          ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: [
+                              "",
+                              "Недвижимость",
+                              "Техника",
+                              "Поголовье",
+                              "Оборудование",
+                              "Ничего из перечисленного"
+                            ],
+                            name: "mainform.form1.credit"
+                          },
+                          model: {
+                            value: _vm.mainform.form1.credit,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form1, "credit", $$v)
+                            },
+                            expression: "mainform.form1.credit"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form1.credit"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form1.credit')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Желаемые сроки для погашения кредита")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          directives: [
+                            {
+                              name: "validate",
+                              rawName: "v-validate",
+                              value: "required",
+                              expression: "'required'"
+                            }
+                          ],
+                          attrs: {
+                            items: ["", "сроки-1", "сроки-2"],
                             name: "mainform.form1.term"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form1,
-                                "term",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("сроки-1")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("сроки-2")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("сроки-3")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form1.term"),
-                              expression: "errors.first('mainform.form1.term')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Цель привлечения средств")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form1.target,
-                              expression: "mainform.form1.target"
+                          model: {
+                            value: _vm.mainform.form1.term,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form1, "term", $$v)
                             },
+                            expression: "mainform.form1.term"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first("mainform.form1.term"),
+                                expression:
+                                  "errors.first('mainform.form1.term')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Цель привлечения средств")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          directives: [
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -33579,80 +33883,57 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: [
+                              "",
+                              "Пополнение оборотных средств",
+                              "Развитие",
+                              "Модернизация",
+                              "Стартап",
+                              "Другое"
+                            ],
                             name: "mainform.form1.target"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form1,
-                                "target",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [
-                            _vm._v("Пополнение оборотных средств")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Развитие")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Модернизация")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Стартап")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Другое")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form1.target"),
-                              expression:
-                                "errors.first('mainform.form1.target')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Расчет доходности на текущий момент")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form1.moment,
-                              expression: "mainform.form1.moment"
+                          model: {
+                            value: _vm.mainform.form1.target,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form1, "target", $$v)
                             },
+                            expression: "mainform.form1.target"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form1.target"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form1.target')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Расчет доходности на текущий момент")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          directives: [
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -33660,58 +33941,44 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: [
+                              "",
+                              "Есть  расчёт",
+                              "Нет расчёта",
+                              "Хочу получить расчёт"
+                            ],
                             name: "mainform.form1.moment"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form1,
-                                "moment",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
+                          model: {
+                            value: _vm.mainform.form1.moment,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form1, "moment", $$v)
+                            },
+                            expression: "mainform.form1.moment"
                           }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Есть  расчёт")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Нет расчёта")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Хочу получить расчёт")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form1.moment"),
-                              expression:
-                                "errors.first('mainform.form1.moment')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ])
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form1.moment"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form1.moment')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    )
                   ]
                 ),
                 _vm._v(" "),
@@ -33728,21 +33995,16 @@ var render = function() {
                     ]
                   },
                   [
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Цель получения гранта")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Цель получения гранта")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
                           directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form2.target,
-                              expression: "mainform.form2.target"
-                            },
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -33750,76 +34012,56 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: [
+                              "",
+                              "Расширения",
+                              "Модернизации",
+                              "Стартап",
+                              "Другое"
+                            ],
                             name: "mainform.form2.target"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form2,
-                                "target",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Расширения")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Модернизации")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Стартап")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Другое")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form2.target"),
-                              expression:
-                                "errors.first('mainform.form2.target')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Тип хозяйства")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form2.type,
-                              expression: "mainform.form2.type"
+                          model: {
+                            value: _vm.mainform.form2.target,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form2, "target", $$v)
                             },
+                            expression: "mainform.form2.target"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form2.target"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form2.target')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Тип хозяйства")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          directives: [
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -33827,75 +34069,54 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: [
+                              "",
+                              "Животноводство",
+                              "Растениеводство",
+                              "Овощеводство",
+                              "Производство"
+                            ],
                             name: "mainform.form2.type"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form2,
-                                "type",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Животноводство")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Растениеводство")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Овощеводство")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Производство")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form2.type"),
-                              expression: "errors.first('mainform.form2.type')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Членство в кооперативе")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form2.chlen,
-                              expression: "mainform.form2.chlen"
+                          model: {
+                            value: _vm.mainform.form2.type,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form2, "type", $$v)
                             },
+                            expression: "mainform.form2.type"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first("mainform.form2.type"),
+                                expression:
+                                  "errors.first('mainform.form2.type')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Членство в кооперативе")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          directives: [
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -33903,73 +34124,50 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: ["", "Да", "Нет", "Являюсь председателем"],
                             name: "mainform.form2.chlen"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form2,
-                                "chlen",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Да")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Нет")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Являюсь председателем")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form2.chlen"),
-                              expression: "errors.first('mainform.form2.chlen')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Расчет доходности хозяйства на текущий момент")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form2.term,
-                              expression: "mainform.form2.term"
+                          model: {
+                            value: _vm.mainform.form2.chlen,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form2, "chlen", $$v)
                             },
+                            expression: "mainform.form2.chlen"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first("mainform.form2.chlen"),
+                                expression:
+                                  "errors.first('mainform.form2.chlen')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v(
+                            "Расчет доходности хозяйства на текущий момент"
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          directives: [
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -33977,73 +34175,48 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: ["", "Есть", "Отсутствует", "Хочу получить"],
                             name: "mainform.form2.term"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form2,
-                                "term",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Есть")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Отсутствует")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Хочу получить")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form2.term"),
-                              expression: "errors.first('mainform.form2.term')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Расчет доходности после получения гранта")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form2.raschet,
-                              expression: "mainform.form2.raschet"
+                          model: {
+                            value: _vm.mainform.form2.term,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form2, "term", $$v)
                             },
+                            expression: "mainform.form2.term"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first("mainform.form2.term"),
+                                expression:
+                                  "errors.first('mainform.form2.term')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Расчет доходности после получения гранта")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          directives: [
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -34051,58 +34224,39 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: ["", "Есть", "Отсутствует", "Хочу получить"],
                             name: "mainform.form2.raschet"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form2,
-                                "raschet",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
+                          model: {
+                            value: _vm.mainform.form2.raschet,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form2, "raschet", $$v)
+                            },
+                            expression: "mainform.form2.raschet"
                           }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Есть")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Отсутствует")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Хочу получить")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form2.raschet"),
-                              expression:
-                                "errors.first('mainform.form2.raschet')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ])
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form2.raschet"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form2.raschet')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    )
                   ]
                 ),
                 _vm._v(" "),
@@ -34120,21 +34274,16 @@ var render = function() {
                     ]
                   },
                   [
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Регион ведения деятельности")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Регион ведения деятельности")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
                           directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form3.region,
-                              expression: "mainform.form3.region"
-                            },
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -34142,78 +34291,56 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: [
+                              "",
+                              "Все регионы РФ",
+                              "Все ригионы РФ кроме СКФО",
+                              "СКФО (за исключением Ставропольского Края)",
+                              "Ставропольский Край"
+                            ],
                             name: "mainform.form3.region"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form3,
-                                "region",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Все регионы РФ")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Все ригионы РФ кроме СКФО")]),
-                          _vm._v(" "),
-                          _c("option", [
-                            _vm._v("СКФО (за исключением Ставропольского Края)")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Ставропольский Край")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form3.region"),
-                              expression:
-                                "errors.first('mainform.form3.region')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Срок выплаты кредита")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form3.srok,
-                              expression: "mainform.form3.srok"
+                          model: {
+                            value: _vm.mainform.form3.region,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form3, "region", $$v)
                             },
+                            expression: "mainform.form3.region"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form3.region"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form3.region')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Срок выплаты кредита")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          directives: [
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -34221,72 +34348,50 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: ["", "от 1 года", "до 15 лет"],
                             name: "mainform.form3.srok"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form3,
-                                "srok",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("от 1 года")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("до 15 лет")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form3.region"),
-                              expression:
-                                "errors.first('mainform.form3.region')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Финансовая модель")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form3.finance,
-                              expression: "mainform.form3.finance"
+                          model: {
+                            value: _vm.mainform.form3.srok,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form3, "srok", $$v)
                             },
+                            expression: "mainform.form3.srok"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form3.region"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form3.region')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Финансовая модель")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          directives: [
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -34294,74 +34399,50 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: ["", "Есть", "Нет", "Составьте мне"],
                             name: "mainform.form3.finance"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form3,
-                                "finance",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Есть")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Нет")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Составьте мне")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form3.finance"),
-                              expression:
-                                "errors.first('mainform.form3.finance')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Залоги под финансирование")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form3.zalog,
-                              expression: "mainform.form3.zalog"
+                          model: {
+                            value: _vm.mainform.form3.finance,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form3, "finance", $$v)
                             },
+                            expression: "mainform.form3.finance"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form3.finance"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form3.finance')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Залоги под финансирование")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          directives: [
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -34369,75 +34450,54 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: [
+                              "",
+                              "Недвижимость",
+                              "Техника",
+                              "Оборудование",
+                              "Ничего из перечисленного"
+                            ],
                             name: "mainform.form3.zalog"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form3,
-                                "zalog",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Недвижимость")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Техника")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Оборудование")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Ничего из перечисленного")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form3.zalog"),
-                              expression: "errors.first('mainform.form3.zalog')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Срок окупаемости проекта")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form3.secondsrok,
-                              expression: "mainform.form3.secondsrok"
+                          model: {
+                            value: _vm.mainform.form3.zalog,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form3, "zalog", $$v)
                             },
+                            expression: "mainform.form3.zalog"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first("mainform.form3.zalog"),
+                                expression:
+                                  "errors.first('mainform.form3.zalog')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Срок окупаемости проекта")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          directives: [
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -34445,66 +34505,39 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: ["", "Срок-1", "Срок-2"],
                             name: "mainform.form3.secondsrok"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form3,
-                                "secondsrok",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
+                          model: {
+                            value: _vm.mainform.form3.secondsrok,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form3, "secondsrok", $$v)
+                            },
+                            expression: "mainform.form3.secondsrok"
                           }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", { attrs: { value: "Срок-1" } }, [
-                            _vm._v("Срок-1")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", { attrs: { value: "Срок-2" } }, [
-                            _vm._v("Срок-2")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", { attrs: { value: "Срок-3" } }, [
-                            _vm._v("Срок-3")
-                          ])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first(
-                                "mainform.form3.secondsrok"
-                              ),
-                              expression:
-                                "errors.first('mainform.form3.secondsrok')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ])
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form3.secondsrok"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form3.secondsrok')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    )
                   ]
                 ),
                 _vm._v(" "),
@@ -34521,21 +34554,16 @@ var render = function() {
                     ]
                   },
                   [
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Получение субсидий ранее ")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Получение субсидий ранее ")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
                           directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form4.geter,
-                              expression: "mainform.form4.geter"
-                            },
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -34543,55 +34571,37 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: ["", "Получал", "Не получал"],
                             name: "mainform.form4.geter"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form4,
-                                "geter",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
+                          model: {
+                            value: _vm.mainform.form4.geter,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form4, "geter", $$v)
+                            },
+                            expression: "mainform.form4.geter"
                           }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Получал")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Не получал")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form4.geter"),
-                              expression: "errors.first('mainform.form4.geter')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first("mainform.form4.geter"),
+                                expression:
+                                  "errors.first('mainform.form4.geter')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
                     _vm._v(" "),
                     _c(
                       "div",
@@ -34601,54 +34611,94 @@ var render = function() {
                           _vm._v("Размер понесенных затрат к возмещению")
                         ]),
                         _vm._v(" "),
-                        _c("label", { staticClass: "calc-form__slider-val" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.mainform.form4.summ,
-                                expression: "mainform.form4.summ"
-                              },
-                              {
-                                name: "validate",
-                                rawName: "v-validate",
-                                value: "required",
-                                expression: "'required'"
-                              }
-                            ],
-                            staticClass: "input calc-form__slider-input",
-                            attrs: {
-                              type: "text",
-                              id: "amount-3",
-                              value: "1000000",
-                              name: "mainform.form1.history"
-                            },
-                            domProps: { value: _vm.mainform.form4.summ },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
+                        _c(
+                          "label",
+                          { staticClass: "calc-form__slider-val" },
+                          [
+                            _c(
+                              "vue-slider",
+                              _vm._b(
+                                {
+                                  model: {
+                                    value: _vm.mainform.form4.summ,
+                                    callback: function($$v) {
+                                      _vm.$set(_vm.mainform.form4, "summ", $$v)
+                                    },
+                                    expression: "mainform.form4.summ"
+                                  }
+                                },
+                                "vue-slider",
+                                _vm.options,
+                                false
+                              )
+                            ),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.mainform.form4.summ,
+                                  expression: "mainform.form4.summ"
+                                },
+                                {
+                                  name: "validate",
+                                  rawName: "v-validate",
+                                  value: "required",
+                                  expression: "'required'"
                                 }
-                                _vm.$set(
-                                  _vm.mainform.form4,
-                                  "summ",
-                                  $event.target.value
-                                )
+                              ],
+                              staticClass: "input calc-form__slider-input",
+                              attrs: {
+                                type: "text",
+                                id: "amount-3",
+                                name: "mainform.form1.history"
+                              },
+                              domProps: { value: _vm.mainform.form4.summ },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.mainform.form4,
+                                    "summ",
+                                    $event.target.value
+                                  )
+                                }
                               }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "js-slider-txt" }),
-                          _c("span", { staticClass: "rub" }, [_vm._v("i")])
-                        ]),
+                            }),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "js-slider-txt" }, [
+                              _vm._v(_vm._s(_vm.mainform.form4.summ))
+                            ]),
+                            _c("span", { staticClass: "rub" }, [_vm._v("р")])
+                          ],
+                          1
+                        ),
                         _vm._v(" "),
                         _c("div", {
                           staticClass: "calc-form__slider-blc",
                           attrs: { id: "slider-range-subs" }
                         }),
                         _vm._v(" "),
-                        _vm._m(12)
+                        _c("div", { staticClass: "calc-form__slider-row" }, [
+                          _c("div", [
+                            _c("span", { staticClass: "js-min" }, [
+                              _vm._v(_vm._s(_vm.options.min))
+                            ]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "rub" }, [_vm._v("р")])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", [
+                            _c("span", { staticClass: "js-max" }, [
+                              _vm._v(_vm._s(_vm.options.max))
+                            ]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "rub" }, [_vm._v("р")])
+                          ])
+                        ])
                       ]
                     ),
                     _vm._v(" "),
@@ -34705,21 +34755,16 @@ var render = function() {
                       ])
                     ]),
                     _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Обоснование затрат к возмещению")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Обоснование затрат к возмещению")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
                           directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form4.answer,
-                              expression: "mainform.form4.answer"
-                            },
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -34727,74 +34772,50 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: ["", "Есть", "Нет", "Нужна консультация"],
                             name: "mainform.form4.answer"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form4,
-                                "answer",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Есть")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Нет")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Нужна консультация")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form4.answer"),
-                              expression:
-                                "errors.first('mainform.form4.answer')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Задолженность по налогам")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form4.dolg,
-                              expression: "mainform.form4.dolg"
+                          model: {
+                            value: _vm.mainform.form4.answer,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form4, "answer", $$v)
                             },
+                            expression: "mainform.form4.answer"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form4.answer"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form4.answer')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Задолженность по налогам")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          directives: [
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -34802,71 +34823,48 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: ["", "Есть", "Нет"],
                             name: "mainform.form4.dolg"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form4,
-                                "dolg",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Есть")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Нет")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form4.dolg"),
-                              expression: "errors.first('mainform.form4.dolg')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Процедура банкротства")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form4.proc,
-                              expression: "mainform.form4.proc"
+                          model: {
+                            value: _vm.mainform.form4.dolg,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form4, "dolg", $$v)
                             },
+                            expression: "mainform.form4.dolg"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first("mainform.form4.dolg"),
+                                expression:
+                                  "errors.first('mainform.form4.dolg')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Процедура банкротства")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          directives: [
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -34874,55 +34872,37 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: ["", "Есть", "Нет"],
                             name: "mainform.form4.proc"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form4,
-                                "proc",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
+                          model: {
+                            value: _vm.mainform.form4.proc,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form4, "proc", $$v)
+                            },
+                            expression: "mainform.form4.proc"
                           }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Есть")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Нет")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form4.proc"),
-                              expression: "errors.first('mainform.form4.proc')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ])
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first("mainform.form4.proc"),
+                                expression:
+                                  "errors.first('mainform.form4.proc')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    )
                   ]
                 ),
                 _vm._v(" "),
@@ -34967,10 +34947,10 @@ var render = function() {
             staticClass: "container"
           },
           [
-            _vm._m(13),
+            _vm._m(6),
             _vm._v(" "),
             _c("div", { staticClass: "calc-sec__wrap" }, [
-              _vm._m(14),
+              _vm._m(7),
               _vm._v(" "),
               _c("div", { staticClass: "calc-form" }, [
                 _c(
@@ -34986,21 +34966,16 @@ var render = function() {
                     ]
                   },
                   [
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Расчет доходности после получения кредита")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Расчет доходности после получения кредита")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
                           directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form1.payment,
-                              expression: "mainform.form1.payment"
-                            },
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -35008,74 +34983,55 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: [
+                              "",
+                              "Есть  расчёт",
+                              "Нет расчёта",
+                              "Хочу получить расчёт"
+                            ],
                             name: "mainform.form1.payment"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form1,
-                                "payment",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Есть  расчёт")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Нет расчёта")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Хочу получить расчёт")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form1.payment"),
-                              expression:
-                                "errors.first('mainform.form1.payment')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Сейчас бухгалтерию ведет")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form1.accounting,
-                              expression: "mainform.form1.accounting"
+                          model: {
+                            value: _vm.mainform.form1.payment,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form1, "payment", $$v)
                             },
+                            expression: "mainform.form1.payment"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form1.payment"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form1.payment')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Сейчас бухгалтерию ведет")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          directives: [
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -35083,64 +35039,45 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: [
+                              "",
+                              "Штатный сотрудник  расчёт",
+                              "Профильное в СХ агентство",
+                              "Непрофильное в с СХ агентство",
+                              "Своими силами"
+                            ],
                             name: "mainform.form1.accounting"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form1,
-                                "accounting",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
+                          model: {
+                            value: _vm.mainform.form1.accounting,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form1, "accounting", $$v)
+                            },
+                            expression: "mainform.form1.accounting"
                           }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Штатный сотрудник")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Профильное в СХ агентство")]),
-                          _vm._v(" "),
-                          _c("option", [
-                            _vm._v("Непрофильное в с СХ агентство")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Своими силами")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first(
-                                "mainform.form1.accounting"
-                              ),
-                              expression:
-                                "errors.first('mainform.form1.accounting')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form1.accounting"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form1.accounting')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
                     _vm._v(" "),
                     _c("label", { staticClass: "calc-form__label js-label" }, [
                       _c("span", { staticClass: "calc-form__label-title" }, [
@@ -35483,21 +35420,16 @@ var render = function() {
                       )
                     ]),
                     _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Должность")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Должность")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
                           directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form2.position,
-                              expression: "mainform.form2.position"
-                            },
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -35505,66 +35437,44 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: [
+                              "",
+                              "Должность-1",
+                              "Должность-2",
+                              "Должность-3"
+                            ],
                             name: "mainform.form2.position"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form2,
-                                "position",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
+                          model: {
+                            value: _vm.mainform.form2.position,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form2, "position", $$v)
+                            },
+                            expression: "mainform.form2.position"
                           }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", { attrs: { value: "Должность-1" } }, [
-                            _vm._v("Должность-1")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", { attrs: { value: "Должность-2" } }, [
-                            _vm._v("Должность-2")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", { attrs: { value: "Должность-3" } }, [
-                            _vm._v("Должность-3")
-                          ])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first(
-                                "mainform.form2.position"
-                              ),
-                              expression:
-                                "errors.first('mainform.form2.position')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ])
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form2.position"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form2.position')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    )
                   ]
                 ),
                 _vm._v(" "),
@@ -35582,21 +35492,16 @@ var render = function() {
                     ]
                   },
                   [
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Презентация")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Презентация")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
                           directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form3.present,
-                              expression: "mainform.form3.present"
-                            },
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -35604,72 +35509,52 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: ["", "Есть, готов презентовать", "Нет"],
                             name: "mainform.form3.present"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form3,
-                                "present",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Есть, готов презентовать")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Нет")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first("mainform.form3.present"),
-                              expression:
-                                "errors.first('mainform.form3.present')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("От суммы проекта имеются собственные средства ")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form3.sredstva,
-                              expression: "mainform.form3.sredstva"
+                          model: {
+                            value: _vm.mainform.form3.present,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form3, "present", $$v)
                             },
+                            expression: "mainform.form3.present"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form3.present"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form3.present')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v(
+                            "От суммы проекта имеются собственные средства "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          directives: [
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -35677,62 +35562,39 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: ["", "0%", "10%", "20%", "30%"],
                             name: "mainform.form3.sredstva"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form3,
-                                "sredstva",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
+                          model: {
+                            value: _vm.mainform.form3.sredstva,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form3, "sredstva", $$v)
+                            },
+                            expression: "mainform.form3.sredstva"
                           }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("0%")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("10%")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("20%")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("30%")])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first(
-                                "mainform.form3.sredstva"
-                              ),
-                              expression:
-                                "errors.first('mainform.form3.sredstva')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ]),
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form3.sredstva"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form3.sredstva')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    ),
                     _vm._v(" "),
                     _c("label", { staticClass: "calc-form__label js-label" }, [
                       _c("span", { staticClass: "calc-form__label-title" }, [
@@ -35897,21 +35759,16 @@ var render = function() {
                       )
                     ]),
                     _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Должность или позиция в компании")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Должность или позиция в компании")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
                           directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form3.position,
-                              expression: "mainform.form3.position"
-                            },
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -35919,66 +35776,39 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: ["", "Должность-1", "Должность-2"],
                             name: "mainform.form3.position"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form3,
-                                "position",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
+                          model: {
+                            value: _vm.mainform.form3.position,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form3, "position", $$v)
+                            },
+                            expression: "mainform.form3.position"
                           }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", { attrs: { value: "Должность-1" } }, [
-                            _vm._v("Должность-1")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", { attrs: { value: "Должность-2" } }, [
-                            _vm._v("Должность-2")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", { attrs: { value: "Должность-3" } }, [
-                            _vm._v("Должность-3")
-                          ])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first(
-                                "mainform.form3.position"
-                              ),
-                              expression:
-                                "errors.first('mainform.form3.position')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ])
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form3.position"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form3.position')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    )
                   ]
                 ),
                 _vm._v(" "),
@@ -36158,21 +35988,16 @@ var render = function() {
                       )
                     ]),
                     _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
-                      _c("span", { staticClass: "calc-form__label-title" }, [
-                        _vm._v("Должность")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
+                    _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Должность")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
                           directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mainform.form4.position,
-                              expression: "mainform.form4.position"
-                            },
                             {
                               name: "validate",
                               rawName: "v-validate",
@@ -36180,66 +36005,39 @@ var render = function() {
                               expression: "'required'"
                             }
                           ],
-                          staticClass: "form-select",
                           attrs: {
-                            "data-placeholder": " ",
+                            items: ["", "Должность-1", "Должность-2"],
                             name: "mainform.form4.position"
                           },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.mainform.form4,
-                                "position",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
+                          model: {
+                            value: _vm.mainform.form4.position,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform.form4, "position", $$v)
+                            },
+                            expression: "mainform.form4.position"
                           }
-                        },
-                        [
-                          _c("option"),
-                          _vm._v(" "),
-                          _c("option", { attrs: { value: "Должность-1" } }, [
-                            _vm._v("Должность-1")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", { attrs: { value: "Должность-2" } }, [
-                            _vm._v("Должность-2")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", { attrs: { value: "Должность-3" } }, [
-                            _vm._v("Должность-3")
-                          ])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.first(
-                                "mainform.form4.position"
-                              ),
-                              expression:
-                                "errors.first('mainform.form4.position')"
-                            }
-                          ]
-                        },
-                        [_vm._v("Поле обязательно для заполнения")]
-                      )
-                    ])
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first(
+                                  "mainform.form4.position"
+                                ),
+                                expression:
+                                  "errors.first('mainform.form4.position')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
+                    )
                   ]
                 ),
                 _vm._v(" "),
@@ -36265,7 +36063,7 @@ var render = function() {
                     )
                   ]),
                   _vm._v(" "),
-                  _vm._m(15)
+                  _vm._m(8)
                 ])
               ])
             ])
@@ -36350,50 +36148,6 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("label", { staticClass: "calc-form__label js-label" }, [
-      _c("span", { staticClass: "calc-form__label-title" }, [_vm._v("Регион")]),
-      _vm._v(" "),
-      _c(
-        "select",
-        {
-          staticClass: "form-select",
-          attrs: {
-            name: "add-employer-positions",
-            "data-placeholder": " ",
-            disabled: "disabled"
-          }
-        },
-        [_c("option")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "calc-form__label js-label" }, [
-      _c("span", { staticClass: "calc-form__label-title" }, [
-        _vm._v("Организационная форма")
-      ]),
-      _vm._v(" "),
-      _c(
-        "select",
-        {
-          staticClass: "form-select",
-          attrs: {
-            name: "add-employer-positions",
-            "data-placeholder": " ",
-            disabled: "disabled"
-          }
-        },
-        [_c("option")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "calc-form__label js-label" }, [
       _c("span", { staticClass: "calc-form__label-title" }, [
         _vm._v("Дата создания юридического лица")
       ]),
@@ -36408,87 +36162,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "calc-form__label js-label" }, [
-      _c("span", { staticClass: "calc-form__label-title" }, [
-        _vm._v("Годовой баланс")
-      ]),
-      _vm._v(" "),
-      _c(
-        "select",
-        {
-          staticClass: "form-select",
-          attrs: {
-            name: "add-employer-positions",
-            "data-placeholder": " ",
-            disabled: "disabled"
-          }
-        },
-        [_c("option")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "calc-form__slider-row" }, [
-      _c("div", [
-        _c("span", { staticClass: "js-min" }),
-        _vm._v(" "),
-        _c("span", { staticClass: "rub" }, [_vm._v("i")])
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("span", { staticClass: "js-max" }),
-        _vm._v(" "),
-        _c("span", { staticClass: "rub" }, [_vm._v("i")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "calc-form__slider-row" }, [
-      _c("div", [
-        _c("span", { staticClass: "js-min" }),
-        _vm._v(" "),
-        _c("span", { staticClass: "rub" }, [_vm._v("i")])
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("span", { staticClass: "js-max" }),
-        _vm._v(" "),
-        _c("span", { staticClass: "rub" }, [_vm._v("i")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("span", { staticClass: "calc-form__label-title" }, [
       _vm._v("Наличие 10% от запрашиваемой суммы "),
       _c("span", [_vm._v("на счету")]),
       _c("sup", [_vm._v("*")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "calc-form__slider-row" }, [
-      _c("div", [
-        _c("span", { staticClass: "js-min" }),
-        _vm._v(" "),
-        _c("span", { staticClass: "rub" }, [_vm._v("i")])
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("span", { staticClass: "js-max" }),
-        _vm._v(" "),
-        _c("span", { staticClass: "rub" }, [_vm._v("i")])
-      ])
     ])
   },
   function() {
@@ -36507,24 +36184,6 @@ var staticRenderFns = [
     return _c("div", { staticClass: "calc-sec__step" }, [
       _c("div", { staticClass: "calc-sec__step-baloon step-2" }, [
         _vm._v("Шаг 2 из 3")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "calc-form__slider-row" }, [
-      _c("div", [
-        _c("span", { staticClass: "js-min" }),
-        _vm._v(" "),
-        _c("span", { staticClass: "rub" }, [_vm._v("i")])
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("span", { staticClass: "js-max" }),
-        _vm._v(" "),
-        _c("span", { staticClass: "rub" }, [_vm._v("i")])
       ])
     ])
   },
@@ -36707,6 +36366,53 @@ function normalizeComponent (
   }
 }
 
+
+/***/ }),
+
+/***/ "./node_modules/vue-slider-component/dist/vue-slider-component.umd.min.js":
+/*!********************************************************************************!*\
+  !*** ./node_modules/vue-slider-component/dist/vue-slider-component.umd.min.js ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+(function(t,e){ true?module.exports=e(__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js")):undefined})("undefined"!==typeof self?self:this,function(t){return function(t){var e={};function r(n){if(e[n])return e[n].exports;var o=e[n]={i:n,l:!1,exports:{}};return t[n].call(o.exports,o,o.exports,r),o.l=!0,o.exports}return r.m=t,r.c=e,r.d=function(t,e,n){r.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:n})},r.r=function(t){"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},r.t=function(t,e){if(1&e&&(t=r(t)),8&e)return t;if(4&e&&"object"===typeof t&&t&&t.__esModule)return t;var n=Object.create(null);if(r.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var o in t)r.d(n,o,function(e){return t[e]}.bind(null,o));return n},r.n=function(t){var e=t&&t.__esModule?function(){return t["default"]}:function(){return t};return r.d(e,"a",e),e},r.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},r.p="",r(r.s="fb15")}({2350:function(t,e){function r(t,e){var r=t[1]||"",o=t[3];if(!o)return r;if(e&&"function"===typeof btoa){var i=n(o),s=o.sources.map(function(t){return"/*# sourceURL="+o.sourceRoot+t+" */"});return[r].concat(s).concat([i]).join("\n")}return[r].join("\n")}function n(t){var e=btoa(unescape(encodeURIComponent(JSON.stringify(t)))),r="sourceMappingURL=data:application/json;charset=utf-8;base64,"+e;return"/*# "+r+" */"}t.exports=function(t){var e=[];return e.toString=function(){return this.map(function(e){var n=r(e,t);return e[2]?"@media "+e[2]+"{"+n+"}":n}).join("")},e.i=function(t,r){"string"===typeof t&&(t=[[null,t,""]]);for(var n={},o=0;o<this.length;o++){var i=this[o][0];"number"===typeof i&&(n[i]=!0)}for(o=0;o<t.length;o++){var s=t[o];"number"===typeof s[0]&&n[s[0]]||(r&&!s[2]?s[2]=r:r&&(s[2]="("+s[2]+") and ("+r+")"),e.push(s))}},e}},"499e":function(t,e,r){"use strict";function n(t,e){for(var r=[],n={},o=0;o<e.length;o++){var i=e[o],s=i[0],a=i[1],u=i[2],l=i[3],c={id:t+":"+o,css:a,media:u,sourceMap:l};n[s]?n[s].parts.push(c):r.push(n[s]={id:s,parts:[c]})}return r}r.r(e),r.d(e,"default",function(){return h});var o="undefined"!==typeof document;if("undefined"!==typeof DEBUG&&DEBUG&&!o)throw new Error("vue-style-loader cannot be used in a non-browser environment. Use { target: 'node' } in your Webpack config to indicate a server-rendering environment.");var i={},s=o&&(document.head||document.getElementsByTagName("head")[0]),a=null,u=0,l=!1,c=function(){},d=null,f="data-vue-ssr-id",p="undefined"!==typeof navigator&&/msie [6-9]\b/.test(navigator.userAgent.toLowerCase());function h(t,e,r,o){l=r,d=o||{};var s=n(t,e);return y(s),function(e){for(var r=[],o=0;o<s.length;o++){var a=s[o],u=i[a.id];u.refs--,r.push(u)}e?(s=n(t,e),y(s)):s=[];for(o=0;o<r.length;o++){u=r[o];if(0===u.refs){for(var l=0;l<u.parts.length;l++)u.parts[l]();delete i[u.id]}}}}function y(t){for(var e=0;e<t.length;e++){var r=t[e],n=i[r.id];if(n){n.refs++;for(var o=0;o<n.parts.length;o++)n.parts[o](r.parts[o]);for(;o<r.parts.length;o++)n.parts.push(m(r.parts[o]));n.parts.length>r.parts.length&&(n.parts.length=r.parts.length)}else{var s=[];for(o=0;o<r.parts.length;o++)s.push(m(r.parts[o]));i[r.id]={id:r.id,refs:1,parts:s}}}}function v(){var t=document.createElement("style");return t.type="text/css",s.appendChild(t),t}function m(t){var e,r,n=document.querySelector("style["+f+'~="'+t.id+'"]');if(n){if(l)return c;n.parentNode.removeChild(n)}if(p){var o=u++;n=a||(a=v()),e=g.bind(null,n,o,!1),r=g.bind(null,n,o,!0)}else n=v(),e=k.bind(null,n),r=function(){n.parentNode.removeChild(n)};return e(t),function(n){if(n){if(n.css===t.css&&n.media===t.media&&n.sourceMap===t.sourceMap)return;e(t=n)}else r()}}var b=function(){var t=[];return function(e,r){return t[e]=r,t.filter(Boolean).join("\n")}}();function g(t,e,r,n){var o=r?"":n.css;if(t.styleSheet)t.styleSheet.cssText=b(e,o);else{var i=document.createTextNode(o),s=t.childNodes;s[e]&&t.removeChild(s[e]),s.length?t.insertBefore(i,s[e]):t.appendChild(i)}}function k(t,e){var r=e.css,n=e.media,o=e.sourceMap;if(n&&t.setAttribute("media",n),d.ssrId&&t.setAttribute(f,e.id),o&&(r+="\n/*# sourceURL="+o.sources[0]+" */",r+="\n/*# sourceMappingURL=data:application/json;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(o))))+" */"),t.styleSheet)t.styleSheet.cssText=r;else{while(t.firstChild)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(r))}}},"4abb":function(t,e,r){var n=r("df80");"string"===typeof n&&(n=[[t.i,n,""]]),n.locals&&(t.exports=n.locals);var o=r("499e").default;o("3e7284f8",n,!0,{sourceMap:!1,shadowMode:!1})},"4ed8":function(t,e,r){var n=r("ae61");"string"===typeof n&&(n=[[t.i,n,""]]),n.locals&&(t.exports=n.locals);var o=r("499e").default;o("57c2b2f0",n,!0,{sourceMap:!1,shadowMode:!1})},"556c":function(t,e,r){var n=r("d5ac");"string"===typeof n&&(n=[[t.i,n,""]]),n.locals&&(t.exports=n.locals);var o=r("499e").default;o("f3ffc7f8",n,!0,{sourceMap:!1,shadowMode:!1})},"65d9":function(t,e,r){"use strict";
+/**
+  * vue-class-component v7.0.1
+  * (c) 2015-present Evan You
+  * @license MIT
+  */function n(t){return t&&"object"===typeof t&&"default"in t?t["default"]:t}Object.defineProperty(e,"__esModule",{value:!0});var o=n(r("8bbf")),i="undefined"!==typeof Reflect&&Reflect.defineMetadata&&Reflect.getOwnMetadataKeys;function s(t,e){a(t,e),Object.getOwnPropertyNames(e.prototype).forEach(function(r){a(t.prototype,e.prototype,r)}),Object.getOwnPropertyNames(e).forEach(function(r){a(t,e,r)})}function a(t,e,r){var n=r?Reflect.getOwnMetadataKeys(e,r):Reflect.getOwnMetadataKeys(e);n.forEach(function(n){var o=r?Reflect.getOwnMetadata(n,e,r):Reflect.getOwnMetadata(n,e);r?Reflect.defineMetadata(n,o,t,r):Reflect.defineMetadata(n,o,t)})}var u={__proto__:[]},l=u instanceof Array;function c(t){return function(e,r,n){var o="function"===typeof e?e:e.constructor;o.__decorators__||(o.__decorators__=[]),"number"!==typeof n&&(n=void 0),o.__decorators__.push(function(e){return t(e,r,n)})}}function d(){for(var t=[],e=0;e<arguments.length;e++)t[e]=arguments[e];return o.extend({mixins:t})}function f(t){var e=typeof t;return null==t||"object"!==e&&"function"!==e}function p(t,e){var r=e.prototype._init;e.prototype._init=function(){var e=this,r=Object.getOwnPropertyNames(t);if(t.$options.props)for(var n in t.$options.props)t.hasOwnProperty(n)||r.push(n);r.forEach(function(r){"_"!==r.charAt(0)&&Object.defineProperty(e,r,{get:function(){return t[r]},set:function(e){t[r]=e},configurable:!0})})};var n=new e;e.prototype._init=r;var o={};return Object.keys(n).forEach(function(t){void 0!==n[t]&&(o[t]=n[t])}),o}var h=["data","beforeCreate","created","beforeMount","mounted","beforeDestroy","destroyed","beforeUpdate","updated","activated","deactivated","render","errorCaptured","serverPrefetch"];function y(t,e){void 0===e&&(e={}),e.name=e.name||t._componentTag||t.name;var r=t.prototype;Object.getOwnPropertyNames(r).forEach(function(t){if("constructor"!==t)if(h.indexOf(t)>-1)e[t]=r[t];else{var n=Object.getOwnPropertyDescriptor(r,t);void 0!==n.value?"function"===typeof n.value?(e.methods||(e.methods={}))[t]=n.value:(e.mixins||(e.mixins=[])).push({data:function(){var e;return e={},e[t]=n.value,e}}):(n.get||n.set)&&((e.computed||(e.computed={}))[t]={get:n.get,set:n.set})}}),(e.mixins||(e.mixins=[])).push({data:function(){return p(this,t)}});var n=t.__decorators__;n&&(n.forEach(function(t){return t(e)}),delete t.__decorators__);var a=Object.getPrototypeOf(t.prototype),u=a instanceof o?a.constructor:o,l=u.extend(e);return v(l,t,u),i&&s(l,t),l}function v(t,e,r){Object.getOwnPropertyNames(e).forEach(function(n){if("prototype"!==n){var o=Object.getOwnPropertyDescriptor(t,n);if(!o||o.configurable){var i=Object.getOwnPropertyDescriptor(e,n);if(!l){if("cid"===n)return;var s=Object.getOwnPropertyDescriptor(r,n);if(!f(i.value)&&s&&s.value===i.value)return}0,Object.defineProperty(t,n,i)}}})}function m(t){return"function"===typeof t?y(t):function(e){return y(e,t)}}m.registerHooks=function(t){h.push.apply(h,t)},e.default=m,e.createDecorator=c,e.mixins=d},"8bbf":function(e,r){e.exports=t},ae61:function(t,e,r){e=t.exports=r("2350")(!1),e.push([t.i,".vue-slider-dot{position:absolute;will-change:transform;-webkit-transition:all 0s;transition:all 0s;z-index:5}.vue-slider-dot-tooltip{position:absolute;visibility:hidden}.vue-slider-dot-tooltip-show{visibility:visible}.vue-slider-dot-tooltip-top{top:-10px;left:50%;-webkit-transform:translate(-50%,-100%);transform:translate(-50%,-100%)}.vue-slider-dot-tooltip-bottom{bottom:-10px;left:50%;-webkit-transform:translate(-50%,100%);transform:translate(-50%,100%)}.vue-slider-dot-tooltip-left{left:-10px;top:50%;-webkit-transform:translate(-100%,-50%);transform:translate(-100%,-50%)}.vue-slider-dot-tooltip-right{right:-10px;top:50%;-webkit-transform:translate(100%,-50%);transform:translate(100%,-50%)}",""])},d5ac:function(t,e,r){e=t.exports=r("2350")(!1),e.push([t.i,".vue-slider-marks{position:relative;width:100%;height:100%}.vue-slider-mark{position:absolute;z-index:1}.vue-slider-ltr .vue-slider-mark,.vue-slider-rtl .vue-slider-mark{width:0;height:100%;top:50%}.vue-slider-ltr .vue-slider-mark-step,.vue-slider-rtl .vue-slider-mark-step{top:0}.vue-slider-ltr .vue-slider-mark-label,.vue-slider-rtl .vue-slider-mark-label{top:100%;margin-top:10px}.vue-slider-ltr .vue-slider-mark{-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.vue-slider-ltr .vue-slider-mark-step{left:0}.vue-slider-ltr .vue-slider-mark-label{left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.vue-slider-rtl .vue-slider-mark{-webkit-transform:translate(50%,-50%);transform:translate(50%,-50%)}.vue-slider-rtl .vue-slider-mark-step{right:0}.vue-slider-rtl .vue-slider-mark-label{right:50%;-webkit-transform:translateX(50%);transform:translateX(50%)}.vue-slider-btt .vue-slider-mark,.vue-slider-ttb .vue-slider-mark{width:100%;height:0;left:50%}.vue-slider-btt .vue-slider-mark-step,.vue-slider-ttb .vue-slider-mark-step{left:0}.vue-slider-btt .vue-slider-mark-label,.vue-slider-ttb .vue-slider-mark-label{left:100%;margin-left:10px}.vue-slider-btt .vue-slider-mark{-webkit-transform:translate(-50%,50%);transform:translate(-50%,50%)}.vue-slider-btt .vue-slider-mark-step{top:0}.vue-slider-btt .vue-slider-mark-label{top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.vue-slider-ttb .vue-slider-mark{-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.vue-slider-ttb .vue-slider-mark-step{bottom:0}.vue-slider-ttb .vue-slider-mark-label{bottom:50%;-webkit-transform:translateY(50%);transform:translateY(50%)}.vue-slider-mark-label,.vue-slider-mark-step{position:absolute}",""])},df80:function(t,e,r){e=t.exports=r("2350")(!1),e.push([t.i,".vue-slider{position:relative;-webkit-box-sizing:content-box;box-sizing:content-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;display:block;-ms-touch-action:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}.vue-slider-disabled{pointer-events:none}.vue-slider-rail{position:relative;width:100%;height:100%;-webkit-transition-property:width,height,left,right,top,bottom;transition-property:width,height,left,right,top,bottom}.vue-slider-process{position:absolute;z-index:1}.vue-slider-sr-only{clip:rect(1px,1px,1px,1px);height:1px;width:1px;overflow:hidden;position:absolute!important}",""])},fb15:function(t,e,r){"use strict";var n;(r.r(e),"undefined"!==typeof window)&&((n=window.document.currentScript)&&(n=n.src.match(/(.+\/)[^\/]+\.js(\?.*)?$/))&&(r.p=n[1]));function o(t,e,r,n){var o,i=arguments.length,s=i<3?e:null===n?n=Object.getOwnPropertyDescriptor(e,r):n;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)s=Reflect.decorate(t,e,r,n);else for(var a=t.length-1;a>=0;a--)(o=t[a])&&(s=(i<3?o(s):i>3?o(e,r,s):o(e,r))||s);return i>3&&s&&Object.defineProperty(e,r,s),s}var i=r("8bbf"),s=r.n(i),a=r("65d9"),u=r.n(a);var l="undefined"!==typeof Reflect&&"undefined"!==typeof Reflect.getMetadata;function c(t,e,r){l&&(Array.isArray(t)||"function"===typeof t||"undefined"!==typeof t.type||(t.type=Reflect.getMetadata("design:type",e,r)))}function d(t,e){return void 0===e&&(e={}),function(r,n){c(e,r,n),Object(a["createDecorator"])(function(r,n){(r.props||(r.props={}))[n]=e,r.model={prop:n,event:t||n}})(r,n)}}function f(t){return void 0===t&&(t={}),function(e,r){c(t,e,r),Object(a["createDecorator"])(function(e,r){(e.props||(e.props={}))[r]=t})(e,r)}}function p(t,e){void 0===e&&(e={});var r=e.deep,n=void 0!==r&&r,o=e.immediate,i=void 0!==o&&o;return Object(a["createDecorator"])(function(e,r){"object"!==typeof e.watch&&(e.watch=Object.create(null));var o=e.watch;"object"!==typeof o[t]||Array.isArray(o[t])?"undefined"===typeof o[t]&&(o[t]=[]):o[t]=[o[t]],o[t].push({handler:r,deep:n,immediate:i})})}r("4ed8");function h(t){return h="function"===typeof Symbol&&"symbol"===typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"===typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},h(t)}function y(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function v(t,e){for(var r=0;r<e.length;r++){var n=e[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(t,n.key,n)}}function m(t,e,r){return e&&v(t.prototype,e),r&&v(t,r),t}function b(t,e){return!e||"object"!==h(e)&&"function"!==typeof e?g(t):e}function g(t){if(void 0===t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t}function k(t){return k=Object.setPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__||Object.getPrototypeOf(t)},k(t)}function x(t,e){if("function"!==typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function");t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,writable:!0,configurable:!0}}),e&&w(t,e)}function w(t,e){return w=Object.setPrototypeOf||function(t,e){return t.__proto__=e,t},w(t,e)}var O=function(t){function e(){return y(this,e),b(this,k(e).apply(this,arguments))}return x(e,t),m(e,[{key:"dragStart",value:function(t){if(this.disabled)return!1;this.$emit("drag-start")}},{key:"render",value:function(){var t=arguments[0];return t("div",{ref:"dot",class:this.dotClasses,on:{mousedown:this.dragStart,touchstart:this.dragStart}},[this.$slots.dot||t("div",{class:this.handleClasses,style:this.dotStyle}),"none"!==this.tooltip?t("div",{class:this.tooltipClasses},[this.$slots.tooltip||t("div",{class:this.tooltipInnerClasses,style:this.tooltipStyle},[t("span",{class:"vue-slider-dot-tooltip-text"},[this.tooltipValue])])]):null])}},{key:"dotClasses",get:function(){return["vue-slider-dot",{"vue-slider-dot-disabled":this.disabled,"vue-slider-dot-focus":this.focus}]}},{key:"handleClasses",get:function(){return["vue-slider-dot-handle",{"vue-slider-dot-handle-disabled":this.disabled,"vue-slider-dot-handle-focus":this.focus}]}},{key:"tooltipClasses",get:function(){return["vue-slider-dot-tooltip",["vue-slider-dot-tooltip-".concat(this.tooltipPlacement)],{"vue-slider-dot-tooltip-show":this.showTooltip}]}},{key:"tooltipInnerClasses",get:function(){return["vue-slider-dot-tooltip-inner",["vue-slider-dot-tooltip-inner-".concat(this.tooltipPlacement)],{"vue-slider-dot-tooltip-inner-disabled":this.disabled,"vue-slider-dot-tooltip-inner-focus":this.focus}]}},{key:"showTooltip",get:function(){switch(this.tooltip){case"always":return!0;case"none":return!1;case"focus":return!!this.focus;default:return!1}}},{key:"tooltipValue",get:function(){return this.tooltipFormatter?"string"===typeof this.tooltipFormatter?this.tooltipFormatter.replace(/\{value\}/,String(this.value)):this.tooltipFormatter(this.value):this.value}}]),e}(s.a);o([f({default:0})],O.prototype,"value",void 0),o([f()],O.prototype,"tooltip",void 0),o([f()],O.prototype,"dotStyle",void 0),o([f()],O.prototype,"tooltipStyle",void 0),o([f({type:String,validator:function(t){return["top","right","bottom","left"].indexOf(t)>-1},required:!0})],O.prototype,"tooltipPlacement",void 0),o([f({type:[String,Function]})],O.prototype,"tooltipFormatter",void 0),o([f({type:Boolean,default:!1})],O.prototype,"focus",void 0),o([f({default:!1})],O.prototype,"disabled",void 0),O=o([u.a],O);var P=O;r("556c");function S(t){return S="function"===typeof Symbol&&"symbol"===typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"===typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},S(t)}function E(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function R(t,e){for(var r=0;r<e.length;r++){var n=e[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(t,n.key,n)}}function D(t,e,r){return e&&R(t.prototype,e),r&&R(t,r),t}function A(t,e){return!e||"object"!==S(e)&&"function"!==typeof e?j(t):e}function j(t){if(void 0===t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t}function V(t){return V=Object.setPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__||Object.getPrototypeOf(t)},V(t)}function _(t,e){if("function"!==typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function");t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,writable:!0,configurable:!0}}),e&&M(t,e)}function M(t,e){return M=Object.setPrototypeOf||function(t,e){return t.__proto__=e,t},M(t,e)}var C=function(t){function e(){return E(this,e),A(this,V(e).apply(this,arguments))}return _(e,t),D(e,[{key:"labelClickHandle",value:function(t){t.stopPropagation(),this.$emit("pressLabel",this.mark.pos)}},{key:"render",value:function(){var t=arguments[0],e=this.mark;return t("div",{class:this.marksClasses},[this.$slots.step||t("div",{class:this.stepClasses,style:[this.stepStyle,e.style,e.active?this.stepActiveStyle:null,e.active?e.activeStyle:null]}),this.hideLabel?null:this.$slots.label||t("div",{class:this.labelClasses,style:[this.labelStyle,e.labelStyle,e.active?this.labelActiveStyle:null,e.active?e.labelActiveStyle:null],on:{click:this.labelClickHandle}},[e.label])])}},{key:"marksClasses",get:function(){return["vue-slider-mark",{"vue-slider-mark-active":this.mark.active}]}},{key:"stepClasses",get:function(){return["vue-slider-mark-step",{"vue-slider-mark-step-active":this.mark.active}]}},{key:"labelClasses",get:function(){return["vue-slider-mark-label",{"vue-slider-mark-label-active":this.mark.active}]}}]),e}(s.a);o([f({required:!0})],C.prototype,"mark",void 0),o([f(Boolean)],C.prototype,"hideLabel",void 0),o([f()],C.prototype,"stepStyle",void 0),o([f()],C.prototype,"stepActiveStyle",void 0),o([f()],C.prototype,"labelStyle",void 0),o([f()],C.prototype,"labelActiveStyle",void 0),C=o([u.a],C);var N,T=C,B=function(t){return"number"===typeof t?"".concat(t,"px"):t},I=function(t){var e=document.documentElement,r=document.body,n=t.getBoundingClientRect(),o={y:n.top+(window.pageYOffset||e.scrollTop)-(e.clientTop||r.clientTop||0),x:n.left+(window.pageXOffset||e.scrollLeft)-(e.clientLeft||r.clientLeft||0)};return o},L=function(t,e,r){var n="targetTouches"in t?t.targetTouches[0]:t,o=I(e),i={x:n.pageX-o.x,y:n.pageY-o.y};return{x:r?e.offsetWidth-i.x:i.x,y:r?e.offsetHeight-i.y:i.y}};(function(t){t[t["PAGE_UP"]=33]="PAGE_UP",t[t["PAGE_DOWN"]=34]="PAGE_DOWN",t[t["END"]=35]="END",t[t["HOME"]=36]="HOME",t[t["LEFT"]=37]="LEFT",t[t["UP"]=38]="UP",t[t["RIGHT"]=39]="RIGHT",t[t["DOWN"]=40]="DOWN"})(N||(N={}));var z=function(t,e){switch(t.keyCode){case N.UP:return function(t){return"ttb"===e.direction?t-1:t+1};case N.RIGHT:return function(t){return"rtl"===e.direction?t-1:t+1};case N.DOWN:return function(t){return"ttb"===e.direction?t+1:t-1};case N.LEFT:return function(t){return"rtl"===e.direction?t+1:t-1};case N.END:return function(){return e.max};case N.HOME:return function(){return e.min};case N.PAGE_UP:return function(t){return t+10};case N.PAGE_DOWN:return function(t){return t-10};default:return null}};function H(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function U(t,e){for(var r=0;r<e.length;r++){var n=e[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(t,n.key,n)}}function F(t,e,r){return e&&U(t.prototype,e),r&&U(t,r),t}var $,W,G=function(){function t(e){H(this,t),this.num=e}return F(t,[{key:"decimal",value:function(t,e){var r=this.num,n=this.getDecimalLen(r),o=this.getDecimalLen(t),i=0;switch(e){case"+":i=this.getExponent(n,o),this.num=(this.safeRoundUp(r,i)+this.safeRoundUp(t,i))/i;break;case"-":i=this.getExponent(n,o),this.num=(this.safeRoundUp(r,i)-this.safeRoundUp(t,i))/i;break;case"*":this.num=this.safeRoundUp(this.safeRoundUp(r,this.getExponent(n)),this.safeRoundUp(t,this.getExponent(o)))/this.getExponent(n+o);break;case"/":i=this.getExponent(n,o),this.num=this.safeRoundUp(r,i)/this.safeRoundUp(t,i);break;case"%":i=this.getExponent(n,o),this.num=this.safeRoundUp(r,i)%this.safeRoundUp(t,i)/i;break}return this}},{key:"plus",value:function(t){return this.decimal(t,"+")}},{key:"minus",value:function(t){return this.decimal(t,"-")}},{key:"multiply",value:function(t){return this.decimal(t,"*")}},{key:"divide",value:function(t){return this.decimal(t,"/")}},{key:"remainder",value:function(t){return this.decimal(t,"%")}},{key:"toNumber",value:function(){return this.num}},{key:"getDecimalLen",value:function(t){return("".concat(t).split(".")[1]||"").length}},{key:"getExponent",value:function(t,e){return Math.pow(10,void 0!==e?Math.max(t,e):t)}},{key:"safeRoundUp",value:function(t,e){return Math.round(t*e)}}]),t}();function X(t){for(var e=1;e<arguments.length;e++){var r=null!=arguments[e]?arguments[e]:{},n=Object.keys(r);"function"===typeof Object.getOwnPropertySymbols&&(n=n.concat(Object.getOwnPropertySymbols(r).filter(function(t){return Object.getOwnPropertyDescriptor(r,t).enumerable}))),n.forEach(function(e){it(t,e,r[e])})}return t}function K(t,e){return J(t)||q(t,e)||Y()}function Y(){throw new TypeError("Invalid attempt to destructure non-iterable instance")}function q(t,e){var r=[],n=!0,o=!1,i=void 0;try{for(var s,a=t[Symbol.iterator]();!(n=(s=a.next()).done);n=!0)if(r.push(s.value),e&&r.length===e)break}catch(u){o=!0,i=u}finally{try{n||null==a["return"]||a["return"]()}finally{if(o)throw i}}return r}function J(t){if(Array.isArray(t))return t}function Q(t){return et(t)||tt(t)||Z()}function Z(){throw new TypeError("Invalid attempt to spread non-iterable instance")}function tt(t){if(Symbol.iterator in Object(t)||"[object Arguments]"===Object.prototype.toString.call(t))return Array.from(t)}function et(t){if(Array.isArray(t)){for(var e=0,r=new Array(t.length);e<t.length;e++)r[e]=t[e];return r}}function rt(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function nt(t,e){for(var r=0;r<e.length;r++){var n=e[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(t,n.key,n)}}function ot(t,e,r){return e&&nt(t.prototype,e),r&&nt(t,r),t}function it(t,e,r){return e in t?Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}):t[e]=r,t}(function(t){t[t["VALUE"]=1]="VALUE",t[t["INTERVAL"]=2]="INTERVAL",t[t["MIN"]=3]="MIN",t[t["MAX"]=4]="MAX",t[t["ORDER"]=5]="ORDER"})(W||(W={}));var st=($={},it($,W.VALUE,'The type of the "value" is illegal'),it($,W.INTERVAL,'The prop "interval" is invalid, "(max - min)" cannot be divisible by "interval"'),it($,W.MIN,'The "value" cannot be less than the minimum.'),it($,W.MAX,'The "value" cannot be greater than the maximum.'),it($,W.ORDER,'When "order" is false, the parameters "minRange", "maxRange", "fixed", "enabled" are invalid.'),$),at=function(){function t(e){rt(this,t),this.dotsPos=[],this.dotsValue=[],this.data=e.data,this.max=e.max,this.min=e.min,this.interval=e.interval,this.order=e.order,this.marks=e.marks,this.included=e.included,this.process=e.process,this.adsorb=e.adsorb,this.dotOptions=e.dotOptions,this.onError=e.onError,this.order?(this.minRange=e.minRange||0,this.maxRange=e.maxRange||0,this.enableCross=e.enableCross,this.fixed=e.fixed):((e.minRange||e.maxRange||!e.enableCross||e.fixed)&&this.emitError(W.ORDER),this.minRange=0,this.maxRange=0,this.enableCross=!0,this.fixed=!1),this.setValue(e.value)}return ot(t,[{key:"setValue",value:function(t){this.setDotsValue(Array.isArray(t)?Q(t):[t],!0)}},{key:"setDotsValue",value:function(t,e){this.dotsValue=t,e&&this.syncDotsPos()}},{key:"setDotsPos",value:function(t){var e=this,r=this.order?Q(t).sort(function(t,e){return t-e}):t;this.dotsPos=r,this.setDotsValue(r.map(function(t){return e.getValueByPos(t)}),this.adsorb)}},{key:"getValueByPos",value:function(t){var e=this.parsePos(t);if(this.included){var r=100;this.markList.forEach(function(n){var o=Math.abs(n.pos-t);o<r&&(r=o,e=n.value)})}return e}},{key:"syncDotsPos",value:function(){var t=this;this.dotsPos=this.dotsValue.map(function(e){return t.parseValue(e)})}},{key:"getRecentDot",value:function(t){var e=this.dotsPos.map(function(e){return Math.abs(e-t)});return e.indexOf(Math.min.apply(Math,Q(e)))}},{key:"getIndexByValue",value:function(t){return this.data?this.data.indexOf(t):new G(+t).minus(this.min).divide(this.interval).toNumber()}},{key:"getValueByIndex",value:function(t){return t<0?t=0:t>this.total&&(t=this.total),this.data?this.data[t]:new G(t).multiply(this.interval).plus(this.min).toNumber()}},{key:"setDotPos",value:function(t,e){t=this.getValidPos(t,e).pos;var r=t-this.dotsPos[e];if(r){var n=new Array(this.dotsPos.length);this.fixed?n=this.getFixedChangePosArr(r,e):this.minRange||this.maxRange?n=this.getLimitRangeChangePosArr(t,r,e):n[e]=r,this.setDotsPos(this.dotsPos.map(function(t,e){return t+(n[e]||0)}))}}},{key:"getFixedChangePosArr",value:function(t,e){var r=this;return this.dotsPos.forEach(function(n,o){if(o!==e){var i=r.getValidPos(n+t,o),s=i.pos,a=i.inRange;a||(t=Math.min(Math.abs(s-n),Math.abs(t))*(t<0?-1:1))}}),this.dotsPos.map(function(e){return t})}},{key:"getLimitRangeChangePosArr",value:function(t,e,r){var n=this,o=[{index:r,changePos:e}],i=e;return[this.minRange,this.maxRange].forEach(function(s,a){if(!s)return!1;var u=0===a,l=e>0,c=0;c=u?l?1:-1:l?-1:1;var d=function(t,e){var r=Math.abs(t-e);return u?r<n.minRangeDir:r>n.maxRangeDir},f=r+c,p=n.dotsPos[f],h=t;while(n.isPos(p)&&d(p,h)){var y=n.getValidPos(p+i,f),v=y.pos;o.push({index:f,changePos:v-p}),f+=c,h=v,p=n.dotsPos[f]}}),this.dotsPos.map(function(t,e){var r=o.filter(function(t){return t.index===e});return r.length?r[0].changePos:0})}},{key:"isPos",value:function(t){return"number"===typeof t}},{key:"getValidPos",value:function(t,e){var r=this.valuePosRange[e],n=!0;return t<r[0]?(t=r[0],n=!1):t>r[1]&&(t=r[1],n=!1),{pos:t,inRange:n}}},{key:"parseValue",value:function(t){if(this.data)t=this.data.indexOf(t);else if("number"===typeof t||"string"===typeof t){if(t=+t,t<this.min)return this.emitError(W.MIN),0;if(t>this.max)return this.emitError(W.MAX),0;if("number"!==typeof t||t!==t)return this.emitError(W.VALUE),0;t=new G(t).minus(this.min).divide(this.interval).toNumber()}var e=new G(t).multiply(this.gap).toNumber();return e<0?0:e>100?100:e}},{key:"parsePos",value:function(t){var e=Math.round(t/this.gap);return this.getValueByIndex(e)}},{key:"isActiveByPos",value:function(t){return this.processArray.some(function(e){var r=K(e,2),n=r[0],o=r[1];return t>=n&&t<=o})}},{key:"getValues",value:function(){if(this.data)return this.data;for(var t=[this.max],e=0;e<this.total;e++)t.unshift(new G(e).multiply(this.interval).plus(this.min).toNumber());return t}},{key:"emitError",value:function(t){this.onError&&this.onError(t,st[t])}},{key:"getDotRange",value:function(t,e,r){if(!this.dotOptions)return r;var n=Array.isArray(this.dotOptions)?this.dotOptions[t]:this.dotOptions;return n&&void 0!==n[e]?this.parseValue(n[e]):r}},{key:"markList",get:function(){var t=this;if(!this.marks)return[];var e=function(e,r){var n=t.parseValue(e);return X({pos:n,value:e,label:e,active:t.isActiveByPos(n)},r)};return!0===this.marks?this.getValues().map(function(t){return e(t)}):"[object Object]"===Object.prototype.toString.call(this.marks)?Object.keys(this.marks).sort(function(t,e){return+t-+e}).map(function(r){var n=t.marks[r];return e(r,"string"!==typeof n?n:{label:n})}):Array.isArray(this.marks)?this.marks.map(function(t){return e(t)}):"function"===typeof this.marks?this.getValues().map(function(e){return{value:e,result:t.marks(e)}}).filter(function(t){var e=t.result;return!!e}).map(function(t){var r=t.value,n=t.result;return e(r,n)}):[]}},{key:"processArray",get:function(){if(this.process){if("function"===typeof this.process)return this.process(this.dotsPos);if(1===this.dotsPos.length)return[[0,this.dotsPos[0]]];if(this.dotsPos.length>1)return[[Math.min.apply(Math,Q(this.dotsPos)),Math.max.apply(Math,Q(this.dotsPos))]]}return[]}},{key:"total",get:function(){var t=0;return t=this.data?this.data.length-1:new G(this.max).minus(this.min).divide(this.interval).toNumber(),t-Math.floor(t)!==0?(this.emitError(W.INTERVAL),0):t}},{key:"gap",get:function(){return 100/this.total}},{key:"minRangeDir",get:function(){return this.minRange?this.minRange*this.gap:0}},{key:"maxRangeDir",get:function(){return this.maxRange?this.maxRange*this.gap:100}},{key:"valuePosRange",get:function(){var t=this,e=this.dotsPos,r=[];return e.forEach(function(n,o){r.push([Math.max(t.minRange?t.minRangeDir*o:0,t.enableCross?0:e[o-1]||0,t.getDotRange(o,"min",0)),Math.min(t.minRange?100-t.minRangeDir*(e.length-1-o):100,t.enableCross?100:e[o+1]||100,t.getDotRange(o,"max",100))])}),r}},{key:"dotsIndex",get:function(){var t=this;return this.dotsValue.map(function(e){return t.getIndexByValue(e)})}}]),t}();function ut(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function lt(t,e){for(var r=0;r<e.length;r++){var n=e[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(t,n.key,n)}}function ct(t,e,r){return e&&lt(t.prototype,e),r&&lt(t,r),t}var dt=function(){function t(e){ut(this,t),this.states=0,this.map=e}return ct(t,[{key:"add",value:function(t){this.states|=t}},{key:"delete",value:function(t){this.states&=~t}},{key:"toggle",value:function(t){this.has(t)?this.delete(t):this.add(t)}},{key:"has",value:function(t){return!!(this.states&t)}}]),t}();r("4abb");function ft(t){return ft="function"===typeof Symbol&&"symbol"===typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"===typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},ft(t)}function pt(t){for(var e=1;e<arguments.length;e++){var r=null!=arguments[e]?arguments[e]:{},n=Object.keys(r);"function"===typeof Object.getOwnPropertySymbols&&(n=n.concat(Object.getOwnPropertySymbols(r).filter(function(t){return Object.getOwnPropertyDescriptor(r,t).enumerable}))),n.forEach(function(e){bt(t,e,r[e])})}return t}function ht(t,e){return mt(t)||vt(t,e)||yt()}function yt(){throw new TypeError("Invalid attempt to destructure non-iterable instance")}function vt(t,e){var r=[],n=!0,o=!1,i=void 0;try{for(var s,a=t[Symbol.iterator]();!(n=(s=a.next()).done);n=!0)if(r.push(s.value),e&&r.length===e)break}catch(u){o=!0,i=u}finally{try{n||null==a["return"]||a["return"]()}finally{if(o)throw i}}return r}function mt(t){if(Array.isArray(t))return t}function bt(t,e,r){return e in t?Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}):t[e]=r,t}function gt(t){return wt(t)||xt(t)||kt()}function kt(){throw new TypeError("Invalid attempt to spread non-iterable instance")}function xt(t){if(Symbol.iterator in Object(t)||"[object Arguments]"===Object.prototype.toString.call(t))return Array.from(t)}function wt(t){if(Array.isArray(t)){for(var e=0,r=new Array(t.length);e<t.length;e++)r[e]=t[e];return r}}function Ot(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function Pt(t,e){for(var r=0;r<e.length;r++){var n=e[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(t,n.key,n)}}function St(t,e,r){return e&&Pt(t.prototype,e),r&&Pt(t,r),t}function Et(t,e){return!e||"object"!==ft(e)&&"function"!==typeof e?Rt(t):e}function Rt(t){if(void 0===t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t}function Dt(t){return Dt=Object.setPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__||Object.getPrototypeOf(t)},Dt(t)}function At(t,e){if("function"!==typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function");t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,writable:!0,configurable:!0}}),e&&jt(t,e)}function jt(t,e){return jt=Object.setPrototypeOf||function(t,e){return t.__proto__=e,t},jt(t,e)}var Vt={None:0,Drag:1,Focus:2},_t=4,Mt=function(t){function e(){var t;return Ot(this,e),t=Et(this,Dt(e).apply(this,arguments)),t.states=new dt(Vt),t.scale=1,t.focusDotIndex=0,t}return At(e,t),St(e,[{key:"onValueChanged",value:function(){!this.states.has(Vt.Drag)&&this.isNotSync&&this.control.setValue(this.value)}},{key:"created",value:function(){this.initControl()}},{key:"mounted",value:function(){this.bindEvent()}},{key:"beforeDestroy",value:function(){this.unbindEvent()}},{key:"bindEvent",value:function(){document.addEventListener("touchmove",this.dragMove,{passive:!1}),document.addEventListener("touchend",this.dragEnd,{passive:!1}),document.addEventListener("mousedown",this.blurHandle),document.addEventListener("mousemove",this.dragMove),document.addEventListener("mouseup",this.dragEnd),document.addEventListener("mouseleave",this.dragEnd),document.addEventListener("keydown",this.keydownHandle)}},{key:"unbindEvent",value:function(){document.removeEventListener("touchmove",this.dragMove),document.removeEventListener("touchend",this.dragEnd),document.removeEventListener("mousedown",this.blurHandle),document.removeEventListener("mousemove",this.dragMove),document.removeEventListener("mouseup",this.dragEnd),document.removeEventListener("mouseleave",this.dragEnd),document.removeEventListener("keydown",this.keydownHandle)}},{key:"setScale",value:function(){this.scale=new G(Math.floor(this.isHorizontal?this.$el.offsetWidth:this.$el.offsetHeight)).divide(100).toNumber()}},{key:"initControl",value:function(){var t=this;this.control=new at({value:this.value,data:this.data,enableCross:this.enableCross,fixed:this.fixed,max:this.max,min:this.min,interval:this.interval,minRange:this.minRange,maxRange:this.maxRange,order:this.order,marks:this.marks,included:this.included,process:this.process,adsorb:this.adsorb,dotOptions:this.dotOptions,onError:this.emitError}),["data","enableCross","fixed","max","min","interval","minRange","maxRange","order","marks","process","adsorb","included","dotOptions"].forEach(function(e){t.$watch(e,function(r){if("data"===e&&Array.isArray(t.control.data)&&Array.isArray(r)&&t.control.data.length===r.length&&r.every(function(e,r){return e===t.control.data[r]}))return!1;t.control[e]=r,["data","max","min","interval"].indexOf(e)>-1&&t.control.syncDotsPos()})})}},{key:"isDisabledByDotIndex",value:function(t){return this.dots[t].disabled}},{key:"syncValueByPos",value:function(){var t=this.control.dotsValue;this.isDiff(t,Array.isArray(this.value)?this.value:[this.value])&&this.$emit("change",1===t.length?t[0]:gt(t))}},{key:"isDiff",value:function(t,e){return t.length!==e.length||t.some(function(t,r){return t!==e[r]})}},{key:"emitError",value:function(t,e){this.silent||console.error("[VueSlider error]: ".concat(e)),this.$emit("error",t,e)}},{key:"dragStart",value:function(t){this.focusDotIndex=t,this.setScale(),this.states.add(Vt.Drag),this.states.add(Vt.Focus),this.$emit("drag-start")}},{key:"dragMove",value:function(t){if(!this.states.has(Vt.Drag))return!1;t.preventDefault();var e=this.getPosByEvent(t);this.isCrossDot(e),this.control.setDotPos(e,this.focusDotIndex),this.lazy||this.syncValueByPos();var r=this.control.dotsValue;this.$emit("dragging",1===r.length?r[0]:gt(r))}},{key:"isCrossDot",value:function(t){if(this.canSort){var e=this.focusDotIndex,r=t;r>this.dragRange[1]?(r=this.dragRange[1],this.focusDotIndex++):r<this.dragRange[0]&&(r=this.dragRange[0],this.focusDotIndex--),e!==this.focusDotIndex&&this.control.setDotPos(r,e)}}},{key:"dragEnd",value:function(){var t=this;if(!this.states.has(Vt.Drag))return!1;this.lazy&&this.syncValueByPos(),setTimeout(function(){t.included&&t.isNotSync?t.control.setValue(t.value):t.control.syncDotsPos(),t.states.delete(Vt.Drag),t.useKeyboard||t.states.delete(Vt.Focus),t.$emit("drag-end")})}},{key:"blurHandle",value:function(t){if(!this.states.has(Vt.Focus)||!this.$refs.container||this.$refs.container.contains(t.target))return!1;this.states.delete(Vt.Focus)}},{key:"clickHandle",value:function(t){if(!this.clickable)return!1;if(!this.states.has(Vt.Drag)){this.setScale();var e=this.getPosByEvent(t);this.setValueByPos(e)}}},{key:"focus",value:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:0;this.states.add(Vt.Focus),this.focusDotIndex=t}},{key:"blur",value:function(){this.states.delete(Vt.Focus)}},{key:"getValue",value:function(){var t=this.control.dotsValue;return 1===t.length?t[0]:t}},{key:"getIndex",value:function(){var t=this.control.dotsIndex;return 1===t.length?t[0]:t}},{key:"setValue",value:function(t){this.control.setValue(Array.isArray(t)?gt(t):[t]),this.syncValueByPos()}},{key:"setIndex",value:function(t){var e=this,r=Array.isArray(t)?t.map(function(t){return e.control.getValueByIndex(t)}):this.control.getValueByIndex(t);this.setValue(r)}},{key:"setValueByPos",value:function(t){var e=this,r=this.control.getRecentDot(t);if(this.isDisabledByDotIndex(r))return!1;this.focusDotIndex=r,this.control.setDotPos(t,r),this.syncValueByPos(),this.useKeyboard&&this.states.add(Vt.Focus),setTimeout(function(){e.included&&e.isNotSync?e.control.setValue(e.value):e.control.syncDotsPos()})}},{key:"keydownHandle",value:function(t){if(!this.useKeyboard||!this.states.has(Vt.Focus))return!1;var e=z(t,{direction:this.direction,max:this.control.total,min:0});if(e){t.preventDefault();var r=this.control.getIndexByValue(this.control.dotsValue[this.focusDotIndex]),n=e(r),o=this.control.parseValue(this.control.getValueByIndex(n));this.isCrossDot(o),this.control.setDotPos(o,this.focusDotIndex),this.syncValueByPos()}}},{key:"getPosByEvent",value:function(t){return L(t,this.$el,this.isReverse)[this.isHorizontal?"x":"y"]/this.scale}},{key:"renderSlot",value:function(t,e,r,n){var o=this.$createElement,i=this.$scopedSlots[t];return i?n?i(e):o("template",{slot:t},[i(e)]):r}},{key:"render",value:function(){var t=this,e=arguments[0];return e("div",{ref:"container",class:this.containerClasses,style:this.containerStyles,attrs:{"aria-hidden":!0},on:{click:this.clickHandle}},[e("div",{class:"vue-slider-rail",style:this.railStyle},[this.processArray.map(function(r,n){return t.renderSlot("process",r,e("div",{class:"vue-slider-process",key:"process-".concat(n),style:r.style}),!0)}),this.marks?e("div",{class:"vue-slider-marks"},[this.control.markList.map(function(r,n){var o;return t.renderSlot("mark",r,e("vue-slider-mark",{key:"mark-".concat(n),attrs:{mark:r,hideLabel:t.hideLabel,stepStyle:t.stepStyle,stepActiveStyle:t.stepActiveStyle,labelStyle:t.labelStyle,labelActiveStyle:t.labelActiveStyle},style:(o={},bt(o,t.isHorizontal?"height":"width","100%"),bt(o,t.isHorizontal?"width":"height",t.tailSize),bt(o,t.mainDirection,"".concat(r.pos,"%")),o),on:{pressLabel:function(e){return t.setValueByPos(e)}}},[t.renderSlot("step",r,null),t.renderSlot("label",r,null)]),!0)})]):null,this.dots.map(function(r,n){var o;return e("vue-slider-dot",{ref:"dot-".concat(n),key:"dot-".concat(n),attrs:{value:r.value,disabled:r.disabled,focus:r.focus,"dot-style":[r.style,r.disabled?r.disabledStyle:null,r.focus?r.focusStyle:null],tooltip:r.tooltip||t.tooltip,"tooltip-style":[t.tooltipStyle,r.tooltipStyle,r.disabled?r.tooltipDisabledStyle:null,r.focus?r.tooltipFocusStyle:null],"tooltip-formatter":Array.isArray(t.tooltipFormatter)?t.tooltipFormatter[n]:t.tooltipFormatter,"tooltip-placement":t.tooltipDirections[n]},style:[t.dotBaseStyle,(o={},bt(o,t.mainDirection,"".concat(r.pos,"%")),bt(o,"transition","".concat(t.mainDirection," ").concat(t.animateTime,"s")),o)],on:{"drag-start":function(){return t.dragStart(n)}}},[t.renderSlot("dot",r,null),t.renderSlot("tooltip",r,null)])})]),1!==this.dots.length||this.data?null:e("input",{class:"vue-slider-sr-only",attrs:{type:"range",min:this.min,max:this.max},domProps:{value:this.value}})])}},{key:"tailSize",get:function(){return B((this.isHorizontal?this.height:this.width)||_t)}},{key:"containerClasses",get:function(){return["vue-slider",["vue-slider-".concat(this.direction)],{"vue-slider-disabled":this.disabled}]}},{key:"containerStyles",get:function(){var t=Array.isArray(this.dotSize)?this.dotSize:[this.dotSize,this.dotSize],e=ht(t,2),r=e[0],n=e[1],o=this.width?B(this.width):this.isHorizontal?"auto":B(_t),i=this.height?B(this.height):this.isHorizontal?B(_t):"auto";return{padding:this.contained?"".concat(n/2,"px ").concat(r/2,"px"):this.isHorizontal?"".concat(n/2,"px 0"):"0 ".concat(r/2,"px"),width:o,height:i}}},{key:"processArray",get:function(){var t=this;return this.control.processArray.map(function(e){var r,n=ht(e,3),o=n[0],i=n[1],s=n[2];if(o>i){var a=[i,o];o=a[0],i=a[1]}var u=t.isHorizontal?"width":"height";return{start:o,end:i,style:pt((r={},bt(r,t.isHorizontal?"height":"width","100%"),bt(r,t.isHorizontal?"top":"left",0),bt(r,t.mainDirection,"".concat(o,"%")),bt(r,u,"".concat(i-o,"%")),bt(r,"transitionProperty","".concat(u,",").concat(t.mainDirection)),bt(r,"transitionDuration","".concat(t.animateTime,"s")),r),t.processStyle,s)}})}},{key:"dotBaseStyle",get:function(){var t,e=Array.isArray(this.dotSize)?this.dotSize:[this.dotSize,this.dotSize],r=ht(e,2),n=r[0],o=r[1];return t=this.isHorizontal?bt({transform:"translate(".concat(this.isReverse?"50%":"-50%",", -50%)"),WebkitTransform:"translate(".concat(this.isReverse?"50%":"-50%",", -50%)"),top:"50%"},"ltr"===this.direction?"left":"right","0"):bt({transform:"translate(-50%, ".concat(this.isReverse?"50%":"-50%",")"),WebkitTransform:"translate(-50%, ".concat(this.isReverse?"50%":"-50%",")"),left:"50%"},"btt"===this.direction?"bottom":"top","0"),pt({width:"".concat(n,"px"),height:"".concat(o,"px")},t)}},{key:"mainDirection",get:function(){switch(this.direction){case"ltr":return"left";case"rtl":return"right";case"btt":return"bottom";case"ttb":return"top"}}},{key:"isHorizontal",get:function(){return"ltr"===this.direction||"rtl"===this.direction}},{key:"isReverse",get:function(){return"rtl"===this.direction||"btt"===this.direction}},{key:"tooltipDirections",get:function(){var t=this.tooltipPlacement||(this.isHorizontal?"top":"left");return Array.isArray(t)?t:this.dots.map(function(){return t})}},{key:"dots",get:function(){var t=this;return this.control.dotsPos.map(function(e,r){return pt({pos:e,index:r,value:t.control.dotsValue[r],focus:t.states.has(Vt.Focus)&&t.focusDotIndex===r,disabled:!1,style:t.dotStyle},(Array.isArray(t.dotOptions)?t.dotOptions[r]:t.dotOptions)||{})})}},{key:"animateTime",get:function(){return this.states.has(Vt.Drag)?0:this.duration}},{key:"canSort",get:function(){return this.order&&!this.minRange&&!this.maxRange&&!this.fixed&&this.enableCross}},{key:"isNotSync",get:function(){var t=this.control.dotsValue;return Array.isArray(this.value)?this.value.length!==t.length||this.value.some(function(e,r){return e!==t[r]}):this.value!==t[0]}},{key:"dragRange",get:function(){var t=this.dots[this.focusDotIndex-1],e=this.dots[this.focusDotIndex+1];return[t?t.pos:-1/0,e?e.pos:1/0]}}]),e}(s.a);o([d("change",{default:0})],Mt.prototype,"value",void 0),o([f({type:Boolean,default:!1})],Mt.prototype,"silent",void 0),o([f({default:"ltr",validator:function(t){return["ltr","rtl","ttb","btt"].indexOf(t)>-1}})],Mt.prototype,"direction",void 0),o([f({type:[Number,String]})],Mt.prototype,"width",void 0),o([f({type:[Number,String]})],Mt.prototype,"height",void 0),o([f({default:14})],Mt.prototype,"dotSize",void 0),o([f({default:!1})],Mt.prototype,"contained",void 0),o([f({type:Number,default:0})],Mt.prototype,"min",void 0),o([f({type:Number,default:100})],Mt.prototype,"max",void 0),o([f({type:Number,default:1})],Mt.prototype,"interval",void 0),o([f({type:Boolean,default:!1})],Mt.prototype,"disabled",void 0),o([f({type:Boolean,default:!0})],Mt.prototype,"clickable",void 0),o([f({type:Number,default:.5})],Mt.prototype,"duration",void 0),o([f(Array)],Mt.prototype,"data",void 0),o([f({type:Boolean,default:!1})],Mt.prototype,"lazy",void 0),o([f({type:String,validator:function(t){return["none","always","focus"].indexOf(t)>-1},default:"focus"})],Mt.prototype,"tooltip",void 0),o([f({type:[String,Array],validator:function(t){return(Array.isArray(t)?t:[t]).every(function(t){return["top","right","bottom","left"].indexOf(t)>-1})}})],Mt.prototype,"tooltipPlacement",void 0),o([f({type:[String,Array,Function]})],Mt.prototype,"tooltipFormatter",void 0),o([f({type:Boolean,default:!1})],Mt.prototype,"useKeyboard",void 0),o([f({type:Boolean,default:!0})],Mt.prototype,"enableCross",void 0),o([f({type:Boolean,default:!1})],Mt.prototype,"fixed",void 0),o([f({type:Boolean,default:!0})],Mt.prototype,"order",void 0),o([f(Number)],Mt.prototype,"minRange",void 0),o([f(Number)],Mt.prototype,"maxRange",void 0),o([f({type:[Boolean,Object,Array,Function],default:!1})],Mt.prototype,"marks",void 0),o([f({type:[Boolean,Function],default:!0})],Mt.prototype,"process",void 0),o([f(Boolean)],Mt.prototype,"included",void 0),o([f(Boolean)],Mt.prototype,"adsorb",void 0),o([f(Boolean)],Mt.prototype,"hideLabel",void 0),o([f()],Mt.prototype,"dotOptions",void 0),o([f()],Mt.prototype,"railStyle",void 0),o([f()],Mt.prototype,"processStyle",void 0),o([f()],Mt.prototype,"dotStyle",void 0),o([f()],Mt.prototype,"tooltipStyle",void 0),o([f()],Mt.prototype,"stepStyle",void 0),o([f()],Mt.prototype,"stepActiveStyle",void 0),o([f()],Mt.prototype,"labelStyle",void 0),o([f()],Mt.prototype,"labelActiveStyle",void 0),o([p("value")],Mt.prototype,"onValueChanged",null),Mt=o([u()({data:function(){return{control:null}},components:{VueSliderDot:P,VueSliderMark:T},inheritAttrs:!1})],Mt);var Ct=Mt,Nt=Ct;r.d(e,"ERROR_TYPE",function(){return W});e["default"]=Nt}})["default"]});
+//# sourceMappingURL=vue-slider-component.umd.min.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vue-slider-component/theme/antd.css":
+/*!**********************************************************!*\
+  !*** ./node_modules/vue-slider-component/theme/antd.css ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../css-loader??ref--6-1!../../postcss-loader/src??ref--6-2!./antd.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-slider-component/theme/antd.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
@@ -48751,6 +48457,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vee_validate_dist_locale_ru__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vee-validate/dist/locale/ru */ "./node_modules/vee-validate/dist/locale/ru.js");
 /* harmony import */ var vee_validate_dist_locale_ru__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vee_validate_dist_locale_ru__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vee_validate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vee-validate */ "./node_modules/vee-validate/dist/vee-validate.esm.js");
+/* harmony import */ var vue_cool_select__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-cool-select */ "./node_modules/vue-cool-select/dist/vue-cool-select.umd.min.js");
+/* harmony import */ var vue_cool_select__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_cool_select__WEBPACK_IMPORTED_MODULE_3__);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -48762,6 +48470,11 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+
+Vue.use(vue_cool_select__WEBPACK_IMPORTED_MODULE_3___default.a, {
+  theme: 'bootstrap' // or 'material-design'
+
+});
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -48932,7 +48645,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MainForm_vue_vue_type_template_id_59d07df0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MainForm.vue?vue&type=template&id=59d07df0& */ "./resources/js/components/MainForm.vue?vue&type=template&id=59d07df0&");
 /* harmony import */ var _MainForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MainForm.vue?vue&type=script&lang=js& */ "./resources/js/components/MainForm.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _MainForm_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MainForm.vue?vue&type=style&index=0&lang=scss& */ "./resources/js/components/MainForm.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -48940,7 +48655,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _MainForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _MainForm_vue_vue_type_template_id_59d07df0___WEBPACK_IMPORTED_MODULE_0__["render"],
   _MainForm_vue_vue_type_template_id_59d07df0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
@@ -48969,6 +48684,22 @@ component.options.__file = "resources/js/components/MainForm.vue"
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MainForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./MainForm.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MainForm.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MainForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/MainForm.vue?vue&type=style&index=0&lang=scss&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/MainForm.vue?vue&type=style&index=0&lang=scss& ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_lib_loader_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_MainForm_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/lib/loader.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./MainForm.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MainForm.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_lib_loader_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_MainForm_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_lib_loader_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_MainForm_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_lib_loader_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_MainForm_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_lib_loader_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_MainForm_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_lib_loader_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_MainForm_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 

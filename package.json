@@ -25,6 +25,9 @@
     },
     "dependencies": {
         "typewriter-effect": "^2.5.3",
-        "vee-validate": "^2.2.7"
+        "vee-validate": "^2.2.7",
+        "vue-cool-select": "^2.10.2",
+        "vue-dropdowns": "^1.0.6",
+        "vue-slider-component": "^3.0.31"
     }
 }
