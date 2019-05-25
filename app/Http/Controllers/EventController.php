@@ -41,6 +41,9 @@ class EventController extends Controller
 
     public function sendform(Request $request)
     {
+
+        $cityes = ['Республика Дагестан', 'Республика Ингушетия','Кабардино-Балкарская Республика','Карачаево-Черкесская Республика','Республика Северная Осетия - Алания','Чеченская Республика'];
+
         $result = 0;
         $result2 = 0;
 
@@ -54,7 +57,12 @@ class EventController extends Controller
         if($request['type'] == 'Кредит'){
    
 
-            if($request['form1']['region'] == 'СКФО (за исключением Ставропольского Края)'){
+            // if($request['form1']['region'] == 'СКФО (за исключением Ставропольского Края)'){
+            //     $result = $result - 15;
+            //     $result2 = $result2 - 1;
+            // }
+
+            if(in_array($request['form1']['region'], $cityes)){
                 $result = $result - 15;
                 $result2 = $result2 - 1;
             }
@@ -296,18 +304,30 @@ class EventController extends Controller
         }
         
         if($request['type'] == 'Грант'){
-            if($request['form2']['region'] == 'Все ригионы РФ кроме СКФО'){
-                $result = $result + 60;
-            }
 
-            if($request['form2']['region'] == 'СКФО (за исключением Ставропольского Края)'){
+            if(in_array($request['form1']['region'], $cityes)){
                 $result = $result + 40;
                 $result2 = $result2 - 1;
+            } else{
+                if($request['form2']['region'] == 'Ставропольский край'){
+                    $result = $result + 60;
+                } else {
+                    $result = $result + 60;
+                }
             }
 
-            if($request['form2']['region'] == 'Ставропольский Край'){
-                $result = $result + 60;
-            }
+            // if($request['form2']['region'] == 'Все ригионы РФ кроме СКФО'){
+            //     $result = $result + 60;
+            // }
+
+            // if($request['form2']['region'] == 'СКФО (за исключением Ставропольского Края)'){
+            //     $result = $result + 40;
+            //     $result2 = $result2 - 1;
+            // }
+
+            // if($request['form2']['region'] == 'Ставропольский край'){
+            //     $result = $result + 60;
+            // }
 
 
             
@@ -355,18 +375,19 @@ class EventController extends Controller
         }
 
         if($request['type'] == 'Субсидия'){
-            if($request['form4']['region'] == 'Все ригионы РФ кроме СКФО'){
-                $result = $result + 30;
-            }
 
-            if($request['form4']['region'] == 'СКФО (за исключением Ставропольского Края)'){
+
+            if(in_array($request['form1']['region'], $cityes)){
                 $result = $result + 10;
                 $result2 = $result2 -1;
+            } else{
+                if($request['form2']['region'] == 'Ставропольский край'){
+                    $result = $result + 30;
+                } else {
+                    $result = $result + 30;
+                }
             }
 
-            if($request['form4']['region'] == 'Ставропольский Край'){
-                $result = $result + 30;
-            }
 
             if($request['form4']['form'] == 'Глава кооператива'){
                 $result = $result + 5;
@@ -497,17 +518,15 @@ class EventController extends Controller
                 $result2 = $result2 - 10;
             }
 
-            if($request['form3']['region'] == 'Все ригионы РФ кроме СКФО'){
-                $result = $result + 30;
-            }
-
-            if($request['form3']['region'] == 'СКФО (за исключением Ставропольского Края)'){
+            if(in_array($request['form1']['region'], $cityes)){
                 $result = $result + 10;
                 $result2 = $result2 - 2;
-            }
-
-            if($request['form3']['region'] == 'Ставропольский Край'){
-                $result = $result + 30;
+            } else{
+                if($request['form2']['region'] == 'Ставропольский край'){
+                    $result = $result + 30;
+                } else {
+                    $result = $result + 30;
+                }
             }
 
             if($request['form3']['finance'] == 'Есть'){
