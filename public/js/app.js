@@ -36411,11 +36411,20 @@ var staticRenderFns = [
       _vm._v(
         "\n                                Нажимая «Отправить заявку», вы принимаете "
       ),
-      _c("a", { attrs: { href: "#", target: "_blank" } }, [
-        _vm._v(
-          "условия передачи\n                                    информации"
-        )
-      ])
+      _c(
+        "a",
+        {
+          attrs: {
+            href: "http://agrodohod.ru/download/policy",
+            target: "_blank"
+          }
+        },
+        [
+          _vm._v(
+            "условия передачи\n                                    информации"
+          )
+        ]
+      )
     ])
   }
 ]

@@ -614,7 +614,7 @@
                                     :disabled="loadbtn || checkBtn3">Отправить заявку</button>
                             </div>
                             <div class="calc-form__message">
-                                Нажимая «Отправить заявку», вы принимаете <a href="#" target="_blank">условия передачи
+                                Нажимая «Отправить заявку», вы принимаете <a href="http://agrodohod.ru/download/policy" target="_blank">условия передачи
                                     информации</a>
                             </div>
                         </div>
