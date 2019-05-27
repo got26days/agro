@@ -922,6 +922,9 @@
         },
         computed: {
 			overOp(){
+                if((this.mainform.type == 'Проектное финансирование')) {
+					return 500000000;
+				}
 				if((this.mainform.orgform == 'ИП КФХ (существует менее 2 лет)') || (this.mainform.orgform == 'Физлицо')) {
 					return 3000000;
 				}
