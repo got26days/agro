@@ -83,14 +83,14 @@
 										 </cool-select>
 									<p v-show="errors.first('mainform.form1.region')">Поле обязательно для заполнения</p>
 								</label>
-								<div class="calc-form__slider js-rang-slider">
+								<div class="calc-form__slider">
 									<div class="calc-form__slider-txt">Сумма кредита</div>
 									<label class="calc-form__slider-val" >
 										<div class="new-selector">
-											<input type="number" id="amount-4" class="out-input" v-model="mainform.form1.summ" @focus="focused = true" @blur="onBlur" v-show="focused" ref="summ1"> 
+											<input type="number" class="out-input" v-model="mainform.form1.summ" @focus="focused = true" @blur="onBlur" v-show="focused" ref="summ1"> 
 											<span v-show="!focused" @click="openInput('summ1')">{{ mainform.form1.summ }} &#8381;</span>
 										</div>
-										<vue-slider v-model="mainform.form1.summ" v-bind="options"/>
+										<vue-slider v-model="mainform.form1.summ" v-bind="options" :disabled="watchCheck"/>
 									</label>       							
 									<div class="calc-form__slider-blc" id="slider-range-credit"></div>
 									<div class="calc-form__slider-row">
@@ -99,7 +99,7 @@
 									</div>
 								</div>
 								<label class="calc-form__checkbox">
-									<input type="checkbox" id="js-check-toggler" v-model="mainform.form1.needprice">
+									<input type="checkbox" v-model="mainform.form1.needprice">
 									<span class="calc-form__checkbox-dop"></span>
 									<span class="calc-form__checkbox-txt">Нужен расчет от АгроДохода</span>
 								</label>
@@ -794,7 +794,8 @@ import 'vue-slider-component/theme/antd.css'
 					width: 'auto',
 					dotSize: 40,
 					dotStyle: '#64dc66',
-					tooltip: 'none'
+					tooltip: 'none',
+					interval: 100000,
 				},
 				mainform: {
 					type: null,
@@ -952,6 +953,13 @@ import 'vue-slider-component/theme/antd.css'
 			}
 		},
 		computed: {
+			watchCheck(){
+				if((this.mainform.type == 'Кредит') && (this.mainform.form1.needprice == true)){
+					return true;
+				} else {
+					return false;
+				}
+			},
 			checkBtn1: function(){
 
 				if(this.mainform.sourcetwo == null) {
