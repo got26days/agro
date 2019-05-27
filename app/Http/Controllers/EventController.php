@@ -621,7 +621,7 @@ class EventController extends Controller
             $loan->region = $request['form1']['region'];
             $loan->summ = $request['form1']['summ'];
             $loan->needprice = $request['form1']['needprice'];
-            $loan->orgform = $request['form1']['orgform'];
+            $loan->orgform = $request['orgform'];
             $loan->dateur = $request['form1']['dateur'];
             $loan->yearbalance = $request['form1']['yearbalance'];
             $loan->history = $request['form1']['history'];
@@ -645,7 +645,7 @@ class EventController extends Controller
             $grant->email = $request['form2']['email'];
             $grant->position = $request['form2']['position'];
             $grant->region = $request['form2']['region'];
-            $grant->status = $request['form2']['status'];
+            $grant->status = $request['orgform'];
             $grant->summ = $request['form2']['summ'];
             $grant->have = $request['form2']['have'];
             $grant->target = $request['form2']['target'];
@@ -667,7 +667,7 @@ class EventController extends Controller
             $finan->phone = $request['form3']['phone'];
             $finan->email = $request['form3']['email'];
             $finan->position = $request['form3']['position'];
-            $finan->form = $request['form3']['form'];
+            $finan->form = $request['orgform'];
             $finan->summ = $request['form3']['summ'];
             $finan->studia = $request['form3']['studia'];
             $finan->balance = $request['form3']['balance'];
@@ -693,7 +693,7 @@ class EventController extends Controller
             $sub->email = $request['form4']['email'];
             $sub->position = $request['form4']['position'];
             $sub->region = $request['form4']['region'];
-            $sub->form = $request['form4']['form'];
+            $sub->form = $request['orgform'];
             $sub->type = $request['form4']['type'];
             $sub->buhgalrer = $request['form4']['buhgalrer'];
             $sub->geter = $request['form4']['geter'];

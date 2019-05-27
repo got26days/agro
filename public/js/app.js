@@ -2450,43 +2450,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -2518,11 +2481,12 @@ __webpack_require__.r(__webpack_exports__);
         sendpercent: this.percent,
         sendpoint: this.point,
         sourcetwo: null,
+        orgform: null,
         form1: {
           region: null,
           summ: 5000000,
           needprice: false,
-          orgform: null,
+          // orgform: null,
           dateur: null,
           yearbalance: null,
           history: null,
@@ -2538,7 +2502,7 @@ __webpack_require__.r(__webpack_exports__);
         },
         form2: {
           region: null,
-          status: null,
+          // status: null,
           summ: 5000000,
           have: null,
           target: null,
@@ -2552,7 +2516,7 @@ __webpack_require__.r(__webpack_exports__);
           position: ''
         },
         form3: {
-          form: null,
+          // form: null,
           summ: 5000000,
           studia: null,
           balance: null,
@@ -2571,7 +2535,7 @@ __webpack_require__.r(__webpack_exports__);
         },
         form4: {
           region: null,
-          form: null,
+          // form: null,
           type: null,
           buhgalrer: null,
           geter: null,
@@ -2647,6 +2611,49 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   computed: {
+    checkError: function checkError() {
+      if (this.mainform.orgform == 'ИП' && this.mainform.type == 'Грант') {
+        return true;
+      }
+
+      if (this.mainform.orgform == 'ИП' && this.mainform.type == 'Грант') {
+        return true;
+      }
+
+      if (this.mainform.orgform == 'ООО' && this.mainform.type == 'Грант') {
+        return true;
+      }
+
+      if (this.mainform.orgform == 'ОАО' && this.mainform.type == 'Грант') {
+        return true;
+      }
+
+      if (this.mainform.orgform == 'ЗАО' && this.mainform.type == 'Грант') {
+        return true;
+      }
+
+      if (this.mainform.orgform == 'Другое' && this.mainform.type == 'Грант') {
+        return true;
+      }
+
+      if (this.mainform.orgform == 'ИП КФХ (существует менее 2 лет)' && this.mainform.type == 'Проектное финансирование') {
+        return true;
+      }
+
+      if (this.mainform.orgform == 'ИП КФХ (существует более 2 лет)' && this.mainform.type == 'Проектное финансирование') {
+        return true;
+      }
+
+      if (this.mainform.orgform == 'Физлицо' && this.mainform.type == 'Проектное финансирование') {
+        return true;
+      }
+
+      if (this.mainform.orgform == 'ИП' && this.mainform.type == 'Проектное финансирование') {
+        return true;
+      }
+
+      return false;
+    },
     watchCheck: function watchCheck() {
       if (this.mainform.type == 'Кредит' && this.mainform.form1.needprice == true) {
         return true;
@@ -2660,11 +2667,11 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       if (this.mainform.type == 'Кредит') {
-        if (this.mainform.form1.region == null || this.mainform.form1.summ == null || this.mainform.form1.yearbalance == null || this.mainform.form1.orgform == null || this.mainform.form1.yearbalance == null) {
+        if (this.mainform.form1.region == null || this.mainform.form1.summ == null || this.mainform.form1.yearbalance == null || this.mainform.orgform == null || this.mainform.form1.yearbalance == null) {
           return true;
         }
 
-        if (this.mainform.form1.orgform != 'Физлицо') {
+        if (this.mainform.orgform != 'Физлицо') {
           if (this.mainform.form1.dateur == "") {
             return true;
           }
@@ -2676,19 +2683,19 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       if (this.mainform.type == 'Грант') {
-        if (this.mainform.form2.region == null || this.mainform.form2.status == null || this.mainform.form2.summ == null || this.mainform.form2.have == null) {
+        if (this.mainform.form2.region == null || this.mainform.form2.summ == null || this.mainform.form2.have == null) {
           return true;
         }
       }
 
       if (this.mainform.type == 'Проектное финансирование') {
-        if (this.mainform.form3.form == null || this.mainform.form3.summ == null || this.mainform.form3.studia == null || this.mainform.form3.balance == null || this.mainform.form3.history == null) {
+        if (this.mainform.form3.summ == null || this.mainform.form3.studia == null || this.mainform.form3.balance == null || this.mainform.form3.history == null) {
           return true;
         }
       }
 
       if (this.mainform.type == 'Субсидия') {
-        if (this.mainform.form4.region == null || this.mainform.form4.form == null || this.mainform.form4.type == null || this.mainform.form4.buhgalrer == null) {
+        if (this.mainform.form4.region == null || this.mainform.form4.type == null || this.mainform.form4.buhgalrer == null) {
           return true;
         }
       }
@@ -32305,6 +32312,65 @@ var render = function() {
                   { staticClass: "calc-form__label js-label" },
                   [
                     _c("span", { staticClass: "calc-form__label-title" }, [
+                      _vm._v("Организационная форма")
+                    ]),
+                    _vm._v(" "),
+                    _c("cool-select", {
+                      directives: [
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required",
+                          expression: "'required'"
+                        }
+                      ],
+                      attrs: {
+                        items: [
+                          "",
+                          "ИП КФХ (существует менее 2 лет)",
+                          "ИП КФХ (существует более 2 лет)",
+                          "Глава кооператива",
+                          "Физлицо",
+                          "ИП",
+                          "ООО",
+                          "ОАО",
+                          "ЗАО",
+                          "Другое"
+                        ],
+                        name: "mainform.orgform"
+                      },
+                      model: {
+                        value: _vm.mainform.orgform,
+                        callback: function($$v) {
+                          _vm.$set(_vm.mainform, "orgform", $$v)
+                        },
+                        expression: "mainform.orgform"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.first("mainform.orgform"),
+                            expression: "errors.first('mainform.orgform')"
+                          }
+                        ]
+                      },
+                      [_vm._v("Поле обязательно для заполнения")]
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "label",
+                  { staticClass: "calc-form__label js-label" },
+                  [
+                    _c("span", { staticClass: "calc-form__label-title" }, [
                       _vm._v("Вид финансирования")
                     ]),
                     _vm._v(" "),
@@ -32349,6 +32415,206 @@ var render = function() {
                         ]
                       },
                       [_vm._v("Поле обязательно для заполнения")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value:
+                              _vm.mainform.orgform == "ИП" &&
+                              _vm.mainform.type == "Грант",
+                            expression:
+                              "((mainform.orgform == 'ИП') && (mainform.type == 'Грант'))"
+                          }
+                        ]
+                      },
+                      [
+                        _vm._v(
+                          "Безвозмездное\n                                финансирование от государства доступно только для ИП КФХ и глав кооперативов."
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value:
+                              _vm.mainform.orgform == "ООО" &&
+                              _vm.mainform.type == "Грант",
+                            expression:
+                              "((mainform.orgform == 'ООО') && (mainform.type == 'Грант'))"
+                          }
+                        ]
+                      },
+                      [
+                        _vm._v(
+                          "Безвозмездное\n                                финансирование от государства доступно только для ИП КФХ и глав кооперативов."
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value:
+                              _vm.mainform.orgform == "ОАО" &&
+                              _vm.mainform.type == "Грант",
+                            expression:
+                              "((mainform.orgform == 'ОАО') && (mainform.type == 'Грант'))"
+                          }
+                        ]
+                      },
+                      [
+                        _vm._v(
+                          "Безвозмездное\n                                финансирование от государства доступно только для ИП КФХ и глав кооперативов."
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value:
+                              _vm.mainform.orgform == "ЗАО" &&
+                              _vm.mainform.type == "Грант",
+                            expression:
+                              "((mainform.orgform == 'ЗАО') && (mainform.type == 'Грант'))"
+                          }
+                        ]
+                      },
+                      [
+                        _vm._v(
+                          "Безвозмездное\n                                финансирование от государства доступно только для ИП КФХ и глав кооперативов."
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value:
+                              _vm.mainform.orgform == "Другое" &&
+                              _vm.mainform.type == "Грант",
+                            expression:
+                              "((mainform.orgform == 'Другое') && (mainform.type == 'Грант'))"
+                          }
+                        ]
+                      },
+                      [
+                        _vm._v(
+                          "Безвозмездное\n                                финансирование от государства доступно только для ИП КФХ и глав кооперативов."
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value:
+                              _vm.mainform.orgform ==
+                                "ИП КФХ (существует менее 2 лет)" &&
+                              _vm.mainform.type == "Проектное финансирование",
+                            expression:
+                              "((mainform.orgform == 'ИП КФХ (существует менее 2 лет)') && (mainform.type == 'Проектное финансирование'))"
+                          }
+                        ]
+                      },
+                      [
+                        _vm._v(
+                          "\n                                Кредиты под целевые проекты от 100 миллионов рублей доступны только для глав\n                                кооперативов, ООО, ОАО и ЗАО."
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value:
+                              _vm.mainform.orgform ==
+                                "ИП КФХ (существует более 2 лет)" &&
+                              _vm.mainform.type == "Проектное финансирование",
+                            expression:
+                              "((mainform.orgform == 'ИП КФХ (существует более 2 лет)') && (mainform.type == 'Проектное финансирование'))"
+                          }
+                        ]
+                      },
+                      [
+                        _vm._v(
+                          "\n                                Кредиты под целевые проекты от 100 миллионов рублей доступны только для глав\n                                кооперативов, ООО, ОАО и ЗАО."
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value:
+                              _vm.mainform.orgform == "Физлицо" &&
+                              _vm.mainform.type == "Проектное финансирование",
+                            expression:
+                              "((mainform.orgform == 'Физлицо') && (mainform.type == 'Проектное финансирование'))"
+                          }
+                        ]
+                      },
+                      [
+                        _vm._v(
+                          "\n                                Кредиты под целевые проекты от 100 миллионов рублей доступны только для глав\n                                кооперативов, ООО, ОАО и ЗАО."
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value:
+                              _vm.mainform.orgform == "ИП" &&
+                              _vm.mainform.type == "Проектное финансирование",
+                            expression:
+                              "((mainform.orgform == 'ИП') && (mainform.type == 'Проектное финансирование'))"
+                          }
+                        ]
+                      },
+                      [
+                        _vm._v(
+                          "\n                                Кредиты под целевые проекты от 100 миллионов рублей доступны только для глав\n                                кооперативов, ООО, ОАО и ЗАО."
+                        )
+                      ]
                     )
                   ],
                   1
@@ -32361,8 +32627,9 @@ var render = function() {
                       {
                         name: "show",
                         rawName: "v-show",
-                        value: _vm.mainform.type === null,
-                        expression: "mainform.type === null"
+                        value: _vm.mainform.type === null || _vm.checkError,
+                        expression:
+                          "((mainform.type === null) || ( checkError ))"
                       }
                     ]
                   },
@@ -32423,8 +32690,10 @@ var render = function() {
                       {
                         name: "show",
                         rawName: "v-show",
-                        value: _vm.mainform.type === "Кредит",
-                        expression: "mainform.type === 'Кредит'"
+                        value:
+                          _vm.mainform.type === "Кредит" && !_vm.checkError,
+                        expression:
+                          "((mainform.type === 'Кредит') && (!checkError))"
                       }
                     ]
                   },
@@ -32545,7 +32814,12 @@ var render = function() {
                                   }
                                 }
                               },
-                              [_vm._v(_vm._s(_vm.mainform.form1.summ) + " ₽")]
+                              [
+                                _vm._v(
+                                  _vm._s(_vm.mainform.form1.summ) +
+                                    "\n                                            ₽"
+                                )
+                              ]
                             )
                           ]),
                           _vm._v(" "),
@@ -32648,64 +32922,6 @@ var render = function() {
                       ])
                     ]),
                     _vm._v(" "),
-                    _c(
-                      "label",
-                      { staticClass: "calc-form__label js-label" },
-                      [
-                        _c("span", { staticClass: "calc-form__label-title" }, [
-                          _vm._v("Организационная форма")
-                        ]),
-                        _vm._v(" "),
-                        _c("cool-select", {
-                          directives: [
-                            {
-                              name: "validate",
-                              rawName: "v-validate",
-                              value: "required",
-                              expression: "'required'"
-                            }
-                          ],
-                          attrs: {
-                            items: [
-                              "",
-                              "Физлицо",
-                              "ИП",
-                              "ООО",
-                              "Кооператив",
-                              "Холдинг"
-                            ],
-                            name: "mainform.form1.orgform"
-                          },
-                          model: {
-                            value: _vm.mainform.form1.orgform,
-                            callback: function($$v) {
-                              _vm.$set(_vm.mainform.form1, "orgform", $$v)
-                            },
-                            expression: "mainform.form1.orgform"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "p",
-                          {
-                            directives: [
-                              {
-                                name: "show",
-                                rawName: "v-show",
-                                value: _vm.errors.first(
-                                  "mainform.form1.orgform"
-                                ),
-                                expression:
-                                  "errors.first('mainform.form1.orgform')"
-                              }
-                            ]
-                          },
-                          [_vm._v("Поле обязательно для заполнения")]
-                        )
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
                     _c("label", { staticClass: "calc-form__label js-label" }, [
                       _c("span", { staticClass: "calc-form__label-title" }, [
                         _vm._v("Дата создания юридического лица")
@@ -32722,11 +32938,11 @@ var render = function() {
                         ],
                         staticClass: "input calc-form__input js-input",
                         class: {
-                          isdissabled: _vm.mainform.form1.orgform == "Физлицо"
+                          isdissabled: _vm.mainform.orgform == "Физлицо"
                         },
                         attrs: {
                           type: "date",
-                          disabled: _vm.mainform.form1.orgform == "Физлицо"
+                          disabled: _vm.mainform.orgform == "Физлицо"
                         },
                         domProps: { value: _vm.mainform.form1.dateur },
                         on: {
@@ -32794,7 +33010,11 @@ var render = function() {
                               }
                             ]
                           },
-                          [_vm._v("Поле обязательно для заполнения")]
+                          [
+                            _vm._v(
+                              "Поле обязательно для заполнения\n                                "
+                            )
+                          ]
                         )
                       ],
                       1
@@ -32809,8 +33029,9 @@ var render = function() {
                       {
                         name: "show",
                         rawName: "v-show",
-                        value: _vm.mainform.type === "Грант",
-                        expression: "mainform.type === 'Грант'"
+                        value: _vm.mainform.type === "Грант" && !_vm.checkError,
+                        expression:
+                          "((mainform.type === 'Грант') && (!checkError))"
                       }
                     ]
                   },
@@ -32867,74 +33088,12 @@ var render = function() {
                     ),
                     _vm._v(" "),
                     _c(
-                      "label",
-                      { staticClass: "calc-form__label js-label" },
-                      [
-                        _c("span", { staticClass: "calc-form__label-title" }, [
-                          _vm._v("Статус")
-                        ]),
-                        _vm._v(" "),
-                        _c("cool-select", {
-                          directives: [
-                            {
-                              name: "validate",
-                              rawName: "v-validate",
-                              value: "required",
-                              expression: "'required'"
-                            }
-                          ],
-                          attrs: {
-                            items: [
-                              "",
-                              "ИП КФХ (существует менее 2 лет)",
-                              "ИП КФХ (существует более 2 лет)",
-                              "Глава кооператива",
-                              "Физлицо",
-                              "ИП",
-                              "ООО",
-                              "ОАО",
-                              "ЗАО",
-                              "Другое"
-                            ],
-                            name: "mainform.form2.status"
-                          },
-                          model: {
-                            value: _vm.mainform.form2.status,
-                            callback: function($$v) {
-                              _vm.$set(_vm.mainform.form2, "status", $$v)
-                            },
-                            expression: "mainform.form2.status"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "p",
-                          {
-                            directives: [
-                              {
-                                name: "show",
-                                rawName: "v-show",
-                                value: _vm.errors.first(
-                                  "mainform.form2.status"
-                                ),
-                                expression:
-                                  "errors.first('mainform.form2.status')"
-                              }
-                            ]
-                          },
-                          [_vm._v("Поле обязательно для заполнения")]
-                        )
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
                       "div",
                       { staticClass: "calc-form__slider js-rang-slider" },
                       [
                         _c("div", { staticClass: "calc-form__slider-txt" }, [
                           _vm._v(
-                            "Доступен грант «Начинающий фермер». Какая сумма необходима?"
+                            "Доступен грант «Начинающий фермер». Какая сумма\n                                    необходима?"
                           )
                         ]),
                         _vm._v(" "),
@@ -32997,7 +33156,12 @@ var render = function() {
                                     }
                                   }
                                 },
-                                [_vm._v(_vm._s(_vm.mainform.form2.summ) + " ₽")]
+                                [
+                                  _vm._v(
+                                    _vm._s(_vm.mainform.form2.summ) +
+                                      "\n                                            ₽"
+                                  )
+                                ]
                               )
                             ]),
                             _vm._v(" "),
@@ -33077,7 +33241,7 @@ var render = function() {
                         _vm._v(" "),
                         _c("span", { staticClass: "calc-form__label-sub" }, [
                           _vm._v(
-                            "*Требование комиссии при подаче заявки на грант"
+                            "*Требование комиссии при подаче заявки на\n                                    грант"
                           )
                         ]),
                         _vm._v(" "),
@@ -33109,69 +33273,15 @@ var render = function() {
                       {
                         name: "show",
                         rawName: "v-show",
-                        value: _vm.mainform.type === "Проектное финансирование",
+                        value:
+                          _vm.mainform.type === "Проектное финансирование" &&
+                          !_vm.checkError,
                         expression:
-                          "mainform.type === 'Проектное финансирование'"
+                          "((mainform.type === 'Проектное финансирование') && (!checkError))"
                       }
                     ]
                   },
                   [
-                    _c(
-                      "label",
-                      { staticClass: "calc-form__label js-label" },
-                      [
-                        _c("span", { staticClass: "calc-form__label-title" }, [
-                          _vm._v("Правовая форма собственности")
-                        ]),
-                        _vm._v(" "),
-                        _c("cool-select", {
-                          directives: [
-                            {
-                              name: "validate",
-                              rawName: "v-validate",
-                              value: "required",
-                              expression: "'required'"
-                            }
-                          ],
-                          attrs: {
-                            items: [
-                              "",
-                              "ООО",
-                              "Холдинг",
-                              "ЗАО",
-                              "ОАО",
-                              "Другое"
-                            ],
-                            name: "mainform.form3.form"
-                          },
-                          model: {
-                            value: _vm.mainform.form3.form,
-                            callback: function($$v) {
-                              _vm.$set(_vm.mainform.form3, "form", $$v)
-                            },
-                            expression: "mainform.form3.form"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "p",
-                          {
-                            directives: [
-                              {
-                                name: "show",
-                                rawName: "v-show",
-                                value: _vm.errors.first("mainform.form3.form"),
-                                expression:
-                                  "errors.first('mainform.form3.form')"
-                              }
-                            ]
-                          },
-                          [_vm._v("Поле обязательно для заполнения")]
-                        )
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
                     _c(
                       "div",
                       { staticClass: "calc-form__slider js-rang-slider" },
@@ -33239,7 +33349,12 @@ var render = function() {
                                     }
                                   }
                                 },
-                                [_vm._v(_vm._s(_vm.mainform.form3.summ) + " ₽")]
+                                [
+                                  _vm._v(
+                                    _vm._s(_vm.mainform.form3.summ) +
+                                      "\n                                            ₽"
+                                  )
+                                ]
                               )
                             ]),
                             _vm._v(" "),
@@ -33468,8 +33583,10 @@ var render = function() {
                       {
                         name: "show",
                         rawName: "v-show",
-                        value: _vm.mainform.type === "Субсидия",
-                        expression: "mainform.type === 'Субсидия'"
+                        value:
+                          _vm.mainform.type === "Субсидия" && !_vm.checkError,
+                        expression:
+                          "((mainform.type === 'Субсидия') && (!checkError))"
                       }
                     ]
                   },
@@ -33516,66 +33633,6 @@ var render = function() {
                                 ),
                                 expression:
                                   "errors.first('mainform.form4.region')"
-                              }
-                            ]
-                          },
-                          [_vm._v("Поле обязательно для заполнения")]
-                        )
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "label",
-                      { staticClass: "calc-form__label js-label" },
-                      [
-                        _c("span", { staticClass: "calc-form__label-title" }, [
-                          _vm._v("Организационная форма")
-                        ]),
-                        _vm._v(" "),
-                        _c("cool-select", {
-                          directives: [
-                            {
-                              name: "validate",
-                              rawName: "v-validate",
-                              value: "required",
-                              expression: "'required'"
-                            }
-                          ],
-                          attrs: {
-                            items: [
-                              "",
-                              "ИП КФХ (существует менее 2 лет)",
-                              "ИП КФХ (существует более 2 лет)",
-                              "Глава кооператива",
-                              "Физлицо",
-                              "ИП",
-                              "ООО",
-                              "ОАО",
-                              "ЗАО",
-                              "Другое"
-                            ],
-                            name: "mainform.form4.form"
-                          },
-                          model: {
-                            value: _vm.mainform.form4.form,
-                            callback: function($$v) {
-                              _vm.$set(_vm.mainform.form4, "form", $$v)
-                            },
-                            expression: "mainform.form4.form"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "p",
-                          {
-                            directives: [
-                              {
-                                name: "show",
-                                rawName: "v-show",
-                                value: _vm.errors.first("mainform.form4.form"),
-                                expression:
-                                  "errors.first('mainform.form4.form')"
                               }
                             ]
                           },
@@ -34228,7 +34285,7 @@ var render = function() {
                       [
                         _c("span", { staticClass: "calc-form__label-title" }, [
                           _vm._v(
-                            "Расчет доходности хозяйства на текущий момент"
+                            "Расчет доходности хозяйства на текущий\n                                    момент"
                           )
                         ]),
                         _vm._v(" "),
@@ -34593,7 +34650,11 @@ var render = function() {
                               }
                             ]
                           },
-                          [_vm._v("Поле обязательно для заполнения")]
+                          [
+                            _vm._v(
+                              "Поле обязательно для заполнения\n                                "
+                            )
+                          ]
                         )
                       ],
                       1
@@ -34730,7 +34791,12 @@ var render = function() {
                                     }
                                   }
                                 },
-                                [_vm._v(_vm._s(_vm.mainform.form4.summ) + " ₽")]
+                                [
+                                  _vm._v(
+                                    _vm._s(_vm.mainform.form4.summ) +
+                                      "\n                                            ₽"
+                                  )
+                                ]
                               )
                             ]),
                             _vm._v(" "),
@@ -35151,7 +35217,11 @@ var render = function() {
                               }
                             ]
                           },
-                          [_vm._v("Поле обязательно для заполнения")]
+                          [
+                            _vm._v(
+                              "Поле обязательно для заполнения\n                                "
+                            )
+                          ]
                         )
                       ],
                       1
@@ -35314,7 +35384,7 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "Поле обязательно для заполнения и должно быть формата email@email.com"
+                            "Поле обязательно для заполнения и\n                                    должно быть формата email@email.com"
                           )
                         ]
                       )
@@ -35492,7 +35562,7 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "Поле обязательно для заполнения и должно быть формата email@email.com"
+                            "Поле обязательно для заполнения и\n                                    должно быть формата email@email.com"
                           )
                         ]
                       )
@@ -35630,7 +35700,7 @@ var render = function() {
                       [
                         _c("span", { staticClass: "calc-form__label-title" }, [
                           _vm._v(
-                            "От суммы проекта имеются собственные средства "
+                            "От суммы проекта имеются собственные средства\n                                "
                           )
                         ]),
                         _vm._v(" "),
@@ -35834,7 +35904,7 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "Поле обязательно для заполнения и должно быть формата email@email.com"
+                            "Поле обязательно для заполнения и\n                                    должно быть формата email@email.com"
                           )
                         ]
                       )
@@ -36071,7 +36141,7 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "Поле обязательно для заполнения и должно быть формата email@email.com"
+                            "Поле обязательно для заполнения и\n                                    должно быть формата email@email.com"
                           )
                         ]
                       )
@@ -36186,13 +36256,13 @@ var render = function() {
           _c("div", { staticClass: "container" }, [
             _c("div", { staticClass: "calc-ready__blc" }, [
               _c("div", { staticClass: "calc-ready__blc-txt" }, [
-                _vm._v("\n\t\t\t\t\t\t\tВероятность получения "),
+                _vm._v("\n                            Вероятность получения "),
                 _c("span", [_vm._v("гранта")]),
-                _vm._v(" на сумму \n\n\t\t\t\t\t\t\t"),
+                _vm._v(" на сумму\n\n                            "),
                 _c("span", [_vm._v(_vm._s(_vm.summresult))]),
                 _vm._v(" "),
                 _c("i", { staticClass: "rub" }, [_vm._v("₽")]),
-                _vm._v(" составит\n\t\t\t\t\t\t")
+                _vm._v(" составит\n                        ")
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "calc-ready__blc-persent" }, [
@@ -36202,7 +36272,7 @@ var render = function() {
             _vm._v(" "),
             _c("div", { staticClass: "calc-ready__txt" }, [
               _vm._v(
-                "\n            \t\t\tМы приняли вашу заявку.  В ближайшее время с вами свяжется наш менеджер для уточнения деталей.\n            \t\t"
+                "\n                        Мы приняли вашу заявку. В ближайшее время с вами свяжется наш менеджер для уточнения деталей.\n                    "
               )
             ]),
             _vm._v(" "),
@@ -36261,7 +36331,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("span", { staticClass: "calc-form__label-title" }, [
       _vm._v("Наличие 10% от запрашиваемой суммы "),
-      _c("span", [_vm._v("на счету")]),
+      _c("span", [_vm._v("на\n                                        счету")]),
       _c("sup", [_vm._v("*")])
     ])
   },
@@ -36309,10 +36379,12 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "calc-form__message" }, [
       _vm._v(
-        "\n       \t\t\t\t\t\t\t\tНажимая «Отправить заявку», вы принимаете "
+        "\n                                Нажимая «Отправить заявку», вы принимаете "
       ),
       _c("a", { attrs: { href: "#", target: "_blank" } }, [
-        _vm._v("условия передачи информации")
+        _vm._v(
+          "условия передачи\n                                    информации"
+        )
       ])
     ])
   }
