@@ -2507,6 +2507,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
+      opman: this.manager,
       focused: false,
       currentPage: 1,
       result: '',
@@ -2522,84 +2523,84 @@ __webpack_require__.r(__webpack_exports__);
         tooltip: 'none'
       },
       mainform: {
-        type: '',
+        type: null,
         sendpercent: this.percent,
         sendpoint: this.point,
-        source: '',
+        sourcetwo: null,
         form1: {
-          region: '',
+          region: null,
           summ: 5000000,
           needprice: false,
-          orgform: '',
-          dateur: '',
-          yearbalance: '',
-          history: '',
-          credit: '',
-          term: '',
-          target: '',
-          moment: '',
-          payment: '',
-          accounting: '',
+          orgform: null,
+          dateur: null,
+          yearbalance: null,
+          history: null,
+          credit: null,
+          term: null,
+          target: null,
+          moment: null,
+          payment: null,
+          accounting: null,
           name: '',
           phone: '',
           email: ''
         },
         form2: {
-          region: '',
-          status: '',
+          region: null,
+          status: null,
           summ: 5000000,
-          have: '',
-          target: '',
-          type: '',
-          chlen: '',
-          term: '',
-          raschet: '',
+          have: null,
+          target: null,
+          type: null,
+          chlen: null,
+          term: null,
+          raschet: null,
           name: '',
           phone: '',
           email: '',
           position: ''
         },
         form3: {
-          form: '',
+          form: null,
           summ: 5000000,
-          studia: '',
-          balance: '',
-          history: '',
-          region: '',
-          srok: '',
-          finance: '',
-          zalog: '',
-          secondsrok: '',
-          present: '',
-          sredstva: '',
+          studia: null,
+          balance: null,
+          history: null,
+          region: null,
+          srok: null,
+          finance: null,
+          zalog: null,
+          secondsrok: null,
+          present: null,
+          sredstva: null,
           name: '',
           phone: '',
           email: '',
-          position: ''
+          position: null
         },
         form4: {
-          region: '',
-          form: '',
-          type: '',
-          buhgalrer: '',
-          geter: '',
+          region: null,
+          form: null,
+          type: null,
+          buhgalrer: null,
+          geter: null,
           summ: 1000000,
           need: '',
-          answer: '',
-          dolg: '',
-          proc: '',
+          answer: null,
+          dolg: null,
+          proc: null,
           name: '',
           phone: '',
           email: '',
-          position: ''
+          position: null
         }
       }
     };
   },
   props: ['percent', 'point', 'manager'],
-  mounted: function mounted() {
-    if (this.manager == false) {
-      this.mainform.source = 'Анкета на сайте';
+  created: function created() {
+    if (this.opman == false) {
+      this.mainform.sourcetwo = "Анкета на сайте"; // console.log(this.mainform.sourcetwo);
     }
   },
   methods: {
@@ -2656,7 +2657,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     checkBtn1: function checkBtn1() {
-      if (this.mainform.source == '') {
+      if (this.mainform.sourcetwo == null) {
         return true;
       }
 
@@ -32251,63 +32252,55 @@ var render = function() {
               _vm._m(1),
               _vm._v(" "),
               _c("div", { staticClass: "calc-form" }, [
-                _c(
-                  "label",
-                  {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: _vm.manager,
-                        expression: "manager"
-                      }
-                    ],
-                    staticClass: "calc-form__label js-label"
-                  },
-                  [
-                    _c("span", { staticClass: "calc-form__label-title" }, [
-                      _vm._v("Источник заявки")
-                    ]),
-                    _vm._v(" "),
-                    _c("cool-select", {
-                      directives: [
-                        {
-                          name: "validate",
-                          rawName: "v-validate",
-                          value: "required",
-                          expression: "'required'"
-                        }
-                      ],
-                      attrs: {
-                        items: ["", "Звонок", "Личная встреча", "Грант"],
-                        name: "mainform.source"
-                      },
-                      model: {
-                        value: _vm.mainform.source,
-                        callback: function($$v) {
-                          _vm.$set(_vm.mainform, "source", $$v)
-                        },
-                        expression: "mainform.source"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.errors.first("mainform.source"),
-                            expression: "errors.first('mainform.source')"
+                _vm.manager
+                  ? _c(
+                      "label",
+                      { staticClass: "calc-form__label js-label" },
+                      [
+                        _c("span", { staticClass: "calc-form__label-title" }, [
+                          _vm._v("Источник заявки")
+                        ]),
+                        _vm._v(" "),
+                        _c("cool-select", {
+                          directives: [
+                            {
+                              name: "validate",
+                              rawName: "v-validate",
+                              value: "required",
+                              expression: "'required'"
+                            }
+                          ],
+                          attrs: {
+                            items: ["", "Звонок", "Личная встреча", "Грант"],
+                            name: "mainform.sourcetwo"
+                          },
+                          model: {
+                            value: _vm.mainform.sourcetwo,
+                            callback: function($$v) {
+                              _vm.$set(_vm.mainform, "sourcetwo", $$v)
+                            },
+                            expression: "mainform.sourcetwo"
                           }
-                        ]
-                      },
-                      [_vm._v("Поле обязательно для заполнения")]
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.first("mainform.sourcetwo"),
+                                expression: "errors.first('mainform.sourcetwo')"
+                              }
+                            ]
+                          },
+                          [_vm._v("Поле обязательно для заполнения")]
+                        )
+                      ],
+                      1
                     )
-                  ],
-                  1
-                ),
+                  : _vm._e(),
                 _vm._v(" "),
                 _c(
                   "label",

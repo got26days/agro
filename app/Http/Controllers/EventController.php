@@ -42,7 +42,7 @@ class EventController extends Controller
 
     public function sendform(Request $request)
     {
-        return 1;
+        return $request;
 
         $cityes = ['Республика Дагестан', 'Республика Ингушетия','Кабардино-Балкарская Республика','Карачаево-Черкесская Республика','Республика Северная Осетия - Алания','Чеченская Республика'];
 

@@ -10,14 +10,14 @@
        					</div>
        					<div class="calc-form">
 
-							<label class="calc-form__label js-label" v-show="manager">
+							<label class="calc-form__label js-label" v-if="manager">
        							<span class="calc-form__label-title">Источник заявки</span>
 								<cool-select
-								v-model="mainform.source"
+								v-model="mainform.sourcetwo"
 								:items="['', 'Звонок', 'Личная встреча', 'Грант']"
-								v-validate="'required'" name="mainform.source"
+								v-validate="'required'" name="mainform.sourcetwo"
 								/> 
-								<span v-show="errors.first('mainform.source')">Поле обязательно для заполнения</span>
+								<span v-show="errors.first('mainform.sourcetwo')">Поле обязательно для заполнения</span>
        						</label>
 
 
@@ -702,7 +702,7 @@ import 'vue-slider-component/theme/antd.css'
 		components: { CoolSelect, VueSlider },
         data() {
             return {
-
+				opman: this.manager,
 				focused: false,
 
 				currentPage: 1,
@@ -807,42 +807,42 @@ import 'vue-slider-component/theme/antd.css'
 					tooltip: 'none'
 				},
 				mainform: {
-					type: '',
+					type: null,
 					sendpercent: this.percent,
 					sendpoint: this.point,
-					source: '',
+					sourcetwo: null,
 					form1: {
-						region: '',
+						region: null,
 						summ: 5000000,
 						needprice: false,
-						orgform: '',
-						dateur: '',
-						yearbalance: '',
+						orgform: null,
+						dateur: null,
+						yearbalance: null,
 						
 
-						history: '',
-						credit: '',
-						term: '',
-						target: '',
-						moment: '',
+						history: null,
+						credit: null,
+						term: null,
+						target: null,
+						moment: null,
 
-						payment: '',
-						accounting: '',
+						payment: null,
+						accounting: null,
 						name: '',
 						phone: '',
 						email: '',
 					},
 					form2: {
-						region: '',
-						status: '',
+						region: null,
+						status: null,
 						summ: 5000000,
-						have: '',
+						have: null,
 
-						target: '',
-						type: '',
-						chlen: '',
-						term: '',
-						raschet: '',
+						target: null,
+						type: null,
+						chlen: null,
+						term: null,
+						raschet: null,
 
 						name: '',
 						phone: '',
@@ -850,51 +850,53 @@ import 'vue-slider-component/theme/antd.css'
 						position: ''
 					},
 					form3: {
-						form: '',
+						form: null,
 						summ: 5000000,
-						studia: '',
-						balance: '',
-						history: '',
+						studia: null,
+						balance: null,
+						history: null,
 
-						region: '',
-						srok: '',
-						finance: '',
-						zalog: '',
-						secondsrok: '',
+						region: null,
+						srok: null,
+						finance: null,
+						zalog: null,
+						secondsrok: null,
 
-						present: '',
-						sredstva: '',
+						present: null,
+						sredstva: null,
 						name: '',
 						phone: '',
 						email: '',
-						position: '',
+						position: null,
 					}, 
 					form4: {
-						region: '',
-						form: '',
-						type: '',
-						buhgalrer: '',
+						region: null,
+						form: null,
+						type: null,
+						buhgalrer: null,
 
-						geter: '',
+						geter: null,
 						summ: 1000000,
 						need: '',
-						answer: '',
-						dolg: '',
-						proc: '',
+						answer: null,
+						dolg: null,
+						proc: null,
 
 						name: '',
 						phone: '',
 						email: '',
-						position: ''
+						position: null
 
 					}	
 				}
             }
-        },
+		},
+
         props: ['percent', 'point', 'manager'],
-        mounted() {
-			if(this.manager == false) {
-				this.mainform.source = 'Анкета на сайте';
+        created() {
+			if(this.opman == false) {
+				this.mainform.sourcetwo = "Анкета на сайте";
+				// console.log(this.mainform.sourcetwo);
 			}
 		},
         methods: {
@@ -962,7 +964,7 @@ import 'vue-slider-component/theme/antd.css'
 		computed: {
 			checkBtn1: function(){
 
-				if(this.mainform.source == '') {
+				if(this.mainform.sourcetwo == null) {
 					return true;
 				}
 				if(this.mainform.type == 'Кредит'){
