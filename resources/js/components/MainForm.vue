@@ -86,7 +86,7 @@
 
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Дата создания юридического лица</span>
-                                <input type="text" class="input calc-form__input js-input" disabled="disabled">
+                                <input type="text" class="input calc-form__input js-input" disabled="disabled" style="background-color: #e9ecef;">
                             </label>
 
                             <label class="calc-form__label js-label">

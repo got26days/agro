@@ -70,7 +70,7 @@ class EventController extends Controller
             }
 
 
-            if($request['form1']['orgform'] == 'Физлицо'){
+            if($request['orgform'] == 'Физлицо'){
 
                 if($request['form1']['summ'] <= 1500000){
                     // $result = $result - 15;
@@ -96,7 +96,7 @@ class EventController extends Controller
                 }
             }
 
-            if($request['form1']['orgform'] == 'ИП'){
+            if($request['orgform'] == 'ИП'){
                 if($request['form1']['summ'] <= 1500000){
                     // $result = $result - 15;
                     $result2 = $result2 + 1;
@@ -118,7 +118,7 @@ class EventController extends Controller
             }
 
 
-            if($request['form1']['orgform'] == 'ООО'){
+            if($request['orgform'] == 'ООО'){
                 if($request['form1']['summ'] <= 1500000){
                     $result = $result + 20;
                     $result2 = $result2 + 1;
@@ -142,7 +142,7 @@ class EventController extends Controller
                 }
             }
 
-            if($request['form1']['orgform'] == 'Кооператив'){
+            if($request['orgform'] == 'Кооператив'){
                 if($request['form1']['summ'] <= 1500000){
                     $result = $result + 20;
                     $result2 = $result2 + 1;
@@ -166,7 +166,7 @@ class EventController extends Controller
                 }
             }
 
-            if($request['form1']['orgform'] == 'Холдинг'){
+            if($request['orgform'] == 'Холдинг'){
                 if($request['form1']['summ'] <= 1500000){
                     $result = $result + 20;
                     $result2 = $result2 + 1;
@@ -333,7 +333,7 @@ class EventController extends Controller
 
 
             
-            if($request['form2']['status'] == 'Глава кооператива'){
+            if($request['orgform'] == 'Глава кооператива'){
                 $result = $result + 5;
                 $result2 = $result2 + 1;
             }
@@ -391,7 +391,7 @@ class EventController extends Controller
             }
 
 
-            if($request['form4']['form'] == 'Глава кооператива'){
+            if($request['orgform'] == 'Глава кооператива'){
                 $result = $result + 5;
             }
 

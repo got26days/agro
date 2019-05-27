@@ -36350,6 +36350,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("input", {
         staticClass: "input calc-form__input js-input",
+        staticStyle: { "background-color": "#e9ecef" },
         attrs: { type: "text", disabled: "disabled" }
       })
     ])
