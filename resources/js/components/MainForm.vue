@@ -1177,4 +1177,5 @@ $themeColor:#5dbb5f;
 	.calc-form__label p{
 		color: red;
 	}
+	
 </style>

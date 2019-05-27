@@ -10,7 +10,7 @@
         <header class="header">
             <div class="container">
                 <div class="header__wrap">
-                    <a href="/" class="header__logo"><img src="/event/img/header/logo.png" alt="Агродоход"></a>
+                    <a href="http://{{ env('APP_MAIN_DOMAIN') }}/" class="header__logo"><img src="/event/img/header/logo.png" alt="Агродоход"></a>
                     <div class="header__bar">
                         <a href="tel:88005558586" class="header__tel">8 (800) 555-85-86</a>
                         <button class="btn btn--menu js-menu-btn"></button>
@@ -22,8 +22,8 @@
             <div class="container">
                 <div class="header-hide__wrap">
                     <div class="header-hide__left">
-                        <a href="/" class="header__logo"><img src="/event/img/header/logo.png" alt="Агродоход"></a>
-                        <form action="#" method="get" name="search" class="search" id="search">
+                        <a href="http://{{ env('APP_MAIN_DOMAIN') }}/" class="header__logo"><img src="/event/img/header/logo.png" alt="Агродоход"></a>
+                        <form action="#" method="get" name="search" class="search" id="search" style="margin-left: 60px;">
                             <input type="search" name="input search-input" class="search__input" placeholder="Поиск">
                             <button class="btn search__btn" type="submit" title="Искать">Искать</button>
                         </form>
@@ -31,8 +31,8 @@
                     <div class="header-hide__right">
                         <nav class="user-menu">
                             <ul>
-                                <li><a href="#" class="user-menu__link user-menu__link--sign-up">Регистрация</a></li>
-                                <li><a href="#" class="user-menu__link user-menu__link--sign-in">Войти</a></li>
+                                <li><a href="http://crm.agrodohod.ru/authentication/register" class="user-menu__link user-menu__link--sign-up" target="_blank">Регистрация</a></li>
+                                <li><a href="http://crm.agrodohod.ru/authentication/login" class="user-menu__link user-menu__link--sign-in" target="_blank">Войти</a></li>
                             </ul>
                         </nav>
                         <button class="btn btn--menu-close js-menu-btn" title="Закрыть"></button>
@@ -40,11 +40,11 @@
                 </div>
                 <nav class="main-menu">
                     <ul>
-                        <li class="main-menu__item"><a href="#" class="main-menu__link">О нас</a></li>
-                        <li class="main-menu__item"><a href="#" class="main-menu__link">Услуги</a></li>
-                        <li class="main-menu__item"><a href="#" class="main-menu__link">События</a></li>
-                        <li class="main-menu__item"><a href="#" class="main-menu__link">Вопрос-ответ</a></li>
-                        <li class="main-menu__item"><a href="#" class="main-menu__link">Контакты</a></li>
+                        <li class="main-menu__item"><a href="http://{{ env('APP_MAIN_DOMAIN') }}/o-nas" class="main-menu__link">О нас</a></li>
+                        <li class="main-menu__item"><a href="http://{{ env('APP_MAIN_DOMAIN') }}/uslugi" class="main-menu__link">Услуги</a></li>
+                        <li class="main-menu__item"><a href="http://{{ env('APP_MAIN_DOMAIN') }}/events" class="main-menu__link">События</a></li>
+                        <li class="main-menu__item"><a href="http://{{ env('APP_MAIN_DOMAIN') }}/faq" class="main-menu__link">Вопрос-ответ</a></li>
+                        <li class="main-menu__item"><a href="http://{{ env('APP_MAIN_DOMAIN') }}/#contacts" class="main-menu__link">Контакты</a></li>
                     </ul>
                 </nav>
             </div>
@@ -61,17 +61,17 @@
             </form>
             <nav class="main-menu">
                 <ul>
-                    <li class="main-menu__item"><a href="#" class="main-menu__link">О нас</a></li>
-                    <li class="main-menu__item"><a href="#" class="main-menu__link">Услуги</a></li>
-                    <li class="main-menu__item"><a href="#" class="main-menu__link">События</a></li>
-                    <li class="main-menu__item"><a href="#" class="main-menu__link">Вопрос-ответ</a></li>
-                    <li class="main-menu__item"><a href="#" class="main-menu__link">Контакты</a></li>
+                    <li class="main-menu__item"><a href="http://{{ env('APP_MAIN_DOMAIN') }}/o-nas" class="main-menu__link">О нас</a></li>
+                    <li class="main-menu__item"><a href="http://{{ env('APP_MAIN_DOMAIN') }}/uslugi" class="main-menu__link">Услуги</a></li>
+                    <li class="main-menu__item"><a href="http://{{ env('APP_MAIN_DOMAIN') }}/events" class="main-menu__link">События</a></li>
+                    <li class="main-menu__item"><a href="http://{{ env('APP_MAIN_DOMAIN') }}/faq" class="main-menu__link">Вопрос-ответ</a></li>
+                    <li class="main-menu__item"><a href="http://{{ env('APP_MAIN_DOMAIN') }}/#contacts" class="main-menu__link">Контакты</a></li>
                 </ul>
             </nav>
             <nav class="user-menu">
                 <ul>
-                    <li><a href="#" class="user-menu__link user-menu__link--sign-up">Регистрация</a></li>
-                    <li><a href="#" class="user-menu__link user-menu__link--sign-in">Войти</a></li>
+                    <li><a href="http://crm.agrodohod.ru/authentication/register" class="user-menu__link user-menu__link--sign-up" target="_blank">Регистрация</a></li>
+                    <li><a href="http://crm.agrodohod.ru/authentication/login" class="user-menu__link user-menu__link--sign-in" target="_blank">Войти</a></li>
                 </ul>
             </nav>
         </header>
