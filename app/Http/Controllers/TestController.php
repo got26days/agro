@@ -8,6 +8,7 @@ use App\Imports\MailImport;
 use App\Exports\DownloadsExport;
 use App\Exports\LoansExport;
 use App\Exports\NdomainsExport;
+use App\Exports\SubsExport;
 
 class TestController extends Controller
 {

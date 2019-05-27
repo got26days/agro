@@ -2487,16 +2487,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -35503,61 +35493,64 @@ var render = function() {
                       )
                     ]),
                     _vm._v(" "),
-                    _c(
-                      "label",
-                      { staticClass: "calc-form__label js-label" },
-                      [
-                        _c("span", { staticClass: "calc-form__label-title" }, [
-                          _vm._v("Должность")
-                        ]),
-                        _vm._v(" "),
-                        _c("cool-select", {
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Должность")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.mainform.form2.position,
+                            expression: "mainform.form2.position"
+                          },
+                          {
+                            name: "validate",
+                            rawName: "v-validate",
+                            value: "required",
+                            expression: "'required'"
+                          }
+                        ],
+                        staticClass: "input calc-form__input js-input",
+                        attrs: {
+                          type: "text",
+                          name: "mainform.form2.position"
+                        },
+                        domProps: { value: _vm.mainform.form2.position },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.mainform.form2,
+                              "position",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "p",
+                        {
                           directives: [
                             {
-                              name: "validate",
-                              rawName: "v-validate",
-                              value: "required",
-                              expression: "'required'"
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.first(
+                                "mainform.form2.position"
+                              ),
+                              expression:
+                                "errors.first('mainform.form2.position')"
                             }
-                          ],
-                          attrs: {
-                            items: [
-                              "",
-                              "Должность-1",
-                              "Должность-2",
-                              "Должность-3"
-                            ],
-                            name: "mainform.form2.position"
-                          },
-                          model: {
-                            value: _vm.mainform.form2.position,
-                            callback: function($$v) {
-                              _vm.$set(_vm.mainform.form2, "position", $$v)
-                            },
-                            expression: "mainform.form2.position"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "p",
-                          {
-                            directives: [
-                              {
-                                name: "show",
-                                rawName: "v-show",
-                                value: _vm.errors.first(
-                                  "mainform.form2.position"
-                                ),
-                                expression:
-                                  "errors.first('mainform.form2.position')"
-                              }
-                            ]
-                          },
-                          [_vm._v("Поле обязательно для заполнения")]
-                        )
-                      ],
-                      1
-                    )
+                          ]
+                        },
+                        [_vm._v("Поле обязательно для заполнения")]
+                      )
+                    ])
                   ]
                 ),
                 _vm._v(" "),
@@ -35842,56 +35835,64 @@ var render = function() {
                       )
                     ]),
                     _vm._v(" "),
-                    _c(
-                      "label",
-                      { staticClass: "calc-form__label js-label" },
-                      [
-                        _c("span", { staticClass: "calc-form__label-title" }, [
-                          _vm._v("Должность или позиция в компании")
-                        ]),
-                        _vm._v(" "),
-                        _c("cool-select", {
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Должность или позиция в компании")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.mainform.form3.position,
+                            expression: "mainform.form3.position"
+                          },
+                          {
+                            name: "validate",
+                            rawName: "v-validate",
+                            value: "required",
+                            expression: "'required'"
+                          }
+                        ],
+                        staticClass: "input calc-form__input js-input",
+                        attrs: {
+                          type: "text",
+                          name: "mainform.form3.position"
+                        },
+                        domProps: { value: _vm.mainform.form3.position },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.mainform.form3,
+                              "position",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "p",
+                        {
                           directives: [
                             {
-                              name: "validate",
-                              rawName: "v-validate",
-                              value: "required",
-                              expression: "'required'"
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.first(
+                                "mainform.form3.position"
+                              ),
+                              expression:
+                                "errors.first('mainform.form3.position')"
                             }
-                          ],
-                          attrs: {
-                            items: ["", "Должность-1", "Должность-2"],
-                            name: "mainform.form3.position"
-                          },
-                          model: {
-                            value: _vm.mainform.form3.position,
-                            callback: function($$v) {
-                              _vm.$set(_vm.mainform.form3, "position", $$v)
-                            },
-                            expression: "mainform.form3.position"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "p",
-                          {
-                            directives: [
-                              {
-                                name: "show",
-                                rawName: "v-show",
-                                value: _vm.errors.first(
-                                  "mainform.form3.position"
-                                ),
-                                expression:
-                                  "errors.first('mainform.form3.position')"
-                              }
-                            ]
-                          },
-                          [_vm._v("Поле обязательно для заполнения")]
-                        )
-                      ],
-                      1
-                    )
+                          ]
+                        },
+                        [_vm._v("Поле обязательно для заполнения")]
+                      )
+                    ])
                   ]
                 ),
                 _vm._v(" "),
@@ -36071,56 +36072,64 @@ var render = function() {
                       )
                     ]),
                     _vm._v(" "),
-                    _c(
-                      "label",
-                      { staticClass: "calc-form__label js-label" },
-                      [
-                        _c("span", { staticClass: "calc-form__label-title" }, [
-                          _vm._v("Должность")
-                        ]),
-                        _vm._v(" "),
-                        _c("cool-select", {
+                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                      _c("span", { staticClass: "calc-form__label-title" }, [
+                        _vm._v("Должность")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.mainform.form4.position,
+                            expression: "mainform.form4.position"
+                          },
+                          {
+                            name: "validate",
+                            rawName: "v-validate",
+                            value: "required",
+                            expression: "'required'"
+                          }
+                        ],
+                        staticClass: "input calc-form__input js-input",
+                        attrs: {
+                          type: "text",
+                          name: "mainform.form4.position"
+                        },
+                        domProps: { value: _vm.mainform.form4.position },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.mainform.form4,
+                              "position",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "p",
+                        {
                           directives: [
                             {
-                              name: "validate",
-                              rawName: "v-validate",
-                              value: "required",
-                              expression: "'required'"
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.first(
+                                "mainform.form4.position"
+                              ),
+                              expression:
+                                "errors.first('mainform.form4.position')"
                             }
-                          ],
-                          attrs: {
-                            items: ["", "Должность-1", "Должность-2"],
-                            name: "mainform.form4.position"
-                          },
-                          model: {
-                            value: _vm.mainform.form4.position,
-                            callback: function($$v) {
-                              _vm.$set(_vm.mainform.form4, "position", $$v)
-                            },
-                            expression: "mainform.form4.position"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "p",
-                          {
-                            directives: [
-                              {
-                                name: "show",
-                                rawName: "v-show",
-                                value: _vm.errors.first(
-                                  "mainform.form4.position"
-                                ),
-                                expression:
-                                  "errors.first('mainform.form4.position')"
-                              }
-                            ]
-                          },
-                          [_vm._v("Поле обязательно для заполнения")]
-                        )
-                      ],
-                      1
-                    )
+                          ]
+                        },
+                        [_vm._v("Поле обязательно для заполнения")]
+                      )
+                    ])
                   ]
                 ),
                 _vm._v(" "),

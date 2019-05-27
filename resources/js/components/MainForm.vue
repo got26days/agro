@@ -570,11 +570,8 @@
 								</label>
 								<label class="calc-form__label js-label">
 									<span class="calc-form__label-title">Должность</span>
-									<cool-select
-										v-model="mainform.form2.position"
-										:items="['', 'Должность-1', 'Должность-2', 'Должность-3']"
-										v-validate="'required'" name="mainform.form2.position"
-									/> 
+									<input type="text" class="input calc-form__input js-input" v-model="mainform.form2.position"
+									v-validate="'required'" name="mainform.form2.position">
 									<p v-show="errors.first('mainform.form2.position')">Поле обязательно для заполнения</p>
 								</label>
 							</div>
@@ -617,11 +614,8 @@
 								</label>
 								<label class="calc-form__label js-label">
 									<span class="calc-form__label-title">Должность или позиция в компании</span>
-									<cool-select
-										v-model="mainform.form3.position"
-										:items="['', 'Должность-1', 'Должность-2']"
-										v-validate="'required'" name="mainform.form3.position"
-									/> 
+									<input type="text" class="input calc-form__input js-input" v-model="mainform.form3.position"
+									v-validate="'required'" name="mainform.form3.position">
 									<p v-show="errors.first('mainform.form3.position')">Поле обязательно для заполнения</p>
 								</label>
 							</div>
@@ -646,12 +640,8 @@
 								</label>
 								<label class="calc-form__label js-label">
 									<span class="calc-form__label-title">Должность</span>
-									<cool-select
-										v-model="mainform.form4.position"
-										:items="['', 'Должность-1', 'Должность-2']"
-										v-validate="'required'" name="mainform.form4.position"
-									/> 
-
+									<input type="text" class="input calc-form__input js-input" v-model="mainform.form4.position"
+									v-validate="'required'" name="mainform.form4.position">
 									<p v-show="errors.first('mainform.form4.position')">Поле обязательно для заполнения</p>
 								</label>
 							</div>
