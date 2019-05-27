@@ -14,11 +14,22 @@
             q3: String,
         },
         mounted() {
-            new Typewriter(document.getElementById('typewriter'), {
-                strings: [this.q1, this.q2, this.q3],
-                autoStart: true,
+            var typevr = new Typewriter(document.getElementById('typewriter'), {
                 loop: true,
+                changeDeleteSpeed: 2,
             });
+
+            typevr.changeDelay(60)
+            .typeString(this.q1)
+            .pauseFor(3500)
+            .deleteAll(8)
+            .typeString(this.q2)
+            .pauseFor(3500)
+            .deleteAll(8)
+            .typeString(this.q3)
+            .pauseFor(3500)
+            .deleteAll(8)
+            .start()
         }
     }
 </script>
