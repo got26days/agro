@@ -2468,7 +2468,7 @@ __webpack_require__.r(__webpack_exports__);
       summresult: '',
       cityes: ['Республика Адыгея (Адыгея)', 'Республика Башкортостан', 'Республика Бурятия', 'Республика Алтай', 'Республика Дагестан', 'Республика Ингушетия', 'Кабардино-Балкарская Республика', 'Республика Калмыкия', 'Карачаево-Черкесская Республика', 'Республика Карелия', 'Республика Коми', 'Республика Марий Эл', 'Республика Мордовия', 'Республика Саха (Якутия)', 'Республика Северная Осетия - Алания', 'Республика Татарстан (Татарстан)', 'Республика Тыва', 'Удмуртская Республика', 'Республика Хакасия', 'Чеченская Республика', 'Чувашская Республика - Чувашия', 'Алтайский край', 'Краснодарский край', 'Красноярский край', 'Приморский край', 'Ставропольский край', 'Хабаровский край', 'Амурская область', 'Архангельская область', 'Астраханская область', 'Белгородская область', 'Брянская область', 'Владимирская область', 'Волгоградская область', 'Вологодская область', 'Воронежская область', 'Ивановская область', 'Иркутская область', 'Калининградская область', 'Калужская область', 'Камчатский край', 'Кемеровская область', 'Кировская область', 'Костромская область', 'Курганская область', 'Курская область', 'Ленинградская область', 'Липецкая область', 'Магаданская область', 'Московская область', 'Мурманская область', 'Нижегородская область', 'Новгородская область', 'Новосибирская область', 'Омская область', 'Оренбургская область', 'Орловская область', 'Пензенская область', 'Пермский край', 'Псковская область', 'Ростовская область', 'Рязанская область', 'Самарская область', 'Саратовская область', 'Сахалинская область', 'Свердловская область', 'Смоленская область', 'Тамбовская область', 'Тверская область', 'Томская область', 'Тульская область', 'Тюменская область', 'Ульяновская область', 'Челябинская область', 'Забайкальский край', 'Ярославская область', 'Москва', 'Санкт-Петербург', 'Еврейская автономная область', 'Ненецкий автономный округ', 'Ханты-Мансийский автономный округ - Югра', 'Чукотский автономный округ', 'Ямало-Ненецкий автономный округ', 'Республика Крым', 'Севастополь'],
       options: {
-        min: 1000000,
+        min: 500000,
         max: 35000000,
         width: 'auto',
         dotSize: 40,
@@ -2484,7 +2484,7 @@ __webpack_require__.r(__webpack_exports__);
         orgform: null,
         form1: {
           region: null,
-          summ: 5000000,
+          summ: 600000,
           needprice: false,
           // orgform: null,
           dateur: null,
@@ -2503,7 +2503,7 @@ __webpack_require__.r(__webpack_exports__);
         form2: {
           region: null,
           // status: null,
-          summ: 5000000,
+          summ: 600000,
           have: null,
           target: null,
           type: null,
@@ -2517,7 +2517,7 @@ __webpack_require__.r(__webpack_exports__);
         },
         form3: {
           // form: null,
-          summ: 5000000,
+          summ: 600000,
           studia: null,
           balance: null,
           history: null,
@@ -2539,7 +2539,7 @@ __webpack_require__.r(__webpack_exports__);
           type: null,
           buhgalrer: null,
           geter: null,
-          summ: 1000000,
+          summ: 6000000,
           need: '',
           answer: null,
           dolg: null,
@@ -2611,6 +2611,25 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   computed: {
+    overOp: function overOp() {
+      if (this.mainform.orgform == 'ИП КФХ (существует менее 2 лет)' || this.mainform.orgform == 'Физлицо') {
+        return 3000000;
+      }
+
+      if (this.mainform.orgform == 'ИП КФХ (существует более 2 лет)') {
+        return 30000000;
+      }
+
+      if (this.mainform.orgform == 'Глава кооператива') {
+        return 70000000;
+      }
+
+      if (this.mainform.orgform == 'ИП' || this.mainform.orgform == 'ООО' || this.mainform.orgform == 'ОАО' || this.mainform.orgform == 'ЗАО' || this.mainform.orgform == 'Другое') {
+        return 3000000;
+      }
+
+      return 10000000;
+    },
     checkError: function checkError() {
       if (this.mainform.orgform == 'ИП' && this.mainform.type == 'Грант') {
         return true;
@@ -32827,7 +32846,10 @@ var render = function() {
                             "vue-slider",
                             _vm._b(
                               {
-                                attrs: { disabled: _vm.watchCheck },
+                                attrs: {
+                                  disabled: _vm.watchCheck,
+                                  max: _vm.overOp
+                                },
                                 model: {
                                   value: _vm.mainform.form1.summ,
                                   callback: function($$v) {
@@ -32861,7 +32883,7 @@ var render = function() {
                         _vm._v(" "),
                         _c("div", [
                           _c("span", { staticClass: "js-max" }, [
-                            _vm._v(_vm._s(_vm.options.max))
+                            _vm._v(_vm._s(_vm.overOp))
                           ]),
                           _vm._v(" "),
                           _c("span", { staticClass: "rub" }, [_vm._v("₽")])
@@ -33169,6 +33191,7 @@ var render = function() {
                               "vue-slider",
                               _vm._b(
                                 {
+                                  attrs: { max: _vm.overOp },
                                   model: {
                                     value: _vm.mainform.form2.summ,
                                     callback: function($$v) {
@@ -33202,7 +33225,7 @@ var render = function() {
                           _vm._v(" "),
                           _c("div", [
                             _c("span", { staticClass: "js-max" }, [
-                              _vm._v(_vm._s(_vm.options.max))
+                              _vm._v(_vm._s(_vm.overOp))
                             ]),
                             _vm._v(" "),
                             _c("span", { staticClass: "rub" }, [_vm._v("₽")])
@@ -33362,6 +33385,7 @@ var render = function() {
                               "vue-slider",
                               _vm._b(
                                 {
+                                  attrs: { max: _vm.overOp },
                                   model: {
                                     value: _vm.mainform.form3.summ,
                                     callback: function($$v) {
@@ -33395,7 +33419,7 @@ var render = function() {
                           _vm._v(" "),
                           _c("div", [
                             _c("span", { staticClass: "js-max" }, [
-                              _vm._v(_vm._s(_vm.options.max))
+                              _vm._v(_vm._s(_vm.overOp))
                             ]),
                             _vm._v(" "),
                             _c("span", { staticClass: "rub" }, [_vm._v("₽")])
@@ -34804,6 +34828,7 @@ var render = function() {
                               "vue-slider",
                               _vm._b(
                                 {
+                                  attrs: { max: _vm.overOp },
                                   model: {
                                     value: _vm.mainform.form4.summ,
                                     callback: function($$v) {
@@ -34837,7 +34862,7 @@ var render = function() {
                           _vm._v(" "),
                           _c("div", [
                             _c("span", { staticClass: "js-max" }, [
-                              _vm._v(_vm._s(_vm.options.max))
+                              _vm._v(_vm._s(_vm.overOp))
                             ]),
                             _vm._v(" "),
                             _c("span", { staticClass: "rub" }, [_vm._v("₽")])

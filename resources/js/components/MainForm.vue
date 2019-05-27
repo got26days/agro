@@ -113,13 +113,13 @@
                                         <span v-show="!focused" @click="openInput('summ1')">{{ mainform.form1.summ }}
                                             &#8381;</span>
                                     </div>
-                                    <vue-slider v-model="mainform.form1.summ" v-bind="options" :disabled="watchCheck" />
+                                    <vue-slider v-model="mainform.form1.summ" v-bind="options" :disabled="watchCheck" :max="overOp"/>
                                 </label>
                                 <div class="calc-form__slider-blc" id="slider-range-credit"></div>
                                 <div class="calc-form__slider-row">
                                     <div><span class="js-min">{{ options.min }}</span> <span class="rub">&#8381;</span>
                                     </div>
-                                    <div><span class="js-max">{{ options.max }}</span> <span class="rub">&#8381;</span>
+                                    <div><span class="js-max">{{ overOp }}</span> <span class="rub">&#8381;</span>
                                     </div>
                                 </div>
                             </div>
@@ -166,14 +166,14 @@
                                         <span v-show="!focused" @click="openInput('summ2')">{{ mainform.form2.summ }}
                                             &#8381;</span>
                                     </div>
-                                    <vue-slider v-model="mainform.form2.summ" v-bind="options" />
+                                    <vue-slider v-model="mainform.form2.summ" v-bind="options" :max="overOp"/>
                                 </label>
 
                                 <div class="calc-form__slider-blc" id="slider-range-grant"></div>
                                 <div class="calc-form__slider-row">
                                     <div><span class="js-min">{{ options.min }}</span> <span class="rub">&#8381;</span>
                                     </div>
-                                    <div><span class="js-max">{{ options.max }}</span> <span class="rub">&#8381;</span>
+                                    <div><span class="js-max">{{ overOp }}</span> <span class="rub">&#8381;</span>
                                     </div>
                                 </div>
                             </div>
@@ -201,14 +201,14 @@
                                         <span v-show="!focused" @click="openInput('summ3')">{{ mainform.form3.summ }}
                                             &#8381;</span>
                                     </div>
-                                    <vue-slider v-model="mainform.form3.summ" v-bind="options" />
+                                    <vue-slider v-model="mainform.form3.summ" v-bind="options" :max="overOp"/>
                                 </label>
 
                                 <div class="calc-form__slider-blc" id="slider-range-project"></div>
                                 <div class="calc-form__slider-row">
                                     <div><span class="js-min">{{ options.min }}</span> <span class="rub">&#8381;</span>
                                     </div>
-                                    <div><span class="js-max">{{ options.max }}</span> <span class="rub">&#8381;</span>
+                                    <div><span class="js-max">{{ overOp }}</span> <span class="rub">&#8381;</span>
                                     </div>
                                 </div>
                             </div>
@@ -407,14 +407,14 @@
                                         <span v-show="!focused" @click="openInput('summ4')">{{ mainform.form4.summ }}
                                             &#8381;</span>
                                     </div>
-                                    <vue-slider v-model="mainform.form4.summ" v-bind="options" />
+                                    <vue-slider v-model="mainform.form4.summ" v-bind="options" :max="overOp"/>
                                 </label>
 
                                 <div class="calc-form__slider-blc" id="slider-range-subs"></div>
                                 <div class="calc-form__slider-row">
                                     <div><span class="js-min">{{ options.min }}</span> <span class="rub">&#8381;</span>
                                     </div>
-                                    <div><span class="js-max">{{ options.max }}</span> <span class="rub">&#8381;</span>
+                                    <div><span class="js-max">{{ overOp }}</span> <span class="rub">&#8381;</span>
                                     </div>
                                 </div>
                             </div>
@@ -756,7 +756,7 @@
                     'Севастополь'
                 ],
                 options: {
-                    min: 1000000,
+                    min: 500000,
                     max: 35000000,
                     width: 'auto',
                     dotSize: 40,
@@ -772,7 +772,7 @@
                     orgform: null,
                     form1: {
                         region: null,
-                        summ: 5000000,
+                        summ: 600000,
                         needprice: false,
                         // orgform: null,
                         dateur: null,
@@ -794,7 +794,7 @@
                     form2: {
                         region: null,
                         // status: null,
-                        summ: 5000000,
+                        summ: 600000,
                         have: null,
 
                         target: null,
@@ -810,7 +810,7 @@
                     },
                     form3: {
                         // form: null,
-                        summ: 5000000,
+                        summ: 600000,
                         studia: null,
                         balance: null,
                         history: null,
@@ -835,7 +835,7 @@
                         buhgalrer: null,
 
                         geter: null,
-                        summ: 1000000,
+                        summ: 6000000,
                         need: '',
                         answer: null,
                         dolg: null,
@@ -921,6 +921,21 @@
             }
         },
         computed: {
+			overOp(){
+				if((this.mainform.orgform == 'ИП КФХ (существует менее 2 лет)') || (this.mainform.orgform == 'Физлицо')) {
+					return 3000000;
+				}
+				if(this.mainform.orgform == 'ИП КФХ (существует более 2 лет)') {
+					return 30000000;
+				}
+				if(this.mainform.orgform == 'Глава кооператива') {
+					return 70000000;
+				}
+				if((this.mainform.orgform == 'ИП') || (this.mainform.orgform == 'ООО') || (this.mainform.orgform == 'ОАО') || (this.mainform.orgform == 'ЗАО') || (this.mainform.orgform == 'Другое')) {
+					return 3000000;
+				}
+				return 10000000;
+			},
             checkError() {
                 if ((this.mainform.orgform == 'ИП') && (this.mainform.type == 'Грант')) {
                     return true;
@@ -942,12 +957,10 @@
                 }
 
 
-                if ((this.mainform.orgform == 'ИП КФХ (существует менее 2 лет)') && (this.mainform.type ==
-                        'Проектное финансирование')) {
+                if ((this.mainform.orgform == 'ИП КФХ (существует менее 2 лет)') && (this.mainform.type == 'Проектное финансирование')) {
                     return true;
                 }
-                if ((this.mainform.orgform == 'ИП КФХ (существует более 2 лет)') && (this.mainform.type ==
-                        'Проектное финансирование')) {
+                if ((this.mainform.orgform == 'ИП КФХ (существует более 2 лет)') && (this.mainform.type == 'Проектное финансирование')) {
                     return true;
                 }
                 if ((this.mainform.orgform == 'Физлицо') && (this.mainform.type == 'Проектное финансирование')) {
