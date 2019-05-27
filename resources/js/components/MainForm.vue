@@ -17,7 +17,7 @@
 								:items="['', 'Звонок', 'Личная встреча', 'Грант']"
 								v-validate="'required'" name="mainform.sourcetwo"
 								/> 
-								<span v-show="errors.first('mainform.sourcetwo')">Поле обязательно для заполнения</span>
+								<p v-show="errors.first('mainform.sourcetwo')">Поле обязательно для заполнения</p>
        						</label>
 
 
@@ -30,7 +30,7 @@
 								v-validate="'required'" name="mainform.type"
 								/> 
 
-								<span v-show="errors.first('mainform.type')">Поле обязательно для заполнения</span>
+								<p v-show="errors.first('mainform.type')">Поле обязательно для заполнения</p>
        						</label>
 
 							
@@ -1172,5 +1172,9 @@ $themeColor:#5dbb5f;
 
 	.isdissabled{
 		background-color: #e9ecef;
+	}
+
+	.calc-form__label p{
+		color: red;
 	}
 </style>
