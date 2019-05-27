@@ -1129,7 +1129,7 @@ h1, h2, h3, h4 {
     .calc-form__slider-val {
       display: block;
       width: 100%;
-      margin-bottom: 24px;
+      margin-bottom: 5px;
       text-align: center;
       font-size: 36px;
       line-height: 41px;
@@ -1142,14 +1142,15 @@ h1, h2, h3, h4 {
         font-size: 34px; }
     .calc-form__slider-input {
       display: block;
-      opacity: 0;
+      /* opacity: 0; */
       z-index: 2;
-      position: relative;
+      /* position: relative; */
       width: 100%;
       text-align: center;
       position: absolute;
-      top: 0;
-      left: 0; }
+      /* top: 0; */
+      /* left: 0;  */
+    }
       .calc-form__slider-input:focus {
         opacity: 1; }
         .calc-form__slider-input:focus ~ * {
@@ -1164,7 +1165,7 @@ h1, h2, h3, h4 {
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between;
-      margin-top: 22px;
+      /* margin-top: 22px; */
       font-size: 18px;
       line-height: 21px;
       letter-spacing: -0.05em;

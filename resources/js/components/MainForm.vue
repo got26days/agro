@@ -86,14 +86,16 @@
 								<div class="calc-form__slider js-rang-slider">
 									<div class="calc-form__slider-txt">Сумма кредита</div>
 									<label class="calc-form__slider-val" >
+										<div class="new-selector">
+											<input type="number" id="amount-4" class="out-input" v-model="mainform.form1.summ" @focus="focused = true" @blur="onBlur" v-show="focused" ref="summ1"> 
+											<span v-show="!focused" @click="openInput('summ1')">{{ mainform.form1.summ }} &#8381;</span>
+										</div>
 										<vue-slider v-model="mainform.form1.summ" v-bind="options"/>
-										<input type="text" id="amount-4" class="input calc-form__slider-input" v-model="mainform.form1.summ"> 
-										<span class="js-slider-txt">{{ mainform.form1.summ }}</span><span class="rub">р</span>
 									</label>       							
 									<div class="calc-form__slider-blc" id="slider-range-credit"></div>
 									<div class="calc-form__slider-row">
-										<div><span class="js-min">{{ options.min }}</span> <span class="rub">р</span></div>
-										<div><span class="js-max">{{ options.max }}</span> <span class="rub">р</span></div>
+										<div><span class="js-min">{{ options.min }}</span> <span class="rub">&#8381;</span></div>
+										<div><span class="js-max">{{ options.max }}</span> <span class="rub">&#8381;</span></div>
 									</div>
 								</div>
 								<label class="calc-form__checkbox">
@@ -146,17 +148,20 @@
 									<p v-show="errors.first('mainform.form2.status')">Поле обязательно для заполнения</p>
 								</label>
 								<div class="calc-form__slider js-rang-slider">
-									<div class="calc-form__slider-txt">Доступен грант «Начинающий фермер». Какая сумма необходима?</div>
-									<label class="calc-form__slider-val" >
-										<vue-slider v-model="mainform.form2.summ" v-bind="options"/>
+									<div class="calc-form__slider-txt">Доступен грант «Начинающий фермер». Какая сумма необходима?</div>   	
 
-										<input type="text" id="amount-2" class="input calc-form__slider-input" value="400000" v-model="mainform.form2.summ"  v-validate="'required'" name="mainform.form2.summ">
-										<span class="js-slider-txt">{{ mainform.form2.summ }}</span><span class="rub">р</span>
-									</label>       							
+									<label class="calc-form__slider-val">
+										<div class="new-selector">
+											<input type="number" id="amount-4" class="out-input" v-model="mainform.form2.summ" @focus="focused = true" @blur="onBlur" v-show="focused" ref="summ2"> 
+											<span v-show="!focused" @click="openInput('summ2')">{{ mainform.form2.summ }} &#8381;</span>
+										</div>
+										<vue-slider v-model="mainform.form2.summ" v-bind="options"/>
+									</label>   
+
 									<div class="calc-form__slider-blc" id="slider-range-grant"></div>
 									<div class="calc-form__slider-row">
-										<div><span class="js-min">{{ options.min }}</span> <span class="rub">р</span></div>
-										<div><span class="js-max">{{ options.max }}</span> <span class="rub">р</span></div>
+										<div><span class="js-min">{{ options.min }}</span> <span class="rub">&#8381;</span></div>
+										<div><span class="js-max">{{ options.max }}</span> <span class="rub">&#8381;</span></div>
 									</div>
 								</div>
 								<label class="calc-form__label js-label">
@@ -183,16 +188,19 @@
 								</label>
 								
 								<div class="calc-form__slider js-rang-slider">
-									<div class="calc-form__slider-txt">Сумма проекта</div>
-									<label class="calc-form__slider-val" >
+									<div class="calc-form__slider-txt">Сумма проекта</div>     
+									<label class="calc-form__slider-val">
+										<div class="new-selector">
+											<input type="number" id="amount-4" class="out-input" v-model="mainform.form3.summ" @focus="focused = true" @blur="onBlur" v-show="focused" ref="summ3"> 
+											<span v-show="!focused" @click="openInput('summ3')">{{ mainform.form3.summ }} &#8381;</span>
+										</div>
 										<vue-slider v-model="mainform.form3.summ" v-bind="options"/>
-										<input type="text" id="amount-5" class="input calc-form__slider-input"  v-model="mainform.form3.summ" v-validate="'required'" name="mainform.form3.summ">
-										<span class="js-slider-txt">{{ mainform.form3.summ }}</span><span class="rub">р</span>
-									</label>       							
+									</label>   
+
 									<div class="calc-form__slider-blc" id="slider-range-project"></div>
 									<div class="calc-form__slider-row">
-										<div><span class="js-min">{{ options.min }}</span> <span class="rub">р</span></div>
-										<div><span class="js-max">{{ options.max }}</span> <span class="rub">р</span></div>
+										<div><span class="js-min">{{ options.min }}</span> <span class="rub">&#8381;</span></div>
+										<div><span class="js-max">{{ options.max }}</span> <span class="rub">&#8381;</span></div>
 									</div>
 								</div>
 
@@ -437,15 +445,17 @@
 								<div class="calc-form__slider js-rang-slider">
 									<div class="calc-form__slider-txt">Размер понесенных затрат к возмещению</div>
 									<label class="calc-form__slider-val" >
+										<div class="new-selector">
+											<input type="number" id="amount-4" class="out-input" v-model="mainform.form4.summ" @focus="focused = true" @blur="onBlur" v-show="focused" ref="summ4"> 
+											<span v-show="!focused" @click="openInput('summ4')">{{ mainform.form4.summ }} &#8381;</span>
+										</div>
 										<vue-slider v-model="mainform.form4.summ" v-bind="options"/>
-										<input type="text" id="amount-3" class="input calc-form__slider-input" v-model="mainform.form4.summ"
-										v-validate="'required'" name="mainform.form1.history">
-										<span class="js-slider-txt">{{ mainform.form4.summ }}</span><span class="rub">р</span>
-									</label>       							
+									</label>   
+
 									<div class="calc-form__slider-blc" id="slider-range-subs"></div>
 									<div class="calc-form__slider-row">
-										<div><span class="js-min">{{ options.min }}</span> <span class="rub">р</span></div>
-										<div><span class="js-max">{{ options.max }}</span> <span class="rub">р</span></div>
+										<div><span class="js-min">{{ options.min }}</span> <span class="rub">&#8381;</span></div>
+										<div><span class="js-max">{{ options.max }}</span> <span class="rub">&#8381;</span></div>
 									</div>
 								</div>
 
@@ -668,7 +678,7 @@
 
 							<span>{{ summresult }}</span>
 							
-							<i class="rub">i</i> составит
+							<i class="rub">&#8381;</i> составит
 						</div>
            				<div class="calc-ready__blc-persent">{{ result }}%</div>
             		</div>
@@ -693,7 +703,7 @@ import 'vue-slider-component/theme/antd.css'
         data() {
             return {
 
-
+				focused: false,
 
 				currentPage: 1,
 
@@ -778,7 +788,7 @@ import 'vue-slider-component/theme/antd.css'
 					'Челябинская область',
 					'Забайкальский край',
 					'Ярославская область',
-					'г. Москва',
+					'Москва',
 					'Санкт-Петербург',
 					'Еврейская автономная область',
 					'Ненецкий автономный округ',
@@ -886,11 +896,17 @@ import 'vue-slider-component/theme/antd.css'
 			if(this.manager == false) {
 				this.mainform.source = 'Анкета на сайте';
 			}
-			
 		},
         methods: {
-            nextPage(){
-                console.log(123);
+			openInput(string) {
+				this.focused = true;
+				this.$refs[string].focus();
+				
+			},
+			onBlur() {
+				this.focused = false
+			},
+			nextPage(){
                 this.currentPage++;
             },
             backPage(){
@@ -1132,5 +1148,23 @@ $themeColor:#5dbb5f;
 	}
 	.IZ-select__no-data{
 		display: none;
+	}
+
+	.out-input{
+		margin: 0;
+		outline: 0;
+		border: 0;
+		background: 0 0;
+		text-align: center;
+	}
+
+	.new-selector{
+		    margin-bottom: 24px;
+	}
+
+	input[type=number]::-webkit-inner-spin-button, 
+	input[type=number]::-webkit-outer-spin-button { 
+	-webkit-appearance: none; 
+	margin: 0; 
 	}
 </style>
