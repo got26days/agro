@@ -217,7 +217,7 @@
                             </div>
                         </div>
                         <div class="calc-video__txt">
-                            <div class="calc-video__logo"><img src="/event/img/video/rub.svg" alt="P"></div>
+                            {{-- <div class="calc-video__logo"><img src="/event/img/video/rub.svg" alt="P"></div> --}}
                             <div class="calc-video__txt-main">
                                 Получение грантов, кредитов и субсидий нашими клиентами — результат комплексной работы всех подразделений АгроДохода. Это и сбор информации и её анализ, и переговоры со всеми участниками процесса, и обучение наших клиентов. Но всё это невозможно без безупречной работы нашей бухгалтерской службы. Её руководитель Оксана Кондратова рассказывает о специфике своей работы.
                             </div>
@@ -229,6 +229,7 @@
                     <div class="video-wrapper__container">
                         <button class="btn video-wrapper__close js-video-close" title="Закрыть">Закрыть</button>
                         <div class="video-wrapper__blc" id="js-video-container">
+                            
                         </div>
                     </div>
                 </div>

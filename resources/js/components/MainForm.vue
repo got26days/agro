@@ -310,7 +310,7 @@
 									<span class="calc-form__label-title">Желаемые сроки для погашения кредита</span>
 									<cool-select
 										v-model="mainform.form1.term"
-										:items="['', 'сроки-1', 'сроки-2']"
+										:items="['', '12 месяцев', '24 месяца', '48 месяцев', '60 месяцев', 'более 60 месяцев']"
 										v-validate="'required'" name="mainform.form1.term"
 									/> 
 									<p v-show="errors.first('mainform.form1.term')">Поле обязательно для заполнения</p>
