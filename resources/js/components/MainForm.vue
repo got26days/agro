@@ -155,8 +155,7 @@
 
 
                             <div class="calc-form__slider js-rang-slider">
-                                <div class="calc-form__slider-txt">Доступен грант «Начинающий фермер». Какая сумма
-                                    необходима?</div>
+                                <div class="calc-form__slider-txt"> Какая сумма необходима?</div>
 
                                 <label class="calc-form__slider-val">
                                     <div class="new-selector">

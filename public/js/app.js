@@ -2449,7 +2449,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -33118,9 +33117,7 @@ var render = function() {
                       { staticClass: "calc-form__slider js-rang-slider" },
                       [
                         _c("div", { staticClass: "calc-form__slider-txt" }, [
-                          _vm._v(
-                            "Доступен грант «Начинающий фермер». Какая сумма\n                                    необходима?"
-                          )
+                          _vm._v(" Какая сумма необходима?")
                         ]),
                         _vm._v(" "),
                         _c(
