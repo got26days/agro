@@ -476,7 +476,7 @@
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Сейчас бухгалтерию ведет</span>
                                 <cool-select v-model="mainform.form1.accounting"
-                                    :items="['', 'Штатный сотрудник  расчёт', 'Профильное в СХ агентство', 'Непрофильное в с СХ агентство', 'Своими силами']"
+                                    :items="['', 'Штатный сотрудник', 'Профильное в СХ агентство', 'Непрофильное в с СХ агентство', 'Своими силами']"
                                     v-validate="'required'" name="mainform.form1.accounting" />
                                 <p v-show="errors.first('mainform.form1.accounting')">Поле обязательно для заполнения
                                 </p>
