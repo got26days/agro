@@ -114,7 +114,7 @@
 								</label>
 								<label class="calc-form__label js-label">
 									<span class="calc-form__label-title">Дата создания юридического лица</span>
-									<input type="date" class="input calc-form__input js-input" v-model="mainform.form1.dateur" :disabled="mainform.form1.orgform == 'Физлицо'">
+									<input type="date" class="input calc-form__input js-input" v-model="mainform.form1.dateur" :disabled="mainform.form1.orgform == 'Физлицо'" v-bind:class="{ isdissabled: mainform.form1.orgform == 'Физлицо' }">
 								</label>
 								<label class="calc-form__label js-label">
 									<span class="calc-form__label-title">Годовой баланс</span>
@@ -1166,5 +1166,9 @@ $themeColor:#5dbb5f;
 	input[type=number]::-webkit-outer-spin-button { 
 	-webkit-appearance: none; 
 	margin: 0; 
+	}
+
+	.isdissabled{
+		background-color: #e9ecef;
 	}
 </style>
