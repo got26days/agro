@@ -212,7 +212,7 @@
                     <div class="calc-video__wrap">
                         <div class="calc-video__blc">
                             <div class="calc-video__blind js-blind"
-                                data-href="https://www.youtube.com/watch?v=d2ZmNCjW6Qw">
+                                data-href="https://www.youtube.com/embed/d2ZmNCjW6Qw">
                                 <img src="/event/img/video/blind.jpg" alt="">
                             </div>
                         </div>
@@ -229,7 +229,6 @@
                     <div class="video-wrapper__container">
                         <button class="btn video-wrapper__close js-video-close" title="Закрыть">Закрыть</button>
                         <div class="video-wrapper__blc" id="js-video-container">
-                            
                         </div>
                     </div>
                 </div>
