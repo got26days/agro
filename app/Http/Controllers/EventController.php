@@ -11,6 +11,7 @@ use App\Loan;
 use App\Grant;
 use App\Finan;
 use App\Sub;
+use App\Sendmail;
 
 class EventController extends Controller
 {
@@ -673,6 +674,7 @@ class EventController extends Controller
             $finan->region = $request['form3']['region'];
             $finan->srok = $request['form3']['srok'];
             $finan->finance = $request['form3']['finance'];
+            $finan->zalog = $request['form3']['zalog'];
             $finan->secondsrok = $request['form3']['secondsrok'];
             $finan->present = $request['form3']['present'];
             $finan->sredstva = $request['form3']['sredstva'];
@@ -702,6 +704,88 @@ class EventController extends Controller
             $sub->save();
         }
 
+
+        if($request['type'] == 'Кредит'){
+
+            $data = [
+                'loan' => $loan
+            ];
+
+            $sendmails = Sendmail::where('send', '=', 'true')->latest()->get();
+
+            if(!empty($sendmails)){
+                foreach($sendmails as $sendmail){
+    
+                    $sendto = $sendmail['email'];
+    
+                    \Mail::send('mail.mail1', $data, function($message) use ($data, $sendto)
+                    {
+                        $message->from('orders@agrodohod.ru', 'Заявка с Finance.Agrodohod');
+                        $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход.');
+                    });
+    
+                }
+            }
+
+        }
+
+        if($request['type'] == 'Грант'){
+
+            $data = [
+                'grant' => $grant
+            ];
+
+            $sendmails = Sendmail::where('send', '=', 'true')->latest()->get();
+
+            if(!empty($sendmails)){
+                foreach($sendmails as $sendmail){
+    
+                    $sendto = $sendmail['email'];
+    
+                    \Mail::send('mail.mail2', $data, function($message) use ($data, $sendto)
+                    {
+                        $message->from('orders@agrodohod.ru', 'Заявка с Finance.Agrodohod');
+                        $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход.');
+                    });
+    
+                }
+            }
+
+        }
+
+        if($request['type'] == 'Проектное финансирование'){
+            $data = [
+                'finan' => $finan
+            ];
+            $sendmails = Sendmail::where('send', '=', 'true')->latest()->get();
+            if(!empty($sendmails)){
+                foreach($sendmails as $sendmail){
+                    $sendto = $sendmail['email'];
+                    \Mail::send('mail.mail3', $data, function($message) use ($data, $sendto)
+                    {
+                        $message->from('orders@agrodohod.ru', 'Заявка с Finance.Agrodohod');
+                        $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход.');
+                    });
+                }
+            }
+        }
+
+        if($request['type'] == 'Субсидия'){
+            $data = [
+                'sub' => $sub
+            ];
+            $sendmails = Sendmail::where('send', '=', 'true')->latest()->get();
+            if(!empty($sendmails)){
+                foreach($sendmails as $sendmail){
+                    $sendto = $sendmail['email'];
+                    \Mail::send('mail.mail4', $data, function($message) use ($data, $sendto)
+                    {
+                        $message->from('orders@agrodohod.ru', 'Заявка с Finance.Agrodohod');
+                        $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход.');
+                    });
+                }
+            }
+        }
 
 
         return $result;

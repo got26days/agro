@@ -7,6 +7,7 @@ use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\MailImport;
 use App\Exports\DownloadsExport;
 use App\Exports\LoansExport;
+use App\Exports\NdomainsExport;
 
 class TestController extends Controller
 {
@@ -33,5 +34,10 @@ class TestController extends Controller
     public function getdata4()
     {
         return Excel::download(new SubsExport, 'data.xlsx');
+    }
+
+    public function getnd()
+    {
+        return Excel::download(new NdomainsExport, 'data.xlsx');
     }
 }
