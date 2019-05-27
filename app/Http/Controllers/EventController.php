@@ -28,7 +28,7 @@ class EventController extends Controller
         $partners = Partner::latest()->get();
         
 
-        $seotitle = $domain['seo_title'];
+        $seotitle = $domain['title'];
         $seodescription = $domain['seo_description'];
         $seokeywords = $domain['seo_keywords'];
 
