@@ -719,7 +719,7 @@ class EventController extends Controller
     
                     $sendto = $sendmail['email'];
     
-                    \Mail::send('mail.mail1', $data, function($message) use ($data, $sendto)
+                    \Mail::send('mail.mail1', $data, function($message) use ($data, $sendto, $request)
                     {
                         $message->from('orders@agrodohod.ru', 'Заявка с Finance.Agrodohod');
                         $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход. ' . $request['mailsubject']);
@@ -743,7 +743,7 @@ class EventController extends Controller
     
                     $sendto = $sendmail['email'];
     
-                    \Mail::send('mail.mail2', $data, function($message) use ($data, $sendto)
+                    \Mail::send('mail.mail2', $data, function($message) use ($data, $sendto, $request)
                     {
                         $message->from('orders@agrodohod.ru', 'Заявка с Finance.Agrodohod');
                         $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход. ' . $request['mailsubject']);
@@ -762,7 +762,7 @@ class EventController extends Controller
             if(!empty($sendmails)){
                 foreach($sendmails as $sendmail){
                     $sendto = $sendmail['email'];
-                    \Mail::send('mail.mail3', $data, function($message) use ($data, $sendto)
+                    \Mail::send('mail.mail3', $data, function($message) use ($data, $sendto, $request)
                     {
                         $message->from('orders@agrodohod.ru', 'Заявка с Finance.Agrodohod');
                         $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход. ' . $request['mailsubject']);
@@ -779,7 +779,7 @@ class EventController extends Controller
             if(!empty($sendmails)){
                 foreach($sendmails as $sendmail){
                     $sendto = $sendmail['email'];
-                    \Mail::send('mail.mail4', $data, function($message) use ($data, $sendto)
+                    \Mail::send('mail.mail4', $data, function($message) use ($data, $sendto, $request)
                     {
                         $message->from('orders@agrodohod.ru', 'Заявка с Finance.Agrodohod');
                         $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход. ' . $request['mailsubject']);

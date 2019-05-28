@@ -111,8 +111,16 @@
                                 <div class="calc-form__slider-txt">Сумма кредита</div>
                                 <label class="calc-form__slider-val">
                                     <div class="new-selector">
-                                        <input type="number" class="out-input" v-model="mainform.form1.summ"
-                                            @focus="focused = true" @blur="onBlur" v-show="focused" ref="summ1" @change="maxNum">
+                                        <input 
+                                        type="number" 
+                                        class="out-input"  
+                                        v-model="mainform.form1.summ"
+                                        @focus="focused = true" 
+                                        @blur="onBlur" 
+                                        v-show="focused" 
+                                        ref="summ1" 
+                                        @change="maxNum"
+                                        v-bind:class="{ active: isActive }">
                                         <span v-show="!focused" @click="openInput('summ1')">{{ mainform.form1.summ }}
                                             &#8381;</span>
                                     </div>

@@ -2454,6 +2454,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -32845,6 +32853,7 @@ var render = function() {
                               ],
                               ref: "summ1",
                               staticClass: "out-input",
+                              class: { active: _vm.isActive },
                               attrs: { type: "number" },
                               domProps: { value: _vm.mainform.form1.summ },
                               on: {
