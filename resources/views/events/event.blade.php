@@ -264,7 +264,7 @@
                         <li class="footer-menu__item"><a href="http://{{ env('APP_MAIN_DOMAIN') }}/uslugi" class="footer-menu__link">Услуги</a></li>
                         <li class="footer-menu__item"><a href="http://{{ env('APP_MAIN_DOMAIN') }}/events" class="footer-menu__link">События</a></li>
                         <li class="footer-menu__item"><a href="http://{{ env('APP_MAIN_DOMAIN') }}/faq" class="footer-menu__link">Вопрос-ответ</a></li>
-                        <li class="footer-menu__item"><a href="http://{{ env('APP_MAIN_DOMAIN') }}/#contacts">Контакты</a></li>
+                        <li class="footer-menu__item"><a href="http://{{ env('APP_MAIN_DOMAIN') }}/#contacts" class="footer-menu__link">Контакты</a></li>
                     </ul>
                 </nav>
             </div>
