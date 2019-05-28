@@ -2534,7 +2534,7 @@ __webpack_require__.r(__webpack_exports__);
           summ: 600000,
           needprice: false,
           // orgform: null,
-          dateur: null,
+          dateur: '',
           yearbalance: null,
           history: null,
           credit: null,
