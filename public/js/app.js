@@ -2454,8 +2454,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 
 
@@ -2565,6 +2563,42 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   methods: {
+    maxNum: function maxNum() {
+      if (this.mainform.form1.summ > this.overOp) {
+        this.mainform.form1.summ = this.overOp;
+      }
+
+      if (this.mainform.form1.summ < this.options.min) {
+        this.mainform.form1.summ = this.options.min;
+      }
+    },
+    maxNum2: function maxNum2() {
+      if (this.mainform.form2.summ > this.overOp) {
+        this.mainform.form2.summ = this.overOp;
+      }
+
+      if (this.mainform.form2.summ < this.options.min) {
+        this.mainform.form2.summ = this.options.min;
+      }
+    },
+    maxNum3: function maxNum3() {
+      if (this.mainform.form3.summ > this.overOp) {
+        this.mainform.form3.summ = this.overOp;
+      }
+
+      if (this.mainform.form3.summ < this.options.min) {
+        this.mainform.form3.summ = this.options.min;
+      }
+    },
+    maxNum4: function maxNum4() {
+      if (this.mainform.form4.summ > this.overOp) {
+        this.mainform.form4.summ = this.overOp;
+      }
+
+      if (this.mainform.form4.summ < this.options.min) {
+        this.mainform.form4.summ = this.options.min;
+      }
+    },
     openInput: function openInput(string) {
       this.focused = true;
       this.$refs[string].focus();
@@ -2618,6 +2652,10 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     overOp: function overOp() {
+      if (this.mainform.type == 'Кредит') {
+        return 35000000;
+      }
+
       if (this.mainform.type == 'Проектное финансирование') {
         return 500000000;
       }
@@ -32813,6 +32851,7 @@ var render = function() {
                                   _vm.focused = true
                                 },
                                 blur: _vm.onBlur,
+                                change: _vm.maxNum,
                                 input: function($event) {
                                   if ($event.target.composing) {
                                     return
@@ -33156,6 +33195,7 @@ var render = function() {
                                     _vm.focused = true
                                   },
                                   blur: _vm.onBlur,
+                                  change: _vm.maxNum2,
                                   input: function($event) {
                                     if ($event.target.composing) {
                                       return
@@ -33350,6 +33390,7 @@ var render = function() {
                                     _vm.focused = true
                                   },
                                   blur: _vm.onBlur,
+                                  change: _vm.maxNum3,
                                   input: function($event) {
                                     if ($event.target.composing) {
                                       return
@@ -34793,6 +34834,7 @@ var render = function() {
                                     _vm.focused = true
                                   },
                                   blur: _vm.onBlur,
+                                  change: _vm.maxNum4,
                                   input: function($event) {
                                     if ($event.target.composing) {
                                       return

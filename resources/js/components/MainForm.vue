@@ -35,9 +35,7 @@
                                 :items="['', 'Кредит', 'Субсидия', 'Грант', 'Проектное финансирование']"
                                 v-validate="'required'" 
                                 name="mainform.type"
-                             
                                  />
-
 
                             <p v-show="errors.first('mainform.type')">Поле обязательно для заполнения</p>
 
@@ -114,7 +112,7 @@
                                 <label class="calc-form__slider-val">
                                     <div class="new-selector">
                                         <input type="number" class="out-input" v-model="mainform.form1.summ"
-                                            @focus="focused = true" @blur="onBlur" v-show="focused" ref="summ1">
+                                            @focus="focused = true" @blur="onBlur" v-show="focused" ref="summ1" @change="maxNum">
                                         <span v-show="!focused" @click="openInput('summ1')">{{ mainform.form1.summ }}
                                             &#8381;</span>
                                     </div>
@@ -167,7 +165,7 @@
                                     <div class="new-selector">
                                         <input type="number" id="amount-4" class="out-input"
                                             v-model="mainform.form2.summ" @focus="focused = true" @blur="onBlur"
-                                            v-show="focused" ref="summ2">
+                                            v-show="focused" ref="summ2" @change="maxNum2">
                                         <span v-show="!focused" @click="openInput('summ2')">{{ mainform.form2.summ }}
                                             &#8381;</span>
                                     </div>
@@ -202,7 +200,7 @@
                                     <div class="new-selector">
                                         <input type="number" id="amount-4" class="out-input"
                                             v-model="mainform.form3.summ" @focus="focused = true" @blur="onBlur"
-                                            v-show="focused" ref="summ3">
+                                            v-show="focused" ref="summ3" @change="maxNum3">
                                         <span v-show="!focused" @click="openInput('summ3')">{{ mainform.form3.summ }}
                                             &#8381;</span>
                                     </div>
@@ -408,7 +406,7 @@
                                     <div class="new-selector">
                                         <input type="number" id="amount-4" class="out-input"
                                             v-model="mainform.form4.summ" @focus="focused = true" @blur="onBlur"
-                                            v-show="focused" ref="summ4">
+                                            v-show="focused" ref="summ4" @change="maxNum4">
                                         <span v-show="!focused" @click="openInput('summ4')">{{ mainform.form4.summ }}
                                             &#8381;</span>
                                     </div>
@@ -865,6 +863,42 @@
             }
         },
         methods: {
+            maxNum(){
+                if(this.mainform.form1.summ > this.overOp){
+                    this.mainform.form1.summ = this.overOp;
+                }
+
+                if(this.mainform.form1.summ < this.options.min){
+                    this.mainform.form1.summ = this.options.min;
+                }
+            },
+            maxNum2(){
+                if(this.mainform.form2.summ > this.overOp){
+                    this.mainform.form2.summ = this.overOp;
+                }
+
+                if(this.mainform.form2.summ < this.options.min){
+                    this.mainform.form2.summ = this.options.min;
+                }
+            },
+            maxNum3(){
+                if(this.mainform.form3.summ > this.overOp){
+                    this.mainform.form3.summ = this.overOp;
+                }
+
+                if(this.mainform.form3.summ < this.options.min){
+                    this.mainform.form3.summ = this.options.min;
+                }
+            },
+            maxNum4(){
+                if(this.mainform.form4.summ > this.overOp){
+                    this.mainform.form4.summ = this.overOp;
+                }
+
+                if(this.mainform.form4.summ < this.options.min){
+                    this.mainform.form4.summ = this.options.min;
+                }
+            },
             openInput(string) {
                 this.focused = true;
                 this.$refs[string].focus();
@@ -928,6 +962,10 @@
         },
         computed: {
             overOp() {
+                if ((this.mainform.type == 'Кредит')) {
+                    return 35000000;
+                }
+
                 if ((this.mainform.type == 'Проектное финансирование')) {
                     return 500000000;
                 }
