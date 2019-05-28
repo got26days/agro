@@ -619,8 +619,13 @@ class EventController extends Controller
             $loan->phone = $request['form1']['phone'];
             $loan->email = $request['form1']['email'];
             $loan->region = $request['form1']['region'];
-            $loan->summ = $request['form1']['summ'];
+            
             $loan->needprice = $request['form1']['needprice'];
+            if($request['form1']['needprice']){
+                $loan->summ = "Нужен расчёт";
+            } else {
+                $loan->summ = $request['form1']['summ'];
+            }
             $loan->orgform = $request['orgform'];
             $loan->dateur = $request['form1']['dateur'];
             $loan->yearbalance = $request['form1']['yearbalance'];
@@ -697,8 +702,14 @@ class EventController extends Controller
             $sub->type = $request['form4']['type'];
             $sub->buhgalrer = $request['form4']['buhgalrer'];
             $sub->geter = $request['form4']['geter'];
-            $sub->summ = $request['form4']['summ'];
             $sub->need = $request['form4']['need'];
+
+            if($request['form4']['need']){
+                $sub->summ = "Нужен расчёт";
+            } else {
+                $sub->summ = $request['form4']['summ'];
+            }
+
             $sub->answer = $request['form4']['answer'];
             $sub->dolg = $request['form4']['dolg'];
             $sub->proc = $request['form4']['proc'];
