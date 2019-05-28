@@ -18,9 +18,18 @@ class EventController extends Controller
 
     public function main()
     {
-        redirect()->action(
-            'EventController@index', ['slug' => 'pomosh-v-poluchenii-kreditov-subsidij-i-grantov-ot-kompanii-agrodohod']
-        );
+        $domain = Ndomain::where('slug', '=', 'pomosh-v-poluchenii-kreditov-subsidij-i-grantov-ot-kompanii-agrodohod')->latest()->first();
+        $teams = Team::get();
+
+        $partners = Partner::latest()->get();
+        
+
+        $seotitle = $domain['title'];
+        $seodescription = $domain['seo_description'];
+        $seokeywords = $domain['seo_keywords'];
+
+        return view('events.event', compact('partners','teams', 'domain', 'seotitle', 'seodescription', 'seokeywords'));
+    
     }
 
     public function index($slug)
