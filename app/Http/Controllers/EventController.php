@@ -722,7 +722,7 @@ class EventController extends Controller
                     \Mail::send('mail.mail1', $data, function($message) use ($data, $sendto)
                     {
                         $message->from('orders@agrodohod.ru', 'Заявка с Finance.Agrodohod');
-                        $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход.');
+                        $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход. ' . $request['mailsubject']);
                     });
     
                 }
@@ -746,7 +746,7 @@ class EventController extends Controller
                     \Mail::send('mail.mail2', $data, function($message) use ($data, $sendto)
                     {
                         $message->from('orders@agrodohod.ru', 'Заявка с Finance.Agrodohod');
-                        $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход.');
+                        $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход. ' . $request['mailsubject']);
                     });
     
                 }
@@ -765,7 +765,7 @@ class EventController extends Controller
                     \Mail::send('mail.mail3', $data, function($message) use ($data, $sendto)
                     {
                         $message->from('orders@agrodohod.ru', 'Заявка с Finance.Agrodohod');
-                        $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход.');
+                        $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход. ' . $request['mailsubject']);
                     });
                 }
             }
@@ -782,7 +782,7 @@ class EventController extends Controller
                     \Mail::send('mail.mail4', $data, function($message) use ($data, $sendto)
                     {
                         $message->from('orders@agrodohod.ru', 'Заявка с Finance.Agrodohod');
-                        $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход.');
+                        $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход. ' . $request['mailsubject']);
                     });
                 }
             }

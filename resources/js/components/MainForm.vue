@@ -773,6 +773,7 @@
                     sendpercent: this.percent,
                     sendpoint: this.point,
                     sourcetwo: null,
+                    mailsubject: this.subject,
                     orgform: null,
                     form1: {
                         region: null,
@@ -855,7 +856,7 @@
             }
         },
 
-        props: ['percent', 'point', 'manager'],
+        props: ['percent', 'point', 'manager', 'subject'],
         created() {
             if (this.opman == false) {
                 this.mainform.sourcetwo = "Анкета на сайте";

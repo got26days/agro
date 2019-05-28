@@ -296,6 +296,7 @@ class NdomainsController extends \TCG\Voyager\Http\Controllers\VoyagerBaseContro
                     $newpage->whytitle1 = $data['whytitle1'];
                     $newpage->whytitle2 = $data['whytitle2'];
                     $newpage->whytitle3 = $data['whytitle3'];
+                    $newpage->subject = $data['subject'];
                     $newpage->save();
 
                     $slug = str_slug($result[1], '-');

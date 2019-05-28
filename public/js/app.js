@@ -2485,6 +2485,7 @@ __webpack_require__.r(__webpack_exports__);
         sendpercent: this.percent,
         sendpoint: this.point,
         sourcetwo: null,
+        mailsubject: this.subject,
         orgform: null,
         form1: {
           region: null,
@@ -2556,7 +2557,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     };
   },
-  props: ['percent', 'point', 'manager'],
+  props: ['percent', 'point', 'manager', 'subject'],
   created: function created() {
     if (this.opman == false) {
       this.mainform.sourcetwo = "Анкета на сайте"; // console.log(this.mainform.sourcetwo);
