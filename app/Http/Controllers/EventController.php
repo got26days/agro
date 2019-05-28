@@ -15,6 +15,14 @@ use App\Sendmail;
 
 class EventController extends Controller
 {
+
+    public function main()
+    {
+        edirect()->action(
+            'EventController@index', ['slug' => 'pomosh-v-poluchenii-kreditov-subsidij-i-grantov-ot-kompanii-agrodohod']
+        );
+    }
+
     public function index($slug)
     {
 

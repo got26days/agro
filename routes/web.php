@@ -78,6 +78,7 @@ Route::post('/event/sendform', 'EventController@sendform');
 $thirddomain = env('APP_THIRD_DOMAIN');
 
 Route::group(['domain' => $thirddomain], function () {
+    Route::get('/', 'EventController@main')->name('clone'); 
     Route::get('/{slug}', 'EventController@index');    
 });
 
