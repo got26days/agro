@@ -254,7 +254,7 @@
                 </div>
             </section>
             <mainform :point="{{ isset($domain['point']) ? $domain['point'] : 0}}"
-        :percent="{{ isset($domain['percent']) ? $domain['percent'] : 0}}" :manager="false" :subject="{{ isset($domain['subject']) ? $domain['subject'] : ' '}}"></mainform>
+        :percent="{{ isset($domain['percent']) ? $domain['percent'] : 0}}" :manager="false" :subject="`{{ isset($domain['subject']) ? $domain['subject'] : ''}}`"></mainform>
         </main>
         <footer class="footer">
             <div class="container">
