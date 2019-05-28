@@ -33,7 +33,11 @@
 
                             <cool-select v-model="mainform.type"
                                 :items="['', 'Кредит', 'Субсидия', 'Грант', 'Проектное финансирование']"
-                                v-validate="'required'" name="mainform.type" />
+                                v-validate="'required'" 
+                                name="mainform.type"
+                             
+                                 />
+
 
                             <p v-show="errors.first('mainform.type')">Поле обязательно для заполнения</p>
 
@@ -86,7 +90,8 @@
 
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Дата создания юридического лица</span>
-                                <input type="text" class="input calc-form__input js-input" disabled="disabled" style="background-color: #e9ecef;">
+                                <input type="text" class="input calc-form__input js-input" disabled="disabled"
+                                    style="background-color: #e9ecef;">
                             </label>
 
                             <label class="calc-form__label js-label">
@@ -113,7 +118,8 @@
                                         <span v-show="!focused" @click="openInput('summ1')">{{ mainform.form1.summ }}
                                             &#8381;</span>
                                     </div>
-                                    <vue-slider v-model="mainform.form1.summ" v-bind="options" :disabled="watchCheck" :max="overOp"/>
+                                    <vue-slider v-model="mainform.form1.summ" v-bind="options" :disabled="watchCheck"
+                                        :max="overOp" />
                                 </label>
                                 <div class="calc-form__slider-blc" id="slider-range-credit"></div>
                                 <div class="calc-form__slider-row">
@@ -165,7 +171,7 @@
                                         <span v-show="!focused" @click="openInput('summ2')">{{ mainform.form2.summ }}
                                             &#8381;</span>
                                     </div>
-                                    <vue-slider v-model="mainform.form2.summ" v-bind="options" :max="overOp"/>
+                                    <vue-slider v-model="mainform.form2.summ" v-bind="options" :max="overOp" />
                                 </label>
 
                                 <div class="calc-form__slider-blc" id="slider-range-grant"></div>
@@ -200,7 +206,7 @@
                                         <span v-show="!focused" @click="openInput('summ3')">{{ mainform.form3.summ }}
                                             &#8381;</span>
                                     </div>
-                                    <vue-slider v-model="mainform.form3.summ" v-bind="options" :max="overOp"/>
+                                    <vue-slider v-model="mainform.form3.summ" v-bind="options" :max="overOp" />
                                 </label>
 
                                 <div class="calc-form__slider-blc" id="slider-range-project"></div>
@@ -406,7 +412,7 @@
                                         <span v-show="!focused" @click="openInput('summ4')">{{ mainform.form4.summ }}
                                             &#8381;</span>
                                     </div>
-                                    <vue-slider v-model="mainform.form4.summ" v-bind="options" :max="overOp"/>
+                                    <vue-slider v-model="mainform.form4.summ" v-bind="options" :max="overOp" />
                                 </label>
 
                                 <div class="calc-form__slider-blc" id="slider-range-subs"></div>
@@ -613,7 +619,8 @@
                                     :disabled="loadbtn || checkBtn3">Отправить заявку</button>
                             </div>
                             <div class="calc-form__message">
-                                Нажимая «Отправить заявку», вы принимаете <a href="http://agrodohod.ru/download/policy" target="_blank">условия передачи
+                                Нажимая «Отправить заявку», вы принимаете <a href="http://agrodohod.ru/download/policy"
+                                    target="_blank">условия передачи
                                     информации</a>
                             </div>
                         </div>
@@ -920,24 +927,26 @@
             }
         },
         computed: {
-			overOp(){
-                if((this.mainform.type == 'Проектное финансирование')) {
-					return 500000000;
-				}
-				if((this.mainform.orgform == 'ИП КФХ (существует менее 2 лет)') || (this.mainform.orgform == 'Физлицо')) {
-					return 3000000;
-				}
-				if(this.mainform.orgform == 'ИП КФХ (существует более 2 лет)') {
-					return 30000000;
-				}
-				if(this.mainform.orgform == 'Глава кооператива') {
-					return 70000000;
-				}
-				if((this.mainform.orgform == 'ИП') || (this.mainform.orgform == 'ООО') || (this.mainform.orgform == 'ОАО') || (this.mainform.orgform == 'ЗАО') || (this.mainform.orgform == 'Другое')) {
-					return 3000000;
-				}
-				return 10000000;
-			},
+            overOp() {
+                if ((this.mainform.type == 'Проектное финансирование')) {
+                    return 500000000;
+                }
+                if ((this.mainform.orgform == 'ИП КФХ (существует менее 2 лет)') || (this.mainform.orgform ==
+                    'Физлицо')) {
+                    return 3000000;
+                }
+                if (this.mainform.orgform == 'ИП КФХ (существует более 2 лет)') {
+                    return 30000000;
+                }
+                if (this.mainform.orgform == 'Глава кооператива') {
+                    return 70000000;
+                }
+                if ((this.mainform.orgform == 'ИП') || (this.mainform.orgform == 'ООО') || (this.mainform.orgform ==
+                        'ОАО') || (this.mainform.orgform == 'ЗАО') || (this.mainform.orgform == 'Другое')) {
+                    return 3000000;
+                }
+                return 10000000;
+            },
             checkError() {
                 if ((this.mainform.orgform == 'ИП') && (this.mainform.type == 'Грант')) {
                     return true;
@@ -959,10 +968,12 @@
                 }
 
 
-                if ((this.mainform.orgform == 'ИП КФХ (существует менее 2 лет)') && (this.mainform.type == 'Проектное финансирование')) {
+                if ((this.mainform.orgform == 'ИП КФХ (существует менее 2 лет)') && (this.mainform.type ==
+                        'Проектное финансирование')) {
                     return true;
                 }
-                if ((this.mainform.orgform == 'ИП КФХ (существует более 2 лет)') && (this.mainform.type == 'Проектное финансирование')) {
+                if ((this.mainform.orgform == 'ИП КФХ (существует более 2 лет)') && (this.mainform.type ==
+                        'Проектное финансирование')) {
                     return true;
                 }
                 if ((this.mainform.orgform == 'Физлицо') && (this.mainform.type == 'Проектное финансирование')) {
@@ -970,9 +981,9 @@
                 }
                 if ((this.mainform.orgform == 'ИП') && (this.mainform.type == 'Проектное финансирование')) {
                     return true;
-				}
-				
-				return false;
+                }
+
+                return false;
 
             },
             watchCheck() {
