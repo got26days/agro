@@ -18,7 +18,7 @@ class EventController extends Controller
 
     public function main()
     {
-        edirect()->action(
+        redirect()->action(
             'EventController@index', ['slug' => 'pomosh-v-poluchenii-kreditov-subsidij-i-grantov-ot-kompanii-agrodohod']
         );
     }
