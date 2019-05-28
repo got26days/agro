@@ -2462,6 +2462,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -2894,7 +2918,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* Set the theme color of the component */\n/* import theme style */\n/* component style */\n.vue-slider-disabled {\n  opacity: 0.5;\n  cursor: not-allowed;\n}\n\n/* rail style */\n.vue-slider-rail {\n  background-color: #ccc;\n  border-radius: 15px;\n}\n\n/* process style */\n.vue-slider-process {\n  background-color: #5dbb5f;\n  border-radius: 15px;\n}\n\n/* mark style */\n.vue-slider-mark {\n  z-index: 4;\n}\n.vue-slider-mark:first-child .vue-slider-mark-step, .vue-slider-mark:last-child .vue-slider-mark-step {\n  display: none;\n}\n.vue-slider-mark-step {\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n  background-color: rgba(0, 0, 0, 0.16);\n}\n.vue-slider-mark-label {\n  font-size: 14px;\n  white-space: nowrap;\n}\n/* dot style */\n.vue-slider-dot-handle {\n  cursor: pointer;\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n  background-color: #fff;\n  box-sizing: border-box;\n  box-shadow: 0.5px 0.5px 2px 1px rgba(0, 0, 0, 0.32);\n}\n.vue-slider-dot-handle-focus {\n  box-shadow: 0px 0px 1px 2px rgba(93, 187, 95, 0.36);\n}\n.vue-slider-dot-handle-disabled {\n  cursor: not-allowed;\n  background-color: #ccc;\n}\n.vue-slider-dot-tooltip-inner {\n  font-size: 14px;\n  white-space: nowrap;\n  padding: 2px 5px;\n  min-width: 20px;\n  text-align: center;\n  color: #fff;\n  border-radius: 5px;\n  border-color: #5dbb5f;\n  background-color: #5dbb5f;\n  box-sizing: content-box;\n}\n.vue-slider-dot-tooltip-inner::after {\n  content: \"\";\n  position: absolute;\n}\n.vue-slider-dot-tooltip-inner-top::after {\n  top: 100%;\n  left: 50%;\n  -webkit-transform: translate(-50%, 0);\n          transform: translate(-50%, 0);\n  height: 0;\n  width: 0;\n  border-color: transparent;\n  border-style: solid;\n  border-width: 5px;\n  border-top-color: inherit;\n}\n.vue-slider-dot-tooltip-inner-bottom::after {\n  bottom: 100%;\n  left: 50%;\n  -webkit-transform: translate(-50%, 0);\n          transform: translate(-50%, 0);\n  height: 0;\n  width: 0;\n  border-color: transparent;\n  border-style: solid;\n  border-width: 5px;\n  border-bottom-color: inherit;\n}\n.vue-slider-dot-tooltip-inner-left::after {\n  left: 100%;\n  top: 50%;\n  -webkit-transform: translate(0, -50%);\n          transform: translate(0, -50%);\n  height: 0;\n  width: 0;\n  border-color: transparent;\n  border-style: solid;\n  border-width: 5px;\n  border-left-color: inherit;\n}\n.vue-slider-dot-tooltip-inner-right::after {\n  right: 100%;\n  top: 50%;\n  -webkit-transform: translate(0, -50%);\n          transform: translate(0, -50%);\n  height: 0;\n  width: 0;\n  border-color: transparent;\n  border-style: solid;\n  border-width: 5px;\n  border-right-color: inherit;\n}\n.vue-slider-dot-tooltip-wrapper {\n  opacity: 0;\n  transition: all 0.3s;\n}\n.vue-slider-dot-tooltip-wrapper-show {\n  opacity: 1;\n}\n.calc-form__label-title {\n  background: #fff;\n  top: 0;\n  font-size: 13px;\n  line-height: 16px;\n  letter-spacing: -0.05em;\n  color: #5c5c5c;\n}\n.IZ-select__menu {\n  z-index: 10000;\n}\n.IZ-select__input input {\n  height: 64px;\n}\ninput[type=date]::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  display: none;\n}\n.IZ-select__no-data {\n  display: none;\n}\n.out-input {\n  margin: 0;\n  outline: 0;\n  border: 0;\n  background: 0 0;\n  text-align: center;\n}\n.new-selector {\n  margin-bottom: 24px;\n}\ninput[type=number]::-webkit-inner-spin-button,\ninput[type=number]::-webkit-outer-spin-button {\n  -webkit-appearance: none;\n  margin: 0;\n}\n.isdissabled {\n  background-color: #e9ecef;\n}\n.calc-form__label p {\n  color: red;\n}", ""]);
+exports.push([module.i, "/* Set the theme color of the component */\n/* import theme style */\n/* component style */\n.vue-slider-disabled {\n  opacity: 0.5;\n  cursor: not-allowed;\n}\n\n/* rail style */\n.vue-slider-rail {\n  background-color: #ccc;\n  border-radius: 15px;\n}\n\n/* process style */\n.vue-slider-process {\n  background-color: #5dbb5f;\n  border-radius: 15px;\n}\n\n/* mark style */\n.vue-slider-mark {\n  z-index: 4;\n}\n.vue-slider-mark:first-child .vue-slider-mark-step, .vue-slider-mark:last-child .vue-slider-mark-step {\n  display: none;\n}\n.vue-slider-mark-step {\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n  background-color: rgba(0, 0, 0, 0.16);\n}\n.vue-slider-mark-label {\n  font-size: 14px;\n  white-space: nowrap;\n}\n/* dot style */\n.vue-slider-dot-handle {\n  cursor: pointer;\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n  background-color: #fff;\n  box-sizing: border-box;\n  box-shadow: 0.5px 0.5px 2px 1px rgba(0, 0, 0, 0.32);\n}\n.vue-slider-dot-handle-focus {\n  box-shadow: 0px 0px 1px 2px rgba(93, 187, 95, 0.36);\n}\n.vue-slider-dot-handle-disabled {\n  cursor: not-allowed;\n  background-color: #ccc;\n}\n.vue-slider-dot-tooltip-inner {\n  font-size: 14px;\n  white-space: nowrap;\n  padding: 2px 5px;\n  min-width: 20px;\n  text-align: center;\n  color: #fff;\n  border-radius: 5px;\n  border-color: #5dbb5f;\n  background-color: #5dbb5f;\n  box-sizing: content-box;\n}\n.vue-slider-dot-tooltip-inner::after {\n  content: \"\";\n  position: absolute;\n}\n.vue-slider-dot-tooltip-inner-top::after {\n  top: 100%;\n  left: 50%;\n  -webkit-transform: translate(-50%, 0);\n          transform: translate(-50%, 0);\n  height: 0;\n  width: 0;\n  border-color: transparent;\n  border-style: solid;\n  border-width: 5px;\n  border-top-color: inherit;\n}\n.vue-slider-dot-tooltip-inner-bottom::after {\n  bottom: 100%;\n  left: 50%;\n  -webkit-transform: translate(-50%, 0);\n          transform: translate(-50%, 0);\n  height: 0;\n  width: 0;\n  border-color: transparent;\n  border-style: solid;\n  border-width: 5px;\n  border-bottom-color: inherit;\n}\n.vue-slider-dot-tooltip-inner-left::after {\n  left: 100%;\n  top: 50%;\n  -webkit-transform: translate(0, -50%);\n          transform: translate(0, -50%);\n  height: 0;\n  width: 0;\n  border-color: transparent;\n  border-style: solid;\n  border-width: 5px;\n  border-left-color: inherit;\n}\n.vue-slider-dot-tooltip-inner-right::after {\n  right: 100%;\n  top: 50%;\n  -webkit-transform: translate(0, -50%);\n          transform: translate(0, -50%);\n  height: 0;\n  width: 0;\n  border-color: transparent;\n  border-style: solid;\n  border-width: 5px;\n  border-right-color: inherit;\n}\n.vue-slider-dot-tooltip-wrapper {\n  opacity: 0;\n  transition: all 0.3s;\n}\n.vue-slider-dot-tooltip-wrapper-show {\n  opacity: 1;\n}\n.calc-form__label-title {\n  background: #fff;\n  top: 0;\n  font-size: 13px;\n  line-height: 16px;\n  letter-spacing: -0.05em;\n  color: #5c5c5c;\n}\n.IZ-select__menu {\n  z-index: 10000;\n}\n.IZ-select__input input {\n  height: 64px;\n}\ninput[type=date]::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  display: none;\n}\n.IZ-select__no-data {\n  display: none;\n}\n.out-input {\n  margin: 0;\n  outline: 0;\n  border: 0;\n  background: 0 0;\n  text-align: center;\n}\n.new-selector {\n  margin-bottom: 24px;\n}\ninput[type=number]::-webkit-inner-spin-button,\ninput[type=number]::-webkit-outer-spin-button {\n  -webkit-appearance: none;\n  margin: 0;\n}\n.isdissabled {\n  background-color: #e9ecef;\n}\n.calc-form__label p {\n  color: red;\n}\n.dis-num {\n  color: #9C9C9C;\n}", ""]);
 
 // exports
 
@@ -32853,7 +32877,6 @@ var render = function() {
                               ],
                               ref: "summ1",
                               staticClass: "out-input",
-                              class: { active: _vm.isActive },
                               attrs: { type: "number" },
                               domProps: { value: _vm.mainform.form1.summ },
                               on: {
@@ -32882,8 +32905,11 @@ var render = function() {
                                   {
                                     name: "show",
                                     rawName: "v-show",
-                                    value: !_vm.focused,
-                                    expression: "!focused"
+                                    value:
+                                      !_vm.focused &&
+                                      !_vm.mainform.form1.needprice,
+                                    expression:
+                                      "(!focused && !mainform.form1.needprice)"
                                   }
                                 ],
                                 on: {
@@ -32894,8 +32920,34 @@ var render = function() {
                               },
                               [
                                 _vm._v(
-                                  _vm._s(_vm.mainform.form1.summ) +
-                                    "\n                                            ₽"
+                                  "\n                                        " +
+                                    _vm._s(_vm.mainform.form1.summ) +
+                                    "\n                                        ₽\n                                        "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              {
+                                directives: [
+                                  {
+                                    name: "show",
+                                    rawName: "v-show",
+                                    value:
+                                      !_vm.focused &&
+                                      _vm.mainform.form1.needprice,
+                                    expression:
+                                      "(!focused && mainform.form1.needprice)"
+                                  }
+                                ],
+                                staticClass: "dis-num"
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                        " +
+                                    _vm._s(_vm.mainform.form1.summ) +
+                                    "\n                                        ₽\n                                        "
                                 )
                               ]
                             )
@@ -33168,129 +33220,128 @@ var render = function() {
                       1
                     ),
                     _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "calc-form__slider js-rang-slider" },
-                      [
-                        _c("div", { staticClass: "calc-form__slider-txt" }, [
-                          _vm._v(" Какая сумма необходима?")
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "label",
-                          { staticClass: "calc-form__slider-val" },
-                          [
-                            _c("div", { staticClass: "new-selector" }, [
-                              _c("input", {
+                    _c("div", { staticClass: "calc-form__slider" }, [
+                      _c("div", { staticClass: "calc-form__slider-txt" }, [
+                        _vm._v(" Какая сумма необходима?")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "label",
+                        { staticClass: "calc-form__slider-val" },
+                        [
+                          _c("div", { staticClass: "new-selector" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.mainform.form2.summ,
+                                  expression: "mainform.form2.summ"
+                                },
+                                {
+                                  name: "show",
+                                  rawName: "v-show",
+                                  value: _vm.focused,
+                                  expression: "focused"
+                                }
+                              ],
+                              ref: "summ2",
+                              staticClass: "out-input",
+                              attrs: { type: "number", id: "amount-4" },
+                              domProps: { value: _vm.mainform.form2.summ },
+                              on: {
+                                focus: function($event) {
+                                  _vm.focused = true
+                                },
+                                blur: _vm.onBlur,
+                                change: _vm.maxNum2,
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.mainform.form2,
+                                    "summ",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              {
                                 directives: [
-                                  {
-                                    name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.mainform.form2.summ,
-                                    expression: "mainform.form2.summ"
-                                  },
                                   {
                                     name: "show",
                                     rawName: "v-show",
-                                    value: _vm.focused,
-                                    expression: "focused"
+                                    value: !_vm.focused,
+                                    expression: "!focused"
                                   }
                                 ],
-                                ref: "summ2",
-                                staticClass: "out-input",
-                                attrs: { type: "number", id: "amount-4" },
-                                domProps: { value: _vm.mainform.form2.summ },
                                 on: {
-                                  focus: function($event) {
-                                    _vm.focused = true
-                                  },
-                                  blur: _vm.onBlur,
-                                  change: _vm.maxNum2,
-                                  input: function($event) {
-                                    if ($event.target.composing) {
-                                      return
-                                    }
-                                    _vm.$set(
-                                      _vm.mainform.form2,
-                                      "summ",
-                                      $event.target.value
-                                    )
+                                  click: function($event) {
+                                    return _vm.openInput("summ2")
                                   }
                                 }
-                              }),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                {
-                                  directives: [
-                                    {
-                                      name: "show",
-                                      rawName: "v-show",
-                                      value: !_vm.focused,
-                                      expression: "!focused"
-                                    }
-                                  ],
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.openInput("summ2")
-                                    }
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    _vm._s(_vm.mainform.form2.summ) +
-                                      "\n                                            ₽"
-                                  )
-                                ]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "vue-slider",
-                              _vm._b(
-                                {
-                                  attrs: { max: _vm.overOp },
-                                  model: {
-                                    value: _vm.mainform.form2.summ,
-                                    callback: function($$v) {
-                                      _vm.$set(_vm.mainform.form2, "summ", $$v)
-                                    },
-                                    expression: "mainform.form2.summ"
-                                  }
-                                },
-                                "vue-slider",
-                                _vm.options,
-                                false
-                              )
+                              },
+                              [
+                                _vm._v(
+                                  _vm._s(_vm.mainform.form2.summ) +
+                                    "\n                                            ₽"
+                                )
+                              ]
                             )
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
-                        _c("div", {
-                          staticClass: "calc-form__slider-blc",
-                          attrs: { id: "slider-range-grant" }
-                        }),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "calc-form__slider-row" }, [
-                          _c("div", [
-                            _c("span", { staticClass: "js-min" }, [
-                              _vm._v(_vm._s(_vm.options.min))
-                            ]),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "rub" }, [_vm._v("₽")])
                           ]),
                           _vm._v(" "),
-                          _c("div", [
-                            _c("span", { staticClass: "js-max" }, [
-                              _vm._v(_vm._s(_vm.overOp))
-                            ]),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "rub" }, [_vm._v("₽")])
-                          ])
+                          _c(
+                            "vue-slider",
+                            _vm._b(
+                              {
+                                attrs: {
+                                  max: _vm.overOp,
+                                  disabled: _vm.watchCheck
+                                },
+                                model: {
+                                  value: _vm.mainform.form2.summ,
+                                  callback: function($$v) {
+                                    _vm.$set(_vm.mainform.form2, "summ", $$v)
+                                  },
+                                  expression: "mainform.form2.summ"
+                                }
+                              },
+                              "vue-slider",
+                              _vm.options,
+                              false
+                            )
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("div", {
+                        staticClass: "calc-form__slider-blc",
+                        attrs: { id: "slider-range-grant" }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "calc-form__slider-row" }, [
+                        _c("div", [
+                          _c("span", { staticClass: "js-min" }, [
+                            _vm._v(_vm._s(_vm.options.min))
+                          ]),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "rub" }, [_vm._v("₽")])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", [
+                          _c("span", { staticClass: "js-max" }, [
+                            _vm._v(_vm._s(_vm.overOp))
+                          ]),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "rub" }, [_vm._v("₽")])
                         ])
-                      ]
-                    ),
+                      ])
+                    ]),
                     _vm._v(" "),
                     _c(
                       "label",
@@ -33363,129 +33414,125 @@ var render = function() {
                     ]
                   },
                   [
-                    _c(
-                      "div",
-                      { staticClass: "calc-form__slider js-rang-slider" },
-                      [
-                        _c("div", { staticClass: "calc-form__slider-txt" }, [
-                          _vm._v("Сумма проекта")
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "label",
-                          { staticClass: "calc-form__slider-val" },
-                          [
-                            _c("div", { staticClass: "new-selector" }, [
-                              _c("input", {
+                    _c("div", { staticClass: "calc-form__slider" }, [
+                      _c("div", { staticClass: "calc-form__slider-txt" }, [
+                        _vm._v("Сумма проекта")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "label",
+                        { staticClass: "calc-form__slider-val" },
+                        [
+                          _c("div", { staticClass: "new-selector" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.mainform.form3.summ,
+                                  expression: "mainform.form3.summ"
+                                },
+                                {
+                                  name: "show",
+                                  rawName: "v-show",
+                                  value: _vm.focused,
+                                  expression: "focused"
+                                }
+                              ],
+                              ref: "summ3",
+                              staticClass: "out-input",
+                              attrs: { type: "number", id: "amount-4" },
+                              domProps: { value: _vm.mainform.form3.summ },
+                              on: {
+                                focus: function($event) {
+                                  _vm.focused = true
+                                },
+                                blur: _vm.onBlur,
+                                change: _vm.maxNum3,
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.mainform.form3,
+                                    "summ",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              {
                                 directives: [
-                                  {
-                                    name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.mainform.form3.summ,
-                                    expression: "mainform.form3.summ"
-                                  },
                                   {
                                     name: "show",
                                     rawName: "v-show",
-                                    value: _vm.focused,
-                                    expression: "focused"
+                                    value: !_vm.focused,
+                                    expression: "!focused"
                                   }
                                 ],
-                                ref: "summ3",
-                                staticClass: "out-input",
-                                attrs: { type: "number", id: "amount-4" },
-                                domProps: { value: _vm.mainform.form3.summ },
                                 on: {
-                                  focus: function($event) {
-                                    _vm.focused = true
-                                  },
-                                  blur: _vm.onBlur,
-                                  change: _vm.maxNum3,
-                                  input: function($event) {
-                                    if ($event.target.composing) {
-                                      return
-                                    }
-                                    _vm.$set(
-                                      _vm.mainform.form3,
-                                      "summ",
-                                      $event.target.value
-                                    )
+                                  click: function($event) {
+                                    return _vm.openInput("summ3")
                                   }
                                 }
-                              }),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                {
-                                  directives: [
-                                    {
-                                      name: "show",
-                                      rawName: "v-show",
-                                      value: !_vm.focused,
-                                      expression: "!focused"
-                                    }
-                                  ],
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.openInput("summ3")
-                                    }
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    _vm._s(_vm.mainform.form3.summ) +
-                                      "\n                                            ₽"
-                                  )
-                                ]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "vue-slider",
-                              _vm._b(
-                                {
-                                  attrs: { max: _vm.overOp },
-                                  model: {
-                                    value: _vm.mainform.form3.summ,
-                                    callback: function($$v) {
-                                      _vm.$set(_vm.mainform.form3, "summ", $$v)
-                                    },
-                                    expression: "mainform.form3.summ"
-                                  }
-                                },
-                                "vue-slider",
-                                _vm.options,
-                                false
-                              )
+                              },
+                              [
+                                _vm._v(
+                                  _vm._s(_vm.mainform.form3.summ) +
+                                    "\n                                            ₽"
+                                )
+                              ]
                             )
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
-                        _c("div", {
-                          staticClass: "calc-form__slider-blc",
-                          attrs: { id: "slider-range-project" }
-                        }),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "calc-form__slider-row" }, [
-                          _c("div", [
-                            _c("span", { staticClass: "js-min" }, [
-                              _vm._v(_vm._s(_vm.options.min))
-                            ]),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "rub" }, [_vm._v("₽")])
                           ]),
                           _vm._v(" "),
-                          _c("div", [
-                            _c("span", { staticClass: "js-max" }, [
-                              _vm._v(_vm._s(_vm.overOp))
-                            ]),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "rub" }, [_vm._v("₽")])
-                          ])
+                          _c(
+                            "vue-slider",
+                            _vm._b(
+                              {
+                                attrs: { max: _vm.overOp },
+                                model: {
+                                  value: _vm.mainform.form3.summ,
+                                  callback: function($$v) {
+                                    _vm.$set(_vm.mainform.form3, "summ", $$v)
+                                  },
+                                  expression: "mainform.form3.summ"
+                                }
+                              },
+                              "vue-slider",
+                              _vm.options,
+                              false
+                            )
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("div", {
+                        staticClass: "calc-form__slider-blc",
+                        attrs: { id: "slider-range-project" }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "calc-form__slider-row" }, [
+                        _c("div", [
+                          _c("span", { staticClass: "js-min" }, [
+                            _vm._v(_vm._s(_vm.options.min))
+                          ]),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "rub" }, [_vm._v("₽")])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", [
+                          _c("span", { staticClass: "js-max" }, [
+                            _vm._v(_vm._s(_vm.overOp))
+                          ]),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "rub" }, [_vm._v("₽")])
                         ])
-                      ]
-                    ),
+                      ])
+                    ]),
                     _vm._v(" "),
                     _c(
                       "label",
@@ -34807,129 +34854,155 @@ var render = function() {
                       1
                     ),
                     _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "calc-form__slider js-rang-slider" },
-                      [
-                        _c("div", { staticClass: "calc-form__slider-txt" }, [
-                          _vm._v("Размер понесенных затрат к возмещению")
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "label",
-                          { staticClass: "calc-form__slider-val" },
-                          [
-                            _c("div", { staticClass: "new-selector" }, [
-                              _c("input", {
+                    _c("div", { staticClass: "calc-form__slider" }, [
+                      _c("div", { staticClass: "calc-form__slider-txt" }, [
+                        _vm._v("Размер понесенных затрат к возмещению")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "label",
+                        { staticClass: "calc-form__slider-val" },
+                        [
+                          _c("div", { staticClass: "new-selector" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.mainform.form4.summ,
+                                  expression: "mainform.form4.summ"
+                                },
+                                {
+                                  name: "show",
+                                  rawName: "v-show",
+                                  value: _vm.focused,
+                                  expression: "focused"
+                                }
+                              ],
+                              ref: "summ4",
+                              staticClass: "out-input",
+                              attrs: { type: "number", id: "amount-4" },
+                              domProps: { value: _vm.mainform.form4.summ },
+                              on: {
+                                focus: function($event) {
+                                  _vm.focused = true
+                                },
+                                blur: _vm.onBlur,
+                                change: _vm.maxNum4,
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.mainform.form4,
+                                    "summ",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              {
                                 directives: [
-                                  {
-                                    name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.mainform.form4.summ,
-                                    expression: "mainform.form4.summ"
-                                  },
                                   {
                                     name: "show",
                                     rawName: "v-show",
-                                    value: _vm.focused,
-                                    expression: "focused"
+                                    value:
+                                      !_vm.focused && !_vm.mainform.form4.need,
+                                    expression:
+                                      "(!focused && !mainform.form4.need)"
                                   }
                                 ],
-                                ref: "summ4",
-                                staticClass: "out-input",
-                                attrs: { type: "number", id: "amount-4" },
-                                domProps: { value: _vm.mainform.form4.summ },
                                 on: {
-                                  focus: function($event) {
-                                    _vm.focused = true
-                                  },
-                                  blur: _vm.onBlur,
-                                  change: _vm.maxNum4,
-                                  input: function($event) {
-                                    if ($event.target.composing) {
-                                      return
-                                    }
-                                    _vm.$set(
-                                      _vm.mainform.form4,
-                                      "summ",
-                                      $event.target.value
-                                    )
+                                  click: function($event) {
+                                    return _vm.openInput("summ4")
                                   }
                                 }
-                              }),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                {
-                                  directives: [
-                                    {
-                                      name: "show",
-                                      rawName: "v-show",
-                                      value: !_vm.focused,
-                                      expression: "!focused"
-                                    }
-                                  ],
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.openInput("summ4")
-                                    }
-                                  }
-                                },
-                                [
-                                  _vm._v(
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                        " +
                                     _vm._s(_vm.mainform.form4.summ) +
-                                      "\n                                            ₽"
-                                  )
-                                ]
-                              )
-                            ]),
+                                    "\n                                        ₽\n                                        "
+                                )
+                              ]
+                            ),
                             _vm._v(" "),
                             _c(
-                              "vue-slider",
-                              _vm._b(
-                                {
-                                  attrs: { max: _vm.overOp },
-                                  model: {
-                                    value: _vm.mainform.form4.summ,
-                                    callback: function($$v) {
-                                      _vm.$set(_vm.mainform.form4, "summ", $$v)
-                                    },
-                                    expression: "mainform.form4.summ"
+                              "span",
+                              {
+                                directives: [
+                                  {
+                                    name: "show",
+                                    rawName: "v-show",
+                                    value:
+                                      !_vm.focused && _vm.mainform.form4.need,
+                                    expression:
+                                      "(!focused && mainform.form4.need)"
                                   }
-                                },
-                                "vue-slider",
-                                _vm.options,
-                                false
-                              )
+                                ],
+                                staticClass: "dis-num"
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                        " +
+                                    _vm._s(_vm.mainform.form1.summ) +
+                                    "\n                                        ₽\n                                        "
+                                )
+                              ]
                             )
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
-                        _c("div", {
-                          staticClass: "calc-form__slider-blc",
-                          attrs: { id: "slider-range-subs" }
-                        }),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "calc-form__slider-row" }, [
-                          _c("div", [
-                            _c("span", { staticClass: "js-min" }, [
-                              _vm._v(_vm._s(_vm.options.min))
-                            ]),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "rub" }, [_vm._v("₽")])
                           ]),
                           _vm._v(" "),
-                          _c("div", [
-                            _c("span", { staticClass: "js-max" }, [
-                              _vm._v(_vm._s(_vm.overOp))
-                            ]),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "rub" }, [_vm._v("₽")])
-                          ])
+                          _c(
+                            "vue-slider",
+                            _vm._b(
+                              {
+                                attrs: {
+                                  max: _vm.overOp,
+                                  disabled: _vm.mainform.form4.need
+                                },
+                                model: {
+                                  value: _vm.mainform.form4.summ,
+                                  callback: function($$v) {
+                                    _vm.$set(_vm.mainform.form4, "summ", $$v)
+                                  },
+                                  expression: "mainform.form4.summ"
+                                }
+                              },
+                              "vue-slider",
+                              _vm.options,
+                              false
+                            )
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("div", {
+                        staticClass: "calc-form__slider-blc",
+                        attrs: { id: "slider-range-subs" }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "calc-form__slider-row" }, [
+                        _c("div", [
+                          _c("span", { staticClass: "js-min" }, [
+                            _vm._v(_vm._s(_vm.options.min))
+                          ]),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "rub" }, [_vm._v("₽")])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", [
+                          _c("span", { staticClass: "js-max" }, [
+                            _vm._v(_vm._s(_vm.overOp))
+                          ]),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "rub" }, [_vm._v("₽")])
                         ])
-                      ]
-                    ),
+                      ])
+                    ]),
                     _vm._v(" "),
                     _c("label", { staticClass: "calc-form__checkbox" }, [
                       _c("input", {

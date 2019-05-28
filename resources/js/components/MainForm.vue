@@ -119,10 +119,21 @@
                                         @blur="onBlur" 
                                         v-show="focused" 
                                         ref="summ1" 
-                                        @change="maxNum"
-                                        v-bind:class="{ active: isActive }">
-                                        <span v-show="!focused" @click="openInput('summ1')">{{ mainform.form1.summ }}
-                                            &#8381;</span>
+                                        @change="maxNum"/>
+                                        
+                                        <span 
+                                        v-show="(!focused && !mainform.form1.needprice)" 
+                                        @click="openInput('summ1')">
+                                        {{ mainform.form1.summ }}
+                                        &#8381;
+                                        </span>
+                                        <span 
+                                        v-show="(!focused && mainform.form1.needprice)" 
+                                        class="dis-num"
+                                        >
+                                        {{ mainform.form1.summ }}
+                                        &#8381;
+                                        </span>
                                     </div>
                                     <vue-slider v-model="mainform.form1.summ" v-bind="options" :disabled="watchCheck"
                                         :max="overOp" />
@@ -166,7 +177,7 @@
                             </label>
 
 
-                            <div class="calc-form__slider js-rang-slider">
+                            <div class="calc-form__slider">
                                 <div class="calc-form__slider-txt"> Какая сумма необходима?</div>
 
                                 <label class="calc-form__slider-val">
@@ -177,7 +188,7 @@
                                         <span v-show="!focused" @click="openInput('summ2')">{{ mainform.form2.summ }}
                                             &#8381;</span>
                                     </div>
-                                    <vue-slider v-model="mainform.form2.summ" v-bind="options" :max="overOp" />
+                                    <vue-slider v-model="mainform.form2.summ" v-bind="options" :max="overOp" :disabled="watchCheck"/>
                                 </label>
 
                                 <div class="calc-form__slider-blc" id="slider-range-grant"></div>
@@ -202,7 +213,7 @@
                         <div v-show="((mainform.type === 'Проектное финансирование') && (!checkError))">
 
 
-                            <div class="calc-form__slider js-rang-slider">
+                            <div class="calc-form__slider">
                                 <div class="calc-form__slider-txt">Сумма проекта</div>
                                 <label class="calc-form__slider-val">
                                     <div class="new-selector">
@@ -408,17 +419,30 @@
                                 <p v-show="errors.first('mainform.form4.geter')">Поле обязательно для заполнения</p>
                             </label>
 
-                            <div class="calc-form__slider js-rang-slider">
+                            <div class="calc-form__slider">
                                 <div class="calc-form__slider-txt">Размер понесенных затрат к возмещению</div>
                                 <label class="calc-form__slider-val">
                                     <div class="new-selector">
                                         <input type="number" id="amount-4" class="out-input"
                                             v-model="mainform.form4.summ" @focus="focused = true" @blur="onBlur"
                                             v-show="focused" ref="summ4" @change="maxNum4">
-                                        <span v-show="!focused" @click="openInput('summ4')">{{ mainform.form4.summ }}
-                                            &#8381;</span>
+                               
+
+                                        <span 
+                                        v-show="(!focused && !mainform.form4.need)" 
+                                        @click="openInput('summ4')">
+                                        {{ mainform.form4.summ }}
+                                        &#8381;
+                                        </span>
+                                        <span 
+                                        v-show="(!focused && mainform.form4.need)" 
+                                        class="dis-num"
+                                        >
+                                        {{ mainform.form1.summ }}
+                                        &#8381;
+                                        </span>
                                     </div>
-                                    <vue-slider v-model="mainform.form4.summ" v-bind="options" :max="overOp" />
+                                    <vue-slider v-model="mainform.form4.summ" v-bind="options" :max="overOp" :disabled="mainform.form4.need"/>
                                 </label>
 
                                 <div class="calc-form__slider-blc" id="slider-range-subs"></div>
@@ -1253,6 +1277,9 @@
 
     .calc-form__label p {
         color: red;
+    }
+    .dis-num{
+        color: #9C9C9C;
     }
 
 </style>
