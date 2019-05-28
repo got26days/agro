@@ -28,6 +28,7 @@
         "vee-validate": "^2.2.7",
         "vue-cool-select": "^2.10.2",
         "vue-dropdowns": "^1.0.6",
-        "vue-slider-component": "^3.0.31"
+        "vue-slider-component": "^3.0.31",
+        "vue-the-mask": "^0.11.1"
     }
 }

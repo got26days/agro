@@ -178,7 +178,13 @@
 
 
                             <div class="calc-form__slider">
-                                <div class="calc-form__slider-txt"> Какая сумма необходима?</div>
+                                <div class="calc-form__slider-txt">
+                                    <span v-show="((mainform.orgform == 'ИП КФХ (существует менее 2 лет)') || (mainform.orgform == 'Физлицо'))">Доступен грант «Начинающий фермер». </span>
+                                    <span v-show="(mainform.orgform == 'ИП КФХ (существует более 2 лет)')" >Доступен грант «Семейная ферма». </span>
+                                    
+                                    <span v-show="(mainform.orgform == 'Глава кооператива')" >Доступен грант для СПоК. </span>
+                                    
+                                     Какая сумма необходима?</div>
 
                                 <label class="calc-form__slider-val">
                                     <div class="new-selector">
@@ -525,7 +531,7 @@
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Телефон</span>
                                 <input type="tel" class="input calc-form__input js-input" v-model="mainform.form1.phone"
-                                    v-validate="'required'" name="mainform.form1.proc">
+                                    v-validate="'required'" name="mainform.form1.proc" v-mask="'+7 (###) ###-##-##'">
                                 <p v-show="errors.first('mainform.form1.proc')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
@@ -548,7 +554,7 @@
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Телефон</span>
                                 <input type="tel" class="input calc-form__input js-input" v-model="mainform.form2.phone"
-                                    v-validate="'required'" name="mainform.form2.phone">
+                                    v-validate="'required'" name="mainform.form2.phone" v-mask="'+7 (###) ###-##-##'">
                                 <p v-show="errors.first('mainform.form2.phone')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
@@ -592,7 +598,7 @@
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Телефон</span>
                                 <input type="tel" class="input calc-form__input js-input" v-model="mainform.form3.phone"
-                                    v-validate="'required'" name="mainform.form3.phone">
+                                    v-validate="'required'" name="mainform.form3.phone" v-mask="'+7 (###) ###-##-##'">
                                 <p v-show="errors.first('mainform.form3.phone')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
@@ -622,7 +628,7 @@
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Телефон</span>
                                 <input type="tel" class="input calc-form__input js-input" v-model="mainform.form4.phone"
-                                    v-validate="'required'" name="mainform.form4.phone">
+                                    v-validate="'required'" name="mainform.form4.phone" v-mask="'+7 (###) ###-##-##'">
                                 <p v-show="errors.first('mainform.form4.phone')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
@@ -683,6 +689,8 @@
 </template>
 
 <script>
+    import {TheMask} from 'vue-the-mask'
+
     import {
         CoolSelect
     } from 'vue-cool-select'
@@ -692,7 +700,8 @@
     export default {
         components: {
             CoolSelect,
-            VueSlider
+            VueSlider,
+            TheMask
         },
         data() {
             return {
