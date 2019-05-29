@@ -216,7 +216,7 @@ class EventController extends Controller
                     $result2 = $result2 -1;
                 }
 
-                if(($diff > 1) and ($dif < 3)) {
+                if(($diff > 1) and ($diff < 3)) {
                     // $result = $result - 15;
                 }
                 
