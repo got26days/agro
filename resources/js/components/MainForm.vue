@@ -22,7 +22,7 @@
                         <label class="calc-form__label js-label">
                             <span class="calc-form__label-title">Организационная форма</span>
                             <cool-select v-model="mainform.orgform"
-                                :items="['', 'ИП КФХ (существует менее 2 лет)', 'ИП КФХ (существует более 2 лет)', 'Глава кооператива', 'Физлицо', 'ИП', 'ООО', 'ОАО', 'ЗАО', 'Другое']"
+                                :items="['', 'ИП КФХ (существует менее 2 лет)', 'ИП КФХ (существует более 2 лет)', 'Холдинг', 'Глава кооператива', 'Физлицо', 'ИП', 'ООО', 'ОАО', 'ЗАО', 'Другое']"
                                 v-validate="'required'" name="mainform.orgform" />
                             <p v-show="errors.first('mainform.orgform')">Поле обязательно для заполнения</p>
                         </label>
