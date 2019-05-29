@@ -125,14 +125,14 @@
                                         v-show="(!focused && !mainform.form1.needprice)" 
                                         @click="openInput('summ1')">
                                         {{ mainform.form1.summ }}
-                                        &#8381;
+                                        <span class="newrubi">i</span>
                                         </span>
                                         <span 
                                         v-show="(!focused && mainform.form1.needprice)" 
                                         class="dis-num"
                                         >
                                         {{ mainform.form1.summ }}
-                                        &#8381;
+                                        <span class="newrubi">i</span>
                                         </span>
                                     </div>
                                     <vue-slider v-model="mainform.form1.summ" v-bind="options" :disabled="watchCheck"
@@ -140,9 +140,9 @@
                                 </label>
                                 <div class="calc-form__slider-blc" id="slider-range-credit"></div>
                                 <div class="calc-form__slider-row">
-                                    <div><span class="js-min">{{ options.min }}</span> <span class="rub">&#8381;</span>
+                                    <div><span class="js-min">{{ options.min }}</span> <span class="newrubi">i</span>
                                     </div>
-                                    <div><span class="js-max">{{ overOp }}</span> <span class="rub">&#8381;</span>
+                                    <div><span class="js-max">{{ overOp }}</span> <span class="newrubi">i</span>
                                     </div>
                                 </div>
                             </div>
@@ -192,16 +192,16 @@
                                             v-model="mainform.form2.summ" @focus="focused = true" @blur="onBlur"
                                             v-show="focused" ref="summ2" @change="maxNum2">
                                         <span v-show="!focused" @click="openInput('summ2')">{{ mainform.form2.summ }}
-                                            &#8381;</span>
+                                            <span class="newrubi">i</span></span>
                                     </div>
                                     <vue-slider v-model="mainform.form2.summ" v-bind="options" :max="overOp" :disabled="watchCheck"/>
                                 </label>
 
                                 <div class="calc-form__slider-blc" id="slider-range-grant"></div>
                                 <div class="calc-form__slider-row">
-                                    <div><span class="js-min">{{ options.min }}</span> <span class="rub">&#8381;</span>
+                                    <div><span class="js-min">{{ options.min }}</span> <span class="newrubi">i</span>
                                     </div>
-                                    <div><span class="js-max">{{ overOp }}</span> <span class="rub">&#8381;</span>
+                                    <div><span class="js-max">{{ overOp }}</span> <span class="newrubi">i</span>
                                     </div>
                                 </div>
                             </div>
@@ -227,16 +227,16 @@
                                             v-model="mainform.form3.summ" @focus="focused = true" @blur="onBlur"
                                             v-show="focused" ref="summ3" @change="maxNum3">
                                         <span v-show="!focused" @click="openInput('summ3')">{{ mainform.form3.summ }}
-                                            &#8381;</span>
+                                            <span class="newrubi">i</span></span>
                                     </div>
                                     <vue-slider v-model="mainform.form3.summ" v-bind="options" :max="overOp" />
                                 </label>
 
                                 <div class="calc-form__slider-blc" id="slider-range-project"></div>
                                 <div class="calc-form__slider-row">
-                                    <div><span class="js-min">{{ options.min }}</span> <span class="rub">&#8381;</span>
+                                    <div><span class="js-min">{{ options.min }}</span> <span class="newrubi">i</span>
                                     </div>
-                                    <div><span class="js-max">{{ overOp }}</span> <span class="rub">&#8381;</span>
+                                    <div><span class="js-max">{{ overOp }}</span> <span class="newrubi">i</span>
                                     </div>
                                 </div>
                             </div>
@@ -438,14 +438,14 @@
                                         v-show="(!focused && !mainform.form4.need)" 
                                         @click="openInput('summ4')">
                                         {{ mainform.form4.summ }}
-                                        &#8381;
+                                        <span class="newrubi">i</span>
                                         </span>
                                         <span 
                                         v-show="(!focused && mainform.form4.need)" 
                                         class="dis-num"
                                         >
                                         {{ mainform.form1.summ }}
-                                        &#8381;
+                                        <span class="newrubi">i</span>
                                         </span>
                                     </div>
                                     <vue-slider v-model="mainform.form4.summ" v-bind="options" :max="overOp" :disabled="mainform.form4.need"/>
@@ -453,9 +453,9 @@
 
                                 <div class="calc-form__slider-blc" id="slider-range-subs"></div>
                                 <div class="calc-form__slider-row">
-                                    <div><span class="js-min">{{ options.min }}</span> <span class="rub">&#8381;</span>
+                                    <div><span class="js-min">{{ options.min }}</span> <span class="newrubi">i</span>
                                     </div>
-                                    <div><span class="js-max">{{ overOp }}</span> <span class="rub">&#8381;</span>
+                                    <div><span class="js-max">{{ overOp }}</span> <span class="newrubi">i</span>
                                     </div>
                                 </div>
                             </div>
@@ -882,7 +882,7 @@
 
                         geter: null,
                         summ: 6000000,
-                        need: '',
+                        need: false,
                         answer: null,
                         dolg: null,
                         proc: null,
@@ -1232,6 +1232,15 @@
 
     /* import theme style */
     @import '~vue-slider-component/lib/theme/default.scss';
+
+   @font-face {
+    font-family: Rub; /* Имя шрифта */
+    src: url('/event/fonts/subset-ALSRubl.ttf'); /* Путь к файлу со шрифтом */
+   }
+
+   .newrubi{
+       font-family: Rub;
+   }
 
 
     .calc-form__label-title {
