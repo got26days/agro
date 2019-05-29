@@ -575,35 +575,40 @@
                         </div>
 
                         <div v-show="mainform.type === 'Проектное финансирование'">
-                            <label class="calc-form__label js-label">
+                            <div>
+                            <label class="calc-form__label">
                                 <span class="calc-form__label-title">Презентация</span>
                                 <cool-select v-model="mainform.form3.present"
-                                    :items="['', 'Есть, готов презентовать', 'Нет']" v-validate="'required'"
-                                    name="mainform.form3.present" />
+                                    :items="['Есть, готов презентовать', 'Нет']" v-validate="'required'"
+                                    name="mainform.form3.present"
+                                    disable-search />
                                 <p v-show="errors.first('mainform.form3.present')">Поле обязательно для заполнения</p>
                             </label>
-                            <label class="calc-form__label js-label">
+                            <label class="calc-form__label">
                                 <span class="calc-form__label-title">От суммы проекта имеются собственные средства
                                 </span>
-                                <cool-select v-model="mainform.form3.sredstva" :items="['', '0%', '10%', '20%', '30%']"
-                                    v-validate="'required'" name="mainform.form3.sredstva" />
+                                <cool-select v-model="mainform.form3.sredstva" :items="['0%', '10%', '20%', '30%']"
+                                    v-validate="'required'" name="mainform.form3.sredstva"
+                                    disable-search />
                                 <p v-show="errors.first('mainform.form3.sredstva')">Поле обязательно для заполнения</p>
                             </label>
-                            <label class="calc-form__label js-label">
+                            </div>
+
+                            <label class="calc-form__label">
                                 <span class="calc-form__label-title">Имя и фамилия</span>
-                                <input type="text" class="input calc-form__input js-input" v-model="mainform.form3.name"
+                                <input type="text" class="input calc-form__input " v-model="mainform.form3.name"
                                     v-validate="'required'" name="mainform.form3.name">
                                 <p v-show="errors.first('mainform.form3.name')">Поле обязательно для заполнения</p>
                             </label>
-                            <label class="calc-form__label js-label">
+                            <label class="calc-form__label">
                                 <span class="calc-form__label-title">Телефон</span>
-                                <input type="tel" class="input calc-form__input js-input" v-model="mainform.form3.phone"
+                                <input type="text" class="input calc-form__input " v-model="mainform.form3.phone"
                                     v-validate="'required'" name="mainform.form3.phone" v-mask="'+7 (###) ###-##-##'">
                                 <p v-show="errors.first('mainform.form3.phone')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Электронная почта</span>
-                                <input type="email" class="input calc-form__input js-input"
+                                <input type="email" class="input calc-form__input "
                                     v-model="mainform.form3.email" v-validate="'required|email'"
                                     name="mainform.form3.email">
                                 <span v-show="errors.first('mainform.form3.email')">Поле обязательно для заполнения и
@@ -611,7 +616,7 @@
                             </label>
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Должность или позиция в компании</span>
-                                <input type="text" class="input calc-form__input js-input"
+                                <input type="text" class="input calc-form__input "
                                     v-model="mainform.form3.position" v-validate="'required'"
                                     name="mainform.form3.position">
                                 <p v-show="errors.first('mainform.form3.position')">Поле обязательно для заполнения</p>
@@ -1242,6 +1247,9 @@
        font-family: Rub;
    }
 
+    .IZ-select__menu--disable-search{
+            top: auto !important;
+    }
 
     .calc-form__label-title {
         background: #fff;

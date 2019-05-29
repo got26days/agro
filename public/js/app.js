@@ -2494,6 +2494,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 
@@ -2928,7 +2933,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@charset \"UTF-8\";\n/* Set the theme color of the component */\n/* import theme style */\n/* component style */\n.vue-slider-disabled {\n  opacity: 0.5;\n  cursor: not-allowed;\n}\n\n/* rail style */\n.vue-slider-rail {\n  background-color: #ccc;\n  border-radius: 15px;\n}\n\n/* process style */\n.vue-slider-process {\n  background-color: #5dbb5f;\n  border-radius: 15px;\n}\n\n/* mark style */\n.vue-slider-mark {\n  z-index: 4;\n}\n.vue-slider-mark:first-child .vue-slider-mark-step, .vue-slider-mark:last-child .vue-slider-mark-step {\n  display: none;\n}\n.vue-slider-mark-step {\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n  background-color: rgba(0, 0, 0, 0.16);\n}\n.vue-slider-mark-label {\n  font-size: 14px;\n  white-space: nowrap;\n}\n/* dot style */\n.vue-slider-dot-handle {\n  cursor: pointer;\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n  background-color: #fff;\n  box-sizing: border-box;\n  box-shadow: 0.5px 0.5px 2px 1px rgba(0, 0, 0, 0.32);\n}\n.vue-slider-dot-handle-focus {\n  box-shadow: 0px 0px 1px 2px rgba(93, 187, 95, 0.36);\n}\n.vue-slider-dot-handle-disabled {\n  cursor: not-allowed;\n  background-color: #ccc;\n}\n.vue-slider-dot-tooltip-inner {\n  font-size: 14px;\n  white-space: nowrap;\n  padding: 2px 5px;\n  min-width: 20px;\n  text-align: center;\n  color: #fff;\n  border-radius: 5px;\n  border-color: #5dbb5f;\n  background-color: #5dbb5f;\n  box-sizing: content-box;\n}\n.vue-slider-dot-tooltip-inner::after {\n  content: \"\";\n  position: absolute;\n}\n.vue-slider-dot-tooltip-inner-top::after {\n  top: 100%;\n  left: 50%;\n  -webkit-transform: translate(-50%, 0);\n          transform: translate(-50%, 0);\n  height: 0;\n  width: 0;\n  border-color: transparent;\n  border-style: solid;\n  border-width: 5px;\n  border-top-color: inherit;\n}\n.vue-slider-dot-tooltip-inner-bottom::after {\n  bottom: 100%;\n  left: 50%;\n  -webkit-transform: translate(-50%, 0);\n          transform: translate(-50%, 0);\n  height: 0;\n  width: 0;\n  border-color: transparent;\n  border-style: solid;\n  border-width: 5px;\n  border-bottom-color: inherit;\n}\n.vue-slider-dot-tooltip-inner-left::after {\n  left: 100%;\n  top: 50%;\n  -webkit-transform: translate(0, -50%);\n          transform: translate(0, -50%);\n  height: 0;\n  width: 0;\n  border-color: transparent;\n  border-style: solid;\n  border-width: 5px;\n  border-left-color: inherit;\n}\n.vue-slider-dot-tooltip-inner-right::after {\n  right: 100%;\n  top: 50%;\n  -webkit-transform: translate(0, -50%);\n          transform: translate(0, -50%);\n  height: 0;\n  width: 0;\n  border-color: transparent;\n  border-style: solid;\n  border-width: 5px;\n  border-right-color: inherit;\n}\n.vue-slider-dot-tooltip-wrapper {\n  opacity: 0;\n  transition: all 0.3s;\n}\n.vue-slider-dot-tooltip-wrapper-show {\n  opacity: 1;\n}\n@font-face {\n  font-family: Rub;\n  /* Имя шрифта */\n  src: url(\"/event/fonts/subset-ALSRubl.ttf\");\n  /* Путь к файлу со шрифтом */\n}\n.newrubi {\n  font-family: Rub;\n}\n.calc-form__label-title {\n  background: #fff;\n  top: 0;\n  font-size: 13px;\n  line-height: 16px;\n  letter-spacing: -0.05em;\n  color: #5c5c5c;\n}\n.IZ-select__menu {\n  z-index: 10000;\n}\n.IZ-select__input input {\n  height: 64px;\n}\ninput[type=date]::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  display: none;\n}\n.IZ-select__no-data {\n  display: none;\n}\n.out-input {\n  margin: 0;\n  outline: 0;\n  border: 0;\n  background: 0 0;\n  text-align: center;\n}\n.new-selector {\n  margin-bottom: 24px;\n}\ninput[type=number]::-webkit-inner-spin-button,\ninput[type=number]::-webkit-outer-spin-button {\n  -webkit-appearance: none;\n  margin: 0;\n}\n.isdissabled {\n  background-color: #e9ecef;\n}\n.calc-form__label p {\n  color: red;\n}\n.dis-num {\n  color: #9C9C9C;\n}", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\n/* Set the theme color of the component */\n/* import theme style */\n/* component style */\n.vue-slider-disabled {\n  opacity: 0.5;\n  cursor: not-allowed;\n}\n\n/* rail style */\n.vue-slider-rail {\n  background-color: #ccc;\n  border-radius: 15px;\n}\n\n/* process style */\n.vue-slider-process {\n  background-color: #5dbb5f;\n  border-radius: 15px;\n}\n\n/* mark style */\n.vue-slider-mark {\n  z-index: 4;\n}\n.vue-slider-mark:first-child .vue-slider-mark-step, .vue-slider-mark:last-child .vue-slider-mark-step {\n  display: none;\n}\n.vue-slider-mark-step {\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n  background-color: rgba(0, 0, 0, 0.16);\n}\n.vue-slider-mark-label {\n  font-size: 14px;\n  white-space: nowrap;\n}\n/* dot style */\n.vue-slider-dot-handle {\n  cursor: pointer;\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n  background-color: #fff;\n  box-sizing: border-box;\n  box-shadow: 0.5px 0.5px 2px 1px rgba(0, 0, 0, 0.32);\n}\n.vue-slider-dot-handle-focus {\n  box-shadow: 0px 0px 1px 2px rgba(93, 187, 95, 0.36);\n}\n.vue-slider-dot-handle-disabled {\n  cursor: not-allowed;\n  background-color: #ccc;\n}\n.vue-slider-dot-tooltip-inner {\n  font-size: 14px;\n  white-space: nowrap;\n  padding: 2px 5px;\n  min-width: 20px;\n  text-align: center;\n  color: #fff;\n  border-radius: 5px;\n  border-color: #5dbb5f;\n  background-color: #5dbb5f;\n  box-sizing: content-box;\n}\n.vue-slider-dot-tooltip-inner::after {\n  content: \"\";\n  position: absolute;\n}\n.vue-slider-dot-tooltip-inner-top::after {\n  top: 100%;\n  left: 50%;\n  -webkit-transform: translate(-50%, 0);\n          transform: translate(-50%, 0);\n  height: 0;\n  width: 0;\n  border-color: transparent;\n  border-style: solid;\n  border-width: 5px;\n  border-top-color: inherit;\n}\n.vue-slider-dot-tooltip-inner-bottom::after {\n  bottom: 100%;\n  left: 50%;\n  -webkit-transform: translate(-50%, 0);\n          transform: translate(-50%, 0);\n  height: 0;\n  width: 0;\n  border-color: transparent;\n  border-style: solid;\n  border-width: 5px;\n  border-bottom-color: inherit;\n}\n.vue-slider-dot-tooltip-inner-left::after {\n  left: 100%;\n  top: 50%;\n  -webkit-transform: translate(0, -50%);\n          transform: translate(0, -50%);\n  height: 0;\n  width: 0;\n  border-color: transparent;\n  border-style: solid;\n  border-width: 5px;\n  border-left-color: inherit;\n}\n.vue-slider-dot-tooltip-inner-right::after {\n  right: 100%;\n  top: 50%;\n  -webkit-transform: translate(0, -50%);\n          transform: translate(0, -50%);\n  height: 0;\n  width: 0;\n  border-color: transparent;\n  border-style: solid;\n  border-width: 5px;\n  border-right-color: inherit;\n}\n.vue-slider-dot-tooltip-wrapper {\n  opacity: 0;\n  transition: all 0.3s;\n}\n.vue-slider-dot-tooltip-wrapper-show {\n  opacity: 1;\n}\n@font-face {\n  font-family: Rub;\n  /* Имя шрифта */\n  src: url(\"/event/fonts/subset-ALSRubl.ttf\");\n  /* Путь к файлу со шрифтом */\n}\n.newrubi {\n  font-family: Rub;\n}\n.IZ-select__menu--disable-search {\n  top: auto !important;\n}\n.calc-form__label-title {\n  background: #fff;\n  top: 0;\n  font-size: 13px;\n  line-height: 16px;\n  letter-spacing: -0.05em;\n  color: #5c5c5c;\n}\n.IZ-select__menu {\n  z-index: 10000;\n}\n.IZ-select__input input {\n  height: 64px;\n}\ninput[type=date]::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  display: none;\n}\n.IZ-select__no-data {\n  display: none;\n}\n.out-input {\n  margin: 0;\n  outline: 0;\n  border: 0;\n  background: 0 0;\n  text-align: center;\n}\n.new-selector {\n  margin-bottom: 24px;\n}\ninput[type=number]::-webkit-inner-spin-button,\ninput[type=number]::-webkit-outer-spin-button {\n  -webkit-appearance: none;\n  margin: 0;\n}\n.isdissabled {\n  background-color: #e9ecef;\n}\n.calc-form__label p {\n  color: red;\n}\n.dis-num {\n  color: #9C9C9C;\n}", ""]);
 
 // exports
 
@@ -35897,111 +35902,121 @@ var render = function() {
                     ]
                   },
                   [
-                    _c(
-                      "label",
-                      { staticClass: "calc-form__label js-label" },
-                      [
-                        _c("span", { staticClass: "calc-form__label-title" }, [
-                          _vm._v("Презентация")
-                        ]),
-                        _vm._v(" "),
-                        _c("cool-select", {
-                          directives: [
-                            {
-                              name: "validate",
-                              rawName: "v-validate",
-                              value: "required",
-                              expression: "'required'"
-                            }
-                          ],
-                          attrs: {
-                            items: ["", "Есть, готов презентовать", "Нет"],
-                            name: "mainform.form3.present"
-                          },
-                          model: {
-                            value: _vm.mainform.form3.present,
-                            callback: function($$v) {
-                              _vm.$set(_vm.mainform.form3, "present", $$v)
-                            },
-                            expression: "mainform.form3.present"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "p",
-                          {
+                    _c("div", [
+                      _c(
+                        "label",
+                        { staticClass: "calc-form__label" },
+                        [
+                          _c(
+                            "span",
+                            { staticClass: "calc-form__label-title" },
+                            [_vm._v("Презентация")]
+                          ),
+                          _vm._v(" "),
+                          _c("cool-select", {
                             directives: [
                               {
-                                name: "show",
-                                rawName: "v-show",
-                                value: _vm.errors.first(
-                                  "mainform.form3.present"
-                                ),
-                                expression:
-                                  "errors.first('mainform.form3.present')"
+                                name: "validate",
+                                rawName: "v-validate",
+                                value: "required",
+                                expression: "'required'"
                               }
-                            ]
-                          },
-                          [_vm._v("Поле обязательно для заполнения")]
-                        )
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "label",
-                      { staticClass: "calc-form__label js-label" },
-                      [
-                        _c("span", { staticClass: "calc-form__label-title" }, [
-                          _vm._v(
-                            "От суммы проекта имеются собственные средства\n                                "
+                            ],
+                            attrs: {
+                              items: ["Есть, готов презентовать", "Нет"],
+                              name: "mainform.form3.present",
+                              "disable-search": ""
+                            },
+                            model: {
+                              value: _vm.mainform.form3.present,
+                              callback: function($$v) {
+                                _vm.$set(_vm.mainform.form3, "present", $$v)
+                              },
+                              expression: "mainform.form3.present"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "p",
+                            {
+                              directives: [
+                                {
+                                  name: "show",
+                                  rawName: "v-show",
+                                  value: _vm.errors.first(
+                                    "mainform.form3.present"
+                                  ),
+                                  expression:
+                                    "errors.first('mainform.form3.present')"
+                                }
+                              ]
+                            },
+                            [_vm._v("Поле обязательно для заполнения")]
                           )
-                        ]),
-                        _vm._v(" "),
-                        _c("cool-select", {
-                          directives: [
-                            {
-                              name: "validate",
-                              rawName: "v-validate",
-                              value: "required",
-                              expression: "'required'"
-                            }
-                          ],
-                          attrs: {
-                            items: ["", "0%", "10%", "20%", "30%"],
-                            name: "mainform.form3.sredstva"
-                          },
-                          model: {
-                            value: _vm.mainform.form3.sredstva,
-                            callback: function($$v) {
-                              _vm.$set(_vm.mainform.form3, "sredstva", $$v)
-                            },
-                            expression: "mainform.form3.sredstva"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "p",
-                          {
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "label",
+                        { staticClass: "calc-form__label" },
+                        [
+                          _c(
+                            "span",
+                            { staticClass: "calc-form__label-title" },
+                            [
+                              _vm._v(
+                                "От суммы проекта имеются собственные средства\n                                "
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("cool-select", {
                             directives: [
                               {
-                                name: "show",
-                                rawName: "v-show",
-                                value: _vm.errors.first(
-                                  "mainform.form3.sredstva"
-                                ),
-                                expression:
-                                  "errors.first('mainform.form3.sredstva')"
+                                name: "validate",
+                                rawName: "v-validate",
+                                value: "required",
+                                expression: "'required'"
                               }
-                            ]
-                          },
-                          [_vm._v("Поле обязательно для заполнения")]
-                        )
-                      ],
-                      1
-                    ),
+                            ],
+                            attrs: {
+                              items: ["0%", "10%", "20%", "30%"],
+                              name: "mainform.form3.sredstva",
+                              "disable-search": ""
+                            },
+                            model: {
+                              value: _vm.mainform.form3.sredstva,
+                              callback: function($$v) {
+                                _vm.$set(_vm.mainform.form3, "sredstva", $$v)
+                              },
+                              expression: "mainform.form3.sredstva"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "p",
+                            {
+                              directives: [
+                                {
+                                  name: "show",
+                                  rawName: "v-show",
+                                  value: _vm.errors.first(
+                                    "mainform.form3.sredstva"
+                                  ),
+                                  expression:
+                                    "errors.first('mainform.form3.sredstva')"
+                                }
+                              ]
+                            },
+                            [_vm._v("Поле обязательно для заполнения")]
+                          )
+                        ],
+                        1
+                      )
+                    ]),
                     _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                    _c("label", { staticClass: "calc-form__label" }, [
                       _c("span", { staticClass: "calc-form__label-title" }, [
                         _vm._v("Имя и фамилия")
                       ]),
@@ -36021,7 +36036,7 @@ var render = function() {
                             expression: "'required'"
                           }
                         ],
-                        staticClass: "input calc-form__input js-input",
+                        staticClass: "input calc-form__input ",
                         attrs: { type: "text", name: "mainform.form3.name" },
                         domProps: { value: _vm.mainform.form3.name },
                         on: {
@@ -36054,7 +36069,7 @@ var render = function() {
                       )
                     ]),
                     _vm._v(" "),
-                    _c("label", { staticClass: "calc-form__label js-label" }, [
+                    _c("label", { staticClass: "calc-form__label" }, [
                       _c("span", { staticClass: "calc-form__label-title" }, [
                         _vm._v("Телефон")
                       ]),
@@ -36080,8 +36095,8 @@ var render = function() {
                             expression: "'+7 (###) ###-##-##'"
                           }
                         ],
-                        staticClass: "input calc-form__input js-input",
-                        attrs: { type: "tel", name: "mainform.form3.phone" },
+                        staticClass: "input calc-form__input ",
+                        attrs: { type: "text", name: "mainform.form3.phone" },
                         domProps: { value: _vm.mainform.form3.phone },
                         on: {
                           input: function($event) {
@@ -36133,7 +36148,7 @@ var render = function() {
                             expression: "'required|email'"
                           }
                         ],
-                        staticClass: "input calc-form__input js-input",
+                        staticClass: "input calc-form__input ",
                         attrs: { type: "email", name: "mainform.form3.email" },
                         domProps: { value: _vm.mainform.form3.email },
                         on: {
@@ -36190,7 +36205,7 @@ var render = function() {
                             expression: "'required'"
                           }
                         ],
-                        staticClass: "input calc-form__input js-input",
+                        staticClass: "input calc-form__input ",
                         attrs: {
                           type: "text",
                           name: "mainform.form3.position"
