@@ -663,7 +663,7 @@ class EventController extends Controller
             $grant->source = $request['source'];
 
             $grant->name = $request['form2']['name'];
-            $grant->phone = $request['form2']['phone:'];
+            $grant->phone = $request['form2']['phone'];
             $grant->email = $request['form2']['email'];
             $grant->position = $request['form2']['position'];
             $grant->region = $request['form2']['region'];
