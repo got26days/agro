@@ -189,9 +189,74 @@ class NdomainsController extends \TCG\Voyager\Http\Controllers\VoyagerBaseContro
         if ($val->fails()) {
             return response()->json(['errors' => $val->messages()]);
         }
+
         if (!$request->ajax()) {
             $this->insertUpdateData($request, $slug, $dataType->editRows, $data);
             event(new BreadDataUpdated($dataType, $data));
+
+            if($data['newarea']){
+                // return $data['newarea'];
+                $delimiter = "\n";
+                $splitcontents = explode($delimiter, $data['newarea']);
+    
+                foreach ( $splitcontents as $title )
+                {
+                    
+                    $result = explode(' > ',$title);
+
+                    $serslug = str_slug($result[1], '-');
+                    
+                    $newpages = Ndomain::where('slug', 'LIKE', '%'. $serslug .'%')->get();
+
+                    
+                    foreach($newpages as $newpage){
+                        $newpage->form = $result[0];
+                        $newpage->title = $result[1];
+                        $newpage->newarea = $data['newarea'];
+                        $newpage->slug =  md5(microtime());
+                        $newpage->seo_title = $data['seo_title'];
+                        $newpage->seo_description = $data['seo_description'];
+                        $newpage->seo_keywords = $data['seo_keywords'];
+        
+                        $newpage->background = $data['background'];
+                        $newpage->question1 = $data['question1'];
+                        $newpage->question2 = $data['question2'];
+                        $newpage->question3 = $data['question3'];
+                        $newpage->body = $data['body'];
+                        $newpage->price = $data['price'];
+                        $newpage->whyimage1 = $data['whyimage1'];
+                        $newpage->whybody1 = $data['whybody1'];
+                        $newpage->whyimage2 = $data['whyimage2'];
+                        $newpage->whybody2 = $data['whybody2'];
+                        $newpage->whyimage3 = $data['whyimage3'];
+                        $newpage->whybody3 = $data['whybody3'];
+                        $newpage->percent = $data['percent'];
+                        $newpage->point = $data['point'];
+                        $newpage->body2 = $data['body2'];
+                        $newpage->body3 = $data['body3'];
+                        $newpage->type = $data['type'];
+                        $newpage->whytitle1 = $data['whytitle1'];
+                        $newpage->whytitle2 = $data['whytitle2'];
+                        $newpage->whytitle3 = $data['whytitle3'];
+                        $newpage->subject = $data['subject'];
+                        $newpage->save();
+
+                        $slug = str_slug($result[1], '-');
+                        $alldomains = Ndomain::where('slug', '=', $slug)->first();
+                        if($alldomains){
+                            $newpage->slug = $slug . '-' . $newpage['id'];
+                        } else {
+                            $newpage->slug = $slug;
+                        }
+                        $newpage->save();
+                    }
+
+                    // return $newpages;
+
+
+                }
+            }
+
             return redirect()
                 ->route("voyager.{$dataType->slug}.index")
                 ->with([
@@ -271,7 +336,7 @@ class NdomainsController extends \TCG\Voyager\Http\Controllers\VoyagerBaseContro
 
 
 					$newpage->slug =  md5(microtime());
-					
+					$newpage->newarea = $data['newarea'];
                     $newpage->seo_title = $data['seo_title'];
                     $newpage->seo_description = $data['seo_description'];
                     $newpage->seo_keywords = $data['seo_keywords'];
