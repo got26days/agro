@@ -34836,7 +34836,7 @@ var render = function() {
                             }
                           ],
                           attrs: {
-                            items: ["", "Срок-1", "Срок-2"],
+                            items: ["1 год", "5 лет", "10 лет", "более 10 лет"],
                             name: "mainform.form3.secondsrok"
                           },
                           model: {

@@ -410,7 +410,7 @@
                             </label>
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Срок окупаемости проекта</span>
-                                <cool-select v-model="mainform.form3.secondsrok" :items="['', 'Срок-1', 'Срок-2']"
+                                <cool-select v-model="mainform.form3.secondsrok" :items="['1 год', '5 лет', '10 лет', 'более 10 лет']"
                                     v-validate="'required'" name="mainform.form3.secondsrok" />
                                 <p v-show="errors.first('mainform.form3.secondsrok')">Поле обязательно для заполнения
                                 </p>
