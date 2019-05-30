@@ -80,7 +80,7 @@
             <div class="container">
                 <mainform :point="{{ isset($domain['point']) ? $domain['point'] : 0}}"
                 :percent="{{ isset($domain['percent']) ? $domain['percent'] : 0}}" :manager="true"
-                :subject="{{ isset($domain['subject']) ? $domain['subject'] :  "Анкета"}}"></mainform>
+                :subject="`{{ isset($domain['subject']) ? $domain['subject'] : 'Анкета' }}`"></mainform>
             </div>
         </section>
     </main>
