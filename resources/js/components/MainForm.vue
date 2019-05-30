@@ -13,7 +13,7 @@
 
                         <label class="calc-form__label js-label" v-if="manager">
                             <span class="calc-form__label-title">Источник заявки</span>
-                            <cool-select v-model="mainform.sourcetwo" :items="['', 'Звонок', 'Личная встреча', 'Грант']"
+                            <cool-select v-model="mainform.sourcetwo" :items="['', 'Звонок', 'Агент', 'Отдел продаж', 'Другое']"
                                 v-validate="'required'" name="mainform.sourcetwo" />
                             <p v-show="errors.first('mainform.sourcetwo')">Поле обязательно для заполнения</p>
                         </label>

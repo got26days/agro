@@ -32393,7 +32393,13 @@ var render = function() {
                             }
                           ],
                           attrs: {
-                            items: ["", "Звонок", "Личная встреча", "Грант"],
+                            items: [
+                              "",
+                              "Звонок",
+                              "Агент",
+                              "Отдел продаж",
+                              "Другое"
+                            ],
                             name: "mainform.sourcetwo"
                           },
                           model: {
