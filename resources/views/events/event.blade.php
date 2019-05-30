@@ -146,7 +146,7 @@
                             <div class="calc-partners__slide">
                                 @foreach ($partners->slice(0, 5) as $partner)
                                 <div class="calc-partners__item"><img src="{{ Voyager::image($partner['image']) }}"
-                                        alt="" style="width: 154px;"></div>
+                                        alt="" ></div>
                                 @endforeach
                             </div>
                         </div>
@@ -155,7 +155,7 @@
                             <div class="calc-partners__slide">
                                 @foreach ($partners->slice(5, 10) as $partner)
                                 <div class="calc-partners__item"><img src="{{ Voyager::image($partner['image']) }}"
-                                        alt="" style="width: 154px;"></div>
+                                        alt="" ></div>
                                 @endforeach
                             </div>
                         </div>
