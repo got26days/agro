@@ -69,12 +69,12 @@ Route::group(['domain' => $subdomain], function () {
 
 // Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
-Route::group(['middleware' => 'auth'], function() {
-    Route::get('/anketa', 'EventController@anketa');
-});
+// Route::group(['middleware' => 'auth'], function() {
+//     Route::get('/anketa', 'EventController@anketa');
+// });
 Route::post('/event/sendform', 'EventController@sendform');
 // Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/anketa', 'EventController@anketa');
 $thirddomain = env('APP_THIRD_DOMAIN');
 
 Route::group(['domain' => $thirddomain], function () {
