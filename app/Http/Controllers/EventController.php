@@ -54,7 +54,8 @@ class EventController extends Controller
 
     public function anketa()
     {
-        return view('events.anketa');
+        
+        return view('events.anketa', compact('domain'));
     }
 
     public function sendform(Request $request)
