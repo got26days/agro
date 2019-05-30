@@ -632,7 +632,7 @@ class EventController extends Controller
             $loan = new Loan;
             $loan->rating = $result2;
             $loan->chance = $result;
-            $loan->source = $request['source'];
+            $loan->source = $request['sourcetwo'];
             $loan->name = $request['form1']['name'];
             $loan->phone = $request['form1']['phone'];
             $loan->email = $request['form1']['email'];
@@ -661,7 +661,7 @@ class EventController extends Controller
             $grant = new Grant;
             $grant->rating = $result2;
             $grant->chance = $result;
-            $grant->source = $request['source'];
+            $grant->source = $request['sourcetwo'];
 
             $grant->name = $request['form2']['name'];
             $grant->phone = $request['form2']['phone'];
@@ -684,7 +684,7 @@ class EventController extends Controller
             $finan = new Finan;
             $finan->rating = $result2;
             $finan->chance = $result;
-            $finan->source = $request['source'];
+            $finan->source = $request['sourcetwo'];
 
             $finan->name = $request['form3']['name'];
             $finan->phone = $request['form3']['phone'];
@@ -709,7 +709,7 @@ class EventController extends Controller
             $sub = new Sub;
             $sub->rating = $result2;
             $sub->chance = $result;
-            $sub->source = $request['source'];
+            $sub->source = $request['sourcetwo'];
 
             $sub->name = $request['form4']['name'];
             $sub->phone = $request['form4']['phone'];

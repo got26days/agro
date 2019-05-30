@@ -905,8 +905,10 @@
         props: ['percent', 'point', 'manager', 'subject'],
         created() {
             if (this.opman == false) {
-                this.mainform.sourcetwo = "Анкета на сайте";
+                this.mainform.sourcetwo = "Заявка с сайта";
                 // console.log(this.mainform.sourcetwo);
+            } else {
+                this.mainform.sourcetwo = "Анкета";
             }
         },
         methods: {

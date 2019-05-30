@@ -2607,7 +2607,9 @@ __webpack_require__.r(__webpack_exports__);
   props: ['percent', 'point', 'manager', 'subject'],
   created: function created() {
     if (this.opman == false) {
-      this.mainform.sourcetwo = "Анкета на сайте"; // console.log(this.mainform.sourcetwo);
+      this.mainform.sourcetwo = "Заявка с сайта"; // console.log(this.mainform.sourcetwo);
+    } else {
+      this.mainform.sourcetwo = "Анкета";
     }
   },
   methods: {
