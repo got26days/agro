@@ -88,25 +88,24 @@
         <div class="container">
             <nav class="footer-menu">
                 <ul>
-                    <li class="footer-menu__item"><a href="#" class="footer-menu__link">О нас</a></li>
-                    <li class="footer-menu__item"><a href="#" class="footer-menu__link">Услуги</a></li>
-                    <li class="footer-menu__item"><a href="#" class="footer-menu__link">События</a></li>
-                    <li class="footer-menu__item"><a href="#" class="footer-menu__link">Вопрос-ответ</a></li>
-                    <li class="footer-menu__item"><a href="#contacts" class="footer-menu__link js-scroll">Контакты</a>
-                    </li>
+                    <li class="footer-menu__item"><a href="http://{{ env('APP_MAIN_DOMAIN') }}/o-nas" class="footer-menu__link">О нас</a></li>
+                    <li class="footer-menu__item"><a href="http://{{ env('APP_MAIN_DOMAIN') }}/uslugi" class="footer-menu__link">Услуги</a></li>
+                    <li class="footer-menu__item"><a href="http://{{ env('APP_MAIN_DOMAIN') }}/events" class="footer-menu__link">События</a></li>
+                    <li class="footer-menu__item"><a href="http://{{ env('APP_MAIN_DOMAIN') }}/faq" class="footer-menu__link">Вопрос-ответ</a></li>
+                    <li class="footer-menu__item"><a href="http://{{ env('APP_MAIN_DOMAIN') }}/#contacts" class="footer-menu__link">Контакты</a></li>
                 </ul>
             </nav>
         </div>
         <div class="footer__container">
             <div class="footer__wrap">
                 <div class="footer__contacts">
-                    <div>142002, Московская область, Домодедово, улица Текстильщиков, 1Б, офис 307а</div>
-                    <div><a href="mailto:info@agroexpertservice.ru">info@agroexpertservice.ru</a></div>
-                    <div><a href="tel:+74959026838">+7 (495) 902-68-38</a></div>
+                    <div>142007, Московская область, город Домодедово, мкр Авиационный, ул. Ильюшина, стр. 2а, номер помещения 517</div>
+                    <div><a href="mailto:info@agrodohod.ru">info@agrodohod.ru</a></div>
+                    <div><a href="tel:88005558586">8 (800) 555-85-86</a></div>
                 </div>
                 <div class="footer__middle">
-                    <div><a href="#">Политика в отношении обработки персональных данных</a></div>
-                    <div><span>АгроДоход © 2018</span>&#8195;&#8195;<span>Сайт создан <a href="http://bigdatak.com/"
+                    <div><a href="http://{{ env('APP_MAIN_DOMAIN') }}/download/policy" target="_blank">Политика в отношении обработки персональных данных</a></div>
+                    <div><span>АгроДоход © 2019</span>&#8195;&#8195;<span>Сайт создан <a href="http://bigdatak.com/"
                                 target="_blank">Big Data Key</a></span></div>
                 </div>
                 <ul class="footer__soc">
