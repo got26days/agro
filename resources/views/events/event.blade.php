@@ -271,9 +271,9 @@
             <div class="footer__container">
                 <div class="footer__wrap">
                     <div class="footer__contacts">
-                        <div>142002, Московская область, Домодедово, улица Текстильщиков, 1Б, офис 307а</div>
-                        <div><a href="mailto:info@agroexpertservice.ru">info@agroexpertservice.ru</a></div>
-                        <div><a href="tel:+74959026838">+7 (495) 902-68-38</a></div>
+                        <div>142007, Московская область, город Домодедово, мкр Авиационный, ул. Ильюшина, стр. 2а, номер помещения 517</div>
+                        <div><a href="mailto:info@agrodohod.ru">info@agrodohod.ru</a></div>
+                        <div><a href="tel:88005558586">8 (800) 555-85-86</a></div>
                     </div>
                     <div class="footer__middle">
                         <div><a href="http://{{ env('APP_MAIN_DOMAIN') }}/download/policy" target="_blank">Политика в отношении обработки персональных данных</a></div>
