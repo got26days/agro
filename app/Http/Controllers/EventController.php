@@ -395,7 +395,7 @@ class EventController extends Controller
         }
 
         if($request['type'] == 'Субсидия'){
-
+            $result = $result + 70;
 
             if(in_array($request['form1']['region'], $cityes)){
                 $result = $result + 10;
