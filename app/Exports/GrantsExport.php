@@ -9,6 +9,7 @@ use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 
 class GrantsExport implements FromCollection, WithHeadings, ShouldAutoSize
+{
     /**
     * @return \Illuminate\Support\Collection
     */

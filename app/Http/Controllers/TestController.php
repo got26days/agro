@@ -9,6 +9,8 @@ use App\Exports\DownloadsExport;
 use App\Exports\LoansExport;
 use App\Exports\NdomainsExport;
 use App\Exports\SubsExport;
+use App\Exports\GrantsExport;
+use App\Exports\FinansExport;
 
 class TestController extends Controller
 {
