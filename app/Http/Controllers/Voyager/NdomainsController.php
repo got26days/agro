@@ -207,8 +207,7 @@ class NdomainsController extends \TCG\Voyager\Http\Controllers\VoyagerBaseContro
                     $serslug = str_slug($result[1], '-');
                     
                     $newpages = Ndomain::where('slug', 'LIKE', '%'. $serslug .'%')->get();
-
-                    
+  
                     foreach($newpages as $newpage){
                         $newpage->form = $result[0];
                         $newpage->title = $result[1];
