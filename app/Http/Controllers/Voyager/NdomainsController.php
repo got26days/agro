@@ -238,6 +238,11 @@ class NdomainsController extends \TCG\Voyager\Http\Controllers\VoyagerBaseContro
                         $newpage->whytitle2 = $data['whytitle2'];
                         $newpage->whytitle3 = $data['whytitle3'];
                         $newpage->subject = $data['subject'];
+
+                        $newpage->body_after = $data['body_after'];
+                        $newpage->body_video = $data['body_video'];
+                        $newpage->price_two = $data['price_two'];
+
                         $newpage->save();
 
                         $slug = str_slug($result[1], '-');
@@ -361,6 +366,11 @@ class NdomainsController extends \TCG\Voyager\Http\Controllers\VoyagerBaseContro
                     $newpage->whytitle2 = $data['whytitle2'];
                     $newpage->whytitle3 = $data['whytitle3'];
                     $newpage->subject = $data['subject'];
+
+                    $newpage->body_after = $data['body_after'];
+                    $newpage->body_video = $data['body_video'];
+                    $newpage->price_two = $data['price_two'];
+
                     $newpage->save();
 
                     $slug = str_slug($result[1], '-');
