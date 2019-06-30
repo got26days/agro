@@ -531,7 +531,7 @@
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Телефон</span>
                                 <input type="tel" class="input calc-form__input js-input" v-model="mainform.form1.phone"
-                                    v-validate="'required'" name="mainform.form1.proc" v-mask="'+7 (###) ###-##-##'">
+                                    v-validate="'required'" name="mainform.form1.proc">
                                 <p v-show="errors.first('mainform.form1.proc')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
@@ -554,7 +554,7 @@
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Телефон</span>
                                 <input type="tel" class="input calc-form__input js-input" v-model="mainform.form2.phone"
-                                    v-validate="'required'" name="mainform.form2.phone" v-mask="'+7 (###) ###-##-##'">
+                                    v-validate="'required'" name="mainform.form2.phone">
                                 <p v-show="errors.first('mainform.form2.phone')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
@@ -603,7 +603,7 @@
                             <label class="calc-form__label">
                                 <span class="calc-form__label-title">Телефон</span>
                                 <input type="text" class="input calc-form__input " v-model="mainform.form3.phone"
-                                    v-validate="'required'" name="mainform.form3.phone" v-mask="'+7 (###) ###-##-##'">
+                                    v-validate="'required'" name="mainform.form3.phone">
                                 <p v-show="errors.first('mainform.form3.phone')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
@@ -633,7 +633,7 @@
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Телефон</span>
                                 <input type="tel" class="input calc-form__input js-input" v-model="mainform.form4.phone"
-                                    v-validate="'required'" name="mainform.form4.phone" v-mask="'+7 (###) ###-##-##'">
+                                    v-validate="'required'" name="mainform.form4.phone">
                                 <p v-show="errors.first('mainform.form4.phone')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
