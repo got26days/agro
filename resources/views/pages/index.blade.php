@@ -58,7 +58,7 @@
                         <h3 class="income__item-title">Регионы — устойчивое развитие</h3>
                         <div class="income__item-txt">АгроДоход — официальный <br /> партнёр конкурса <br />
                             «Регионы — устойчивое развитие». <br /> Получите финансирование, пройдя <br /> все этапы конкурса вместе с нами. </div>
-                        <a class="btn income__item-btn" href="/pages/region">Подробнее</a>
+                        <a class="btn income__item-btn" href="/regioni-ustoichivoe-razvitie">Подробнее</a>
                     </div>
                 </div>
 

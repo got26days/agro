@@ -35,7 +35,7 @@ Route::group(['domain' => $domain], function()
         Route::get('/direction/{slug}', 'MainController@direction');
         Route::get('/uslugi', 'MainController@servs')->name('uslugi');
         
-        Route::get('/pages/region', 'MainController@region');
+        Route::get('/regioni-ustoichivoe-razvitie', 'MainController@region');
         
 
         Route::post('/form', 'MainController@form');
