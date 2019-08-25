@@ -1,0 +1,21 @@
+.sign-up{
+	padding: 135px 0;
+	text-align: center;
+	&__form{
+		.popup__input{
+			width: 360px;
+			
+		}		
+	}
+}
+
+@media only screen and (max-width : 1024px){
+	.sign-up{
+		padding: 35px 0;
+	}
+}
+@media only screen and (max-width : 767px){
+	.sign-up{
+		padding: 25px 15px;
+	}
+}

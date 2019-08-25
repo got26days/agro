@@ -16,6 +16,8 @@ use Spatie\Sitemap\SitemapGenerator;
 
 $domain = env('APP_MAIN_DOMAIN');
 
+
+
 // Route::get('/', 'MainController@index')->name('mainpage');
 Route::group(['domain' => $domain], function()
     {
@@ -33,8 +35,9 @@ Route::group(['domain' => $domain], function()
         Route::get('/direction/{slug}', 'MainController@direction');
         Route::get('/uslugi', 'MainController@servs')->name('uslugi');
         
+        Route::get('/pages/region', 'MainController@region');
         
-        
+
         Route::post('/form', 'MainController@form');
         
         Route::group(['prefix' => 'admin'], function () {

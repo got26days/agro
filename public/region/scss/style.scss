@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700&subset=cyrillic,cyrillic-ext');
+@import "vendors/normalize.css";
+@import "vendors/slick.css";
+
+/*customs*/
+@import "fonts.css";
+
+/*elems*/
+@import "basic";
+@import "buttons";
+
+/*modules*/
+@import "header";
+@import "footer";
+@import "landing";
+@import "article";
+@import "breadcrumbs";
+@import "main-form";
+@import "farm";
+@import "events";
+@import "faq";
+@import "about";
+@import "sign";
+@import "credit";
+@import "regions";

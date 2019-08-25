@@ -138,6 +138,9 @@ class MainController extends Controller
     public function direction($slug)
     {   
         // return $slug;
+        if($slug == 'zapchasti-dlya-sel-hoztehniki'){
+            abort(404);
+        }
 
         $direction = Direction::where('slug', '=', $slug)->latest()->first();
 
@@ -164,6 +167,11 @@ class MainController extends Controller
         $page_title = $seo['page_title'];
 
         return view('pages.faq', compact('faqs', 'seotitle', 'seokeywords', 'seodescription', 'page_title'));
+    }
+
+    public function region()
+    {
+        return view('region.index');
     }
 
 

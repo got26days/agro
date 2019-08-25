@@ -1,0 +1,199 @@
+.about{
+    &__img{
+        background: url(../img/about/bg.jpg) 0 0 no-repeat;
+        height: 341px;
+    }
+    &__article{
+        font-size: 20px;
+        b{font-weight: bold;}
+    }
+    &__team{
+        margin-bottom: 40px;
+        &-header{
+            margin-bottom: 25px;
+            border-left: 5px solid #008dbf;
+            padding-left: 25px;
+            padding-top: 4px;
+            height: 54px;
+            line-height: 50px;
+            font-size: 30px;
+            font-weight: 600;
+        }
+    }
+}
+.team{
+    position: relative;
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    .slick-arrow{
+        display: block;
+        background: center center no-repeat;
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+        transition: opacity .25s ease;
+        padding: 0;
+        outline: none;
+        position: absolute;
+        top: -75px;
+        font-size: 0;
+        border: none;
+        &:hover{opacity: .5;}
+    }
+    .slick-prev{
+        background: url(../img/about/prev.png);
+        right: 77px;
+    }
+    .slick-next{
+        background: url(../img/about/next.png);
+        right: 15px;
+    }
+    .slick-slide{outline: none;}
+    &__slide{
+        margin: 0 15px;
+        text-align: center;
+    }
+    &__photo{
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        position: relative;
+        img{width: 100%;}
+        &:hover{
+            .video__blind{opacity: 1;}
+        }
+    }
+    &__name{
+        font-size: 18px;
+        font-weight: 600;
+        min-height: 42px;
+        margin-bottom: 16px;
+    }
+    &__status{
+        font-size: 15px;
+        color: #838383;
+        font-style: italic;
+    }
+    .video__blind{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../img/about/play.png) center center no-repeat;
+        transition: opacity .25s ease;
+        z-index: 3;  
+        opacity: 0;
+        cursor: pointer;
+    }
+    
+}
+.video-wrapper{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 300;
+    &__overlay{
+        background: rgba(0,0,0,.6);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    &__container{
+        width: 860px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(.3);
+        opacity: 0;
+        transition: transform .25s ease;
+        
+        background: #000;
+    }
+    &.show{
+        .video-wrapper__container{
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+    &__blc{
+        position: relative;
+        padding-top: 60.25%;
+        width: 100%;
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%!important;
+            height: 100%!important;
+        }
+    }
+    &__close{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: -30px;
+        right: -30px;
+        font-size: 0;
+        &:before,
+        &:after{
+            content: '';
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: #fff;
+            height: 4px;
+            border-radius: 2px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -2px 0 0 -15px;
+        }
+        &:before{transform: rotate(-45deg);}
+        &:after{transform: rotate(45deg);}
+    }
+}
+
+@media only screen and (max-width : 767px){
+    .about__img{
+        background-size: auto 100%;
+        height: 0;
+        padding-top: 40%;
+    }
+    .video-wrapper{
+        &__container{
+            width: 90%;
+        }
+        &__close{
+            top: -30px;
+            right: -4px;
+        }
+    }
+    .team{
+        .video__blind{opacity: 1;}
+    }
+}
+@media only screen and (max-width : 479px){
+    .team{
+        padding: 0 50px;
+        width: 100%;
+        margin: 0;
+        .slick-arrow{
+            top: 50%;
+            margin-top: -45px;
+        }
+        .slick-prev{
+            right: auto;
+            left: 0;
+        }
+        .slick-next{
+            right: 0;
+        }
+    }
+}
