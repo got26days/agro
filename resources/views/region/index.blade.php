@@ -256,7 +256,7 @@
 					</div>
 					<div class="regions-contacts__item">
 						<div class="container">
-							<div class="regions-contacts__sup">Специальный кредитный менеджер АгроДохода готов общаться с Вами в офисе РУР:</div>
+							<div class="regions-contacts__sup">Получить всю необходимую информацию о конкурсе можно в офисе РУР:</div>
 							<div class="regions-contacts__address">Москва, Дербеневская наб., 11, корп. Б</div>
 							<div class="regions-contacts__txt">м. Павелецкая, м. Пролетарская, м. Крестьянская Застава</div>
 						</div>
