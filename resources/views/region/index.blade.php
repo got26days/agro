@@ -265,7 +265,7 @@
 					<div class="regions-contacts__item">
 						<div class="container">
 							<div class="regions-contacts__sup">Также ждём вас непосредственно в офисе АгроДохода:</div>
-							<div class="regions-contacts__address">Москва, Красина пер., 10, стр. 1, офис 301</div>
+							<div class="regions-contacts__address">Москва, Красина пер., 15, стр. 1, офис 301</div>
 							<div class="regions-contacts__txt">м. Белорусская, м. Маяковская</div>
 						</div>
 						<div class="regions-contacts__map" id="js-map-2"></div>
@@ -336,10 +336,10 @@
 				}
 			);
 			placemark2 = new ymaps.Placemark(
-				[55.767934, 37.582808],
+				[55.767544, 37.584425],
 				{ 
-					iconCaption: 'Москва, Красина пер., 10, стр. 1, офис 301',
-					balloonContent: 'Москва, <br>Красина пер., 10, стр. 1, <br>офис 301'
+					iconCaption: 'Москва, Красина пер., 15, стр. 1, офис 301',
+					balloonContent: 'Москва, <br>Красина пер., 15, стр. 1, <br>офис 301'
 				},
 				{
 					preset: 'islands#redDotIconWithCaption'
