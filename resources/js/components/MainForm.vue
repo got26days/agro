@@ -1,6 +1,6 @@
 <template>
 
-    <section class="calc-sec" id="js-form">
+    <section class="calc-sec" id="js-form" :class="{'isOverlay': back}">
         <div v-show="result == ''">
             <div class="container" v-show="currentPage === 1">
                 <h2 class="sec__title">Заполните заявку <span>узнайте шансы на получение денег в режиме онлайн</span>
@@ -902,7 +902,7 @@
             }
         },
 
-        props: ['percent', 'point', 'manager', 'subject'],
+        props: ['percent', 'point', 'manager', 'subject', 'back'],
         created() {
             if (this.opman == false) {
                 this.mainform.sourcetwo = "Заявка с сайта";
@@ -1308,6 +1308,10 @@
     }
     .dis-num{
         color: #9C9C9C;
+    }
+
+    .isOverlay{
+        background: transparent !important;
     }
 
 </style>
