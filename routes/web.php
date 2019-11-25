@@ -93,9 +93,9 @@ Route::get('/newpage/{slug}', 'EventController@index');
 $subdomainthird = env('APP_SUB_DOMAIN_THIRD');
 
 Route::group(['domain' => $subdomainthird], function () {
-    Route::get('/domain1', 'DronController@index');
+    Route::get('/', 'DronController@index');
     Route::post('/form', 'MainController@form');
-    // Route::get('/{slug}', 'DronController@credit');
+    Route::get('/{slug}', 'DronController@credit');
     Route::get('/download/policy', 'MainController@getDownload');
     
 });
@@ -103,9 +103,9 @@ Route::group(['domain' => $subdomainthird], function () {
 $subdomainfour = env('APP_SUB_DOMAIN_FOUR');
 
 Route::group(['domain' => $subdomainfour], function () {
-    Route::get('/domain2', 'DronController@indextwo');
+    Route::get('/', 'DronController@indextwo');
     Route::post('/form', 'MainController@form');
-    // Route::get('/{slug}', 'DronController@credittwo');
+    Route::get('/{slug}', 'DronController@credittwo');
     Route::get('/download/policy', 'MainController@getDownload');
     
 });
