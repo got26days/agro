@@ -18,7 +18,7 @@ $domain = env('APP_MAIN_DOMAIN');
 
 
 
-// Route::get('/', 'MainController@index')->name('mainpage');
+Route::get('/', 'MainController@index')->name('mainpage');
 Route::group(['domain' => $domain], function()
     {
         Route::get('/', 'MainController@index')->name('mainpage');
