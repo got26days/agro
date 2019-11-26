@@ -3748,7 +3748,7 @@ h4 {
 }
 
 .header__namesite{
-    display: none;
+    display: none !important;
 }
 
 .newprops .header__namesite{
