@@ -93,7 +93,7 @@
         </nav>
     </header>
     <main class="main">
-        <section class="calc-main" style="background: url({{ isset($domain['background']) ? Voyager::image($domain['background']) : '/img/vice/back3.png'}}) center center no-repeat;
+        <section class="calc-main" style="background: url(/img/vice/back3.png) center center no-repeat;
 			background-size: cover;">
             <div class="container">
                 <div class="calc-main__wrap">
