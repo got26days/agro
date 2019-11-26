@@ -20,7 +20,7 @@
             </div>
         </div>
     </header>
-    <header class="header-hide" id="js-header">
+    <header class="header-hide" id="js-header-hide">
         <div class="container">
             <div class="header-hide__wrap">
                 <div class="header-hide__left">
