@@ -3733,3 +3733,29 @@ h4 {
 .calc-video__area-name b{
     
 }
+
+
+.newprops{
+    background: #F9FBFD;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    
+}
+
+.newprops .header__sitename-one{
+    display: none;
+}
+
+.header__namesite{
+    display: none;
+}
+
+.newprops .header__namesite{
+    display: block;
+}
+
+.newprops .header__tel{
+    font-weight: normal;
+    font-size: 25px;
+}

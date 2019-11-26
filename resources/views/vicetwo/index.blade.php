@@ -7,11 +7,12 @@
         </p>
     <![endif]-->
 <div class="wrapper" id="app">
-    <header class="header">
+    <header class="header" id="supheader">
         <div class="container">
             <div class="header__wrap">
-                <a href="http://{{ env('APP_MAIN_DOMAIN') }}/" class="header__logo"><img
-                        src="/event/img/header/logo.png" alt="Агродоход"></a>
+                <a href="http://{{ env('APP_MAIN_DOMAIN') }}/" class="header__logo"><img class="header__sitename-one"
+                    src="/event/img/header/logo.png" alt="Агродоход"><img class="header__sitename"
+                    src="/img/vice/suplogo.png" alt="Агродоход"></a>
                 <div class="header__bar">
                     <a href="tel:88005558586" class="header__tel">8 (800) 555-85-86</a>
                     <button class="btn btn--menu js-menu-btn"></button>
