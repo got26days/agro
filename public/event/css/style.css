@@ -3748,7 +3748,7 @@ h4 {
 }
 
 .header__sitename{
-    display: none !important;
+    display: none;
 }
 
 .newprops .header__sitename{
