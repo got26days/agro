@@ -107,9 +107,15 @@
             <div class="container">
                 <div class="calc-shem__blc">
                     <div class="calc-shem__header">
-                        <typetext :q1="'{{ isset($domain['question1']) ? $domain['question1'] : 'Вопрос 1'}}'"
-                            :q2="'{{ isset($domain['question2']) ? $domain['question2'] : 'Вопрос 2'}}'"
-                            :q3="'{{ isset($domain['question3']) ? $domain['question3'] : 'Вопрос 3'}}'"></typetext>
+                        <vue-typer :text='["Как получить проектное финансирование?",
+                        "Какую возможную прибыль может получить инициатор проекта?",
+                        "Для чего делать входную экспертизу?", 
+                        "Зачем нужна финансово-управляющая модель?", 
+                        "Как правильно провести маркетинг-анализ бизнес идеи?",
+                        "Как оформить бизнес-план под требования банка?",
+                        "Какие первичные документы нужно собрать для банка?",
+                        "С чего начать реализацию бизнес идеи?",
+                        "Как разработать дорожную карту реализации проекта?"]' :repeat='Infinity'></vue-typer>
 
                         <p class="calc-shem__blc-txt" style="white-space: pre-line;">
                             {{ isset($domain['body_after']) ? $domain['body_after'] : 'У нас есть чёткие ответы на волнующие вас вопросы.

@@ -49,6 +49,9 @@ Validator.localize('ru', ru);
 //     });
 //   });
 
+import VueTyperPlugin from 'vue-typer'
+Vue.use(VueTyperPlugin)
+
 const app = new Vue({
     el: '#app'
 });

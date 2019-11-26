@@ -107,9 +107,13 @@
             <div class="container">
                 <div class="calc-shem__blc">
                     <div class="calc-shem__header">
-                        <typetext :q1="'{{ isset($domain['question1']) ? $domain['question1'] : 'Вопрос 1'}}'"
-                            :q2="'{{ isset($domain['question2']) ? $domain['question2'] : 'Вопрос 2'}}'"
-                            :q3="'{{ isset($domain['question3']) ? $domain['question3'] : 'Вопрос 3'}}'"></typetext>
+                        
+                            <vue-typer :text='["Как не попасть на огромные налоговые штрафы в новом году?",
+                            "Как избежать налоговых штрафов за подачу просрочку подачи отчётности?",
+                            "Как сэкономить на бухгалтерии и с помощью бухгалтерии?", 
+                            "Как получить кредит на хозяйство и не влезть в долги?", 
+                            "Как не попасть в кабальный договор с кредитной организацией?",
+                            "Как выгодно воспользоваться кредитом и приумножить свой капитал?"]' :repeat='Infinity'></vue-typer>
 
                         <p class="calc-shem__blc-txt" style="white-space: pre-line;">
                             {{ isset($domain['body_after']) ? $domain['body_after'] : 'У нас есть чёткие ответы на волнующие вас вопросы.
