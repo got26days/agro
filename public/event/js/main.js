@@ -76,7 +76,7 @@ $(document).ready(function(){
 	
 
 	$("select").change(function(){
-		console.log(this);
+
 		if($(this).val() !== 0){
 			$(this).closest('.js-label').addClass('val');
 			
@@ -306,7 +306,7 @@ $('.js-val').on('keypress', function(){
     $(window).on('scroll', function(){         
         var mainHeight = 1000,
             windOffset = $(window).scrollTop();
-        console.log(windOffset);
+
         if(windOffset > mainHeight){
             
             $('#js-action-btn').addClass('fix');
