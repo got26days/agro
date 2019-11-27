@@ -65,6 +65,9 @@
                 <div class="popup__form-txt">В ближайшее время мы свяжемся с вами</div>
             </div>
         </div>
+
+        
+        <a href="#sec-form" class="btn action-btn js-action-btn js-order-btn-two" id="js-action-btn" data-title="Оформить заявку" data-titletwo="Оформить заявку" data-btn="Оформить заявку"><span>Оформить заявку</span></a>
         
 
     <script src="/event/js/vendors/jquery.min.js"></script>

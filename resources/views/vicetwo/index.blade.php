@@ -1,4 +1,4 @@
-@extends('vice.master')
+@extends('vicetwo.master')
 
 @section('content')
 <!--[if lt IE 8]>
@@ -126,20 +126,19 @@
                         <div class="calc-shem__blc-item">
                             <div class="calc-shem__blc-icn calc-shem__blc-icn--check"></div>
                             <div class="calc-shem__blc-item-txt" style="white-space: pre-line;">
-                                {{ isset($domain['body']) ? $domain['body'] : 'Заключаем договор и берём вашу бухглатерию на обслуживание'}}
+                                Анализируем вашу идею, бизнес-план, состояние дел. Консультируем и подбираем возможные варианты финансирования, займа, конкурса и гранта.
                             </div>
                         </div>
                         <div class="calc-shem__blc-item">
                             <div class="calc-shem__blc-icn calc-shem__blc-icn--list"></div>
                             <div class="calc-shem__blc-item-txt" style="white-space: pre-line;">
-                                {{ isset($domain['body2']) ? $domain['body2'] : 'Ваша отчётность и финансовая модель подготавливается для получения поддержки от государства'}}
-
+                                Помогаем вам собрать пакет документов и пройти входную экспертизу и согласование. Корректируем финансовую модель и бизнес-план. 
                             </div>
                         </div>
                         <div class="calc-shem__blc-item">
                             <div class="calc-shem__blc-icn calc-shem__blc-icn--walet"></div>
                             <div class="calc-shem__blc-item-txt" style="white-space: pre-line;">
-                                {{ isset($domain['body3']) ? $domain['body3'] : 'Вы получаете поддержку от государства в виде субсидии или гранта'}}
+                                Вы получаете экспертизу бизнес-плана, финансово-управленчиская модель, испраленную отчётность и решение финансового учереждения.
                             </div>
                         </div>
                     </div>
@@ -151,7 +150,7 @@
             <div class="container">
                 <div class="calc-banner__wrap green-area-wrap">
                     <div class="green-area-price">
-                        <p class="green-price-desc">Эффективная ставка</p>
+                        <p class="green-price-desc">Возможная ставка</p>
                         <p class="green-price">2-9,5%</p>
                     </div>
                     <div class="green-area-price">
@@ -174,8 +173,6 @@
                 </div>
             </div>
         </section>
-
-
 
         <section class="calc-partners">
             <div class="container">
@@ -202,6 +199,7 @@
                 </div>
             </div>
         </section>
+        
         <section class="calc-why">
             <div class="container">
                 <h2 class="sec__title">Почему мы</h2>

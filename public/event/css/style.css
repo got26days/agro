@@ -3766,3 +3766,106 @@ h4 {
     font-size: 30px;
     line-height: 1.2;
 }
+
+
+
+.action-btn {
+    position: fixed;
+    z-index: 800;
+    bottom: 2.2rem;
+    right: 7rem;
+    height: 44px;
+    width: 160px;
+    /* line-height: 4.4rem; */
+    border-radius: 2.2rem;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    background-color: #64DB66;
+    -webkit-box-shadow: 0 0 0 0.4rem rgba(95, 223, 92, 0.39);
+    box-shadow: 0 0 0 0.4rem rgba(95, 223, 92, 0.39);
+    -webkit-transform: translateY(200%);
+    -ms-transform: translateY(200%);
+    transform: translateY(200%)
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+
+.action-btn.fix {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0)
+}
+
+.action-btn:hover {
+    -webkit-box-shadow: 0 0 0 0 rgba(0,0,0,.39);
+    box-shadow: 0 0 0 0 rgba(0,0,0,.39)
+}
+
+.action-btn:hover:before {
+    -webkit-animation: none;
+    animation: none
+}
+
+.action-btn:before {
+    content: '';
+    display: block;
+    -webkit-animation: widgetPulse infinite 1.5s;
+    animation: widgetPulse infinite 1.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: 1px solid #64DB66;
+    border-radius: 2.2rem
+}
+
+.main-action-btn {
+    margin: 0 auto;
+    height: 4.8rem;
+    line-height: 4.8rem;
+    text-align: center;
+    padding: 0 2rem 0 4.5rem;
+    background-size: 1.3rem auto;
+    font-size: 1.8rem;
+    font-weight: 500;
+    border-radius: 3px;
+    color: #fff;
+    letter-spacing: -.04rem
+}
+
+@-webkit-keyframes widgetPulse {
+    50% {
+        -webkit-transform: scale(1,1);
+        transform: scale(1,1);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: scale(1.6);
+        transform: scale(1.6);
+        opacity: 0
+    }
+}
+
+@keyframes widgetPulse {
+    50% {
+        -webkit-transform: scale(1,1);
+        transform: scale(1,1);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: scale(1.6);
+        transform: scale(1.6);
+        opacity: 0
+    }
+}

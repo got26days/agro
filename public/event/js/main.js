@@ -179,13 +179,21 @@ $(document).ready(function(){
             $('#js-header').add('#js-header-hide').removeClass('fix');
             $('#supheader').removeClass('newprops');
 		}
-		
-		// if( ($(window).scrollTop() + $(window).height()) > $('#js-form').offset().top ){
-		// 	$('#js-scroll-btn').addClass('hide');
-		// } else{
-		// 	$('#js-scroll-btn').removeClass('hide');
-		// }
-	})
+	
+    })
+    
+    $(window).on('scroll', function(){         
+        var mainHeight = 1000,
+            windOffset = $(window).scrollTop();
+        
+        if(windOffset > mainHeight){
+            
+            $('#js-action-btn').addClass('fix');
+        } else{
+            $('#js-action-btn').removeClass('fix');
+            
+        }
+    });
 	
 	
 });
