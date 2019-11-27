@@ -323,7 +323,7 @@
             </div>
         </section>
 
-        <mainform :back="1" :point="{{ isset($domain['point']) ? $domain['point'] : 0}}"
+        <mainform :back="1" :point="{{ isset($domain['point']) ? $domain['point'] : 0}}" id="secform-down"
         :percent="{{ isset($domain['percent']) ? $domain['percent'] : 0}}" :manager="false" :subject="`{{ isset($domain['subject']) ? $domain['subject'] : ''}}`"></mainform>
 
 
