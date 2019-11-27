@@ -66,7 +66,7 @@
             </div>
         </div>
 
-        <a href="#sec-form" class="btn action-btn js-action-btn js-order-btn-two" id="js-action-btn" data-title="Оформить заявку" data-titletwo="Оформить заявку" data-btn="Оформить заявку"><span>Оформить заявку</span></a>
+        <a class="btn action-btn js-action-btn js-order-btn-two" id="js-action-btn" data-title="Оформить заявку" data-titletwo="Оформить заявку" data-btn="Оформить заявку"><span>Оформить заявку</span></a>
 
         
 
