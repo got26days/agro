@@ -32,7 +32,7 @@
                             <span class="calc-form__label-title">Вид финансирования</span>
 
                             <cool-select v-model="mainform.type"
-                                :items="['', 'Кредит', 'Субсидия', 'Грант', 'Проектное финансирование']"
+                                :items="['', 'Кредит', 'Проектное финансирование']"
                                 v-validate="'required'" 
                                 name="mainform.type"
                                  />
