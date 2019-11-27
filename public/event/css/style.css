@@ -3740,7 +3740,7 @@ h4 {
     -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     position: fixed;
-    
+    z-index: 40;
 }
 
 .newprops .header__sitename-one{
