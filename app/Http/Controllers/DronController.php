@@ -17,7 +17,7 @@ class DronController extends Controller
         $domain = Buh::latest()->first();
 
         if(!$domain){
-            return redirect('https://agrodohod.ru/404');
+            return redirect('http://agrodohod.ru/404');
         }
 
         $teams = Team::get();
@@ -39,7 +39,7 @@ class DronController extends Controller
         $domain = Pr::latest()->first();
 
         if(!$domain){
-            return redirect('https://agrodohod.ru/404');
+            return redirect('http://agrodohod.ru/404');
         }
 
         $teams = Team::get();
