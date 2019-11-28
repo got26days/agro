@@ -26,7 +26,7 @@ class PrsExport implements FromCollection, WithHeadings, ShouldAutoSize, WithChu
             $down = [
                 'request' => $download['form'],
                 'title' => $download['title'],
-                'slug' => env('APP_URL') . '/' . $download["slug"],
+                'slug' => 'http://pr.agrodohod.ru/' . $download["slug"],
             ];
 
             array_push($downloads, $down);

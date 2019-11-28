@@ -26,7 +26,7 @@ class BuhsExport implements FromCollection, WithHeadings, ShouldAutoSize, WithCh
             $down = [
                 'request' => $download['form'],
                 'title' => $download['title'],
-                'slug' => env('APP_URL') . '/' . $download["slug"],
+                'slug' => 'http://buh.agrodohod.ru/' . $download["slug"],
             ];
 
             array_push($downloads, $down);
