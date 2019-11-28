@@ -7,13 +7,17 @@ use App\Ndomain;
 use App\Partner;
 use App\Team;
 use Carbon\Carbon;
+use App\Pr;
+use App\Buh;
 
 class DronController extends Controller
 {
     public function index()
     {
-        $domain = Ndomain::where('slug', '=', 'pomosh-v-poluchenii-kreditov-subsidij-i-grantov-ot-kompanii-agrodohod')->latest()->first();
+        $domain = Buh::latest()->first();
         $teams = Team::get();
+
+        $domain->title='Помощь в получении грантов и субсидий';
 
         $partners = Partner::latest()->get();
         
@@ -27,8 +31,10 @@ class DronController extends Controller
 
     public function indextwo()
     {
-        $domain = Ndomain::where('slug', '=', 'pomosh-v-poluchenii-kreditov-subsidij-i-grantov-ot-kompanii-agrodohod')->latest()->first();
+        $domain = Pr::latest()->first();
         $teams = Team::get();
+
+        $domain->title='Помощь в получении кредитов и проектного финансирования';
 
         $partners = Partner::latest()->get();
         
@@ -43,7 +49,7 @@ class DronController extends Controller
     public function credit($slug)
     {
 
-        $domain = Ndomain::where('slug', '=', $slug)->latest()->first();
+        $domain = Buh::where('slug', '=', $slug)->latest()->first();
 
         if(!isset($domain)){
             abort(404);
@@ -64,7 +70,7 @@ class DronController extends Controller
     public function credittwo($slug)
     {
 
-        $domain = Ndomain::where('slug', '=', $slug)->latest()->first();
+        $domain = Pr::where('slug', '=', $slug)->latest()->first();
 
         if(!isset($domain)){
             abort(404);

@@ -2534,6 +2534,7 @@ __webpack_require__.r(__webpack_exports__);
         sourcetwo: null,
         mailsubject: this.subject,
         orgform: null,
+        mainh1: this.h1,
         form1: {
           region: null,
           summ: 600000,
@@ -2604,7 +2605,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     };
   },
-  props: ['percent', 'point', 'manager', 'subject', 'back'],
+  props: ['percent', 'point', 'manager', 'subject', 'back', 'h1'],
   created: function created() {
     if (this.opman == false) {
       this.mainform.sourcetwo = "Заявка с сайта"; // console.log(this.mainform.sourcetwo);
@@ -32773,7 +32774,11 @@ var render = function() {
                           ),
                           _vm._v(" "),
                           _c("cool-select", {
-                            attrs: { items: [""], disabled: "disabled" }
+                            attrs: {
+                              items: [""],
+                              disabled: "disabled",
+                              "disable-search": ""
+                            }
                           })
                         ],
                         1
@@ -32790,7 +32795,11 @@ var render = function() {
                           ),
                           _vm._v(" "),
                           _c("cool-select", {
-                            attrs: { items: [""], disabled: "disabled" }
+                            attrs: {
+                              items: [""],
+                              disabled: "disabled",
+                              "disable-search": ""
+                            }
                           })
                         ],
                         1
@@ -32809,7 +32818,11 @@ var render = function() {
                           ),
                           _vm._v(" "),
                           _c("cool-select", {
-                            attrs: { items: [""], disabled: "disabled" }
+                            attrs: {
+                              items: [""],
+                              disabled: "disabled",
+                              "disable-search": ""
+                            }
                           })
                         ],
                         1
@@ -32853,6 +32866,7 @@ var render = function() {
                             ],
                             attrs: {
                               items: _vm.cityes,
+                              "disable-search": "",
                               name: "mainform.form1.region",
                               "no-data": ""
                             },
@@ -33167,6 +33181,7 @@ var render = function() {
                               }
                             ],
                             attrs: {
+                              "disable-search": "",
                               items: [
                                 "",
                                 "Положительный баланс",
@@ -33247,6 +33262,7 @@ var render = function() {
                             ],
                             attrs: {
                               items: _vm.cityes,
+                              "disable-search": "",
                               name: "mainform.form2.region"
                             },
                             model: {
@@ -33481,6 +33497,7 @@ var render = function() {
                             ],
                             attrs: {
                               items: ["", "Да", "Нет"],
+                              "disable-search": "",
                               name: "mainform.form2.have"
                             },
                             model: {
@@ -33684,6 +33701,7 @@ var render = function() {
                               }
                             ],
                             attrs: {
+                              "disable-search": "",
                               items: [
                                 "",
                                 "Идея",
@@ -33743,6 +33761,7 @@ var render = function() {
                               }
                             ],
                             attrs: {
+                              "disable-search": "",
                               items: [
                                 "",
                                 "Положительный баланс",
@@ -33802,6 +33821,7 @@ var render = function() {
                               }
                             ],
                             attrs: {
+                              "disable-search": "",
                               items: [
                                 "",
                                 "Чистая кредитная история",
@@ -33878,6 +33898,7 @@ var render = function() {
                             ],
                             attrs: {
                               items: _vm.cityes,
+                              "disable-search": "",
                               name: "mainform.form4.region"
                             },
                             model: {
@@ -33930,6 +33951,7 @@ var render = function() {
                               }
                             ],
                             attrs: {
+                              "disable-search": "",
                               items: [
                                 "",
                                 "Животноводство",
@@ -33989,6 +34011,7 @@ var render = function() {
                               }
                             ],
                             attrs: {
+                              "disable-search": "",
                               items: [
                                 "",
                                 "Штатный сотрудник",
@@ -34113,6 +34136,7 @@ var render = function() {
                               }
                             ],
                             attrs: {
+                              "disable-search": "",
                               items: [
                                 "",
                                 "Чистая кредитная история",
@@ -34171,6 +34195,7 @@ var render = function() {
                               }
                             ],
                             attrs: {
+                              "disable-search": "",
                               items: [
                                 "",
                                 "Недвижимость",
@@ -34231,6 +34256,7 @@ var render = function() {
                               }
                             ],
                             attrs: {
+                              "disable-search": "",
                               items: [
                                 "",
                                 "12 месяцев",
@@ -34291,6 +34317,7 @@ var render = function() {
                               }
                             ],
                             attrs: {
+                              "disable-search": "",
                               items: [
                                 "",
                                 "Пополнение оборотных средств",
@@ -34351,6 +34378,7 @@ var render = function() {
                               }
                             ],
                             attrs: {
+                              "disable-search": "",
                               items: [
                                 "",
                                 "Есть  расчёт",
@@ -34424,6 +34452,7 @@ var render = function() {
                               }
                             ],
                             attrs: {
+                              "disable-search": "",
                               items: [
                                 "",
                                 "Расширения",
@@ -34483,6 +34512,7 @@ var render = function() {
                               }
                             ],
                             attrs: {
+                              "disable-search": "",
                               items: [
                                 "",
                                 "Животноводство",
@@ -34542,6 +34572,7 @@ var render = function() {
                               }
                             ],
                             attrs: {
+                              "disable-search": "",
                               items: ["", "Да", "Нет", "Являюсь председателем"],
                               name: "mainform.form2.chlen"
                             },
@@ -34599,6 +34630,7 @@ var render = function() {
                               }
                             ],
                             attrs: {
+                              "disable-search": "",
                               items: [
                                 "",
                                 "Есть",
@@ -34657,6 +34689,7 @@ var render = function() {
                               }
                             ],
                             attrs: {
+                              "disable-search": "",
                               items: [
                                 "",
                                 "Есть",
@@ -34733,6 +34766,7 @@ var render = function() {
                             ],
                             attrs: {
                               items: _vm.cityes,
+                              "disable-search": "",
                               name: "mainform.form3.region"
                             },
                             model: {
@@ -34786,6 +34820,7 @@ var render = function() {
                             ],
                             attrs: {
                               items: ["", "от 1 года", "до 15 лет"],
+                              "disable-search": "",
                               name: "mainform.form3.srok"
                             },
                             model: {
@@ -34838,6 +34873,7 @@ var render = function() {
                               }
                             ],
                             attrs: {
+                              "disable-search": "",
                               items: ["", "Есть", "Нет", "Составьте мне"],
                               name: "mainform.form3.finance"
                             },
@@ -34891,6 +34927,7 @@ var render = function() {
                               }
                             ],
                             attrs: {
+                              "disable-search": "",
                               items: [
                                 "",
                                 "Недвижимость",
@@ -34956,6 +34993,7 @@ var render = function() {
                                 "10 лет",
                                 "более 10 лет"
                               ],
+                              "disable-search": "",
                               name: "mainform.form3.secondsrok"
                             },
                             model: {
@@ -35028,6 +35066,7 @@ var render = function() {
                             ],
                             attrs: {
                               items: ["", "Получал", "Не получал"],
+                              "disable-search": "",
                               name: "mainform.form4.geter"
                             },
                             model: {
@@ -35296,6 +35335,7 @@ var render = function() {
                               }
                             ],
                             attrs: {
+                              "disable-search": "",
                               items: ["", "Есть", "Нет", "Нужна консультация"],
                               name: "mainform.form4.answer"
                             },
@@ -35350,6 +35390,7 @@ var render = function() {
                             ],
                             attrs: {
                               items: ["", "Есть", "Нет"],
+                              "disable-search": "",
                               name: "mainform.form4.dolg"
                             },
                             model: {
@@ -35403,6 +35444,7 @@ var render = function() {
                             ],
                             attrs: {
                               items: ["", "Есть", "Нет"],
+                              "disable-search": "",
                               name: "mainform.form4.proc"
                             },
                             model: {
@@ -35521,6 +35563,7 @@ var render = function() {
                               }
                             ],
                             attrs: {
+                              "disable-search": "",
                               items: [
                                 "",
                                 "Есть  расчёт",
@@ -35579,6 +35622,7 @@ var render = function() {
                               }
                             ],
                             attrs: {
+                              "disable-search": "",
                               items: [
                                 "",
                                 "Штатный сотрудник",

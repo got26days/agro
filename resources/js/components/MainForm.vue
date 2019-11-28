@@ -78,12 +78,12 @@
                                 <!-- <select class="form-select" name="add-employer-positions" data-placeholder=" " disabled="disabled">
 										<option></option>
 									</select> -->
-                                <cool-select :items="['']" disabled="disabled" />
+                                <cool-select :items="['']" disabled="disabled" disable-search/>
                             </label>
 
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Организационная форма</span>
-                                <cool-select :items="['']" disabled="disabled" />
+                                <cool-select :items="['']" disabled="disabled" disable-search/>
                             </label>
 
                             <label class="calc-form__label js-label">
@@ -94,14 +94,14 @@
 
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Годовой баланс</span>
-                                <cool-select :items="['']" disabled="disabled" />
+                                <cool-select :items="['']" disabled="disabled" disable-search />
                             </label>
                         </div>
 
                         <div v-show="((mainform.type === 'Кредит') && (!checkError))">
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Регион</span>
-                                <cool-select v-model="mainform.form1.region" :items="cityes" v-validate="'required'"
+                                <cool-select v-model="mainform.form1.region" :items="cityes" v-validate="'required'" disable-search
                                     name="mainform.form1.region" no-data />
 
                                 </cool-select>
@@ -160,7 +160,7 @@
                             </label>
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Годовой баланс</span>
-                                <cool-select v-model="mainform.form1.yearbalance"
+                                <cool-select v-model="mainform.form1.yearbalance" disable-search
                                     :items="['', 'Положительный баланс', 'Отрицательный баланс', 'Нулевой баланс']"
                                     v-validate="'required'" name="mainform.form1.yearbalance" />
                                 <p v-show="errors.first('mainform.form1.yearbalance')">Поле обязательно для заполнения
@@ -171,7 +171,7 @@
                         <div v-show="((mainform.type === 'Грант') && (!checkError))">
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Регион</span>
-                                <cool-select v-model="mainform.form2.region" :items="cityes" v-validate="'required'"
+                                <cool-select v-model="mainform.form2.region" :items="cityes" v-validate="'required'" disable-search
                                     name="mainform.form2.region" />
                                 <p v-show="errors.first('mainform.form2.region')">Поле обязательно для заполнения</p>
                             </label>
@@ -208,7 +208,7 @@
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Наличие 10% от запрашиваемой суммы <span>на
                                         счету</span><sup>*</sup></span>
-                                <cool-select v-model="mainform.form2.have" :items="['', 'Да', 'Нет']"
+                                <cool-select v-model="mainform.form2.have" :items="['', 'Да', 'Нет']" disable-search
                                     v-validate="'required'" name="mainform.form2.have" />
                                 <span class="calc-form__label-sub">*Требование комиссии при подаче заявки на
                                     грант</span>
@@ -243,21 +243,21 @@
 
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Стадия проекта</span>
-                                <cool-select v-model="mainform.form3.studia"
+                                <cool-select v-model="mainform.form3.studia" disable-search
                                     :items="['', 'Идея', 'Есть бизнес план', 'Составьте мне бизнес-план', 'В процессе реализации']"
                                     v-validate="'required'" name="mainform.form3.studia" />
                                 <p v-show="errors.first('mainform.form3.studia')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Бухгалтерский баланс</span>
-                                <cool-select v-model="mainform.form3.balance"
+                                <cool-select v-model="mainform.form3.balance" disable-search
                                     :items="['', 'Положительный баланс', 'Отрицательный баланс', 'Нулевой баланс', 'Необходим аудит']"
                                     v-validate="'required'" name="mainform.form3.balance" />
                                 <p v-show="errors.first('mainform.form3.balance')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Кредитная история</span>
-                                <cool-select v-model="mainform.form3.history"
+                                <cool-select v-model="mainform.form3.history" disable-search
                                     :items="['', 'Чистая кредитная история', 'Хорошая кредитная история', 'Плохая кредитная история']"
                                     v-validate="'required'" name="mainform.form3.history" />
                                 <p v-show="errors.first('mainform.form3.history')">Поле обязательно для заполнения</p>
@@ -267,21 +267,21 @@
                         <div v-show="((mainform.type === 'Субсидия') && (!checkError))">
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Регион</span>
-                                <cool-select v-model="mainform.form4.region" :items="cityes" v-validate="'required'"
+                                <cool-select v-model="mainform.form4.region" :items="cityes" v-validate="'required'" disable-search
                                     name="mainform.form4.region" />
                                 <p v-show="errors.first('mainform.form4.region')">Поле обязательно для заполнения</p>
                             </label>
 
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Тип хозяйства</span>
-                                <cool-select v-model="mainform.form4.type"
+                                <cool-select v-model="mainform.form4.type" disable-search
                                     :items="['', 'Животноводство', 'Растениеводство', 'Овощеводство', 'Производство']"
                                     v-validate="'required'" name="mainform.form4.type" />
                                 <p v-show="errors.first('mainform.form4.type')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Сейчас бухгалтерию ведет</span>
-                                <cool-select v-model="mainform.form4.buhgalrer"
+                                <cool-select v-model="mainform.form4.buhgalrer" disable-search
                                     :items="['', 'Штатный сотрудник', 'Профильное в СХ агентство', 'Непрофильное в с СХ агентство', 'Своими силами']"
                                     v-validate="'required'" name="mainform.form4.buhgalrer" />
                                 <p v-show="errors.first('mainform.form4.buhgalrer')">Поле обязательно для заполнения</p>
@@ -307,35 +307,35 @@
                         <div v-show="mainform.type === 'Кредит'">
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Кредитная история</span>
-                                <cool-select v-model="mainform.form1.history"
+                                <cool-select v-model="mainform.form1.history" disable-search
                                     :items="['', 'Чистая кредитная история', 'Хорошая кредитная история', 'Плохая кредитная история']"
                                     v-validate="'required'" name="mainform.form1.history" />
                                 <p v-show="errors.first('mainform.form1.history')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Залоги под кредит </span>
-                                <cool-select v-model="mainform.form1.credit"
+                                <cool-select v-model="mainform.form1.credit" disable-search
                                     :items="['', 'Недвижимость', 'Техника', 'Поголовье', 'Оборудование', 'Ничего из перечисленного']"
                                     v-validate="'required'" name="mainform.form1.credit" />
                                 <p v-show="errors.first('mainform.form1.credit')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Желаемые сроки для погашения кредита</span>
-                                <cool-select v-model="mainform.form1.term"
+                                <cool-select v-model="mainform.form1.term" disable-search
                                     :items="['', '12 месяцев', '24 месяца', '48 месяцев', '60 месяцев', 'более 60 месяцев']"
                                     v-validate="'required'" name="mainform.form1.term" />
                                 <p v-show="errors.first('mainform.form1.term')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Цель привлечения средств</span>
-                                <cool-select v-model="mainform.form1.target"
+                                <cool-select v-model="mainform.form1.target" disable-search
                                     :items="['', 'Пополнение оборотных средств', 'Развитие', 'Модернизация', 'Стартап', 'Другое']"
                                     v-validate="'required'" name="mainform.form1.target" />
                                 <p v-show="errors.first('mainform.form1.target')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Расчет доходности на текущий момент</span>
-                                <cool-select v-model="mainform.form1.moment"
+                                <cool-select v-model="mainform.form1.moment" disable-search
                                     :items="['', 'Есть  расчёт', 'Нет расчёта', 'Хочу получить расчёт']"
                                     v-validate="'required'" name="mainform.form1.moment" />
                                 <p v-show="errors.first('mainform.form1.moment')">Поле обязательно для заполнения</p>
@@ -345,21 +345,21 @@
                         <div v-show="mainform.type === 'Грант'">
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Цель получения гранта</span>
-                                <cool-select v-model="mainform.form2.target"
+                                <cool-select v-model="mainform.form2.target" disable-search
                                     :items="['', 'Расширения', 'Модернизации', 'Стартап', 'Другое']"
                                     v-validate="'required'" name="mainform.form2.target" />
                                 <p v-show="errors.first('mainform.form2.target')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Тип хозяйства</span>
-                                <cool-select v-model="mainform.form2.type"
+                                <cool-select v-model="mainform.form2.type" disable-search
                                     :items="['', 'Животноводство', 'Растениеводство', 'Овощеводство', 'Производство']"
                                     v-validate="'required'" name="mainform.form2.type" />
                                 <p v-show="errors.first('mainform.form2.type')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Членство в кооперативе</span>
-                                <cool-select v-model="mainform.form2.chlen"
+                                <cool-select v-model="mainform.form2.chlen" disable-search
                                     :items="['', 'Да', 'Нет', 'Являюсь председателем']" v-validate="'required'"
                                     name="mainform.form2.chlen" />
                                 <p v-show="errors.first('mainform.form2.chlen')">Поле обязательно для заполнения</p>
@@ -367,14 +367,14 @@
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Расчет доходности хозяйства на текущий
                                     момент</span>
-                                <cool-select v-model="mainform.form2.term"
+                                <cool-select v-model="mainform.form2.term" disable-search
                                     :items="['', 'Есть', 'Отсутствует', 'Хочу получить']" v-validate="'required'"
                                     name="mainform.form2.term" />
                                 <p v-show="errors.first('mainform.form2.term')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Расчет доходности после получения гранта</span>
-                                <cool-select v-model="mainform.form2.raschet"
+                                <cool-select v-model="mainform.form2.raschet" disable-search
                                     :items="['', 'Есть', 'Отсутствует', 'Хочу получить']" v-validate="'required'"
                                     name="mainform.form2.raschet" />
                                 <p v-show="errors.first('mainform.form2.raschet')">Поле обязательно для заполнения</p>
@@ -384,33 +384,33 @@
                         <div v-show="mainform.type === 'Проектное финансирование'">
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Регион ведения деятельности</span>
-                                <cool-select v-model="mainform.form3.region" :items="cityes" v-validate="'required'"
+                                <cool-select v-model="mainform.form3.region" :items="cityes" v-validate="'required'" disable-search
                                     name="mainform.form3.region" />
                                 <p v-show="errors.first('mainform.form3.region')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Срок выплаты кредита</span>
-                                <cool-select v-model="mainform.form3.srok" :items="['', 'от 1 года', 'до 15 лет']"
+                                <cool-select v-model="mainform.form3.srok" :items="['', 'от 1 года', 'до 15 лет']" disable-search
                                     v-validate="'required'" name="mainform.form3.srok" />
                                 <p v-show="errors.first('mainform.form3.region')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Финансовая модель</span>
-                                <cool-select v-model="mainform.form3.finance"
+                                <cool-select v-model="mainform.form3.finance" disable-search
                                     :items="['', 'Есть', 'Нет', 'Составьте мне']" v-validate="'required'"
                                     name="mainform.form3.finance" />
                                 <p v-show="errors.first('mainform.form3.finance')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Залоги под финансирование</span>
-                                <cool-select v-model="mainform.form3.zalog"
+                                <cool-select v-model="mainform.form3.zalog" disable-search
                                     :items="['', 'Недвижимость', 'Техника', 'Оборудование', 'Ничего из перечисленного']"
                                     v-validate="'required'" name="mainform.form3.zalog" />
                                 <p v-show="errors.first('mainform.form3.zalog')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Срок окупаемости проекта</span>
-                                <cool-select v-model="mainform.form3.secondsrok" :items="['1 год', '5 лет', '10 лет', 'более 10 лет']"
+                                <cool-select v-model="mainform.form3.secondsrok" :items="['1 год', '5 лет', '10 лет', 'более 10 лет']" disable-search
                                     v-validate="'required'" name="mainform.form3.secondsrok" />
                                 <p v-show="errors.first('mainform.form3.secondsrok')">Поле обязательно для заполнения
                                 </p>
@@ -420,7 +420,7 @@
                         <div v-show="mainform.type === 'Субсидия'">
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Получение субсидий ранее </span>
-                                <cool-select v-model="mainform.form4.geter" :items="['', 'Получал', 'Не получал']"
+                                <cool-select v-model="mainform.form4.geter" :items="['', 'Получал', 'Не получал']" disable-search
                                     v-validate="'required'" name="mainform.form4.geter" />
                                 <p v-show="errors.first('mainform.form4.geter')">Поле обязательно для заполнения</p>
                             </label>
@@ -468,20 +468,20 @@
 
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Обоснование затрат к возмещению</span>
-                                <cool-select v-model="mainform.form4.answer"
+                                <cool-select v-model="mainform.form4.answer" disable-search
                                     :items="['', 'Есть', 'Нет', 'Нужна консультация']" v-validate="'required'"
                                     name="mainform.form4.answer" />
                                 <p v-show="errors.first('mainform.form4.answer')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Задолженность по налогам</span>
-                                <cool-select v-model="mainform.form4.dolg" :items="['', 'Есть', 'Нет']"
+                                <cool-select v-model="mainform.form4.dolg" :items="['', 'Есть', 'Нет']" disable-search
                                     v-validate="'required'" name="mainform.form4.dolg" />
                                 <p v-show="errors.first('mainform.form4.dolg')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Процедура банкротства</span>
-                                <cool-select v-model="mainform.form4.proc" :items="['', 'Есть', 'Нет']"
+                                <cool-select v-model="mainform.form4.proc" :items="['', 'Есть', 'Нет']" disable-search
                                     v-validate="'required'" name="mainform.form4.proc" />
                                 <p v-show="errors.first('mainform.form4.proc')">Поле обязательно для заполнения</p>
                             </label>
@@ -509,14 +509,14 @@
                         <div v-show="mainform.type === 'Кредит'">
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Расчет доходности после получения кредита</span>
-                                <cool-select v-model="mainform.form1.payment"
+                                <cool-select v-model="mainform.form1.payment" disable-search
                                     :items="['', 'Есть  расчёт', 'Нет расчёта', 'Хочу получить расчёт']"
                                     v-validate="'required'" name="mainform.form1.payment" />
                                 <p v-show="errors.first('mainform.form1.payment')">Поле обязательно для заполнения</p>
                             </label>
                             <label class="calc-form__label js-label">
                                 <span class="calc-form__label-title">Сейчас бухгалтерию ведет</span>
-                                <cool-select v-model="mainform.form1.accounting"
+                                <cool-select v-model="mainform.form1.accounting" disable-search
                                     :items="['', 'Штатный сотрудник', 'Профильное в СХ агентство', 'Непрофильное в с СХ агентство', 'Своими силами']"
                                     v-validate="'required'" name="mainform.form1.accounting" />
                                 <p v-show="errors.first('mainform.form1.accounting')">Поле обязательно для заполнения
@@ -578,7 +578,7 @@
                             <div>
                             <label class="calc-form__label">
                                 <span class="calc-form__label-title">Презентация</span>
-                                <cool-select v-model="mainform.form3.present"
+                                <cool-select v-model="mainform.form3.present" 
                                     :items="['Есть, готов презентовать', 'Нет']" v-validate="'required'"
                                     name="mainform.form3.present"
                                     disable-search />
@@ -821,6 +821,7 @@
                     sourcetwo: null,
                     mailsubject: this.subject,
                     orgform: null,
+                    mainh1: this.h1,
                     form1: {
                         region: null,
                         summ: 600000,
@@ -902,7 +903,7 @@
             }
         },
 
-        props: ['percent', 'point', 'manager', 'subject', 'back'],
+        props: ['percent', 'point', 'manager', 'subject', 'back', 'h1'],
         created() {
             if (this.opman == false) {
                 this.mainform.sourcetwo = "Заявка с сайта";

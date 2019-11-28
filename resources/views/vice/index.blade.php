@@ -298,7 +298,8 @@
                 <form action="/form" method="post" name="order-form" class="sec-form__form js-form-val" id="order-form">
                     @csrf
                     <input type="text" name="title" class="js-val" hidden="hidden"
-                        value="Хотите, чтобы мы ответили на ваши вопросы?">
+                    value="{!! isset($domain['title']) ? $domain['title'] : 'Помощь в
+                    получении кредитов, субсидий и грантов от компании «Агродоход»' !!}">
                     <input type="text" class="input sec-form__input js-val" name="name" placeholder="Ваше имя" required>
                     <input type="tel" class="input sec-form__input js-val" name="tel" placeholder="Номер телефона"
                         required>

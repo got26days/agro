@@ -118,8 +118,8 @@
                         "Как разработать дорожную карту реализации проекта?"]' :repeat='Infinity'></vue-typer>
 
                         <p class="calc-shem__blc-txt" style="white-space: pre-line;">
-                            {{ isset($domain['body_after']) ? $domain['body_after'] : 'У нас есть чёткие ответы на волнующие вас вопросы.
-                                Воспользуйтесь поддержкой АгроДохода для получения денег.'}}
+                            У нас есть чёткие ответы на волнующие вас вопросы.
+                            Воспользуйтесь поддержкой АгроДохода для получения денег.
                         </p>
                     </div>
                     <div class="calc-shem__blc-wrap">
@@ -206,35 +206,38 @@
                 <div class="calc-why__wrap">
                     <div class="calc-why__item">
                         <div class="calc-why__item-pic"
-                            style="background-image: url({{ isset($domain['whyimage1']) ? Voyager::image($domain['whyimage1']) : '/event/img/why/pic-1.jpg'}});">
+                            style="background-image: url(/event/img/why/pic-1.jpg);">
                         </div>
                         <div class="calc-why__item-main">
                             <h3 class="calc-why__item-title">
-                                {{ isset($domain['whytitle1']) ? $domain['whytitle1'] : 'Заботимся о вашей безопасности'}}
+                                Заботимся о вашей безопасности
                             </h3>
                             <div class="calc-why__item-txt" style="white-space: pre-line;">
-                                {{ isset($domain['whybody1']) ? $domain['whybody1'] : 'Изучим вашу финансовую ситуацию. Учтём все риски: от возможных долгов до проблем с налоговыми органами. Выберем и предложим самые лучшие условия финансирования именно для вашего хозяйства.'}}
+                                Изучим вашу финансовую ситуацию. Учтём все риски: от возможных долгов до проблем с налоговыми органами. Выберем и предложим самые лучшие условия финансирования именно для вашего хозяйства.
                             </div>
                         </div>
                     </div>
                     <div class="calc-why__item">
                         <div class="calc-why__item-pic"
-                            style="background-image: url({{ isset($domain['whyimage2']) ? Voyager::image($domain['whyimage2']) : '/event/img/why/pic-2.jpg'}});">
+                            style="background-image: url(/event/img/why/pic-2.jpg);">
                         </div>
                         <div class="calc-why__item-main">
                             <h3 class="calc-why__item-title">
                                 {{ isset($domain['whytitle2']) ? $domain['whytitle2'] : 'Работаем быстро'}}</h3>
-                            <div class="calc-why__item-txt" style="white-space: pre-line;">{{ isset($domain['whybody2']) ? $domain['whybody2'] : 'Наши партнёрские отношения с десятками кредитных организаций по всей России и многолетний опыт позволят вам получить деньги в сжатые сроки.'}}</div>
+                            <div class="calc-why__item-txt" style="white-space: pre-line;">
+                                Наши партнёрские отношения с десятками кредитных организаций по всей России и многолетний опыт позволят вам получить деньги в сжатые сроки.
+                            </div>
                         </div>
                     </div>
                     <div class="calc-why__item">
                         <div class="calc-why__item-pic"
-                            style="background-image: url({{ isset($domain['whyimage3']) ? Voyager::image($domain['whyimage3']) : '/event/img/why/pic-3.jpg'}});">
+                            style="background-image: url(/event/img/why/pic-3.jpg);">
                         </div>
                         <div class="calc-why__item-main">
-                            <h3 class="calc-why__item-title">
-                                {{ isset($domain['whytitle3']) ? $domain['whytitle3'] : 'С нами выгодно'}}</h3>
-                            <div class="calc-why__item-txt" style="white-space: pre-line;">{{ isset($domain['whybody3']) ? $domain['whybody3'] : 'С нами вы не только сможете получить финансирование на выгодных условиях, но и откроете для себя доступ к крупными сетями сбыта и поставщиками материалов для сельского хозяйства.'}}</div>
+                            <h3 class="calc-why__item-title">С нами выгодно</h3>
+                            <div class="calc-why__item-txt" style="white-space: pre-line;">
+                                С нами вы не только сможете получить финансирование на выгодных условиях, но и откроете для себя доступ к крупными сетями сбыта и поставщиками материалов для сельского хозяйства.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -255,7 +258,7 @@
                             <div class="calc-video__area-name">
                                 <b class="calc-video__name">Любовь Николаевна Староверова</b> 
                             </div>
-                            {!! isset($domain['body_video']) ? $domain['body_video'] : 'победитель конкурса лучший бухглатер России и главный финансист АгроДохода'!!}
+                            победитель конкурса лучший бухглатер России и главный финансист АгроДохода
 
                         </div>
                     </div>
@@ -323,8 +326,9 @@
             </div>
         </section>
 
-        <mainform :back="1" :point="{{ isset($domain['point']) ? $domain['point'] : 0}}" id="secform-down"
-        :percent="{{ isset($domain['percent']) ? $domain['percent'] : 0}}" :manager="false" :subject="`{{ isset($domain['subject']) ? $domain['subject'] : ''}}`"></mainform>
+    <mainform :back="1" :point="{{ isset($domain['point']) ? $domain['point'] : 0}}" id="secform-down" h1="{!! isset($domain['title']) ? $domain['title'] : 'Помощь в
+    получении кредитов, субсидий <br>и грантов от компании «Агродоход»' !!}"
+        :percent="0" :manager="false" :subject="`{{ isset($domain['subject']) ? $domain['subject'] : ''}}`"></mainform>
 
 
     </main>

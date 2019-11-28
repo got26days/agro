@@ -655,6 +655,8 @@ class EventController extends Controller
             $loan->payment = $request['form1']['payment'];
             $loan->accounting = $request['form1']['accounting'];
             $loan->save();
+
+            $loan->mainh1 = $request['mainh1'];
         }
 
         if($request['type'] == 'Грант'){
@@ -678,6 +680,8 @@ class EventController extends Controller
             $grant->raschet = $request['form2']['raschet'];
 
             $grant->save();
+
+            $grant->mainh1 = $request['mainh1'];
         }
 
         if($request['type'] == 'Проектное финансирование'){
@@ -703,6 +707,8 @@ class EventController extends Controller
             $finan->present = $request['form3']['present'];
             $finan->sredstva = $request['form3']['sredstva'];
             $finan->save();
+
+            $finan->mainh1 = $request['mainh1'];
         }
 
         if($request['type'] == 'Субсидия'){
@@ -732,6 +738,8 @@ class EventController extends Controller
             $sub->dolg = $request['form4']['dolg'];
             $sub->proc = $request['form4']['proc'];
             $sub->save();
+
+            $sub->mainh1 = $request['mainh1'];
         }
 
 
