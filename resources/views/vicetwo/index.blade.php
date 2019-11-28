@@ -248,7 +248,7 @@
                 <h2 class="sec__title">О нашей компании</h2>
                 <div class="calc-video__wrap">
                     <div class="calc-video__blc">
-                        <div class="calc-video__blind js-blind" data-href="https://www.youtube.com/embed/d2ZmNCjW6Qw">
+                        <div class="calc-video__blind js-blind" data-href="https://www.youtube.com/embed/yjHs4RrZdI8">
                             <img src="/event/img/video/blind.jpg" alt="">
                         </div>
                     </div>
