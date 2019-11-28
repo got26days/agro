@@ -105,7 +105,7 @@
 
                                         @if($row->display_name == "Slug")
                                         <td>
-                                              <a href="http:/pr.agrodohod.ru/{{ $data->{$row->field} }}">{{ $data->{$row->field} }}</a>
+                                              <a href="http://pr.agrodohod.ru/{{ $data->{$row->field} }}">{{ $data->{$row->field} }}</a>
                                         </td>
                                             
                                         @else
