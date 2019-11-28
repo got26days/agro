@@ -11,6 +11,8 @@ use App\Exports\NdomainsExport;
 use App\Exports\SubsExport;
 use App\Exports\GrantsExport;
 use App\Exports\FinansExport;
+use App\Exports\BuhsExport;
+use App\Exports\PrsExport;
 
 class TestController extends Controller
 {
@@ -42,5 +44,15 @@ class TestController extends Controller
     public function getnd()
     {
         return Excel::download(new NdomainsExport, 'data.xlsx');
+    }
+
+    public function getprs()
+    {
+        return Excel::download(new PrsExport, 'data.xlsx');
+    }
+
+    public function getbuhs()
+    {
+        return Excel::download(new BuhsExport, 'data.xlsx');
     }
 }

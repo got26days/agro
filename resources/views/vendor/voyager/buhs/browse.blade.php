@@ -24,9 +24,9 @@
         @endcan
 
 
-        {{-- <a href="/admin/getnd" class="btn btn-success btn-add-new">
+        <a href="/admin/getbuhs" class="btn btn-success btn-add-new">
             <i class="voyager-plus"></i> <span>Выгрузить</span>
-        </a> --}}
+        </a>
 
         @include('voyager::multilingual.language-selector')
     </div>

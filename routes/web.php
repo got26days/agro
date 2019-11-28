@@ -49,6 +49,8 @@ Route::group(['domain' => $domain], function()
             Route::get('/getdata4', 'TestController@getdata4');
 
             Route::get('/getnd', 'TestController@getnd');
+            Route::get('/getprs', 'TestController@getprs');
+            Route::get('/getbuhs', 'TestController@getbuhs');
         });
 
         
