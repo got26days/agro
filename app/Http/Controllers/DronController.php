@@ -15,6 +15,11 @@ class DronController extends Controller
     public function index()
     {
         $domain = Buh::latest()->first();
+
+        if(!$domain){
+            return redirect('https://agrodohod.ru/404');
+        }
+
         $teams = Team::get();
 
         $domain->title='Помощь в получении грантов и субсидий';
@@ -32,6 +37,11 @@ class DronController extends Controller
     public function indextwo()
     {
         $domain = Pr::latest()->first();
+
+        if(!$domain){
+            return redirect('https://agrodohod.ru/404');
+        }
+
         $teams = Team::get();
 
         $domain->title='Помощь в получении кредитов и проектного финансирования';
