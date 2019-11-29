@@ -305,43 +305,45 @@
                 </div>
             </div>
         </section>
-
-        <section class="sec-form" id="sec-form">
-            <div class="container">
-                <h2 class="sec-form__title">Хотите, чтобы мы ответили на ваши вопросы?</h2>
-                <div class="sec-form__txt">Позвоните по телефону <a href="tel:88005558586">8 (800) 555-85-86</a> с
-                    понедельника по пятницу с 9.00 до 18.00. Или отправьте запрос и мы сами вам перезвоним.</div>
-                <form action="/form" method="post" name="order-form" class="sec-form__form js-form-val" id="order-form">
-                    @csrf
-                    <input type="text" name="title" class="js-val" hidden="hidden" value="{!! isset($domain['title']) ? $domain['title'] : 'Помощь в
-                    получении кредитов, субсидий и грантов от компании «Агродоход»' !!}">
-                    <input type="text" class="input sec-form__input js-val" name="name" placeholder="Ваше имя" required>
-                    <input type="tel" class="input sec-form__input js-val" name="tel" placeholder="Номер телефона"
-                        required>
-                    <button class="btn btn--orange sec-form__submit" type="submit">Перезвоните мне</button>
-                </form>
-            </div>
-        </section>
-
-        <section>
-            <div class="year-area prefooter-year-area">
-                <div class="container">
-                    <h2 class="sec__title">Бухгалтерское обслуживание от АгроДохода</h2>
-                    <div class="year-area__desc">
-                        <p>АгроДоход&nbsp;&mdash; это организация, имеющая партнёрские отношения с&nbsp;банками,
-                            фондами, ассоциациями, союзами и&nbsp;государственными структурами, содействующими развитию
-                            сельского хозяйства в&nbsp;России. С&nbsp;нами вы&nbsp;не&nbsp;только сможете навести
-                            порядок в&nbsp;бухгалтерском учёте, просчитать ваши перспективы развития и&nbsp;дохода,
-                            получить кредит под льготный процент, но&nbsp;и&nbsp;правильно подготовить бухгалтерский
-                            пакет документов на&nbsp;получение государственной поддержки и&nbsp;субсидий. Консультируем
-                            бесплатно.<br />
-                            Звоните для получения подробностей!</p>
-                    </div>
-                </div>
-            </div>
-
-
-        </section>
+        
+        <div id="secform-down">
+                <section class="sec-form" id="sec-form">
+                        <div class="container">
+                            <h2 class="sec-form__title">Хотите, чтобы мы ответили на ваши вопросы?</h2>
+                            <div class="sec-form__txt">Позвоните по телефону <a href="tel:88005558586">8 (800) 555-85-86</a> с
+                                понедельника по пятницу с 9.00 до 18.00. Или отправьте запрос и мы сами вам перезвоним.</div>
+                            <form action="/form" method="post" name="order-form" class="sec-form__form js-form-val" id="order-form">
+                                @csrf
+                                <input type="text" name="title" class="js-val" hidden="hidden" value="{!! isset($domain['title']) ? $domain['title'] : 'Помощь в
+                                получении кредитов, субсидий и грантов от компании «Агродоход»' !!}">
+                                <input type="text" class="input sec-form__input js-val" name="name" placeholder="Ваше имя" required>
+                                <input type="tel" class="input sec-form__input js-val" name="tel" placeholder="Номер телефона"
+                                    required>
+                                <button class="btn btn--orange sec-form__submit" type="submit">Перезвоните мне</button>
+                            </form>
+                        </div>
+                    </section>
+            
+                    <section>
+                        <div class="year-area prefooter-year-area">
+                            <div class="container">
+                                <h2 class="sec__title">Бухгалтерское обслуживание от АгроДохода</h2>
+                                <div class="year-area__desc">
+                                    <p>АгроДоход&nbsp;&mdash; это организация, имеющая партнёрские отношения с&nbsp;банками,
+                                        фондами, ассоциациями, союзами и&nbsp;государственными структурами, содействующими развитию
+                                        сельского хозяйства в&nbsp;России. С&nbsp;нами вы&nbsp;не&nbsp;только сможете навести
+                                        порядок в&nbsp;бухгалтерском учёте, просчитать ваши перспективы развития и&nbsp;дохода,
+                                        получить кредит под льготный процент, но&nbsp;и&nbsp;правильно подготовить бухгалтерский
+                                        пакет документов на&nbsp;получение государственной поддержки и&nbsp;субсидий. Консультируем
+                                        бесплатно.<br />
+                                        Звоните для получения подробностей!</p>
+                                </div>
+                            </div>
+                        </div>
+            
+            
+                    </section>
+        </div>
 
 
     </main>
