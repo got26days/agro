@@ -290,9 +290,9 @@
                     <h2 class="sec__title">АгроДоход — проект года по версии «Сколково»</h2>
 
                     <div class="year-area__image">
-                        <a href="/">
+                        <div data-href="https://www.youtube.com/embed/yjHs4RrZdI8" class="calc-video__blind js-blind">
                             <img src="/img/vice/viceimage.png" alt="image">
-                        </a>
+                        </div>
                     </div>
 
                     <div class="year-area__desc">
