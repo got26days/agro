@@ -194,16 +194,16 @@
                     <div class="calc-partners__slider calc-slider" id="js-calc-partners-slider">
                         <div>
                             <div class="calc-partners__slide">
-                                @foreach ($partners->slice(0, 5) as $partner)
+                                @foreach ($partners->slice(0, 6) as $partner)
                                 <div class="calc-partners__item"><img src="{{ Voyager::image($partner['image']) }}"
                                         alt="" style="width: 154px;"></div>
                                 @endforeach
                             </div>
                         </div>
-                        @if(!$partners->slice(5, 10)->isEmpty())
+                        @if(!$partners->slice(6, 12)->isEmpty())
                         <div>
                             <div class="calc-partners__slide">
-                                @foreach ($partners->slice(5, 10) as $partner)
+                                @foreach ($partners->slice(6, 12) as $partner)
                                 <div class="calc-partners__item"><img src="{{ Voyager::image($partner['image']) }}"
                                         alt="" style="width: 154px;"></div>
                                 @endforeach
