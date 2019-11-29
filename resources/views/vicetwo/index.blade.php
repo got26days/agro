@@ -266,7 +266,7 @@
                 <h2 class="sec__title">О нашей компании</h2>
                 <div class="calc-video__wrap">
                     <div class="calc-video__blc">
-                        <div class="calc-video__blind js-blind" data-href="https://www.youtube.com/embed/yjHs4RrZdI8">
+                        <div class="calc-video__blind js-blind" data-href="https://www.youtube.com/embed/d2ZmNCjW6Qw">
                             <img src="/event/img/video/blind.jpg" alt="">
                         </div>
                     </div>
@@ -337,7 +337,7 @@
                     <h2 class="sec__title">АгроДоход — проект года по версии «Сколково»</h2>
 
                     <div class="year-area__image">
-                        <a href="/">
+                        <a href="https://www.youtube.com/watch?v=yjHs4RrZdI8&feature=emb_title">
                             <img src="/img/vice/viceimage.png" alt="image">
                         </a>
                     </div>
