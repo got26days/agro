@@ -3877,4 +3877,8 @@ h4 {
     .calc-shem__header span{
         font-size: 18px;
     }
+    .cals-wrapper{
+        min-height: 300px;
+    }
 }
+

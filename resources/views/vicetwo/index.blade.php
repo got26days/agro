@@ -107,47 +107,52 @@
             </section>
             <section class="calc-shem">
                 <div class="container">
-                    <div class="calc-shem__blc">
-                        <div class="calc-shem__header">
-                            <vue-typer :text='["Как получить проектное финансирование?",
-                            "Какую возможную прибыль может получить инициатор проекта?",
-                            "Для чего делать входную экспертизу?", 
-                            "Зачем нужна финансово-управляющая модель?", 
-                            "Как правильно провести маркетинг-анализ бизнес идеи?",
-                            "Как оформить бизнес-план под требования банка?",
-                            "Какие первичные документы нужно собрать для банка?",
-                            "С чего начать реализацию бизнес идеи?",
-                            "Как разработать дорожную карту реализации проекта?"]' :repeat='Infinity'></vue-typer>
 
-                            <p class="calc-shem__blc-txt" style="white-space: pre-line;">
-                                У нас есть чёткие ответы на волнующие вас вопросы.
-                                Воспользуйтесь поддержкой АгроДохода для получения денег.
-                            </p>
-                        </div>
-                        <div class="calc-shem__blc-wrap">
-                            <div class="calc-shem__blc-item">
-                                <div class="calc-shem__blc-icn calc-shem__blc-icn--check"></div>
-                                <div class="calc-shem__blc-item-txt" style="white-space: pre-line;">
-                                    Анализируем вашу идею, бизнес-план, состояние дел. Консультируем и подбираем
-                                    возможные варианты финансирования, займа, конкурса и гранта.
+                    
+                        <div class="calc-shem__blc">
+                                <div class="cals-wrapper">
+                                    <div class="calc-shem__header">
+                                        <vue-typer :text='["Как получить проектное финансирование?",
+                                        "Какую возможную прибыль может получить инициатор проекта?",
+                                        "Для чего делать входную экспертизу?", 
+                                        "Зачем нужна финансово-управляющая модель?", 
+                                        "Как правильно провести маркетинг-анализ бизнес идеи?",
+                                        "Как оформить бизнес-план под требования банка?",
+                                        "Какие первичные документы нужно собрать для банка?",
+                                        "С чего начать реализацию бизнес идеи?",
+                                        "Как разработать дорожную карту реализации проекта?"]' :repeat='Infinity'></vue-typer>
+            
+                                        <p class="calc-shem__blc-txt" style="white-space: pre-line;">
+                                            У нас есть чёткие ответы на волнующие вас вопросы.
+                                            Воспользуйтесь поддержкой АгроДохода для получения денег.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="calc-shem__blc-item">
-                                <div class="calc-shem__blc-icn calc-shem__blc-icn--list"></div>
-                                <div class="calc-shem__blc-item-txt" style="white-space: pre-line;">
-                                    Помогаем вам собрать пакет документов и пройти входную экспертизу и согласование.
-                                    Корректируем финансовую модель и бизнес-план.
+                                    <div class="calc-shem__blc-wrap">
+                                        <div class="calc-shem__blc-item">
+                                            <div class="calc-shem__blc-icn calc-shem__blc-icn--check"></div>
+                                            <div class="calc-shem__blc-item-txt" style="white-space: pre-line;">
+                                                Анализируем вашу идею, бизнес-план, состояние дел. Консультируем и подбираем
+                                                возможные варианты финансирования, займа, конкурса и гранта.
+                                            </div>
+                                        </div>
+                                        <div class="calc-shem__blc-item">
+                                            <div class="calc-shem__blc-icn calc-shem__blc-icn--list"></div>
+                                            <div class="calc-shem__blc-item-txt" style="white-space: pre-line;">
+                                                Помогаем вам собрать пакет документов и пройти входную экспертизу и согласование.
+                                                Корректируем финансовую модель и бизнес-план.
+                                            </div>
+                                        </div>
+                                        <div class="calc-shem__blc-item">
+                                            <div class="calc-shem__blc-icn calc-shem__blc-icn--walet"></div>
+                                            <div class="calc-shem__blc-item-txt" style="white-space: pre-line;">
+                                                Вы получаете экспертизу бизнес-плана, финансово-управленчиская модель, испраленную
+                                                отчётность и решение финансового учереждения.
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="calc-shem__blc-item">
-                                <div class="calc-shem__blc-icn calc-shem__blc-icn--walet"></div>
-                                <div class="calc-shem__blc-item-txt" style="white-space: pre-line;">
-                                    Вы получаете экспертизу бизнес-плана, финансово-управленчиская модель, испраленную
-                                    отчётность и решение финансового учереждения.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </section>
 

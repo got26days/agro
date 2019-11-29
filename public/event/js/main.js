@@ -313,7 +313,6 @@ $('.js-val').on('keypress', function(){
             formHeight = $('#secform-down').innerHeight();
         
         var sum =footerHeight + formHeight;
-        console.log(sum);
         if((windOffset > headerHeight) && (scrollBottom < (windOffsetDown - sum))){
             
             $('#js-action-btn').addClass('fix');
