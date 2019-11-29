@@ -94,68 +94,71 @@
         </nav>
     </header>
     <main class="main">
-        <section class="calc-main" style="background: url({{ isset($domain['background']) ? Voyager::image($domain['background']) : '/event/img/main-sec/bg.jpg'}}) center center no-repeat;
+        <div id="js-top-head">
+            <section class="calc-main" style="background: url({{ isset($domain['background']) ? Voyager::image($domain['background']) : '/event/img/main-sec/bg.jpg'}}) center center no-repeat;
 			background-size: cover;">
-            <div class="container">
-                <div class="calc-main__wrap">
-                    <h1 class="calc-main__title">{!! isset($domain['title']) ? $domain['title'] : 'Помощь в
-                        получении кредитов, субсидий <br>и грантов от компании «Агродоход»' !!}</h1>
+                <div class="container">
+                    <div class="calc-main__wrap">
+                        <h1 class="calc-main__title">{!! isset($domain['title']) ? $domain['title'] : 'Помощь в
+                            получении кредитов, субсидий <br>и грантов от компании «Агродоход»' !!}</h1>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section class="calc-shem">
-            <div class="container">
-                <div class="calc-shem__blc">
-                    <div class="calc-shem__header">
-                        
+            </section>
+            <section class="calc-shem">
+                <div class="container">
+                    <div class="calc-shem__blc">
+                        <div class="calc-shem__header">
+
                             <vue-typer :text='["Как не попасть на огромные налоговые штрафы в новом году?",
                             "Как избежать налоговых штрафов за подачу просрочку подачи отчётности?",
                             "Как сэкономить на бухгалтерии и с помощью бухгалтерии?", 
                             "Как получить кредит на хозяйство и не влезть в долги?", 
                             "Как не попасть в кабальный договор с кредитной организацией?",
-                            "Как выгодно воспользоваться кредитом и приумножить свой капитал?"]' :repeat='Infinity'></vue-typer>
+                            "Как выгодно воспользоваться кредитом и приумножить свой капитал?"]' :repeat='Infinity'>
+                            </vue-typer>
 
-                        <p class="calc-shem__blc-txt" style="white-space: pre-line;">
-                            {{ isset($domain['body_after']) ? $domain['body_after'] : 'У нас есть чёткие ответы на волнующие вас вопросы.
+                            <p class="calc-shem__blc-txt" style="white-space: pre-line;">
+                                {{ isset($domain['body_after']) ? $domain['body_after'] : 'У нас есть чёткие ответы на волнующие вас вопросы.
                                 Воспользуйтесь поддержкой АгроДохода для получения денег.'}}
-                        </p>
-                    </div>
-                    <div class="calc-shem__blc-wrap">
-                        <div class="calc-shem__blc-item">
-                            <div class="calc-shem__blc-icn calc-shem__blc-icn--check"></div>
-                            <div class="calc-shem__blc-item-txt" style="white-space: pre-line;">
-                                {{ isset($domain['body']) ? $domain['body'] : 'Заключаем договор и берём вашу бухглатерию на обслуживание'}}
-                            </div>
+                            </p>
                         </div>
-                        <div class="calc-shem__blc-item">
-                            <div class="calc-shem__blc-icn calc-shem__blc-icn--list"></div>
-                            <div class="calc-shem__blc-item-txt" style="white-space: pre-line;">
-                                {{ isset($domain['body2']) ? $domain['body2'] : 'Ваша отчётность и финансовая модель подготавливается для получения поддержки от государства'}}
+                        <div class="calc-shem__blc-wrap">
+                            <div class="calc-shem__blc-item">
+                                <div class="calc-shem__blc-icn calc-shem__blc-icn--check"></div>
+                                <div class="calc-shem__blc-item-txt" style="white-space: pre-line;">
+                                    {{ isset($domain['body']) ? $domain['body'] : 'Заключаем договор и берём вашу бухглатерию на обслуживание'}}
+                                </div>
+                            </div>
+                            <div class="calc-shem__blc-item">
+                                <div class="calc-shem__blc-icn calc-shem__blc-icn--list"></div>
+                                <div class="calc-shem__blc-item-txt" style="white-space: pre-line;">
+                                    {{ isset($domain['body2']) ? $domain['body2'] : 'Ваша отчётность и финансовая модель подготавливается для получения поддержки от государства'}}
 
+                                </div>
                             </div>
-                        </div>
-                        <div class="calc-shem__blc-item">
-                            <div class="calc-shem__blc-icn calc-shem__blc-icn--walet"></div>
-                            <div class="calc-shem__blc-item-txt" style="white-space: pre-line;">
-                                {{ isset($domain['body3']) ? $domain['body3'] : 'Вы получаете поддержку от государства в виде субсидии или гранта'}}
+                            <div class="calc-shem__blc-item">
+                                <div class="calc-shem__blc-icn calc-shem__blc-icn--walet"></div>
+                                <div class="calc-shem__blc-item-txt" style="white-space: pre-line;">
+                                    {{ isset($domain['body3']) ? $domain['body3'] : 'Вы получаете поддержку от государства в виде субсидии или гранта'}}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section>
-            <div class="container">
-                <div class="credit-page__bar">
-                    <a href="#sec-form" class="btn btn--green sec__bar-btn js-order-btn-two" data-title="Оформить заявку"
-                        data-titletwo="Оформить заявку" data-btn="Оформить заявку">Оформить заявку</a>
+            <section>
+                <div class="container">
+                    <div class="credit-page__bar">
+                        <a href="#sec-form" class="btn btn--green sec__bar-btn js-order-btn-two"
+                            data-title="Оформить заявку" data-titletwo="Оформить заявку"
+                            data-btn="Оформить заявку">Оформить заявку</a>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
 
-
+        </div>
         <section class="calc-partners">
             <div class="container">
                 <h2 class="sec__title">Наши партнёры</h2>
@@ -206,7 +209,9 @@
                         <div class="calc-why__item-main">
                             <h3 class="calc-why__item-title">
                                 {{ isset($domain['whytitle2']) ? $domain['whytitle2'] : 'Работаем быстро'}}</h3>
-                            <div class="calc-why__item-txt" style="white-space: pre-line;">{{ isset($domain['whybody2']) ? $domain['whybody2'] : 'Наши партнёрские отношения с десятками кредитных организаций по всей России и многолетний опыт позволят вам получить деньги в сжатые сроки.'}}</div>
+                            <div class="calc-why__item-txt" style="white-space: pre-line;">
+                                {{ isset($domain['whybody2']) ? $domain['whybody2'] : 'Наши партнёрские отношения с десятками кредитных организаций по всей России и многолетний опыт позволят вам получить деньги в сжатые сроки.'}}
+                            </div>
                         </div>
                     </div>
                     <div class="calc-why__item">
@@ -216,7 +221,9 @@
                         <div class="calc-why__item-main">
                             <h3 class="calc-why__item-title">
                                 {{ isset($domain['whytitle3']) ? $domain['whytitle3'] : 'С нами выгодно'}}</h3>
-                            <div class="calc-why__item-txt" style="white-space: pre-line;">{{ isset($domain['whybody3']) ? $domain['whybody3'] : 'С нами вы не только сможете получить финансирование на выгодных условиях, но и откроете для себя доступ к крупными сетями сбыта и поставщиками материалов для сельского хозяйства.'}}</div>
+                            <div class="calc-why__item-txt" style="white-space: pre-line;">
+                                {{ isset($domain['whybody3']) ? $domain['whybody3'] : 'С нами вы не только сможете получить финансирование на выгодных условиях, но и откроете для себя доступ к крупными сетями сбыта и поставщиками материалов для сельского хозяйства.'}}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -234,9 +241,13 @@
                     <div class="calc-video__txt">
                         {{-- <div class="calc-video__logo"><img src="/event/img/video/rub.svg" alt="P"></div> --}}
                         <div class="calc-video__txt-main">
-                            {!! isset($domain['body_video']) ? $domain['body_video'] : 'Получение гранта невозможно без безупречного ведения бухгалтерии. Именно поэтому АгроДоход напрямую связывает два своих направления деятельности: бухглатерское обслуживание и&nbsp;содействие в&nbsp;получении поддержки от&nbsp;государства. <br />
+                            {!! isset($domain['body_video']) ? $domain['body_video'] : 'Получение гранта невозможно без
+                            безупречного ведения бухгалтерии. Именно поэтому АгроДоход напрямую связывает два своих
+                            направления деятельности: бухглатерское обслуживание и&nbsp;содействие в&nbsp;получении
+                            поддержки от&nbsp;государства. <br />
                             <br />
-                             Наши специалисты с&nbsp;многолетним опытом помогут вам настроить свою бухгалтерию таким образом, чтобы ваша компания была пригодна для получения грантов.'!!}
+                            Наши специалисты с&nbsp;многолетним опытом помогут вам настроить свою бухгалтерию таким
+                            образом, чтобы ваша компания была пригодна для получения грантов.'!!}
 
                         </div>
                     </div>
@@ -272,6 +283,7 @@
             </div>
         </section>
 
+
         <section>
             <div class="year-area">
                 <div class="container">
@@ -284,7 +296,11 @@
                     </div>
 
                     <div class="year-area__desc">
-                            <p>1 июня 2019 года компания &laquo;АгроДоход&raquo; стала лауреатом ежегодной премии SKOLKOVO Alumni Awards как лучший &laquo;StartUp&raquo; года. Жюри конкурса высоко оценило наш вклад в&nbsp;развитие сельского хозяйства в&nbsp;России. За&nbsp;время своего существования &laquo;АгроДоход&raquo; помог сотням фермерских хозяйств получить поддержку от&nbsp;государства и&nbsp;правильно её учесть.</p>
+                        <p>1 июня 2019 года компания &laquo;АгроДоход&raquo; стала лауреатом ежегодной премии SKOLKOVO
+                            Alumni Awards как лучший &laquo;StartUp&raquo; года. Жюри конкурса высоко оценило наш вклад
+                            в&nbsp;развитие сельского хозяйства в&nbsp;России. За&nbsp;время своего существования
+                            &laquo;АгроДоход&raquo; помог сотням фермерских хозяйств получить поддержку
+                            от&nbsp;государства и&nbsp;правильно её учесть.</p>
                     </div>
                 </div>
             </div>
@@ -297,8 +313,7 @@
                     понедельника по пятницу с 9.00 до 18.00. Или отправьте запрос и мы сами вам перезвоним.</div>
                 <form action="/form" method="post" name="order-form" class="sec-form__form js-form-val" id="order-form">
                     @csrf
-                    <input type="text" name="title" class="js-val" hidden="hidden"
-                    value="{!! isset($domain['title']) ? $domain['title'] : 'Помощь в
+                    <input type="text" name="title" class="js-val" hidden="hidden" value="{!! isset($domain['title']) ? $domain['title'] : 'Помощь в
                     получении кредитов, субсидий и грантов от компании «Агродоход»' !!}">
                     <input type="text" class="input sec-form__input js-val" name="name" placeholder="Ваше имя" required>
                     <input type="tel" class="input sec-form__input js-val" name="tel" placeholder="Номер телефона"
@@ -313,8 +328,14 @@
                 <div class="container">
                     <h2 class="sec__title">Бухгалтерское обслуживание от АгроДохода</h2>
                     <div class="year-area__desc">
-                            <p>АгроДоход&nbsp;&mdash; это организация, имеющая партнёрские отношения с&nbsp;банками, фондами, ассоциациями, союзами и&nbsp;государственными структурами, содействующими развитию сельского хозяйства в&nbsp;России. С&nbsp;нами вы&nbsp;не&nbsp;только сможете навести порядок в&nbsp;бухгалтерском учёте, просчитать ваши перспективы развития и&nbsp;дохода, получить кредит под льготный процент, но&nbsp;и&nbsp;правильно подготовить бухгалтерский пакет документов на&nbsp;получение государственной поддержки и&nbsp;субсидий. Консультируем бесплатно.<br />
-                                Звоните для получения подробностей!</p>
+                        <p>АгроДоход&nbsp;&mdash; это организация, имеющая партнёрские отношения с&nbsp;банками,
+                            фондами, ассоциациями, союзами и&nbsp;государственными структурами, содействующими развитию
+                            сельского хозяйства в&nbsp;России. С&nbsp;нами вы&nbsp;не&nbsp;только сможете навести
+                            порядок в&nbsp;бухгалтерском учёте, просчитать ваши перспективы развития и&nbsp;дохода,
+                            получить кредит под льготный процент, но&nbsp;и&nbsp;правильно подготовить бухгалтерский
+                            пакет документов на&nbsp;получение государственной поддержки и&nbsp;субсидий. Консультируем
+                            бесплатно.<br />
+                            Звоните для получения подробностей!</p>
                     </div>
                 </div>
             </div>

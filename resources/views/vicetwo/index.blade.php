@@ -11,8 +11,8 @@
         <div class="container">
             <div class="header__wrap">
                 <a href="http://{{ env('APP_MAIN_DOMAIN') }}/" class="header__logo"><img class="header__sitename-one"
-                    src="/event/img/header/logo.png" alt="Агродоход"><img class="header__sitename"
-                    src="/img/vice/suplogo.png" alt="Агродоход"></a>
+                        src="/event/img/header/logo.png" alt="Агродоход"><img class="header__sitename"
+                        src="/img/vice/suplogo.png" alt="Агродоход"></a>
                 <div class="header__bar">
                     <a href="tel:88005558586" class="header__tel">8 (800) 555-85-86</a>
                     <button class="btn btn--menu js-menu-btn"></button>
@@ -94,149 +94,162 @@
         </nav>
     </header>
     <main class="main">
-        <section class="calc-main" style="background: url(/img/vice/back3.png) center center no-repeat;
-			background-size: cover;">
-            <div class="container">
-                <div class="calc-main__wrap">
-                    <h1 class="calc-main__title">{!! isset($domain['title']) ? $domain['title'] : 'Помощь в
-                        получении кредитов, субсидий <br>и грантов от компании «Агродоход»' !!}</h1>
-                </div>
-            </div>
-        </section>
-        <section class="calc-shem">
-            <div class="container">
-                <div class="calc-shem__blc">
-                    <div class="calc-shem__header">
-                        <vue-typer :text='["Как получить проектное финансирование?",
-                        "Какую возможную прибыль может получить инициатор проекта?",
-                        "Для чего делать входную экспертизу?", 
-                        "Зачем нужна финансово-управляющая модель?", 
-                        "Как правильно провести маркетинг-анализ бизнес идеи?",
-                        "Как оформить бизнес-план под требования банка?",
-                        "Какие первичные документы нужно собрать для банка?",
-                        "С чего начать реализацию бизнес идеи?",
-                        "Как разработать дорожную карту реализации проекта?"]' :repeat='Infinity'></vue-typer>
 
-                        <p class="calc-shem__blc-txt" style="white-space: pre-line;">
-                            У нас есть чёткие ответы на волнующие вас вопросы.
-                            Воспользуйтесь поддержкой АгроДохода для получения денег.
-                        </p>
-                    </div>
-                    <div class="calc-shem__blc-wrap">
-                        <div class="calc-shem__blc-item">
-                            <div class="calc-shem__blc-icn calc-shem__blc-icn--check"></div>
-                            <div class="calc-shem__blc-item-txt" style="white-space: pre-line;">
-                                Анализируем вашу идею, бизнес-план, состояние дел. Консультируем и подбираем возможные варианты финансирования, займа, конкурса и гранта.
-                            </div>
-                        </div>
-                        <div class="calc-shem__blc-item">
-                            <div class="calc-shem__blc-icn calc-shem__blc-icn--list"></div>
-                            <div class="calc-shem__blc-item-txt" style="white-space: pre-line;">
-                                Помогаем вам собрать пакет документов и пройти входную экспертизу и согласование. Корректируем финансовую модель и бизнес-план. 
-                            </div>
-                        </div>
-                        <div class="calc-shem__blc-item">
-                            <div class="calc-shem__blc-icn calc-shem__blc-icn--walet"></div>
-                            <div class="calc-shem__blc-item-txt" style="white-space: pre-line;">
-                                Вы получаете экспертизу бизнес-плана, финансово-управленчиская модель, испраленную отчётность и решение финансового учереждения.
-                            </div>
-                        </div>
+        <div id="js-top-head">
+            <section class="calc-main" style="background: url(/img/vice/back3.png) center center no-repeat;
+                background-size: cover;">
+                <div class="container">
+                    <div class="calc-main__wrap">
+                        <h1 class="calc-main__title">{!! isset($domain['title']) ? $domain['title'] : 'Помощь в
+                            получении кредитов, субсидий <br>и грантов от компании «Агродоход»' !!}</h1>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            <section class="calc-shem">
+                <div class="container">
+                    <div class="calc-shem__blc">
+                        <div class="calc-shem__header">
+                            <vue-typer :text='["Как получить проектное финансирование?",
+                            "Какую возможную прибыль может получить инициатор проекта?",
+                            "Для чего делать входную экспертизу?", 
+                            "Зачем нужна финансово-управляющая модель?", 
+                            "Как правильно провести маркетинг-анализ бизнес идеи?",
+                            "Как оформить бизнес-план под требования банка?",
+                            "Какие первичные документы нужно собрать для банка?",
+                            "С чего начать реализацию бизнес идеи?",
+                            "Как разработать дорожную карту реализации проекта?"]' :repeat='Infinity'></vue-typer>
 
-        <div class="calc-banner calc-banner-newmargin">
-            <div class="container">
-                <div class="calc-banner__wrap green-area-wrap">
-                    <div class="green-area-price">
-                        <p class="green-price-desc">Возможная ставка</p>
-                        <p class="green-price">2-9,5%</p>
+                            <p class="calc-shem__blc-txt" style="white-space: pre-line;">
+                                У нас есть чёткие ответы на волнующие вас вопросы.
+                                Воспользуйтесь поддержкой АгроДохода для получения денег.
+                            </p>
+                        </div>
+                        <div class="calc-shem__blc-wrap">
+                            <div class="calc-shem__blc-item">
+                                <div class="calc-shem__blc-icn calc-shem__blc-icn--check"></div>
+                                <div class="calc-shem__blc-item-txt" style="white-space: pre-line;">
+                                    Анализируем вашу идею, бизнес-план, состояние дел. Консультируем и подбираем
+                                    возможные варианты финансирования, займа, конкурса и гранта.
+                                </div>
+                            </div>
+                            <div class="calc-shem__blc-item">
+                                <div class="calc-shem__blc-icn calc-shem__blc-icn--list"></div>
+                                <div class="calc-shem__blc-item-txt" style="white-space: pre-line;">
+                                    Помогаем вам собрать пакет документов и пройти входную экспертизу и согласование.
+                                    Корректируем финансовую модель и бизнес-план.
+                                </div>
+                            </div>
+                            <div class="calc-shem__blc-item">
+                                <div class="calc-shem__blc-icn calc-shem__blc-icn--walet"></div>
+                                <div class="calc-shem__blc-item-txt" style="white-space: pre-line;">
+                                    Вы получаете экспертизу бизнес-плана, финансово-управленчиская модель, испраленную
+                                    отчётность и решение финансового учереждения.
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="green-area-price">
-                        <p class="green-price-desc">Средняя ставка по статистике</p>
-                        <p class="green-price">5,5%</p>
-                    </div>
-                    <div class="green-area-price">
-                        <p class="green-price-desc">Залогового имущества в обеспечение</p>
-                        <p class="green-price">40%</p>
+                </div>
+            </section>
+
+            <div class="calc-banner calc-banner-newmargin">
+                <div class="container">
+                    <div class="calc-banner__wrap green-area-wrap">
+                        <div class="green-area-price">
+                            <p class="green-price-desc">Возможная ставка</p>
+                            <p class="green-price">2-9,5%</p>
+                        </div>
+                        <div class="green-area-price">
+                            <p class="green-price-desc">Средняя ставка по статистике</p>
+                            <p class="green-price">5,5%</p>
+                        </div>
+                        <div class="green-area-price">
+                            <p class="green-price-desc">Залогового имущества в обеспечение</p>
+                            <p class="green-price">40%</p>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <section>
+                <div class="container">
+                    <div class="credit-page__bar">
+                        <a href="#sec-form" class="btn btn--green sec__bar-btn js-order-btn-two"
+                            data-title="Оформить заявку" data-titletwo="Оформить заявку"
+                            data-btn="Оформить заявку">Оформить заявку</a>
+                    </div>
+                </div>
+            </section>
+
+     
         </div>
 
-        <section>
-            <div class="container">
-                <div class="credit-page__bar">
-                    <a href="#sec-form" class="btn btn--green sec__bar-btn js-order-btn-two" data-title="Оформить заявку"
-                        data-titletwo="Оформить заявку" data-btn="Оформить заявку">Оформить заявку</a>
-                </div>
-            </div>
-        </section>
-
         <section class="calc-partners">
-            <div class="container">
-                <h2 class="sec__title">Наши партнёры</h2>
-                <div class="calc-partners__slider calc-slider" id="js-calc-partners-slider">
-                    <div>
-                        <div class="calc-partners__slide">
-                            @foreach ($partners->slice(0, 5) as $partner)
-                            <div class="calc-partners__item"><img src="{{ Voyager::image($partner['image']) }}" alt=""
-                                    style="width: 154px;"></div>
-                            @endforeach
+                <div class="container">
+                    <h2 class="sec__title">Наши партнёры</h2>
+                    <div class="calc-partners__slider calc-slider" id="js-calc-partners-slider">
+                        <div>
+                            <div class="calc-partners__slide">
+                                @foreach ($partners->slice(0, 5) as $partner)
+                                <div class="calc-partners__item"><img src="{{ Voyager::image($partner['image']) }}"
+                                        alt="" style="width: 154px;"></div>
+                                @endforeach
+                            </div>
                         </div>
-                    </div>
-                    @if(!$partners->slice(5, 10)->isEmpty())
-                    <div>
-                        <div class="calc-partners__slide">
-                            @foreach ($partners->slice(5, 10) as $partner)
-                            <div class="calc-partners__item"><img src="{{ Voyager::image($partner['image']) }}" alt=""
-                                    style="width: 154px;"></div>
-                            @endforeach
+                        @if(!$partners->slice(5, 10)->isEmpty())
+                        <div>
+                            <div class="calc-partners__slide">
+                                @foreach ($partners->slice(5, 10) as $partner)
+                                <div class="calc-partners__item"><img src="{{ Voyager::image($partner['image']) }}"
+                                        alt="" style="width: 154px;"></div>
+                                @endforeach
+                            </div>
                         </div>
+                        @endif
                     </div>
-                    @endif
                 </div>
-            </div>
-        </section>
-        
+            </section>
+
+
+
         <section class="calc-why">
             <div class="container">
                 <h2 class="sec__title">Почему мы</h2>
                 <div class="calc-why__wrap">
                     <div class="calc-why__item">
-                        <div class="calc-why__item-pic"
-                            style="background-image: url(/event/img/why/pic-1.jpg);">
+                        <div class="calc-why__item-pic" style="background-image: url(/event/img/why/pic-1.jpg);">
                         </div>
                         <div class="calc-why__item-main">
                             <h3 class="calc-why__item-title">
                                 Заботимся о вашей безопасности
                             </h3>
                             <div class="calc-why__item-txt" style="white-space: pre-line;">
-                                Изучим вашу финансовую ситуацию. Учтём все риски: от возможных долгов до проблем с налоговыми органами. Выберем и предложим самые лучшие условия финансирования именно для вашего хозяйства.
+                                Изучим вашу финансовую ситуацию. Учтём все риски: от возможных долгов до проблем с
+                                налоговыми органами. Выберем и предложим самые лучшие условия финансирования именно для
+                                вашего хозяйства.
                             </div>
                         </div>
                     </div>
                     <div class="calc-why__item">
-                        <div class="calc-why__item-pic"
-                            style="background-image: url(/event/img/why/pic-2.jpg);">
+                        <div class="calc-why__item-pic" style="background-image: url(/event/img/why/pic-2.jpg);">
                         </div>
                         <div class="calc-why__item-main">
                             <h3 class="calc-why__item-title">
                                 {{ isset($domain['whytitle2']) ? $domain['whytitle2'] : 'Работаем быстро'}}</h3>
                             <div class="calc-why__item-txt" style="white-space: pre-line;">
-                                Наши партнёрские отношения с десятками кредитных организаций по всей России и многолетний опыт позволят вам получить деньги в сжатые сроки.
+                                Наши партнёрские отношения с десятками кредитных организаций по всей России и
+                                многолетний опыт позволят вам получить деньги в сжатые сроки.
                             </div>
                         </div>
                     </div>
                     <div class="calc-why__item">
-                        <div class="calc-why__item-pic"
-                            style="background-image: url(/event/img/why/pic-3.jpg);">
+                        <div class="calc-why__item-pic" style="background-image: url(/event/img/why/pic-3.jpg);">
                         </div>
                         <div class="calc-why__item-main">
                             <h3 class="calc-why__item-title">С нами выгодно</h3>
                             <div class="calc-why__item-txt" style="white-space: pre-line;">
-                                С нами вы не только сможете получить финансирование на выгодных условиях, но и откроете для себя доступ к крупными сетями сбыта и поставщиками материалов для сельского хозяйства.
+                                С нами вы не только сможете получить финансирование на выгодных условиях, но и откроете
+                                для себя доступ к крупными сетями сбыта и поставщиками материалов для сельского
+                                хозяйства.
                             </div>
                         </div>
                     </div>
@@ -256,7 +269,7 @@
                         <div class="calc-video__logo"><img src="/event/img/video/rub.svg" alt="P"></div>
                         <div class="calc-video__txt-main">
                             <div class="calc-video__area-name">
-                                <b class="calc-video__name">Любовь Николаевна Староверова</b> 
+                                <b class="calc-video__name">Любовь Николаевна Староверова</b>
                             </div>
                             победитель конкурса лучший бухглатер России и главный финансист АгроДохода
 
@@ -278,7 +291,12 @@
                 <div class="container">
                     <h2 class="sec__title">Проектное финансирование</h2>
                     <div class="year-area__desc">
-                        <p>Проектное финансирование&nbsp;&mdash; идеи, планирование, реализации, прибыль! От&nbsp;структурирование проекта до&nbsp;получения финансирования. Входная экспертиза <nobr>бизнес-проекта</nobr> и&nbsp;сопровождение для возможного получения проектного финансирования, <nobr>со-инвестирования</nobr>, субсидий, грантов, кредитов на&nbsp;пополнение оборотных. <br /> Компания &laquo;АГРОДОХОД&raquo;&nbsp;&mdash; лучший <nobr>старт-ап</nobr> года по&nbsp;версии Sk&nbsp;&laquo;Сколково&raquo;</p>
+                        <p>Проектное финансирование&nbsp;&mdash; идеи, планирование, реализации, прибыль!
+                            От&nbsp;структурирование проекта до&nbsp;получения финансирования. Входная экспертиза <nobr>
+                                бизнес-проекта</nobr> и&nbsp;сопровождение для возможного получения проектного
+                            финансирования, <nobr>со-инвестирования</nobr>, субсидий, грантов, кредитов
+                            на&nbsp;пополнение оборотных. <br /> Компания &laquo;АГРОДОХОД&raquo;&nbsp;&mdash; лучший
+                            <nobr>старт-ап</nobr> года по&nbsp;версии Sk&nbsp;&laquo;Сколково&raquo;</p>
                     </div>
                 </div>
             </div>
@@ -320,15 +338,19 @@
                     </div>
 
                     <div class="year-area__desc">
-                            <p>1 июня 2019 года компания &laquo;АгроДоход&raquo; стала лауреатом ежегодной премии SKOLKOVO Alumni Awards как лучший &laquo;StartUp&raquo; года. Жюри конкурса высоко оценило наш вклад в&nbsp;развитие сельского хозяйства в&nbsp;России. За&nbsp;время своего существования &laquo;АгроДоход&raquo; помог сотням фермерских хозяйств получить поддержку от&nbsp;государства и&nbsp;правильно её учесть.</p>
+                        <p>1 июня 2019 года компания &laquo;АгроДоход&raquo; стала лауреатом ежегодной премии SKOLKOVO
+                            Alumni Awards как лучший &laquo;StartUp&raquo; года. Жюри конкурса высоко оценило наш вклад
+                            в&nbsp;развитие сельского хозяйства в&nbsp;России. За&nbsp;время своего существования
+                            &laquo;АгроДоход&raquo; помог сотням фермерских хозяйств получить поддержку
+                            от&nbsp;государства и&nbsp;правильно её учесть.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-    <mainform :back="1" :point="{{ isset($domain['point']) ? $domain['point'] : 0}}" id="secform-down" h1="{!! isset($domain['title']) ? $domain['title'] : 'Помощь в
-    получении кредитов, субсидий <br>и грантов от компании «Агродоход»' !!}"
-        :percent="0" :manager="false" :subject="`{{ isset($domain['subject']) ? $domain['subject'] : ''}}`"></mainform>
+        <mainform :back="1" :point="{{ isset($domain['point']) ? $domain['point'] : 0}}" id="secform-down" h1="{!! isset($domain['title']) ? $domain['title'] : 'Помощь в
+    получении кредитов, субсидий <br>и грантов от компании «Агродоход»' !!}" :percent="0" :manager="false"
+            :subject="`{{ isset($domain['subject']) ? $domain['subject'] : ''}}`"></mainform>
 
 
     </main>

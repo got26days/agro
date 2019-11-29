@@ -304,10 +304,17 @@ $('.js-val').on('keypress', function(){
 	
 
     $(window).on('scroll', function(){         
-        var mainHeight = 1000,
-            windOffset = $(window).scrollTop();
-
-        if(windOffset > mainHeight){
+        var headerHeight = $('#js-top-head').innerHeight(),
+            footerHeight = 1000,
+            windOffset = $(window).scrollTop(),
+            scrollBottom = $(window).scrollTop() + $(window).height(),
+            windOffsetDown = $('#app').innerHeight()
+            footerHeight = $('.footer').innerHeight(),
+            formHeight = $('#secform-down').innerHeight();
+        
+        var sum =footerHeight + formHeight;
+        console.log(sum);
+        if((windOffset > headerHeight) && (scrollBottom < (windOffsetDown - sum))){
             
             $('#js-action-btn').addClass('fix');
         } else{
