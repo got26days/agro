@@ -9,6 +9,9 @@ use App\Team;
 use Carbon\Carbon;
 use App\Pr;
 use App\Buh;
+use App\Prpartner;
+use App\Buhpartner;
+
 
 class DronController extends Controller
 {
@@ -24,7 +27,7 @@ class DronController extends Controller
 
         $domain->title='Помощь в получении грантов и субсидий';
 
-        $partners = Partner::latest()->get();
+        $partners = Buhpartner::latest()->get();
         
 
         $seotitle = $domain['title'];
@@ -46,7 +49,7 @@ class DronController extends Controller
 
         $domain->title='Помощь в получении кредитов и проектного финансирования';
 
-        $partners = Partner::latest()->get();
+        $partners = Prpartner::latest()->get();
         
 
         $seotitle = $domain['title'];
@@ -66,7 +69,7 @@ class DronController extends Controller
         }
         $teams = Team::get();
 
-        $partners = Partner::latest()->get();
+        $partners = Buhpartner::latest()->get();
         
 
         $seotitle = $domain['title'];
@@ -87,7 +90,7 @@ class DronController extends Controller
         }
         $teams = Team::get();
 
-        $partners = Partner::latest()->get();
+        $partners = Prpartner::latest()->get();
         
 
         $seotitle = $domain['title'];
