@@ -178,7 +178,7 @@
             <section>
                 <div class="container">
                     <div class="credit-page__bar">
-                        <a href="#sec-form" class="btn btn--green sec__bar-btn js-order-btn-two"
+                        <a href="#secform-down" class="btn btn--green sec__bar-btn"
                             data-title="Оформить заявку" data-titletwo="Оформить заявку"
                             data-btn="Оформить заявку">Оформить заявку</a>
                     </div>
