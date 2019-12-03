@@ -355,7 +355,7 @@
 
         <mainform :back="1" :point="{{ isset($domain['point']) ? $domain['point'] : 0}}" id="secform-down" h1="{!! isset($domain['title']) ? $domain['title'] : 'Помощь в
     получении кредитов, субсидий <br>и грантов от компании «Агродоход»' !!}" :percent="0" :manager="false"
-            :subject="`{{ isset($domain['subject']) ? $domain['subject'] : ''}}`" :subd="РСЯ"></mainform>
+            :subject="`{{ isset($domain['subject']) ? $domain['subject'] : ''}}`" :subd="'РСЯ'"></mainform>
 
 
     </main>
