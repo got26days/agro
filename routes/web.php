@@ -126,7 +126,7 @@ Route::group(['domain' => $subdomainfive], function () {
 // buh
 $subdomainsix = env('APP_SUB_DOMAIN_SIX');
 
-Route::group(['domain' => $subdomainfive], function () {
+Route::group(['domain' => $subdomainsix], function () {
     Route::get('/', 'DronController@indexsix');
     Route::post('/form', 'MainController@form');
     Route::get('/{slug}', 'DronController@creditsix');
