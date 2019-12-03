@@ -52,6 +52,7 @@
                     <div class="popup__form-title" id="js-form-title"></div>
                     <input type="text" name="title" class="js-val" id="js-input-title" hidden="hidden" value="{!! isset($domain['title']) ? $domain['title'] : 'Помощь в
                     получении кредитов, субсидий и грантов от компании «Агродоход»' !!}">
+                    <input type="hidden" name="subd" value="РСЯ">
                     <input type="text" name="name" class="input popup__input js-val" placeholder="Ваше имя" required>
                     <input type="tel" name="tel" class="input popup__input js-val" placeholder="Телефон" required>
                     <button class="btn btn--green popup__submit" id="js-popup-btn" type="submit">Заказать услугу</button>
