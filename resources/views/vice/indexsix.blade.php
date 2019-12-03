@@ -150,7 +150,7 @@
             <section>
                 <div class="container">
                     <div class="credit-page__bar">
-                        <a href="#sec-form" class="btn btn--green sec__bar-btn"
+                        <a  class="btn btn--green sec__bar-btn js-order-btn-two"
                             data-title="Оформить заявку" data-titletwo="Оформить заявку"
                             data-btn="Оформить заявку">Оформить заявку</a>
                     </div>
