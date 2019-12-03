@@ -822,6 +822,7 @@
                     mailsubject: this.subject,
                     orgform: null,
                     mainh1: this.h1,
+                    newsub: null,
                     form1: {
                         region: null,
                         summ: 600000,
@@ -903,13 +904,16 @@
             }
         },
 
-        props: ['percent', 'point', 'manager', 'subject', 'back', 'h1'],
+        props: ['percent', 'point', 'manager', 'subject', 'back', 'h1', 'subd'],
         created() {
             if (this.opman == false) {
                 this.mainform.sourcetwo = "Заявка с сайта";
                 // console.log(this.mainform.sourcetwo);
             } else {
                 this.mainform.sourcetwo = "Анкета";
+            }
+            if(this.subd == 'РСЯ'){
+                this.mainform.newsub = "РСЯ";
             }
         },
         methods: {

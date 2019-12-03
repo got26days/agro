@@ -54,7 +54,9 @@ class MainController extends Controller
             'email' => $mail['email'],
             'tel' => $mail['tel'],
             'text' => $mail['text'],
+            'subd' => $request['subd']
           );
+
   
         $sendmails = Sendmail::where('send', '=', 'true')->latest()->get();
 
@@ -66,7 +68,7 @@ class MainController extends Controller
                 \Mail::send('mail.form', $data, function($message) use ($data, $sendto, $request)
                 {
                     $message->from('orders@agrodohod.ru', 'Заявка с Direct.Agrodohod');
-                    $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход. ' . $request['yandex_title']);
+                    $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход. ' . $request['yandex_title'] . ' ' . $request['subd'];
                 });
 
             }
@@ -74,6 +76,7 @@ class MainController extends Controller
 
         return 'true';    
     }
+
 
     public function credit($slug)
     {

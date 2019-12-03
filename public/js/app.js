@@ -2535,6 +2535,7 @@ __webpack_require__.r(__webpack_exports__);
         mailsubject: this.subject,
         orgform: null,
         mainh1: this.h1,
+        newsub: null,
         form1: {
           region: null,
           summ: 600000,
@@ -2605,12 +2606,16 @@ __webpack_require__.r(__webpack_exports__);
       }
     };
   },
-  props: ['percent', 'point', 'manager', 'subject', 'back', 'h1'],
+  props: ['percent', 'point', 'manager', 'subject', 'back', 'h1', 'subd'],
   created: function created() {
     if (this.opman == false) {
       this.mainform.sourcetwo = "Заявка с сайта"; // console.log(this.mainform.sourcetwo);
     } else {
       this.mainform.sourcetwo = "Анкета";
+    }
+
+    if (this.subd == 'РСЯ') {
+      this.mainform.newsub = "РСЯ";
     }
   },
   methods: {
@@ -49438,14 +49443,15 @@ __webpack_require__.r(__webpack_exports__);
 /*!**********************************************!*\
   !*** ./resources/js/components/MainForm.vue ***!
   \**********************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MainForm_vue_vue_type_template_id_59d07df0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MainForm.vue?vue&type=template&id=59d07df0& */ "./resources/js/components/MainForm.vue?vue&type=template&id=59d07df0&");
 /* harmony import */ var _MainForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MainForm.vue?vue&type=script&lang=js& */ "./resources/js/components/MainForm.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _MainForm_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MainForm.vue?vue&type=style&index=0&lang=scss& */ "./resources/js/components/MainForm.vue?vue&type=style&index=0&lang=scss&");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _MainForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _MainForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _MainForm_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MainForm.vue?vue&type=style&index=0&lang=scss& */ "./resources/js/components/MainForm.vue?vue&type=style&index=0&lang=scss&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -49477,7 +49483,7 @@ component.options.__file = "resources/js/components/MainForm.vue"
 /*!***********************************************************************!*\
   !*** ./resources/js/components/MainForm.vue?vue&type=script&lang=js& ***!
   \***********************************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

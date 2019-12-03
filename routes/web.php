@@ -109,6 +109,28 @@ Route::group(['domain' => $subdomainfour], function () {
     Route::post('/form', 'MainController@form');
     Route::get('/{slug}', 'DronController@credittwo');
     Route::get('/download/policy', 'MainController@getDownload');
+});
+
+// pr
+$subdomainfive = env('APP_SUB_DOMAIN_FIVE');
+
+Route::group(['domain' => $subdomainfive], function () {
+    Route::get('/', 'DronController@indexfive');
+    Route::post('/form', 'MainController@form');
+    Route::get('/{slug}', 'DronController@creditfive');
+    Route::get('/download/policy', 'MainController@getDownload');
+    
+});
+
+
+// buh
+$subdomainsix = env('APP_SUB_DOMAIN_SIX');
+
+Route::group(['domain' => $subdomainfive], function () {
+    Route::get('/', 'DronController@indexsix');
+    Route::post('/form', 'MainController@form');
+    Route::get('/{slug}', 'DronController@creditsix');
+    Route::get('/download/policy', 'MainController@getDownload');
     
 });
 

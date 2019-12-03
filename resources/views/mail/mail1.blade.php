@@ -9,6 +9,11 @@
 <body>
     
 <h3>{{ $loan->mainh1 }}</h3>
+
+@if($loan->newsub)
+<h2>РСЯ</h2>
+@endif
+
 <p>Рейтинг клиента: {{  $loan->rating }}</p>
 <p>Шансы на получение денег: {{ $loan->chance }}</p>
 <p>Источник заявки: {{ $loan->source }}</p>

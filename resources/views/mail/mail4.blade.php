@@ -9,6 +9,9 @@
 <body>
     
     <h3>{{ $sub->mainh1 }}</h3>
+    @if($sub->newsub)
+    <h2>РСЯ</h2>
+    @endif
     <p>Рейтинг клиента: {{  $sub->rating }}</p>
     <p>Шансы на получение денег: {{  $sub->chance }}</p>
     <p>Источник заявки: {{  $sub->source }}</p>

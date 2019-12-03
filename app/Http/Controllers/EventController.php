@@ -657,6 +657,7 @@ class EventController extends Controller
             $loan->save();
 
             $loan->mainh1 = $request['mainh1'];
+            $loan->newsub = $request['newsub'];
         }
 
         if($request['type'] == 'Грант'){
@@ -682,6 +683,7 @@ class EventController extends Controller
             $grant->save();
 
             $grant->mainh1 = $request['mainh1'];
+            $grant->newsub = $request['newsub'];
         }
 
         if($request['type'] == 'Проектное финансирование'){
@@ -709,6 +711,7 @@ class EventController extends Controller
             $finan->save();
 
             $finan->mainh1 = $request['mainh1'];
+            $finan->newsub = $request['newsub'];
         }
 
         if($request['type'] == 'Субсидия'){
@@ -740,6 +743,7 @@ class EventController extends Controller
             $sub->save();
 
             $sub->mainh1 = $request['mainh1'];
+            $sub->newsub = $request['newsub'];
         }
 
 
@@ -759,7 +763,7 @@ class EventController extends Controller
                     \Mail::send('mail.mail1', $data, function($message) use ($data, $sendto, $request)
                     {
                         $message->from('orders@agrodohod.ru', 'Заявка с Finance.Agrodohod');
-                        $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход. ' . $request['mailsubject']);
+                        $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход. ' . $request['mailsubject'] . ' ' . $request['newsub']);
                     });
     
                 }
@@ -783,7 +787,7 @@ class EventController extends Controller
                     \Mail::send('mail.mail2', $data, function($message) use ($data, $sendto, $request)
                     {
                         $message->from('orders@agrodohod.ru', 'Заявка с Finance.Agrodohod');
-                        $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход. ' . $request['mailsubject']);
+                        $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход. ' . $request['mailsubject'] . ' ' . $request['newsub']);
                     });
     
                 }
@@ -802,7 +806,7 @@ class EventController extends Controller
                     \Mail::send('mail.mail3', $data, function($message) use ($data, $sendto, $request)
                     {
                         $message->from('orders@agrodohod.ru', 'Заявка с Finance.Agrodohod');
-                        $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход. ' . $request['mailsubject']);
+                        $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход. ' . $request['mailsubject'] . ' ' . $request['newsub']);
                     });
                 }
             }
@@ -819,7 +823,7 @@ class EventController extends Controller
                     \Mail::send('mail.mail4', $data, function($message) use ($data, $sendto, $request)
                     {
                         $message->from('orders@agrodohod.ru', 'Заявка с Finance.Agrodohod');
-                        $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход. ' . $request['mailsubject']);
+                        $message->to($sendto, $sendto)->subject('Сообщение с сайта АгроДоход. ' . $request['mailsubject'] . ' ' . $request['newsub']);
                     });
                 }
             }

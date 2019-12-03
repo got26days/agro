@@ -1,4 +1,4 @@
-@extends('vice.master')
+@extends('vice.mastersix')
 
 @section('content')
 <!--[if lt IE 8]>
@@ -316,6 +316,7 @@
                                 @csrf
                                 <input type="text" name="title" class="js-val" hidden="hidden" value="{!! isset($domain['title']) ? $domain['title'] : 'Помощь в
                                 получении кредитов, субсидий и грантов от компании «Агродоход»' !!}">
+                                <input type="hidden" name="subd" value="РСЯ">
                                 <input type="text" class="input sec-form__input js-val" name="name" placeholder="Ваше имя" required>
                                 <input type="tel" class="input sec-form__input js-val" name="tel" placeholder="Номер телефона"
                                     required>

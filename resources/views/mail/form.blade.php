@@ -8,7 +8,12 @@
 </head>
 <body>
     
+    @if($subd)
+    <h3>Сообщение с сайта с пометкой {{ $subd }}</h3>
+    @else
     <h3>Сообщение с сайта</h3>
+    @endif
+    
     @if($title)
         <p>Заголовок: {{  $title }}</p>
     @endif

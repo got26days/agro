@@ -37,6 +37,28 @@ class DronController extends Controller
         return view('vice.index', compact('partners','teams', 'domain', 'seotitle', 'seodescription', 'seokeywords'));
     }
 
+    public function indexsix()
+    {
+        $domain = Buh::latest()->first();
+
+        if(!$domain){
+            abort(404);
+        }
+
+        $teams = Team::get();
+
+        $domain->title='Помощь в получении грантов и субсидий';
+
+        $partners = Buhpartner::latest()->get();
+        
+
+        $seotitle = $domain['title'];
+        $seodescription = $domain['seo_description'];
+        $seokeywords = $domain['seo_keywords'];
+
+        return view('vice.indexsix', compact('partners','teams', 'domain', 'seotitle', 'seodescription', 'seokeywords'));
+    }
+
     public function indextwo()
     {
         $domain = Pr::latest()->first();
@@ -59,6 +81,28 @@ class DronController extends Controller
         return view('vicetwo.index', compact('partners','teams', 'domain', 'seotitle', 'seodescription', 'seokeywords'));
     }
 
+    public function indexfive()
+    {
+        $domain = Pr::latest()->first();
+
+        if(!$domain){
+            abort(404);
+        }
+
+        $teams = Team::get();
+
+        $domain->title='Помощь в получении кредитов и проектного финансирования';
+
+        $partners = Prpartner::latest()->get();
+        
+
+        $seotitle = $domain['title'];
+        $seodescription = $domain['seo_description'];
+        $seokeywords = $domain['seo_keywords'];
+
+        return view('vicetwo.indexfive', compact('partners','teams', 'domain', 'seotitle', 'seodescription', 'seokeywords'));
+    }
+
     public function credit($slug)
     {
 
@@ -77,6 +121,26 @@ class DronController extends Controller
         $seokeywords = $domain['seo_keywords'];
 
         return view('vice.index', compact('partners','teams', 'domain', 'seotitle', 'seodescription', 'seokeywords'));
+    }
+
+    public function creditsix($slug)
+    {
+
+        $domain = Buh::where('slug', '=', $slug)->latest()->first();
+
+        if(!isset($domain)){
+            abort(404);
+        }
+        $teams = Team::get();
+
+        $partners = Buhpartner::latest()->get();
+        
+
+        $seotitle = $domain['title'];
+        $seodescription = $domain['seo_description'];
+        $seokeywords = $domain['seo_keywords'];
+
+        return view('vice.indexsix', compact('partners','teams', 'domain', 'seotitle', 'seodescription', 'seokeywords'));
     }
 
 
@@ -98,5 +162,26 @@ class DronController extends Controller
         $seokeywords = $domain['seo_keywords'];
 
         return view('vicetwo.index', compact('partners','teams', 'domain', 'seotitle', 'seodescription', 'seokeywords'));
+    }
+
+
+    public function creditfive($slug)
+    {
+
+        $domain = Pr::where('slug', '=', $slug)->latest()->first();
+
+        if(!isset($domain)){
+            abort(404);
+        }
+        $teams = Team::get();
+
+        $partners = Prpartner::latest()->get();
+        
+
+        $seotitle = $domain['title'];
+        $seodescription = $domain['seo_description'];
+        $seokeywords = $domain['seo_keywords'];
+
+        return view('vicetwo.indexfive', compact('partners','teams', 'domain', 'seotitle', 'seodescription', 'seokeywords'));
     }
 }
