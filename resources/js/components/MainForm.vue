@@ -14,7 +14,7 @@
                         <label class="calc-form__label js-label" v-if="manager">
                             <span class="calc-form__label-title">Источник заявки</span>
                             <cool-select v-model="mainform.sourcetwo" :items="['', 'Звонок', 'Агент', 'Отдел продаж', 'Другое']"
-                                v-validate="'required'" name="mainform.sourcetwo" />
+                                v-validate="'required'" name="mainform.sourcetwo" disable-search/>
                             <p v-show="errors.first('mainform.sourcetwo')">Поле обязательно для заполнения</p>
                         </label>
 
@@ -23,7 +23,7 @@
                             <span class="calc-form__label-title">Организационная форма</span>
                             <cool-select v-model="mainform.orgform"
                                 :items="['', 'ИП КФХ (существует менее 2 лет)', 'ИП КФХ (существует более 2 лет)', 'Холдинг', 'Глава кооператива', 'Физлицо', 'ИП', 'ООО', 'ОАО', 'ЗАО', 'Другое']"
-                                v-validate="'required'" name="mainform.orgform" />
+                                v-validate="'required'" name="mainform.orgform" disable-search/>
                             <p v-show="errors.first('mainform.orgform')">Поле обязательно для заполнения</p>
                         </label>
 
@@ -35,6 +35,7 @@
                                 :items="['', 'Кредит', 'Проектное финансирование']"
                                 v-validate="'required'" 
                                 name="mainform.type"
+                                disable-search
                                  />
 
                             <p v-show="errors.first('mainform.type')">Поле обязательно для заполнения</p>

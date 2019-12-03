@@ -2499,6 +2499,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -32415,7 +32416,8 @@ var render = function() {
                                 "Отдел продаж",
                                 "Другое"
                               ],
-                              name: "mainform.sourcetwo"
+                              name: "mainform.sourcetwo",
+                              "disable-search": ""
                             },
                             model: {
                               value: _vm.mainform.sourcetwo,
@@ -32477,7 +32479,8 @@ var render = function() {
                             "ЗАО",
                             "Другое"
                           ],
-                          name: "mainform.orgform"
+                          name: "mainform.orgform",
+                          "disable-search": ""
                         },
                         model: {
                           value: _vm.mainform.orgform,
@@ -32525,7 +32528,8 @@ var render = function() {
                         ],
                         attrs: {
                           items: ["", "Кредит", "Проектное финансирование"],
-                          name: "mainform.type"
+                          name: "mainform.type",
+                          "disable-search": ""
                         },
                         model: {
                           value: _vm.mainform.type,
